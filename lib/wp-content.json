@@ -1,0 +1,1690 @@
+{
+  "services": {
+    "website-design-development": {
+      "title": "Website Design & Development",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&fit=crop",
+      "eyebrow": "Digital experiences that perform",
+      "intro": "We design and develop conversion-focused websites that strengthen credibility, explain your value clearly, and turn attention into measurable action.",
+      "overview": "Your website is the center of your digital presence. Every page should guide the right visitor toward a clear decision while delivering the speed, usability, and confidence modern customers expect.",
+      "capabilities": [
+        "Responsive business websites",
+        "Custom WordPress development",
+        "E-commerce experiences",
+        "Corporate websites and portals",
+        "Landing pages and campaign sites",
+        "Performance and technical optimization"
+      ],
+      "process": [
+        [
+          "Discover",
+          "We clarify your goals, audiences, content requirements, competitors, and conversion priorities."
+        ],
+        [
+          "Structure",
+          "We shape the sitemap, user journeys, content hierarchy, and wireframes before visual design begins."
+        ],
+        [
+          "Design & Build",
+          "Approved concepts are developed into a responsive, accessible, and performance-aware website."
+        ],
+        [
+          "Test & Launch",
+          "We test across devices, complete final QA, support launch, and define the next optimization steps."
+        ]
+      ],
+      "faq": [
+        [
+          "Will the website be easy to edit?",
+          "Yes. We use native WordPress editing and structured content areas so routine updates do not require a developer."
+        ],
+        [
+          "Will it work on mobile?",
+          "Every website is designed and tested for modern phones, tablets, laptops, and desktop screens."
+        ],
+        [
+          "Can you improve an existing website?",
+          "Yes. We can audit, redesign, rebuild, or optimize an existing website depending on its current platform and condition."
+        ]
+      ]
+    },
+    "logo-design": {
+      "title": "Graphic Designing",
+      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80&fit=crop",
+      "eyebrow": "Build a brand people remember",
+      "intro": "We create distinctive identity systems that communicate your positioning with clarity, confidence, and consistency across every customer touchpoint.",
+      "overview": "A strong logo is not decoration. It is a recognizable signal of what your company stands for. We connect strategic thinking with crafted design so your identity works in real business situations.",
+      "capabilities": [
+        "Logo and visual identity systems",
+        "Typography and color direction",
+        "Brand guidelines",
+        "Marketing collateral",
+        "Presentation and social templates",
+        "Logo animation and launch assets"
+      ],
+      "process": [
+        [
+          "Brand Discovery",
+          "We learn your market, audience, values, personality, and commercial goals."
+        ],
+        [
+          "Concept Direction",
+          "Strategic visual territories are explored before the strongest routes are developed."
+        ],
+        [
+          "Refinement",
+          "The selected direction is refined across typography, color, proportion, and practical applications."
+        ],
+        [
+          "Delivery",
+          "You receive organized production files and guidance for consistent real-world use."
+        ]
+      ],
+      "faq": [
+        [
+          "Is marketing collateral included?",
+          "Marketing collateral is available within branding packages and can include stationery, social, sales, and presentation assets."
+        ],
+        [
+          "Will I receive editable files?",
+          "Final delivery can include production-ready vector, print, web, and editable formats according to the package."
+        ],
+        [
+          "Can you refresh an existing logo?",
+          "Yes. We can modernize an existing identity while preserving valuable recognition and brand equity."
+        ]
+      ]
+    },
+    "video-animation": {
+      "title": "Video Animation",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80&fit=crop",
+      "eyebrow": "Make complex ideas easy to understand",
+      "intro": "We turn products, services, and stories into compelling motion that captures attention and communicates your message with clarity.",
+      "overview": "Strategic animation can explain faster, increase engagement, and make a brand more memorable. We shape every project around the audience, message, channel, and action you want to inspire.",
+      "capabilities": [
+        "2D animation",
+        "3D animation",
+        "Explainer videos",
+        "Whiteboard animation",
+        "Typography and motion graphics",
+        "Logo and social animation"
+      ],
+      "process": [
+        [
+          "Brief & Story",
+          "We define the audience, core message, desired action, style, and delivery channels."
+        ],
+        [
+          "Script & Storyboard",
+          "The narrative is shaped into a clear script and visual sequence before production."
+        ],
+        [
+          "Production",
+          "Illustration, motion, voice, sound, and editing come together through structured review stages."
+        ],
+        [
+          "Final Delivery",
+          "Approved videos are supplied in the formats and dimensions required for your channels."
+        ]
+      ],
+      "faq": [
+        [
+          "Can you help with the script?",
+          "Yes. Script development and message refinement can be included in the project scope."
+        ],
+        [
+          "Can one video be adapted for social media?",
+          "Yes. We can create shorter edits and alternate aspect ratios for specific platforms."
+        ],
+        [
+          "Are voice-over and sound included?",
+          "Voice-over, music, and sound design can be included based on the selected package and licensing requirements."
+        ]
+      ]
+    },
+    "seo-services": {
+      "title": "SEO Services",
+      "image": "https://images.unsplash.com/photo-1572177812156-58036aae439c?w=800&q=80&fit=crop",
+      "eyebrow": "Earn visibility that compounds",
+      "intro": "We build practical search strategies around technical health, commercial intent, useful content, and measurable opportunities.",
+      "overview": "Sustainable SEO is a system, not a one-time trick. We identify what prevents visibility, prioritize the opportunities that matter, and improve the signals search engines and customers use to trust your website.",
+      "capabilities": [
+        "Technical and content audits",
+        "On-page SEO",
+        "Keyword and intent research",
+        "SEO copywriting",
+        "Authority and link strategy",
+        "Reporting and ongoing optimization"
+      ],
+      "process": [
+        [
+          "Audit",
+          "We identify technical, content, authority, and conversion issues affecting organic growth."
+        ],
+        [
+          "Strategy",
+          "Opportunities are prioritized by relevance, intent, competition, and potential business impact."
+        ],
+        [
+          "Implementation",
+          "Technical fixes, content improvements, and authority initiatives are executed in focused cycles."
+        ],
+        [
+          "Measure & Improve",
+          "Performance is reviewed regularly and the plan evolves based on evidence and market changes."
+        ]
+      ],
+      "faq": [
+        [
+          "How quickly will SEO show results?",
+          "Timelines vary by competition, website condition, authority, and scope. Sustainable SEO normally improves progressively rather than overnight."
+        ],
+        [
+          "Do you guarantee rankings?",
+          "No responsible agency can guarantee a specific ranking. We commit to transparent work, sound strategy, and measurable improvement."
+        ],
+        [
+          "Will I receive reports?",
+          "Yes. Ongoing engagements include clear reporting on completed work, performance, and next priorities."
+        ]
+      ]
+    },
+    "digital-marketing": {
+      "title": "Digital Marketing",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80&fit=crop",
+      "eyebrow": "Turn attention into momentum",
+      "intro": "We connect positioning, creative, channels, and measurement into campaigns designed to reach the right audience and move them toward action.",
+      "overview": "Effective digital marketing requires more than frequent posting. It needs a clear audience, relevant message, disciplined creative system, and constant learning from performance.",
+      "capabilities": [
+        "Brand and channel strategy",
+        "Social media management",
+        "Paid social campaigns",
+        "Community building",
+        "Campaign creative",
+        "Performance reporting and optimization"
+      ],
+      "process": [
+        [
+          "Diagnose",
+          "We clarify objectives, audience segments, current performance, offers, and channel opportunities."
+        ],
+        [
+          "Plan",
+          "A focused channel, content, creative, and campaign roadmap is built around your goals."
+        ],
+        [
+          "Launch",
+          "Campaigns and content are produced, scheduled, launched, and monitored with clear ownership."
+        ],
+        [
+          "Optimize",
+          "Results are analyzed and creative, targeting, budget, and messaging are improved continuously."
+        ]
+      ],
+      "faq": [
+        [
+          "Which platforms do you manage?",
+          "Platform recommendations depend on your audience, offer, market, and available content rather than a one-size-fits-all list."
+        ],
+        [
+          "Is advertising spend included?",
+          "Media spend is normally paid directly by the client and remains separate from strategy and management fees."
+        ],
+        [
+          "Can you create the campaign assets?",
+          "Yes. Creative production, landing pages, and campaign content can be included in the engagement."
+        ]
+      ]
+    },
+    "mobile-apps": {
+      "title": "Mobile Apps",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80&fit=crop",
+      "eyebrow": "Utility meets engagement",
+      "intro": "We shape intuitive mobile and web applications around genuine user needs, clear product priorities, and dependable execution.",
+      "overview": "A successful application balances user experience, business value, technical feasibility, and long-term maintainability. We turn the product vision into a structured roadmap and polished experience.",
+      "capabilities": [
+        "iOS application development",
+        "Android application development",
+        "Cross-platform applications",
+        "Progressive web applications",
+        "Product UX and prototyping",
+        "Application modernization"
+      ],
+      "process": [
+        [
+          "Product Strategy",
+          "We clarify users, problems, priorities, success metrics, and technical constraints."
+        ],
+        [
+          "UX & Prototype",
+          "Core flows are wireframed and tested before detailed interface design begins."
+        ],
+        [
+          "Build",
+          "The approved product is developed in manageable releases with regular reviews."
+        ],
+        [
+          "QA & Release",
+          "Functionality, usability, security, and device behavior are tested before release planning."
+        ]
+      ],
+      "faq": [
+        [
+          "Can you start from an idea?",
+          "Yes. Product discovery can turn an early idea into a defined scope, prototype, and realistic delivery roadmap."
+        ],
+        [
+          "Will the app work on iOS and Android?",
+          "The recommended approach depends on product requirements, budget, integrations, and performance expectations."
+        ],
+        [
+          "Do you provide post-launch support?",
+          "Ongoing maintenance, monitoring, iteration, and feature development can be scoped after launch."
+        ]
+      ]
+    }
+  },
+  "pricing": {
+    "Website Design": [
+      {
+        "name": "BASIC WEBSITE PACKAGE",
+        "price": "$249.00",
+        "striked": "$399",
+        "benefits": [
+          "3 Pages Website",
+          "3 Banner Design",
+          "5 Stock Photos",
+          "FREE Google Friendly Sitemap",
+          "Facebook Page Design",
+          "YouTube Page Design",
+          "100% Satisfaction Guarantee",
+          "100% Unique Design Guarantee",
+          "100% Money Back Guarantee *"
+        ]
+      },
+      {
+        "name": "STARTUP WEBSITE PACKAGE",
+        "price": "$499.00",
+        "striked": "$999",
+        "benefits": [
+          "5 Unique Pages Website",
+          "CMS / Admin Panel Support",
+          "8 Stock images",
+          "5 Banner Designs",
+          "FREE Google Friendly Sitemap",
+          "Facebook Page Design",
+          "YouTube Page Design",
+          "Complete Deployment",
+          "100% Satisfaction Guarantee",
+          "100% Unique Design Guarantee",
+          "100% Money Back Guarantee *"
+        ]
+      },
+      {
+        "name": "PROFESSIONAL WEBSITE PACKAGE",
+        "price": "$749.00",
+        "striked": "$1499",
+        "benefits": [
+          "8-10 Pages Website",
+          "Conceptual and Dynamic Website",
+          "Online Payment Integration",
+          "Online Booking Tool",
+          "Content Management System",
+          "Mobile Responsive Website",
+          "Custom Forms",
+          "Lead Capturing Forms",
+          "Striking Hover Effects",
+          "Newsletter Subscription",
+          "Newsfeed Integration",
+          "Social Media Integration",
+          "5 Stock Photos",
+          "3 Unique Banner Design"
+        ]
+      },
+      {
+        "name": "ELITE WEBSITE PACKAGE",
+        "price": "$1599.00",
+        "striked": "$3,198",
+        "benefits": [
+          "10 Unique Pages Website Design",
+          "Custom, Interactive, Dynamic & High End Design",
+          "Customize WordPress (or) PHP Development",
+          "Interactive Sliding Banners",
+          "10 Stock Images",
+          "10 Banner Designs",
+          "Special Hoover Effects",
+          "Unlimited Revisions",
+          "Content Management System (WordPress or Custom)",
+          "Mobile Responsive",
+          "10 Professional Email ID's",
+          "Google Friendly Sitemap",
+          "Search Engine Submission",
+          "Industry specified Team of Award Winning Designers and Developers",
+          "Complete Deployment"
+        ]
+      },
+      {
+        "name": "CORPORATE WEBSITE PACKAGE",
+        "price": "$2599.00",
+        "striked": "$5,198",
+        "benefits": [
+          "Unlimited Pages Website Design",
+          "Custom Made, Interactive, Dynamic & High End Design",
+          "Customized WordPress & PHP Development",
+          "Interactive Sliding Banners",
+          "Up to 15 Custom Made Banner Designs",
+          "15 Stock Images",
+          "Unlimited Revisions",
+          "Special Hoover Effects",
+          "Content Management System",
+          "Custom Dynamic Forms (Optional)",
+          "Signup Area (For Newsletters, Offers etc.)",
+          "Search Bar",
+          "Live Feeds of Social Networks integration (Optional)",
+          "Mobile Responsive",
+          "Up to 15 Professional Email ID's"
+        ]
+      },
+      {
+        "name": "ENTERPRISE PLUS WEBSITE PACKAGE",
+        "price": "$4,599",
+        "striked": "$9,198",
+        "benefits": [
+          "Custom designed Homepage (6x concepts)",
+          "20 Custom designed Inner pages",
+          "Custom Made, Interactive, Dynamic & User Friendly Design",
+          "Custom Wordpress/PHP Development",
+          "Customized CMS Integration",
+          "Cross platform (Desktop, iPhone, Android, etc) responsive compatibility",
+          "Striking Hover Effects",
+          "15 Premium Stock Photos",
+          "10 Custom Banner Designs",
+          "2 Landing Page Designs",
+          "Custom Dynamic Forms",
+          "Online Reservation/ Appointment/ Scheduling Tool",
+          "Online Payment Integration"
+        ]
+      }
+    ],
+    "E-Commerce": [
+      {
+        "name": "E-COMMERCE BASIC PACKAGE",
+        "price": "$499.00",
+        "striked": "$999.00",
+        "benefits": [
+          "Theme Based Design",
+          "2 Banner Designs",
+          "Sliding Banner",
+          "3 Stock Photos",
+          "06 Revisions",
+          "Hover Effects",
+          "Up to 10 Products",
+          "Up to 3 Categories",
+          "Content/Inventory Management System",
+          "Easy Product Search Bar",
+          "Shopping Cart Integration",
+          "Payment Module Integration",
+          "Direct Checkout"
+        ]
+      },
+      {
+        "name": "E-COMMERCE STARTUP PACKAGE",
+        "price": "$699.00",
+        "striked": "$1399.00",
+        "benefits": [
+          "E-Commerce Website Design and Development",
+          "High-end Theme Based Design",
+          "5 Banner Designs",
+          "Sliding Banner",
+          "5 Stock Photos",
+          "12 Revisions",
+          "Hover Effects",
+          "Up to 25 Products",
+          "Up to 5 Categories",
+          "Content/Inventory Management System",
+          "Easy Product Search Bar",
+          "Shopping Cart Integration",
+          "Payment Module Integration",
+          "Direct Checkout",
+          "Sign up Checkout",
+          "Tax calculator Integration",
+          "Shipping calculator Integration",
+          "Wishlist",
+          "Social Media Pages Integration",
+          "Facebook “Like” Plugin integration",
+          "Sitemap",
+          "Dedicated Team of Designers and Developers",
+          "Complete Deployment",
+          "Value Added Services",
+          "Complete Source Files",
+          "Dedicated Project Manager",
+          "100% Satisfaction and Money-Back Guarantee**"
+        ]
+      },
+      {
+        "name": "BEGINNERS E-COMMERCE PACKAGE",
+        "price": "$1199",
+        "striked": "$2398",
+        "benefits": [
+          "Upto 15 Unique Pages Website",
+          "Conceptual and Dynamic Website",
+          "Content Management System (CMS)",
+          "Mobile Responsive",
+          "Easy Product Search",
+          "Product Reviews",
+          "Up To 100 Products",
+          "Unlimited Categories",
+          "Shopping Cart Integration",
+          "Payment Integration",
+          "Sales & Inventory Management",
+          "Free Google Friendly Sitemap",
+          "Custom Email Addresses"
+        ]
+      },
+      {
+        "name": "CORPORATE E-COMMERCE PACKAGE",
+        "price": "$1799.99",
+        "striked": "$3599.00",
+        "benefits": [
+          "Unlimited Unique Pages Website",
+          "Conceptual and Dynamic Website",
+          "Content Management System (CMS)",
+          "Mobile Responsive",
+          "Easy Product Search",
+          "Product Reviews",
+          "Unlimited Products",
+          "Unlimited Categories",
+          "Full Shopping Cart Integration",
+          "Payment Module Integration",
+          "Sales & Inventory Management",
+          "Free Google Friendly Sitemap",
+          "Custom Email Addresses",
+          "Facebook Page Design",
+          "YouTube Page Design",
+          "Instagram Page Design",
+          "Complete Deployment",
+          "Dedicated Accounts Manager",
+          "100% Ownership Rights"
+        ]
+      },
+      {
+        "name": "ELITE E-COMMERCE PACKAGE",
+        "price": "$3694.99",
+        "striked": "$7,389.98",
+        "benefits": [
+          "UNLIMITED Logo Design Concepts",
+          "By 6 Award Winning Designers",
+          "Icon Design",
+          "UNLIMITED Revisions",
+          "Print Media",
+          "Stationary Design (BusinessCard, Letterhead & Envelope)",
+          "Invoice Design, Email Signature",
+          "Bi-Fold Brochure (OR) 2 Sided Flyer Design",
+          "Product Catalog Design",
+          "Sign age Design (OR) Label Design",
+          "T-Shirt Design (OR) Car Wrap Design",
+          "Website",
+          "E-Commerce Store Design",
+          "Product Detail Page Design",
+          "Unique Banner Slider",
+          "Featured Products Showcase",
+          "Full Shopping Cart Integration",
+          "Unlimited Products",
+          "Unlimited Categories",
+          "Product Rating & Reviews",
+          "Easy Product Search"
+        ]
+      },
+      {
+        "name": "CUSTOM E-COMMERCE MARKETPLACE PACKAGE",
+        "price": "$6999.00",
+        "striked": "$13999.00",
+        "benefits": [
+          "Unlimited Page Website",
+          "Custom Content Management System (CMS)",
+          "Unique Pages and UI Design",
+          "Complete Custom Development",
+          "Process Automation Tools",
+          "Newsfeed Integration",
+          "Social Media Plugins Integration",
+          "Upto 40 Stock images",
+          "10 Unique Banner Designs",
+          "Free Google Friendly Sitemap",
+          "FREE 5 Years Hosting",
+          "Custom Email Addresses",
+          "Social Media Page Designs (Facebook, Twitter, Instagram)",
+          "Complete Deployment",
+          "100% Satisfaction Guarantee",
+          "100% Unique Design Guarantee",
+          "Money Back Guarantee",
+          "Automated Inventory/Shipping/Supplier Module"
+        ]
+      }
+    ],
+    "Logo": [
+      {
+        "name": "BASIC LOGO PACKAGE",
+        "price": "$70.00",
+        "striked": "$139.99",
+        "benefits": [
+          "3 Custom Logo Design Concepts",
+          "1 Dedicated Designer",
+          "4 Revisions",
+          "100% Unique Design Guarantee",
+          "100% Satisfaction and Money-Back Guarantee**"
+        ]
+      },
+      {
+        "name": "START UP LOGO PACKAGE",
+        "price": "$168.00",
+        "striked": "$268.98",
+        "benefits": [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "UNLIMITED Revisions",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
+          "100% Satisfaction and Money-Back Guarantee**",
+          "100% Unique Design Guarantee"
+        ]
+      },
+      {
+        "name": "PROFESSIONAL LOGO PACKAGE",
+        "price": "$248.00",
+        "striked": "$399.98",
+        "benefits": [
+          "UNLIMITED Logo Design Concepts",
+          "By 4 Designers",
+          "UNLIMITED Revisions",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "FREE MS Word Letterhead"
+        ]
+      },
+      {
+        "name": "ELITE LOGO PACKAGE",
+        "price": "$348.00",
+        "striked": "$696.00",
+        "benefits": [
+          "UNLIMITED Logo Design Concepts",
+          "By 5 Award Winning Designers",
+          "Stationary Design (Business Card, Letterhead, Envelope)",
+          "Icon Design",
+          "UNLIMITED Revisions",
+          "FREE MS Word Letterhead",
+          "Free Email Signature"
+        ]
+      },
+      {
+        "name": "BUSINESS LOGO PACKAGE",
+        "price": "$448.00",
+        "striked": "$896.00",
+        "benefits": [
+          "UNLIMITED Logo Design Concepts",
+          "By 8 Award Winning Designers",
+          "UNLIMITED Revisions",
+          "2 Stationary Design Sets (Business Card, Letterhead, Envelope)",
+          "Icon Design",
+          "Double Sided Flyer Design / Bi-Fold Brochure",
+          "FREE MS Word Letterhead",
+          "Free Email Signature"
+        ]
+      },
+      {
+        "name": "GOLD LOGO PACKAGE",
+        "price": "$848.00",
+        "striked": "$1696.00",
+        "benefits": [
+          "UNLIMITED Logo Design Concepts",
+          "By 8 Award Winning Designers",
+          "Icon Design",
+          "UNLIMITED Revisions",
+          "2 Stationary Design Sets (Business Card, Letterhead, Envelope)",
+          "FREE MS Word Letterhead",
+          "Free Email Signature",
+          "3 Page Custom Website",
+          "2 Stock Photos",
+          "2 Banner Designs",
+          "All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)",
+          "100% Satisfaction and Money-Back Guarantee**"
+        ]
+      }
+    ],
+    "SEO": [
+      {
+        "name": "STARTUP SEO PACKAGE",
+        "price": "$445.00",
+        "striked": "$99.99",
+        "benefits": [
+          "5 Keywords",
+          "Guaranteed Ranking on Google",
+          "Off-site Optimization",
+          "Link Building",
+          "Social Bookmarking",
+          "Basic Analytical Report",
+          "In-depth Site Analysis",
+          "Content Duplicity Check",
+          "Initial Backlinks analysis",
+          "Google Penalty Check",
+          "Mobile Usability Check",
+          "Competition Analysis",
+          "Keyword Research",
+          "Informational Content Writing & Sharing (2 - Per Month)",
+          "Blog Writing (1 - Per Month)",
+          "Press Release Social Bookmarking (5 - Per Month)",
+          "NAP Syndication",
+          "Google My Business / Bing Local Listing"
+        ]
+      },
+      {
+        "name": "IDENTITY SEO PACKAGE",
+        "price": "$845.00",
+        "striked": "$1690.00",
+        "benefits": [
+          "10 Keywords",
+          "Guaranteed Ranking on Google",
+          "Off-site Optimization",
+          "On-site Optimization",
+          "Link Building",
+          "Social Bookmarking",
+          "In-depth Site Analysis",
+          "Content Duplicacy Check",
+          "Initial Backlinks analysis",
+          "Google Penalty Check",
+          "Mobile Usability Check",
+          "Competition Analysis",
+          "Keyword Research",
+          "Title & Meta Tags Optimization",
+          "Content Optimization",
+          "Page Speed Analysis & Optimization",
+          "HTML Code Cleanup & Optimization",
+          "Internal Link Structuring & Optimization",
+          "Pages H tags Optimization"
+        ]
+      },
+      {
+        "name": "ELITE SEO PACKAGE",
+        "price": "$1545.00",
+        "striked": "$399.98",
+        "benefits": [
+          "20 Keywords",
+          "Guaranteed Ranking on Google",
+          "Off-site Optimization",
+          "On-site Optimization",
+          "Link Building",
+          "Social Bookmarking",
+          "In-depth Site Analysis",
+          "Content Duplicacy Check",
+          "Initial Backlinks analysis",
+          "Google Penalty Check",
+          "Mobile Usability Check",
+          "Competition Analysis",
+          "Keyword Research",
+          "Page Speed Analysis & Optimization",
+          "Title & Meta Tags Optimization",
+          "Content Optimization",
+          "HTML Code Cleanup & Optimization",
+          "Internal Link Structuring & Optimization",
+          "Pages H tags Optimization"
+        ]
+      },
+      {
+        "name": "PROFESSIONAL SEO PACKAGE",
+        "price": "$2145.00",
+        "striked": "$399.98",
+        "benefits": [
+          "30 Keywords",
+          "Guaranteed Ranking on Google",
+          "Off-site Optimization",
+          "On-site Optimization",
+          "Link Building",
+          "Social Bookmarking",
+          "In-depth Site Analysis",
+          "Content Duplicacy Check",
+          "Initial Backlinks analysis",
+          "Google Penalty Check",
+          "Mobile Usability Check",
+          "Competition Analysis",
+          "Keyword Research",
+          "Page Speed Analysis & Optimization",
+          "Title & Meta Tags Optimization",
+          "Content Optimization",
+          "HTML Code Cleanup & Optimization",
+          "Internal Link Structuring & Optimization",
+          "Pages H tags Optimization"
+        ]
+      }
+    ],
+    "Branding": [
+      {
+        "name": "STATIONERY PACKAGE",
+        "price": "$49.99",
+        "striked": "$99.99",
+        "benefits": [
+          "1 Business Card Design",
+          "1 Letterhead Design",
+          "1 Envelope Design",
+          "Dedicated Designer",
+          "3 Design Revisions",
+          "Turnaround Time 24 - 48 Hours"
+        ]
+      },
+      {
+        "name": "INFOGRAPHIC PACKAGE",
+        "price": "$129.99",
+        "striked": "$259.98",
+        "benefits": [
+          "1 Unique Design",
+          "6 Design concepts",
+          "Dedicated designers",
+          "Dedicated Account Manager",
+          "Unlimited Revisions"
+        ]
+      },
+      {
+        "name": "BROCHURE/FLYER PACKAGE",
+        "price": "$199.99",
+        "striked": "$399.98",
+        "benefits": [
+          "1 Unique Design",
+          "4 Design concepts (Trifold / Bi-fold)",
+          "Dedicated designers",
+          "Dedicated Account Manager",
+          "Unlimited Revisions"
+        ]
+      }
+    ],
+    "Video Animation": [
+      {
+        "name": "BASIC VIDEO PACKAGE",
+        "price": "$199.00",
+        "striked": "$399.00",
+        "benefits": [
+          "30 Second Video",
+          "Professional Script",
+          "Storyboard",
+          "Animation",
+          "Voice - Over & Sound Effects",
+          "4 weeks Delivery",
+          "Unlimited Revisions"
+        ]
+      },
+      {
+        "name": "BASIC PLUS VIDEO PACKAGE",
+        "price": "$299.00",
+        "striked": "$598.00",
+        "benefits": [
+          "60 Second Video",
+          "Professional Script",
+          "Sample Theme",
+          "Storyboard",
+          "Animation",
+          "Voice - Over & Sound Effects",
+          "5 weeks Delivery"
+        ]
+      },
+      {
+        "name": "CLASSIC VIDEO PACKAGE",
+        "price": "$399.00",
+        "striked": "$798.00",
+        "benefits": [
+          "90 Second Video",
+          "Professional Script",
+          "Sample Theme",
+          "Storyboard",
+          "Animation",
+          "Voice - Over & Sound Effects",
+          "6 Weeks Delivery"
+        ]
+      },
+      {
+        "name": "2D BASIC VIDEO PACKAGE",
+        "price": "$599.00",
+        "striked": "$1198.00",
+        "benefits": [
+          "120 Second Video",
+          "Professional Script",
+          "Sample Theme",
+          "Storyboard",
+          "Animation",
+          "Voice - Over & Sound Effects"
+        ]
+      }
+    ],
+    "Shopify": [
+      {
+        "name": "E-COMMERCE BASIC PACKAGE (Shopify)",
+        "price": "$499.00",
+        "striked": "$999.00",
+        "benefits": [
+          "Theme Based Design",
+          "2 Banner Designs",
+          "Sliding Banner",
+          "3 Stock Photos",
+          "06 Revisions",
+          "Hover Effects",
+          "Up to 10 Products",
+          "Up to 3 Categories",
+          "Content/Inventory Management System",
+          "Easy Product Search Bar",
+          "Shopping Cart Integration",
+          "Payment Module Integration",
+          "Direct Checkout"
+        ]
+      },
+      {
+        "name": "E-COMMERCE STARTUP PACKAGE (Shopify)",
+        "price": "$699.00",
+        "striked": "$1399.00",
+        "benefits": [
+          "E-Commerce Website Design and Development",
+          "High-end Theme Based Design",
+          "5 Banner Designs",
+          "Sliding Banner",
+          "5 Stock Photos",
+          "12 Revisions",
+          "Hover Effects",
+          "Up to 25 Products",
+          "Up to 5 Categories",
+          "Content/Inventory Management System",
+          "Easy Product Search Bar",
+          "Shopping Cart Integration",
+          "Payment Module Integration",
+          "Direct Checkout",
+          "Sign up Checkout",
+          "Tax calculator Integration",
+          "Shipping calculator Integration",
+          "Wishlist",
+          "Social Media Pages Integration",
+          "Facebook “Like” Plugin integration",
+          "Sitemap",
+          "Dedicated Team of Designers and Developers",
+          "Complete Deployment",
+          "Value Added Services",
+          "Complete Source Files",
+          "Dedicated Project Manager",
+          "100% Satisfaction and Money-Back Guarantee**"
+        ]
+      },
+      {
+        "name": "BEGINNERS E-COMMERCE PACKAGE (Shopify)",
+        "price": "$1199",
+        "striked": "$2398",
+        "benefits": [
+          "Upto 15 Unique Pages Website",
+          "Conceptual and Dynamic Website",
+          "Content Management System (CMS)",
+          "Mobile Responsive",
+          "Easy Product Search",
+          "Product Reviews",
+          "Up To 100 Products",
+          "Unlimited Categories",
+          "Shopping Cart Integration",
+          "Payment Integration",
+          "Sales & Inventory Management",
+          "Free Google Friendly Sitemap",
+          "Custom Email Addresses"
+        ]
+      },
+      {
+        "name": "CORPORATE E-COMMERCE PACKAGE (Shopify)",
+        "price": "$1799.99",
+        "striked": "$3599.00",
+        "benefits": [
+          "Unlimited Unique Pages Website",
+          "Conceptual and Dynamic Website",
+          "Content Management System (CMS)",
+          "Mobile Responsive",
+          "Easy Product Search",
+          "Product Reviews",
+          "Unlimited Products",
+          "Unlimited Categories",
+          "Full Shopping Cart Integration",
+          "Payment Module Integration",
+          "Sales & Inventory Management",
+          "Free Google Friendly Sitemap",
+          "Custom Email Addresses",
+          "Facebook Page Design",
+          "YouTube Page Design",
+          "Instagram Page Design",
+          "Complete Deployment",
+          "Dedicated Accounts Manager",
+          "100% Ownership Rights"
+        ]
+      },
+      {
+        "name": "ELITE E-COMMERCE PACKAGE (Shopify)",
+        "price": "$3694.99",
+        "striked": "$7,388.00",
+        "benefits": [
+          "UNLIMITED Logo Design Concepts",
+          "By 6 Award Winning Designers",
+          "Icon Design",
+          "UNLIMITED Revisions",
+          "Print Media",
+          "Stationary Design (BusinessCard, Letterhead & Envelope)",
+          "Invoice Design, Email Signature",
+          "Bi-Fold Brochure (OR) 2 Sided Flyer Design",
+          "Product Catalog Design",
+          "Sign age Design (OR) Label Design",
+          "T-Shirt Design (OR) Car Wrap Design",
+          "Website",
+          "E-Commerce Store Design",
+          "Product Detail Page Design",
+          "Unique Banner Slider",
+          "Featured Products Showcase",
+          "Full Shopping Cart Integration",
+          "Unlimited Products",
+          "Unlimited Categories",
+          "Product Rating & Reviews",
+          "Easy Product Search"
+        ]
+      },
+      {
+        "name": "CUSTOM E-COMMERCE MARKETPLACE PACKAGE (Shopify)",
+        "price": "$6999.00",
+        "striked": "$13999.00",
+        "benefits": [
+          "Unlimited Page Website",
+          "Custom Content Management System (CMS)",
+          "Unique Pages and UI Design",
+          "Complete Custom Development",
+          "Process Automation Tools",
+          "Newsfeed Integration",
+          "Social Media Plugins Integration",
+          "Upto 40 Stock images",
+          "10 Unique Banner Designs",
+          "Free Google Friendly Sitemap",
+          "FREE 5 Years Hosting",
+          "Custom Email Addresses",
+          "Social Media Page Designs (Facebook, Twitter, Instagram)",
+          "Complete Deployment",
+          "100% Satisfaction Guarantee",
+          "100% Unique Design Guarantee",
+          "Money Back Guarantee",
+          "Automated Inventory/Shipping/Supplier Module"
+        ]
+      }
+    ],
+    "Digital Marketing": [
+      {
+        "name": "BASIC ORM PACKAGE",
+        "price": "$699 Month",
+        "striked": "$1399",
+        "benefits": [
+          "2 Phrases monitored & protected",
+          "Top 10 Search positions monitored",
+          "Choose any 2 Social Media Channels",
+          "Social Bookmarking - 20",
+          "Business Card, Letterhead, Envelope",
+          "Business Listings & Reviews - 2",
+          "Company Profile Listing - 5",
+          "Blog Writing - 2",
+          "Article Writing - 2",
+          "PDF Creation - 1",
+          "PPT Creation - 1",
+          "Blog Submission - 4"
+        ]
+      },
+      {
+        "name": "VALUE ORM PACKAGE",
+        "price": "$999 Month",
+        "striked": "$1,999",
+        "benefits": [
+          "3 Phrases protected & monitored",
+          "Top 10 Search positions monitored",
+          "Choose any 3 Social Media Channels",
+          "Social Bookmarking - 30",
+          "Business Listings & Reviews - 3",
+          "Company Profile Listing - 7",
+          "Blog Writing - 4",
+          "Article Writing - 4",
+          "Press Release Writing - 1",
+          "PDF Creation - 2",
+          "PPT Creation - 2",
+          "Image Creation* - 2"
+        ]
+      },
+      {
+        "name": "STANDARD ORM PACKAGE",
+        "price": "$1999 Month",
+        "striked": "$2,999",
+        "benefits": [
+          "Ad Network - All",
+          "No. of Keywords - 500",
+          "Text Ads",
+          "No. of Adgroups - 50",
+          "GEO Targeting Setup",
+          "Setup Conversion Code",
+          "Upto 6 Ad Copies Per Ad Group",
+          "Campaign Management",
+          "Competitor analysis",
+          "Ad copy Management",
+          "Budget Management",
+          "Competitor analysis",
+          "Keyword Management"
+        ]
+      }
+    ],
+    "SMM": [
+      {
+        "name": "SMM STARTUP PACKAGE",
+        "price": "$299 Month",
+        "striked": "$499",
+        "benefits": [
+          "Platforms (Facebook & Instagram)",
+          "12 Design Posts + Copywriting",
+          "Contact Us Page (with Google Map Integration)",
+          "Competitive Analysis",
+          "Audit + Recommendation",
+          "Content Calendar",
+          "Industry & Keyword Research",
+          "Social Media Copywriting"
+        ]
+      },
+      {
+        "name": "SMM BASIC PACKAGE",
+        "price": "$499 Month",
+        "striked": "$999",
+        "benefits": [
+          "Platforms (Facebook & Instagram)",
+          "15 Design Posts + Copywriting",
+          "Social Media Marketing Strategy",
+          "Competitive Analysis",
+          "Brand Reputation Analysis",
+          "Audit + Recommendation",
+          "Monthly Reporting and Analytics",
+          "1 GIF creatives",
+          "Content Calendar",
+          "Industry and Keyword Research",
+          "Social Media Copywriting",
+          "1 Ads Campaign Setup (Free)"
+        ]
+      },
+      {
+        "name": "SMM ELITE PACKAGE",
+        "price": "$1399 Month",
+        "striked": "$2799.00",
+        "benefits": [
+          "3 Channel Setup",
+          "Platforms (Facebook, Instagram, Twitter)",
+          "18 Post Designs + Copywriting",
+          "Social Media Marketing Strategy",
+          "Competitive Analysis",
+          "Brand Reputation Analysis",
+          "Audit + Recommendation",
+          "Community Management",
+          "Monthly Reporting and Analytics",
+          "3 GIF Creatives",
+          "Content Calendar",
+          "Industry & Keyword Research"
+        ]
+      }
+    ],
+    "Website Maintenance": [
+      {
+        "name": "STARTER PACKAGE (Website Maintenance)",
+        "price": "$49/Month",
+        "striked": "$99 Month",
+        "benefits": [
+          "Making updates on the current features",
+          "Making content related updates",
+          "Performing website version updates and backups",
+          "Security checkups and scans",
+          "Fixing bugs or errors on your website",
+          "Real-time website protection"
+        ]
+      },
+      {
+        "name": "PROFESSIONAL PACKAGE (Website Maintenance)",
+        "price": "$69/Month",
+        "striked": "$1,399",
+        "benefits": [
+          "Making updates on the current features",
+          "Making content related updates",
+          "Performing website version updates and backups",
+          "Security checkups and scans",
+          "Fixing bugs or errors on your website",
+          "Real-time website protection",
+          "Analyzing website for broken links",
+          "Speed optimization",
+          "SEO friendly images and alt-image tags for search engines",
+          "Making content SEO friendly"
+        ]
+      },
+      {
+        "name": "ADVANCED PACKAGE (Website Maintenance)",
+        "price": "$149/Month",
+        "striked": "$2,799",
+        "benefits": [
+          "Making updates on the current features",
+          "Making content related updates",
+          "Performing website version updates and backups",
+          "Security checkups and scans",
+          "Fixing bugs or errors on your website",
+          "Real-time website protection",
+          "Analyzing website for broken links",
+          "Speed optimization",
+          "SEO friendly images and alt-image tags for search engines",
+          "Making content SEO friendly",
+          "Technical support for domain and hosting server",
+          "Web server migrations"
+        ]
+      }
+    ],
+    "Combo": [
+      {
+        "name": "BASIC COMBO PACKAGE",
+        "price": "$699.99",
+        "striked": "",
+        "benefits": [
+          "5 Custom Logo Design Concepts",
+          "By 2 Designers",
+          "Icon Design",
+          "Business Card, Letterhead, Envelope, Fax Template",
+          "MS Word Letterhead",
+          "5 Page Website",
+          "Mobile Responsive",
+          "Team of Expert Designers & Developers",
+          "8 Stock images",
+          "5 Banner Designs",
+          "Free Google Friendly Sitemap",
+          "Complete Deployment",
+          "Facebook Page Design",
+          "YouTube Page Design",
+          "All Final File Formats",
+          "Dedicated Account Manager",
+          "100% Ownership Rights"
+        ]
+      },
+      {
+        "name": "STARTUP COMBO PACKAGE",
+        "price": "$999.99",
+        "striked": "",
+        "benefits": [
+          "Unlimited Logo Design Concepts + Social Media Design",
+          "Mobile Responsive",
+          "3 Dedicated Designers",
+          "Icon Design",
+          "Business Card, Letterhead, Envelope",
+          "MS Word Letterhead",
+          "UNLIMITED Pages Website",
+          "Content Management System (CMS)",
+          "5 Stock Photos + 3 Banner Designs",
+          "Complete Deployment",
+          "Facebook Page Design",
+          "YouTube Page Design",
+          "All Final File Formats",
+          "Dedicated Account Manager",
+          "100% Ownership Rights",
+          "100% Satisfaction Guarantee",
+          "100% Unique Design Guarantee",
+          "100% Money Back Guarantee *"
+        ]
+      },
+      {
+        "name": "PROFESSIONAL COMBO PACKAGE",
+        "price": "$1399.99",
+        "striked": "",
+        "benefits": [
+          "Unlimited Logo Concepts",
+          "8 Dedicated Designers",
+          "Icon Design",
+          "2 Free Custom Stationary Designs",
+          "MS Word Letterhead",
+          "Trifold Brochure Design",
+          "Presentation Folder Design",
+          "Conceptual and Dynamic Liquid Website",
+          "Team of Expert Designers & Developers",
+          "Mobile Responsive",
+          "Online Reservation/Appointment Tool (Optional)",
+          "Custom Forms",
+          "Lead Capturing Forms (Optional)",
+          "Newsfeed Integration",
+          "Social Media Integration",
+          "15 Stock images",
+          "8 Unique Banner Designs"
+        ]
+      },
+      {
+        "name": "CORPORATE COMBO PACKAGE",
+        "price": "$1999.99",
+        "striked": "",
+        "benefits": [
+          "Unlimited Logo Concepts",
+          "8 Dedicated Designers",
+          "Icon Design",
+          "2 Free Custom Stationary Designs",
+          "MS Word Letterhead",
+          "Invoice Design",
+          "Product Catalog Design",
+          "Unlimited Pages Website",
+          "Conceptual and Dynamic Website",
+          "Content Management System (CMS)",
+          "Easy Product Search",
+          "Product Reviews",
+          "Unlimited Products",
+          "Unlimited Categories",
+          "Promotional Product Showcase",
+          "New Product Showcase",
+          "Full Shopping Cart Integration",
+          "Payment Module Integration"
+        ]
+      },
+      {
+        "name": "ELITE COMBO PACKAGE",
+        "price": "$2,999.99",
+        "striked": "",
+        "benefits": [
+          "Complete Custom Design & Development",
+          "Client/User Dashboard Area",
+          "Custom Coding",
+          "Custom PHP Development",
+          "Content Management System (CMS)",
+          "Online Appointment/Scheduling/Online Ordering Integration (Optional)",
+          "Online Payment Integration (Optional)",
+          "Multi Lingual (Optional)",
+          "Custom Dynamic Forms (Optional)",
+          "Signup Area (For Newsletters, Offers etc.)",
+          "Search Bar",
+          "Live Feeds of Social Networks integration (Optional)",
+          "Mobile Responsive Web"
+        ]
+      }
+    ]
+  },
+  "portfolio": [
+    {
+      "title": "Adair Homes",
+      "category": "Digital Marketing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_230744396.png"
+    },
+    {
+      "title": "Audio Library",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/8.webp"
+    },
+    {
+      "title": "Baghead Logo Design",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/5-1.webp"
+    },
+    {
+      "title": "Band Of Travellers",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/07/image_2026-07-09_004405460.jpg"
+    },
+    {
+      "title": "Blackstone",
+      "category": "Digital Marketing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_230848851.png"
+    },
+    {
+      "title": "Branding Cards",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/branding-1.webp"
+    },
+    {
+      "title": "Branding Cards",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/branding-2.webp"
+    },
+    {
+      "title": "Branding Cards",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/branding-3.webp"
+    },
+    {
+      "title": "Branding Cards",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/branding-4.webp"
+    },
+    {
+      "title": "Branding Cards",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/branding-6.webp"
+    },
+    {
+      "title": "Branding Cards",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/branding-8.webp"
+    },
+    {
+      "title": "Car Tracking App",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/5.webp"
+    },
+    {
+      "title": "Chefs App",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/1.jpg"
+    },
+    {
+      "title": "Coffee Swap Logo Design",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/10.webp"
+    },
+    {
+      "title": "Convoy Platform",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/07/image_2026-07-09_004057305.jpg"
+    },
+    {
+      "title": "Health Tracking App",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/port4.png"
+    },
+    {
+      "title": "Houlihan Lawrence",
+      "category": "Digital Marketing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_230634602.png"
+    },
+    {
+      "title": "Job Finding App",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/3.webp"
+    },
+    {
+      "title": "Ka’Chava",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-07-09_002325172.jpg"
+    },
+    {
+      "title": "Life Fitness",
+      "category": "Digital Marketing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_230952467.png"
+    },
+    {
+      "title": "Lorraine Travel",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/07/image_2026-07-09_003623477.jpg"
+    },
+    {
+      "title": "ManpowerGroup",
+      "category": "Digital Marketing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_230905274.png"
+    },
+    {
+      "title": "Music App",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/4.jpg"
+    },
+    {
+      "title": "Nike App Redesign",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/9.webp"
+    },
+    {
+      "title": "Pad Split",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/7.webp"
+    },
+    {
+      "title": "Payment CRM",
+      "category": "Mobile Apps",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/2.webp"
+    },
+    {
+      "title": "Sidecar Health",
+      "category": "Digital Marketing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_230922718.png"
+    },
+    {
+      "title": "Slow Motion Logo Design",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/2-1.webp"
+    },
+    {
+      "title": "Stone Wood Construction",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_203916960-scaled.png"
+    },
+    {
+      "title": "Tovid Ai Logo Design",
+      "category": "Graphic Designing",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/12.webp"
+    },
+    {
+      "title": "Vee-Vee’s African Restaurant",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_203348554-scaled.png"
+    },
+    {
+      "title": "Video Animation Project 1",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/1.mp4"
+    },
+    {
+      "title": "Video Animation Project 2",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/5.mp4"
+    },
+    {
+      "title": "Video Animation Project 3",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/4.mp4"
+    },
+    {
+      "title": "Video Animation Project 4",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/10.mp4"
+    },
+    {
+      "title": "Video Animation Project 5",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/8.mp4"
+    },
+    {
+      "title": "Video Animation Project 6",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/7.mp4"
+    },
+    {
+      "title": "Video Animation Project 7",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/6.mp4"
+    },
+    {
+      "title": "Video Animation Project 8",
+      "category": "Video Animation",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/2.mp4"
+    },
+    {
+      "title": "Wildlife Conservation Society",
+      "category": "Website Design & Development",
+      "image": "https://goexecution.com/wp-content/uploads/2026/06/image_2026-06-30_202600119-scaled.png"
+    }
+  ],
+  "legal": {
+    "privacy": {
+      "intro": [
+        "By using our website or submitting your information, you agree to the practices described in this Privacy Policy."
+      ],
+      "sections": [
+        {
+          "title": "Information We Collect",
+          "paragraphs": [
+            "We may collect personal information when you fill out a form, request a quote, place an order, contact us, subscribe to updates, or communicate with our team.",
+            "This information may include: Full name, Email address, Phone number, Company name, Project details, Billing information, Mailing address, Website or business information, and any additional information voluntarily provided by the user.",
+            "We may also collect non-personal information such as browser type, device information, IP address, pages visited, referral source, and website usage behavior."
+          ]
+        },
+        {
+          "title": "How We Use Your Information",
+          "paragraphs": [
+            "We use collected information to respond to inquiries, process orders and service requests, communicate project updates, provide customer support, improve our website and services, send relevant updates or promotional information, understand client needs and preferences, maintain internal records, and improve user experience.",
+            "We may contact clients through email, phone, SMS, WhatsApp, or other communication channels related to their project or service request."
+          ]
+        },
+        {
+          "title": "Data Protection",
+          "paragraphs": [
+            "We take reasonable steps to protect personal information from unauthorized access, misuse, loss, disclosure, alteration, or destruction.",
+            "While we use industry-standard security practices, no online transmission or electronic storage method is 100% secure. Therefore, we cannot guarantee absolute security."
+          ]
+        },
+        {
+          "title": "Third-Party Sharing",
+          "paragraphs": [
+            "Go Execution does not sell, rent, or trade personal information to third parties.",
+            "We may share information only when necessary with trusted service providers, payment processors, hosting providers, development teams, marketing platforms, or support tools required to deliver our services. These third parties are only allowed to use information as needed to perform services on our behalf.",
+            "We may also disclose information if required by law, legal process, court order, or to protect our rights, safety, users, or business operations."
+          ]
+        },
+        {
+          "title": "Payment Information",
+          "paragraphs": [
+            "Go Execution does not intentionally store sensitive payment card information on its website unless processed through a secure and authorized payment provider.",
+            "Clients are advised not to share confidential payment details, passwords, or sensitive information through unsecured communication channels."
+          ]
+        },
+        {
+          "title": "Cookies Policy",
+          "paragraphs": [
+            "Our website may use cookies and similar technologies to improve user experience, remember preferences, analyze website traffic, and understand how visitors interact with our website.",
+            "Users can disable cookies through their browser settings. However, some website features may not function properly if cookies are disabled."
+          ]
+        },
+        {
+          "title": "Analytics and Tracking",
+          "paragraphs": [
+            "We may use analytics tools to collect general website usage data, such as pages visited, time spent on the website, traffic sources, and user behavior.",
+            "This information helps us improve website performance, design, content, and marketing efforts."
+          ]
+        },
+        {
+          "title": "Social Media Features",
+          "paragraphs": [
+            "Our website may include social media buttons, widgets, pixels, or embedded tools from platforms such as Facebook, Instagram, LinkedIn, Google, or others.",
+            "These tools may collect certain information such as IP address, browser data, or page activity. Your interaction with these tools is governed by the privacy policy of the respective platform."
+          ]
+        },
+        {
+          "title": "Email and Mobile Communication",
+          "paragraphs": [
+            "By submitting your email address or phone number, you consent to receive communication related to your inquiry, project, service updates, promotional offers, or business communication from Go Execution.",
+            "You can opt out of promotional communication at any time by contacting us or following unsubscribe instructions where available.",
+            "For SMS or mobile communication, you may reply \"STOP\" or request removal from our contact list."
+          ]
+        },
+        {
+          "title": "Data Retention",
+          "paragraphs": [
+            "We may retain personal information as long as necessary to provide services, manage client records, comply with legal obligations, resolve disputes, and enforce agreements.",
+            "Users may request deletion or correction of their personal information by contacting us."
+          ]
+        },
+        {
+          "title": "Your Rights",
+          "paragraphs": [
+            "You may request access to the personal information we hold about you. You may also request correction, update, deletion, or restriction of your personal data, subject to applicable legal and business requirements."
+          ]
+        },
+        {
+          "title": "Links to Other Websites",
+          "paragraphs": [
+            "Our website may contain links to third-party websites. Go Execution is not responsible for the privacy practices, content, security, or policies of external websites.",
+            "Users are encouraged to review the privacy policies of any third-party websites they visit."
+          ]
+        },
+        {
+          "title": "Changes to This Privacy Policy",
+          "paragraphs": [
+            "Go Execution may update this Privacy Policy from time to time. Any changes will be posted on this page. Users are encouraged to review this page periodically."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "intro": [
+        "By purchasing, approving, or using our services, the client agrees to the terms mentioned below."
+      ],
+      "sections": [
+        {
+          "title": "Revision Policy",
+          "paragraphs": [
+            "Revisions are provided according to the selected package or agreed project scope. Clients may request revisions within the agreed limits as long as the original concept, direction, and project scope remain the same.",
+            "Revision requests must be clear, consolidated, and related to the original brief. Major changes, new concepts, additional pages, new features, or changes outside the approved scope may require additional charges.",
+            "Standard revision turnaround time may vary depending on the complexity of the request, but we aim to complete revisions as quickly as possible."
+          ]
+        },
+        {
+          "title": "Refund Policy",
+          "paragraphs": [
+            "Refund requests are reviewed on a case-by-case basis and are subject to the project stage, scope, and work already completed.",
+            "A refund may only be considered if the request is made before approval of initial concepts, designs, drafts, mockups, or project direction. Once the client approves the initial work, requests revisions, or confirms continuation of the project, the project will be considered active and the refund request may no longer be applicable.",
+            "No refund will be issued once final files, source files, website access, completed assets, approved designs, or completed deliverables have been provided.",
+            "If a client becomes unresponsive for an extended period, delays feedback, or does not provide required material, Go Execution will not be responsible for project delays. Projects may be placed on hold, and restarting the project may require an additional fee.",
+            "Discounted bundles, custom packages, rush delivery fees, third-party costs, domain, hosting, stock assets, paid tools, plugins, and external service charges are non-refundable."
+          ]
+        },
+        {
+          "title": "Project Approval",
+          "paragraphs": [
+            "Once a client approves a design, content, website layout, logo concept, or any project deliverable, Go Execution will proceed based on that approval. Any major changes after approval may be considered additional work and may require extra charges."
+          ]
+        },
+        {
+          "title": "Client Responsibilities",
+          "paragraphs": [
+            "The client is responsible for providing accurate information, project requirements, content, images, access credentials, brand material, and feedback on time.",
+            "Go Execution will not be responsible for delays caused by incomplete information, late feedback, missing assets, or third-party platform issues."
+          ]
+        },
+        {
+          "title": "Quality Assurance",
+          "paragraphs": [
+            "We aim to deliver work according to the client’s project brief and agreed requirements. Our team follows a professional process to ensure that the final output is aligned with the approved direction.",
+            "However, subjective preferences may vary. Revisions are provided to improve and refine the work within the agreed scope."
+          ]
+        },
+        {
+          "title": "Delivery Policy",
+          "paragraphs": [
+            "Project delivery timelines depend on the selected service, project complexity, client feedback, and required approvals.",
+            "Estimated timelines are shared before or during the project. Delays may occur if the client does not provide timely feedback, required content, approvals, or access.",
+            "Final files, website links, project assets, or deliverables will be shared through email, project dashboard, cloud storage, or any agreed communication method."
+          ]
+        },
+        {
+          "title": "Domain and Hosting",
+          "paragraphs": [
+            "Domain and hosting services are only included if mentioned in the selected package or custom proposal.",
+            "If the client chooses to use their own hosting provider, Go Execution may assist with setup where possible, but third-party hosting performance, downtime, security, backups, or technical issues will not be the responsibility of Go Execution.",
+            "Email accounts are only provided if included in the package or supported by the selected hosting setup."
+          ]
+        },
+        {
+          "title": "Ownership Rights",
+          "paragraphs": [
+            "After full payment is received and the project is completed, ownership rights of the final approved design or deliverable will be transferred to the client, unless otherwise stated.",
+            "Concepts, drafts, unused designs, rejected ideas, internal files, working files, and preliminary versions remain the property of Go Execution unless specifically purchased or agreed in writing."
+          ]
+        },
+        {
+          "title": "Communication Policy",
+          "paragraphs": [
+            "All official communication should be made through Go Execution’s official email, phone number, project dashboard, or approved communication channels.",
+            "Go Execution will not be responsible for any communication, payment request, or instruction received from unauthorized email addresses, numbers, or third parties pretending to represent the company."
+          ]
+        },
+        {
+          "title": "Customer Support",
+          "paragraphs": [
+            "We aim to provide timely customer support for active projects and completed work where applicable. Support availability may depend on the selected package, service type, or maintenance agreement.",
+            "Ongoing support, maintenance, updates, backups, and website changes after project completion may require a separate maintenance plan."
+          ]
+        },
+        {
+          "title": "Limitation of Liability",
+          "paragraphs": [
+            "Go Execution will not be liable for indirect losses, business interruption, loss of revenue, third-party platform issues, hosting downtime, payment gateway issues, plugin failures, social media platform restrictions, search engine algorithm changes, or any external factors beyond our control."
+          ]
+        },
+        {
+          "title": "Changes to Terms",
+          "paragraphs": [
+            "Go Execution reserves the right to update or modify these Terms & Conditions at any time. Updated terms will be posted on the website and will apply from the date of publication."
+          ]
+        }
+      ]
+    }
+  }
+}

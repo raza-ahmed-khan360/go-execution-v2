@@ -1,0 +1,139 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+
+const interactiveSelector = "a, button, input, textarea, select, .ge-interactive, .ge-hero__image-card";
+
+export function SiteEffects() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reveals = Array.from(document.querySelectorAll<HTMLElement>(".ge-reveal"));
+    const counters = Array.from(document.querySelectorAll<HTMLElement>("[data-counter]"));
+
+    reveals.forEach((element, index) => {
+      element.style.setProperty("--ge-reveal-order", String(index % 4));
+    });
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      reveals.forEach((element) => element.classList.add("is-visible"));
+      counters.forEach((element) => {
+        element.textContent = `${element.dataset.counter ?? "0"}${element.dataset.suffix ?? ""}`;
+      });
+    } else {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.14, rootMargin: "0px 0px -5% 0px" },
+      );
+      reveals.forEach((element) => revealObserver.observe(element));
+
+      const counterObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const element = entry.target as HTMLElement;
+            const target = Number(element.dataset.counter ?? 0);
+            const suffix = element.dataset.suffix ?? "";
+            const startedAt = performance.now();
+            const duration = 1100;
+
+            const update = (now: number) => {
+              const progress = Math.min((now - startedAt) / duration, 1);
+              const eased = 1 - (1 - progress) ** 3;
+              element.textContent = `${Math.round(target * eased)}${suffix}`;
+              if (progress < 1) requestAnimationFrame(update);
+            };
+
+            requestAnimationFrame(update);
+            counterObserver.unobserve(element);
+          });
+        },
+        { threshold: 0.5 },
+      );
+      counters.forEach((element) => counterObserver.observe(element));
+
+      const cursor = document.querySelector<HTMLElement>(".ge-custom-cursor");
+      if (!cursor || !window.matchMedia("(pointer: fine)").matches) {
+        return () => {
+          revealObserver.disconnect();
+          counterObserver.disconnect();
+        };
+      }
+
+      let frame = 0;
+      let mouseX = 0;
+      let mouseY = 0;
+      let cursorX = 0;
+      let cursorY = 0;
+      let started = false;
+      let magneticTarget: HTMLElement | null = null;
+
+      const renderCursor = () => {
+        frame = 0;
+        cursorX += (mouseX - cursorX) * 0.22;
+        cursorY += (mouseY - cursorY) * 0.22;
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+      };
+
+      const onPointerMove = (event: PointerEvent) => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        const target = event.target instanceof Element ? event.target : null;
+        cursor.classList.toggle("ge-cursor-hover", Boolean(target?.closest(interactiveSelector)));
+
+        const nextMagneticTarget = target?.closest<HTMLElement>(".ge-magnetic") ?? null;
+        if (magneticTarget && magneticTarget !== nextMagneticTarget) magneticTarget.style.transform = "";
+        magneticTarget = nextMagneticTarget;
+        if (magneticTarget) {
+          const rect = magneticTarget.getBoundingClientRect();
+          const x = (event.clientX - rect.left - rect.width / 2) * 0.12;
+          const y = (event.clientY - rect.top - rect.height / 2) * 0.12;
+          magneticTarget.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        }
+
+        if (!started) {
+          cursorX = mouseX;
+          cursorY = mouseY;
+          started = true;
+          cursor.style.opacity = "1";
+        }
+        if (!frame) frame = requestAnimationFrame(renderCursor);
+      };
+
+      const onPointerLeave = () => {
+        cursor.style.opacity = "0";
+        if (magneticTarget) magneticTarget.style.transform = "";
+        magneticTarget = null;
+      };
+      const onPointerEnter = () => {
+        if (started) cursor.style.opacity = "1";
+      };
+
+      document.addEventListener("pointermove", onPointerMove, { passive: true });
+      document.documentElement.addEventListener("pointerleave", onPointerLeave);
+      document.documentElement.addEventListener("pointerenter", onPointerEnter);
+
+      return () => {
+        revealObserver.disconnect();
+        counterObserver.disconnect();
+        document.removeEventListener("pointermove", onPointerMove);
+        document.documentElement.removeEventListener("pointerleave", onPointerLeave);
+        document.documentElement.removeEventListener("pointerenter", onPointerEnter);
+        if (frame) cancelAnimationFrame(frame);
+        if (magneticTarget) magneticTarget.style.transform = "";
+      };
+    }
+
+    return undefined;
+  }, [pathname]);
+
+  return null;
+}
