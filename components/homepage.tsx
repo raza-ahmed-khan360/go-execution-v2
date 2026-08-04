@@ -5,6 +5,7 @@ import { ServicesCarousel } from "@/components/services-carousel";
 import { MobileHeroStory } from "@/components/mobile-hero-story";
 import { DesktopHeroBackground } from "@/components/desktop-hero-background";
 import { FaqAccordion, PortfolioGrid, PricingGrid } from "@/components/interactive-sections";
+import { TestimonialShowcase, type Testimonial } from "@/components/testimonial-showcase";
 
 const services = [
   { slug: "website-design-development", title: "Website Design & Development", copy: "Conversion-focused websites engineered to look exceptional, load quickly, and turn attention into action." },
@@ -46,16 +47,16 @@ const growthSteps = [
   },
 ] as const;
 
-const testimonials = [
-  ["Go Execution transformed our online presence. The new website generated 127% more qualified leads in the first quarter. Their strategic approach made all the difference.", "Maya Chen", "CEO, Meridian Labs"],
-  ["We hit $2.4M in revenue in our first year with the ecommerce platform they built. The subscription system works flawlessly and our customers love the experience.", "Raj Patel", "Founder, Coastal Roasters"],
-  ["Their digital marketing campaigns delivered a 312% ROI. We generated 847 qualified leads and closed $4.2M in sales. Best agency we've worked with.", "Lucia Torres", "Marketing Director, Velocity Motors"],
-  ["The website redesign increased consultation requests by 94%. We now rank on page 1 for all our target keywords. Their SEO expertise is exceptional.", "Kwame Asante", "Managing Partner, Zenith Legal"],
-  ["The brand identity they created perfectly captures our clean beauty philosophy. We gained 12,000 Instagram followers in 3 months and got featured in 5 major publications.", "Anika Bergström", "Brand Manager, Lumina Cosmetics"],
-  ["The property management platform reduced our admin time by 73%. We now manage 240 properties efficiently with their custom solution.", "James Mitchell", "Owner, Horizon Real Estate"],
-  ["The explainer videos they produced got 2.4M views and increased our conversion rate by 34%. The quality and storytelling are outstanding.", "Sofia Rodriguez", "Director, Pulse Marketing"],
-  ["Our online ordering platform generated $180K in the first year. The custom cake builder is exactly what we needed. Customer satisfaction is at 92%.", "Chen Wei", "Owner, Artisan Bakery"],
-  ["The rebrand positioned us perfectly for enterprise clients. We saw a 156% increase in qualified leads and secured 3 major partnerships.", "Emma Thompson", "VP Marketing, TechFlow Solutions"],
+const testimonials: readonly Testimonial[] = [
+  { quote: "Go Execution transformed our online presence. The new website generated 127% more qualified leads in the first quarter. Their strategic approach made all the difference.", name: "Maya Chen", role: "CEO, Meridian Labs", metric: "127%", metricLabel: "more qualified leads" },
+  { quote: "We hit $2.4M in revenue in our first year with the ecommerce platform they built. The subscription system works flawlessly and our customers love the experience.", name: "Raj Patel", role: "Founder, Coastal Roasters", metric: "$2.4M", metricLabel: "first-year revenue" },
+  { quote: "Their digital marketing campaigns delivered a 312% ROI. We generated 847 qualified leads and closed $4.2M in sales. Best agency we've worked with.", name: "Lucia Torres", role: "Marketing Director, Velocity Motors", metric: "312%", metricLabel: "campaign return on investment" },
+  { quote: "The website redesign increased consultation requests by 94%. We now rank on page 1 for all our target keywords. Their SEO expertise is exceptional.", name: "Kwame Asante", role: "Managing Partner, Zenith Legal", metric: "94%", metricLabel: "more consultation requests" },
+  { quote: "The brand identity they created perfectly captures our clean beauty philosophy. We gained 12,000 Instagram followers in 3 months and got featured in 5 major publications.", name: "Anika Bergström", role: "Brand Manager, Lumina Cosmetics", metric: "12K", metricLabel: "new followers in 90 days" },
+  { quote: "The property management platform reduced our admin time by 73%. We now manage 240 properties efficiently with their custom solution.", name: "James Mitchell", role: "Owner, Horizon Real Estate", metric: "73%", metricLabel: "less administration time" },
+  { quote: "The explainer videos they produced got 2.4M views and increased our conversion rate by 34%. The quality and storytelling are outstanding.", name: "Sofia Rodriguez", role: "Director, Pulse Marketing", metric: "2.4M", metricLabel: "campaign video views" },
+  { quote: "Our online ordering platform generated $180K in the first year. The custom cake builder is exactly what we needed. Customer satisfaction is at 92%.", name: "Chen Wei", role: "Owner, Artisan Bakery", metric: "$180K", metricLabel: "online sales in year one" },
+  { quote: "The rebrand positioned us perfectly for enterprise clients. We saw a 156% increase in qualified leads and secured 3 major partnerships.", name: "Emma Thompson", role: "VP Marketing, TechFlow Solutions", metric: "156%", metricLabel: "growth in qualified leads" },
 ] as const;
 
 const faqs = [
@@ -83,25 +84,7 @@ function HeroContent() {
   );
 }
 
-function TestimonialCard({ item }: { item: (typeof testimonials)[number] }) {
-  return (
-    <blockquote className="ge-marquee-card">
-      <span className="ge-marquee-quote-icon">“</span>
-      <p>{item[0]}</p>
-      <footer>
-        <div className="ge-marquee-avatar">{item[1][0]}</div>
-        <div className="ge-marquee-author-info"><strong>{item[1]}</strong><span>{item[2]}</span></div>
-      </footer>
-    </blockquote>
-  );
-}
-
 export function Homepage() {
-  const firstRow = testimonials.slice(0, 5);
-  const secondRow = testimonials.slice(5);
-  const firstTrack = [...firstRow, ...firstRow];
-  const secondTrack = [...secondRow, ...secondRow, ...secondRow];
-
   return (
     <main id="primary" className="site-main">
       <section className="ge-hero ge-hero--desktop">
@@ -140,7 +123,7 @@ export function Homepage() {
         <div className="ge-why-cards">{["Strategy and delivery under one roof", "Transparent scope and communication", "Premium creative with commercial purpose", "Responsive, scalable, performance-aware builds"].map((title, index) => <div className="ge-why-card ge-reveal" data-reveal="right" style={{ transitionDelay: `${index * 90}ms` }} key={title}><span className="ge-why-card__num">{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><span className="ge-why-card__arrow" aria-hidden="true">↗</span></div>)}</div>
       </div></section>
 
-      <section className="ge-section ge-testimonials-marquee-section"><div className="ge-container"><div className="ge-section-heading ge-reveal"><p className="ge-eyebrow ge-eyebrow--light">Client perspective</p><h2>Client Success Stories</h2></div></div><div className="ge-reveal"><div className="ge-marquee-wrapper"><div className="ge-marquee-track">{firstTrack.map((item, index) => <TestimonialCard item={item} key={`${item[1]}-${index}`} />)}</div><div className="ge-marquee-track ge-marquee-track--reverse">{secondTrack.map((item, index) => <TestimonialCard item={item} key={`${item[1]}-${index}`} />)}</div></div></div></section>
+      <TestimonialShowcase items={testimonials} />
 
       <section className="ge-section ge-faq"><div className="ge-container"><div className="ge-section-heading ge-section-heading--center ge-reveal" style={{ marginBottom: 60 }}><h2 style={{ fontSize: "clamp(32px, 5vw, 56px)", margin: 0, lineHeight: 1.1 }}>Frequently Asked<br /><span style={{ fontFamily: "var(--ge-serif)", fontStyle: "italic", fontWeight: 400 }}>Questions</span></h2></div>
         <div className="ge-faq-grid ge-reveal"><div className="ge-faq-card"><div className="ge-faq-card-header"><div className="ge-faq-email"><span className="ge-faq-email-label">Email</span><a href="mailto:info@goexecution.com" className="ge-faq-email-link">info@goexecution.com</a></div><Link href="/contact" className="ge-faq-contact-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg><span>Get in touch</span></Link></div>
