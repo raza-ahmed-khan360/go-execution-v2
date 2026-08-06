@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type FocusEvent } from "react";
+import { useEffect, useState } from "react";
 
 export type Testimonial = {
   quote: string;
@@ -10,38 +10,30 @@ export type Testimonial = {
   metricLabel: string;
 };
 
-const AUTOPLAY_DELAY = 7000;
+const AUTOPLAY_DELAY = 3500;
 
 export function TestimonialShowcase({ items }: { items: readonly Testimonial[] }) {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const item = items[active];
 
   useEffect(() => {
-    if (paused || items.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (items.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const timer = window.setTimeout(() => {
       setActive((current) => (current + 1) % items.length);
     }, AUTOPLAY_DELAY);
 
     return () => window.clearTimeout(timer);
-  }, [active, items.length, paused]);
+  }, [active, items.length]);
 
   if (!item) return null;
 
   const show = (index: number) => setActive((index + items.length) % items.length);
-  const handleBlur = (event: FocusEvent<HTMLElement>) => {
-    if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
-  };
 
   return (
     <section
       className="ge-testimonial-showcase"
       aria-labelledby="testimonial-showcase-title"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={handleBlur}
     >
       <div className="ge-testimonial-showcase__grid" aria-hidden="true" />
       <div className="ge-testimonial-showcase__orbit" aria-hidden="true" />
@@ -59,11 +51,6 @@ export function TestimonialShowcase({ items }: { items: readonly Testimonial[] }
             <span>Measured impact</span>
             <strong>{item.metric}</strong>
             <p>{item.metricLabel}</p>
-            <div className="ge-testimonial-showcase__index" aria-hidden="true">
-              <b>{String(active + 1).padStart(2, "0")}</b>
-              <i />
-              <span>{String(items.length).padStart(2, "0")}</span>
-            </div>
           </aside>
 
           <blockquote className="ge-testimonial-showcase__quote" key={`quote-${active}`}>
@@ -90,22 +77,7 @@ export function TestimonialShowcase({ items }: { items: readonly Testimonial[] }
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
             </button>
           </div>
-          <span className={`ge-testimonial-showcase__timer${paused ? " is-paused" : ""}`} key={`timer-${active}`} aria-hidden="true" />
-        </div>
-
-        <div className="ge-testimonial-showcase__clients" aria-label="Choose a client story">
-          {items.map((testimonial, index) => (
-            <button
-              type="button"
-              className={index === active ? "is-active" : ""}
-              aria-pressed={index === active}
-              onClick={() => show(index)}
-              key={testimonial.name}
-            >
-              <span aria-hidden="true">{testimonial.name.charAt(0)}</span>
-              <span><strong>{testimonial.name}</strong><small>{testimonial.role.split(",")[0]}</small></span>
-            </button>
-          ))}
+          <span className="ge-testimonial-showcase__timer" key={`timer-${active}`} aria-hidden="true" />
         </div>
       </div>
     </section>

@@ -12,13 +12,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Service pages: live indexed URLs at root -> new /services/[slug] structure
-      { source: "/website-design-development/", destination: "/services/website-design-development/", permanent: true },
-      { source: "/seo-services/", destination: "/services/seo-services/", permanent: true },
-      { source: "/digital-marketing/", destination: "/services/digital-marketing/", permanent: true },
-      { source: "/logo-design/", destination: "/services/logo-design/", permanent: true },
-      { source: "/mobile-apps/", destination: "/services/mobile-apps/", permanent: true },
-      { source: "/video-animation/", destination: "/services/video-animation/", permanent: true },
+      // Service pages: redirect /services/:slug to top-level /:slug/
+      { source: "/services/:slug/", destination: "/:slug/", permanent: true },
+      { source: "/services/:slug", destination: "/:slug/", permanent: true },
+
+      // Renamed legal pages
+      { source: "/privacy/", destination: "/privacy-policy/", permanent: true },
+      { source: "/terms/", destination: "/terms-and-conditions/", permanent: true },
 
       // Old sitemap compatibility
       { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },

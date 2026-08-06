@@ -104,7 +104,7 @@ export function Homepage() {
       <section className="ge-section ge-problems ge-growth-redesign ge-growth-redesign--story"><div className="ge-container">
         <div className="ge-problems-heading ge-reveal"><p className="ge-eyebrow">Limited growth offer</p><h2>Digital Strategy & Growth</h2><p className="ge-growth-redesign__intro">Four connected growth systems designed to sharpen your brand, improve conversion, and create accountable momentum.</p></div>
         <div className="ge-scroll-section"><div className="ge-scroll-text">
-          {growthSteps.map((step, index) => <article className={`ge-scroll-step ge-growth-card ge-growth-story ge-reveal${index === 0 ? " is-active" : ""}`} data-index={index} data-reveal={index % 2 === 0 ? "left" : "right"} key={step.title}><div className="ge-scroll-step__mobile-img-wrap"><Image src={step.image} alt={step.alt} fill sizes="(max-width: 820px) 100vw, 50vw" quality={80} /></div><div className="ge-growth-story__content"><div className="ge-scroll-step__header"><span className="ge-scroll-step__badge">{String(index + 1).padStart(2, "0")}</span><span className="ge-growth-story__label">Growth system</span></div><h3>{step.title}</h3><p>{step.copy}</p><span className="ge-growth-story__line" aria-hidden="true" /></div></article>)}
+          {growthSteps.map((step, index) => <article className={`ge-scroll-step ge-growth-card ge-growth-story ge-reveal${index === 0 ? " is-active" : ""}`} data-index={index} data-reveal={index % 2 === 0 ? "left" : "right"} key={step.title} style={{ "--card-index": index } as React.CSSProperties}><div className="ge-scroll-step__mobile-img-wrap"><Image src={step.image} alt={step.alt} fill sizes="(max-width: 820px) 100vw, 50vw" quality={80} /></div><div className="ge-growth-story__content"><div className="ge-scroll-step__header"><span className="ge-scroll-step__badge">{String(index + 1).padStart(2, "0")}</span><span className="ge-growth-story__label">Growth system</span></div><h3>{step.title}</h3><p>{step.copy}</p><span className="ge-growth-story__line" aria-hidden="true" /></div></article>)}
         </div></div>
       </div></section>
 
@@ -118,17 +118,33 @@ export function Homepage() {
         <PortfolioGrid items={content.portfolio.filter((project) => project.category === "Website Design & Development")} initialLimit={6} includeAll={false} deferCatalogue />
       </div></section>
 
-      <section className="ge-section ge-why ge-why--option-3 ge-why--split"><div className="ge-why__watermark" aria-hidden="true"><Image src="/assets/images/ce-icon.png" alt="" width={1200} height={1200} sizes="100vw" /></div><div className="ge-container">
-        <div className="ge-section-heading ge-section-heading--center ge-reveal"><p className="ge-eyebrow">Why Go Execution</p><h2>Built for momentum.<br />Accountable by design.</h2><p>Strategy, creative, technology, and marketing move together under one focused growth team.</p><Link className="ge-why--split__link" href="/about">Discover our approach <span aria-hidden="true">↗</span></Link></div>
-        <div className="ge-why-cards">{["Strategy and delivery under one roof", "Transparent scope and communication", "Premium creative with commercial purpose", "Responsive, scalable, performance-aware builds"].map((title, index) => <div className="ge-why-card ge-reveal" data-reveal="right" style={{ transitionDelay: `${index * 90}ms` }} key={title}><span className="ge-why-card__num">{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><span className="ge-why-card__arrow" aria-hidden="true">↗</span></div>)}</div>
+      <section className="ge-section ge-why ge-why--split"><div className="ge-why__watermark" aria-hidden="true"><Image src="/assets/images/ce-icon.png" alt="" width={1200} height={1200} sizes="100vw" /></div><div className="ge-container ge-why__grid">
+        <div className="ge-why__lead ge-reveal" data-reveal="left"><p className="ge-eyebrow ge-eyebrow--light">Why Go Execution</p><h2>Built for momentum.<br />Accountable by design.</h2><p>Strategy, creative, technology, and marketing move together under one focused growth team.</p><Link className="ge-why__cta-btn" href="/about"><span>Discover our approach</span><b aria-hidden="true">↗</b></Link></div>
+        <div className="ge-why-cards">
+          {[
+            { title: "Strategy & Delivery Under One Roof", copy: "No agency hand-offs. Strategy, design, engineering, and performance marketing work under one focused growth team." },
+            { title: "Transparent Scope & Communication", copy: "Clear milestones, direct updates, and zero hidden costs so you always know your project's trajectory." },
+            { title: "Premium Creative with Purpose", copy: "Aesthetics engineered for commercial impact. We craft high-end designs that capture attention and convert." },
+            { title: "Scalable, High-Performance Builds", copy: "Lightning-fast architecture engineered for search visibility, enterprise security, and frictionless expansion." },
+          ].map((item, index) => (
+            <div className="ge-why-card ge-reveal" data-reveal="right" style={{ "--card-index": index, transitionDelay: `${index * 120}ms` } as React.CSSProperties} key={item.title}>
+              <div className="ge-why-card__top">
+                <span className="ge-why-card__num">{String(index + 1).padStart(2, "0")}</span>
+                <span className="ge-why-card__arrow" aria-hidden="true">↗</span>
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.copy}</p>
+            </div>
+          ))}
+        </div>
       </div></section>
 
       <TestimonialShowcase items={testimonials} />
 
-      <section className="ge-section ge-faq"><div className="ge-container"><div className="ge-section-heading ge-section-heading--center ge-reveal" style={{ marginBottom: 60 }}><h2 style={{ fontSize: "clamp(32px, 5vw, 56px)", margin: 0, lineHeight: 1.1 }}>Frequently Asked<br /><span style={{ fontFamily: "var(--ge-serif)", fontStyle: "italic", fontWeight: 400 }}>Questions</span></h2></div>
-        <div className="ge-faq-grid ge-reveal"><div className="ge-faq-card"><div className="ge-faq-card-header"><div className="ge-faq-email"><span className="ge-faq-email-label">Email</span><a href="mailto:info@goexecution.com" className="ge-faq-email-link">info@goexecution.com</a></div><Link href="/contact" className="ge-faq-contact-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg><span>Get in touch</span></Link></div>
+      <section className="ge-section ge-faq"><div className="ge-container"><div className="ge-section-heading ge-reveal" style={{ marginBottom: 48 }}><p className="ge-eyebrow">Clear Answers</p><h2>Frequently Asked Questions</h2></div>
+        <div className="ge-faq-grid ge-reveal"><div className="ge-faq-card"><div className="ge-faq-card-header"><div className="ge-faq-email"><span className="ge-faq-email-label">Have questions? Email us directly</span><a href="mailto:justin@goexecution.com" className="ge-faq-email-link">justin@goexecution.com</a></div><Link href="/contact" className="ge-button ge-button--gold ge-magnetic ge-faq-contact-btn"><span>Get in touch</span><span aria-hidden="true">↗</span></Link></div>
           <FaqAccordion items={faqs} hoverToOpen idPrefix="home-faq" className="ge-faq-accordion" />
-        </div><div className="ge-faq-image-wrapper"><Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=70&fit=crop" alt="Digital Agency Team" className="ge-faq-img" fill sizes="(max-width: 991px) 100vw, 50vw" quality={75} /></div></div>
+        </div><div className="ge-faq-image-wrapper"><Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=70&fit=crop" alt="Go Execution Digital Agency Team" className="ge-faq-img" fill sizes="(max-width: 991px) 100vw, 50vw" quality={85} /><div className="ge-faq-image-badge"><span className="ge-faq-image-badge__dot" /><div className="ge-faq-image-badge__text"><strong>Direct Access to Founders</strong><span>Fast responses within 2 hours</span></div></div></div></div>
       </div></section>
 
       <section className="ge-section ge-pricing"><div className="ge-container"><div className="ge-section-heading ge-reveal"><div><p className="ge-eyebrow">Growth offers</p><h2>Flexible Pricing Packages</h2></div></div>

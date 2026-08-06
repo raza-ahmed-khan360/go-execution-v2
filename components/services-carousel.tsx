@@ -45,7 +45,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
           return (
             <a
               className={`ge-services-3d__card ge-services-3d__card--slot-${slot}${isHovered ? " is-hovered" : ""}`}
-              href={`/services/${service.slug}`}
+              href={`/${service.slug}/`}
               aria-current={isActive ? "true" : undefined}
               aria-hidden={!isVisible ? true : undefined}
               tabIndex={isVisible ? 0 : -1}

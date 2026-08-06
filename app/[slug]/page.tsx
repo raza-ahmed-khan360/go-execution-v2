@@ -3,21 +3,48 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, formatBlogDate, getBlogPost } from "@/lib/blog-posts";
-import { JsonLd, buildArticle, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { ServiceDetailView } from "@/components/service-detail-view";
+import { JsonLd, buildArticle, buildService, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 import { site } from "@/lib/seo/site";
+import content from "@/lib/wp-content.json";
+
+type Service = {
+  title: string;
+  image: string;
+  eyebrow: string;
+  intro: string;
+  overview: string;
+  capabilities: string[];
+  process: string[][];
+  faq: string[][];
+};
+
+const services = content.services as Record<string, Service>;
 
 type Props = { params: Promise<{ slug: string }> };
 
-// Only the known post slugs resolve here; every other root path 404s
-// instead of being swallowed by this catch-all segment.
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return blogPosts.map(({ slug }) => ({ slug }));
+  const blogSlugs = blogPosts.map(({ slug }) => ({ slug }));
+  const serviceSlugs = Object.keys(services).map((slug) => ({ slug }));
+  return [...blogSlugs, ...serviceSlugs];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getBlogPost((await params).slug);
+  const { slug } = await params;
+  const service = services[slug];
+  if (service) {
+    const path = `/${slug}/`;
+    return {
+      title: { absolute: service.title },
+      description: service.intro,
+      alternates: { canonical: path },
+      openGraph: { title: service.title, description: service.intro, url: path },
+    };
+  }
+
+  const post = getBlogPost(slug);
   if (!post) return {};
 
   const path = `/${post.slug}/`;
@@ -43,12 +70,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ArticlePage({ params }: Props) {
-  const post = getBlogPost((await params).slug);
+export default async function SlugPage({ params }: Props) {
+  const { slug } = await params;
+
+  // Check if slug is a Service Page
+  const service = services[slug];
+  if (service) {
+    const path = `/${slug}/`;
+    const schema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        buildService({ path, name: service.title, description: service.intro }),
+        buildWebPage({ path, title: service.title }),
+        buildBreadcrumbList([
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services/" },
+          { name: service.title, url: path },
+        ]),
+      ],
+    };
+
+    return (
+      <>
+        <JsonLd data={schema} />
+        <main id="primary" className="site-main">
+          <ServiceDetailView slug={slug} service={service} />
+        </main>
+      </>
+    );
+  }
+
+  // Check if slug is a Blog Post
+  const post = getBlogPost(slug);
   if (!post) notFound();
 
   const path = `/${post.slug}/`;
-  const related = blogPosts.filter(({ slug }) => slug !== post.slug)[0];
+  const related = blogPosts.filter(({ slug: s }) => s !== post.slug)[0];
 
   const schema = {
     "@context": "https://schema.org",

@@ -28,7 +28,7 @@ export default async function Portfolio({ searchParams }: { searchParams: Promis
   return (
     <>
       <JsonLd data={schema} />
-      <main id="primary" className="site-main"><PageHero eyebrow="Selected portfolio" title="Our Portfolio & Case Studies" copy="See how we combine strategy, design, and technology to solve real business challenges." /><section className="ge-section ge-portfolio-page"><div className="ge-container"><PortfolioGrid items={content.portfolio} initialCategory={category} /></div></section><ConsultationCta /></main>
+      <main id="primary" className="site-main"><PageHero eyebrow="Selected portfolio" title="Our Portfolio & Case Studies" copy="See how we combine strategy, design, and technology to solve real business challenges." /><section className="ge-section ge-portfolio-page"><div className="ge-container"><PortfolioGrid items={content.portfolio} initialCategory={category} /></div></section></main>
     </>
   );
 }

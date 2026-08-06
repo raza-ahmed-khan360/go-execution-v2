@@ -8,7 +8,7 @@ const cards = [
   ["bottom: -12%; left: 5%", "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=520&q=65&fit=crop"],
   ["top: -10%; right: -8%", "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=520&q=65&fit=crop"],
   ["bottom: -8%; right: -5%", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=520&q=65&fit=crop"],
-  ["top: 30%; left: 42%", "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=520&q=65&fit=crop"],
+  ["top: 55%; left: 80%", "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=520&q=65&fit=crop"],
 ] as const;
 
 export function DesktopHeroBackground() {

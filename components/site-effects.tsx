@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-const interactiveSelector = "a, button, input, textarea, select, .ge-interactive, .ge-hero__image-card";
+const interactiveSelector = "a, button, input, textarea, select, label, .ge-interactive, .ge-project, .ge-service-card, .ge-faq-card, .ge-price-card, .ge-growth-card, .ge-hero__image-card, [role='button'], [tabindex]";
 
 export function SiteEffects() {
   const pathname = usePathname();

@@ -27,7 +27,7 @@ export default function Pricing() {
   return (
     <>
       <JsonLd data={schema} />
-      <main id="primary" className="site-main"><PageHero eyebrow="Packages" title="Flexible Pricing Plans" copy="We deliver high-end execution with structured, transparent pricing. Custom scopes are available upon request." /><section className="ge-section ge-pricing-page"><div className="ge-container"><PricingGrid groups={content.pricing} /></div></section><ConsultationCta /></main>
+      <main id="primary" className="site-main"><PageHero eyebrow="Packages" title="Flexible Pricing Plans" copy="We deliver high-end execution with structured, transparent pricing. Custom scopes are available upon request." /><section className="ge-section ge-pricing-page"><div className="ge-container"><PricingGrid groups={content.pricing} /></div></section></main>
     </>
   );
 }

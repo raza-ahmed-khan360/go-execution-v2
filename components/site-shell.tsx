@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { type FormEvent, useEffect, useRef, useState } from "react";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+
 
 const dropdowns = {
   portfolio: [
@@ -14,12 +16,12 @@ const dropdowns = {
     ["Mobile Apps", "/portfolio?category=mobile-apps"],
   ],
   services: [
-    ["Website Design & Development", "/services/website-design-development"],
-    ["Graphic Designing", "/services/logo-design"],
-    ["Video Animation", "/services/video-animation"],
-    ["SEO Services", "/services/seo-services"],
-    ["Digital Marketing", "/services/digital-marketing"],
-    ["Mobile Apps", "/services/mobile-apps"],
+    ["Website Design & Development", "/website-design-development/"],
+    ["Graphic Designing", "/logo-design/"],
+    ["Video Animation", "/video-animation/"],
+    ["SEO Services", "/seo-services/"],
+    ["Digital Marketing", "/digital-marketing/"],
+    ["Mobile Apps", "/mobile-apps/"],
   ],
 } as const;
 
@@ -139,12 +141,20 @@ export function Header() {
     <header ref={headerRef} className={`ge-header${isFixed ? " is-fixed" : ""}${isOverDark ? " is-over-dark" : ""}`}>
       <div className="ge-container ge-header__inner">
         <Link className="ge-brand" href="/" aria-label="Go Execution home">
-          <Image src={isOverDark ? "/assets/images/logo-light.png" : "/assets/images/logo-dark.png"} alt="Go Execution" width={340} height={79} priority />
+          <Image src="/assets/images/logo-dark.png" alt="Go Execution" width={340} height={79} priority />
         </Link>
         <button className="ge-menu-toggle" type="button" aria-expanded={open} aria-controls="ge-primary-menu" onClick={() => { setOpen((current) => !current); setDropdown(null); }}>
           <span /><span /><span className="screen-reader-text">Toggle menu</span>
         </button>
         <nav id="ge-primary-menu" className={`ge-navigation ${open ? "is-open" : ""}`} aria-label="Primary navigation">
+          <div className="ge-mobile-menu-header">
+            <Link className="ge-brand" href="/" onClick={closeNavigation} aria-label="Go Execution home">
+              <Image src="/assets/images/logo-light.png" alt="Go Execution" width={180} height={42} priority />
+            </Link>
+            <button className="ge-mobile-menu-close" type="button" onClick={closeNavigation} aria-label="Close menu">
+              ✕
+            </button>
+          </div>
           <ul className="ge-menu">
             <li><Link href="/" onClick={closeNavigation}>Home</Link></li>
             {renderDropdown("portfolio", "Portfolio")}
@@ -153,7 +163,7 @@ export function Header() {
             <li><Link href="/about" onClick={closeNavigation}>About</Link></li>
             <li><Link href="/contact" onClick={closeNavigation}>Contact</Link></li>
           </ul>
-          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Free</span><span>Consultation</span></Link>
+          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Free Consultation ↗</span></Link>
         </nav>
       </div>
     </header>
@@ -186,6 +196,35 @@ export function Footer() {
           <div className="ge-footer__brand-block">
             <Image className="ge-footer__logo" src="/assets/images/logo-light.png" alt="Go Execution" width={360} height={84} />
             <p>We are a multidisciplinary digital agency built for businesses that expect more than attractive ideas—they expect progress.</p>
+            <div className="ge-footer__socials" aria-label="Social Media Links">
+              <a
+                href="https://wa.me/17738653770"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp (+1 773 865-3770)"
+                className="ge-footer__social-link ge-footer__social-link--whatsapp"
+              >
+                <FaWhatsapp className="ge-footer__social-icon" />
+              </a>
+              <a
+                href="https://www.facebook.com/GoExecution"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="ge-footer__social-link ge-footer__social-link--facebook"
+              >
+                <FaFacebookF className="ge-footer__social-icon" />
+              </a>
+              <a
+                href="https://www.instagram.com/go_execution"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="ge-footer__social-link ge-footer__social-link--instagram"
+              >
+                <FaInstagram className="ge-footer__social-icon" />
+              </a>
+            </div>
           </div>
           <div className="ge-footer__newsletter">
             <p className="ge-footer__newsletter-title">Join Our Newsletter</p>
@@ -202,8 +241,8 @@ export function Footer() {
         </div>
         <nav className="ge-footer__nav" aria-label="Footer navigation">
           <Link className="is-active" href="/">Home</Link>
-          <Link href="/portfolio">Portfolio <ChevronDownIcon className="ge-footer__nav-icon" /></Link>
-          <Link href="/services">Services <ChevronDownIcon className="ge-footer__nav-icon" /></Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/services">Services</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>

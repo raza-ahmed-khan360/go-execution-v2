@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { ExecutingLoader } from "@/components/executing-loader";
+import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SiteEffects } from "@/components/site-effects";
 import { Footer, Header } from "@/components/site-shell";
 import "./globals.css";
@@ -60,8 +61,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={poppins.variable} data-scroll-behavior="smooth">
-      <body className="ge-loaded">
+    <html lang="en" className={poppins.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <body className="ge-loaded" suppressHydrationWarning>
         <ExecutingLoader />
         <a className="ge-skip-link" href="#primary">
           Skip to content
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <FloatingWhatsApp />
         <div className="ge-custom-cursor" aria-hidden="true" />
         <SiteEffects />
       </body>

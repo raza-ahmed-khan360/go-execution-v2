@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { startTransition, useMemo, useState } from "react";
+import { useEffect, useRef, startTransition, useMemo, useState } from "react";
 import { PortfolioCard, type PortfolioItem } from "@/components/portfolio-card";
 
 type Package = {
@@ -56,8 +56,42 @@ export function PortfolioGrid({
     [active, catalogue],
   );
   const shown = filtered.slice(0, visibleCount);
+  const filterRef = useRef<HTMLDivElement>(null);
+  const isInteractingRef = useRef(false);
 
-  const chooseCategory = (category: string) => {
+  useEffect(() => {
+    const isMobile = () => window.innerWidth <= 820;
+    let intervalId: NodeJS.Timeout;
+
+    const startAutoSlide = () => {
+      intervalId = setInterval(() => {
+        if (!isMobile() || !filterRef.current || isInteractingRef.current) return;
+        const container = filterRef.current;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        if (maxScrollLeft <= 5) return;
+
+        if (container.scrollLeft >= maxScrollLeft - 10) {
+          container.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          container.scrollBy({ left: 140, behavior: "smooth" });
+        }
+      }, 3000);
+    };
+
+    startAutoSlide();
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const chooseCategory = (category: string, targetEl?: HTMLButtonElement) => {
+    isInteractingRef.current = true;
+    if (window.innerWidth <= 820 && targetEl) {
+      targetEl.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+    setTimeout(() => {
+      isInteractingRef.current = false;
+    }, 6000);
+
     if (deferCatalogue && !hasFullCatalogue && category !== active) {
       setIsLoading(true);
       void loadPortfolioCatalogue().then((fullCatalogue) => {
@@ -82,13 +116,26 @@ export function PortfolioGrid({
 
   return (
     <>
-      <div className="ge-filter" aria-label="Portfolio categories" aria-busy={isLoading}>
+      <div
+        ref={filterRef}
+        className="ge-filter"
+        aria-label="Portfolio categories"
+        aria-busy={isLoading}
+        onTouchStart={() => {
+          isInteractingRef.current = true;
+        }}
+        onTouchEnd={() => {
+          setTimeout(() => {
+            isInteractingRef.current = false;
+          }, 5000);
+        }}
+      >
         {categories.map((category) => (
           <button
             className={active === category ? "is-active" : ""}
             type="button"
             aria-pressed={active === category}
-            onClick={() => chooseCategory(category)}
+            onClick={(e) => chooseCategory(category, e.currentTarget)}
             onMouseEnter={preloadCatalogue}
             onFocus={preloadCatalogue}
             key={category}
@@ -118,17 +165,67 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
   const [active, setActive] = useState(names[0]);
   const [openFeatures, setOpenFeatures] = useState<string | null>(null);
   const packages = groups[active] ?? [];
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const isInteractingRef = useRef(false);
+
+  useEffect(() => {
+    const isMobile = () => window.innerWidth <= 820;
+    let intervalId: NodeJS.Timeout;
+
+    const startAutoSlide = () => {
+      intervalId = setInterval(() => {
+        if (!isMobile() || !tabsRef.current || isInteractingRef.current) return;
+        const container = tabsRef.current;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        if (maxScrollLeft <= 5) return;
+
+        if (container.scrollLeft >= maxScrollLeft - 10) {
+          container.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          container.scrollBy({ left: 130, behavior: "smooth" });
+        }
+      }, 3000);
+    };
+
+    startAutoSlide();
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const handleTabClick = (name: string, targetEl: HTMLButtonElement) => {
+    setActive(name);
+    isInteractingRef.current = true;
+    if (window.innerWidth <= 820 && targetEl) {
+      targetEl.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    }
+    setTimeout(() => {
+      isInteractingRef.current = false;
+    }, 6000);
+  };
 
   return (
     <>
-      <div className="ge-pricing-tabs" role="tablist" aria-label="Pricing package groups">
+      <div
+        ref={tabsRef}
+        className="ge-pricing-tabs"
+        role="tablist"
+        aria-label="Pricing package groups"
+        onTouchStart={() => {
+          isInteractingRef.current = true;
+        }}
+        onTouchEnd={() => {
+          setTimeout(() => {
+            isInteractingRef.current = false;
+          }, 5000);
+        }}
+      >
         {names.map((name) => (
           <button
             className={active === name ? "is-active" : ""}
             type="button"
             role="tab"
             aria-selected={active === name}
-            onClick={() => setActive(name)}
+            onClick={(e) => handleTabClick(name, e.currentTarget)}
             key={name}
           >
             {name}
@@ -140,7 +237,7 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
           const id = `${slug(active)}-${index}`;
           const isOpen = openFeatures === id;
           return (
-            <article className="ge-package" key={`${active}-${pkg.name}`}>
+            <article className="ge-package" key={`${active}-${pkg.name}`} style={{ "--card-index": index } as React.CSSProperties}>
               <div>
                 <p>{active}</p>
                 <h2>{pkg.name}</h2>
