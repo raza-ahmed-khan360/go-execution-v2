@@ -212,7 +212,7 @@ export function Footer() {
           <Link href="/privacy-policy">Privacy Policy</Link>
         </nav>
         <div className="ge-footer__details">
-          <a href="https://www.google.com/maps/search/?api=1&query=13345+N+Central+Expy,+Ste+203,+Dallas,+Texas+75243" target="_blank" rel="noreferrer">13345 N Central Expy, Ste 203<br />Dallas, Texas 75243</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=13345+N+Central+Expy,+Suite+203,+Dallas,+Texas+75243" target="_blank" rel="noreferrer">13345 N Central Expy, Suite#203<br />Dallas, Texas 75243</a>
           <a href="tel:+15872004832">+1 (587) 200-4832</a>
           <a href="mailto:justin@goexecution.com">justin@goexecution.com</a>
         </div>

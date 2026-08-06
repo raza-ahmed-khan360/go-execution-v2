@@ -40,7 +40,7 @@ export function createContactRequestEmail(request: ContactRequest) {
           <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:600px;overflow:hidden;border:1px solid rgba(13,27,42,.06);border-radius:16px;background:#ffffff;">
             <tr>
               <td align="center" style="padding:30px 40px;border-bottom:3px solid #c9a86a;background:#0d1b2a;text-align:center;">
-                <img src="https://goexecution.com/wp-content/themes/go-execution/assets/images/logo-light.png" width="200" alt="Go Execution" style="display:inline-block;width:200px;max-width:100%;height:auto;border:0;" />
+                <img src="https://goexecution.com/assets/images/logo-light.png" width="200" alt="Go Execution" style="display:inline-block;width:200px;max-width:100%;height:auto;border:0;" />
               </td>
             </tr>
             <tr>
