@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ConsultationCta, PageHero } from "@/components/page-hero";
+import { JsonLd, buildAboutPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
-export const metadata = { title: "About" };
+export const metadata: Metadata = {
+  title: { absolute: "About Go Execution | US Digital Growth Agency Team" },
+  description:
+    "Meet the Go Execution team and learn how we combine strategy, design, development, SEO, and marketing to help US businesses achieve sustainable growth.",
+  alternates: { canonical: "/about/" },
+  openGraph: { url: "/about/" },
+};
 
 const values = [
   ["01", "Clarity before activity", "We define the real objective before recommending deliverables, channels, or technology."],
@@ -11,8 +19,21 @@ const values = [
 ] as const;
 
 export default function About() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildAboutPage({ path: "/about/", title: "About Go Execution | US Digital Growth Agency Team" }),
+      buildBreadcrumbList([
+        { name: "Home", url: "/" },
+        { name: "About", url: "/about/" },
+      ]),
+    ],
+  };
+
   return (
-    <main id="primary" className="site-main">
+    <>
+      <JsonLd data={schema} />
+      <main id="primary" className="site-main">
       <PageHero
         eyebrow="About Go Execution"
         title="About Us: Strategy & Execution"
@@ -63,7 +84,8 @@ export default function About() {
           </div>
         </div>
       </section>
-      <ConsultationCta />
-    </main>
+        <ConsultationCta />
+      </main>
+    </>
   );
 }

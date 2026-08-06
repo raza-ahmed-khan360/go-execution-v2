@@ -207,16 +207,16 @@ export function Footer() {
           <Link href="/pricing">Pricing</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
-          <a href="https://goexecution.com/blog/">Blog</a>
-          <Link href="/terms">Terms &amp; Conditions</Link>
-          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
         </nav>
         <div className="ge-footer__details">
           <a href="https://www.google.com/maps/search/?api=1&query=13345+N+Central+Expy,+Ste+203,+Dallas,+Texas+75243" target="_blank" rel="noreferrer">13345 N Central Expy, Ste 203<br />Dallas, Texas 75243</a>
-          <a href="tel:+17373166049">+1 (737) 316-6049</a>
+          <a href="tel:+15872004832">+1 (587) 200-4832</a>
           <a href="mailto:justin@goexecution.com">justin@goexecution.com</a>
         </div>
-        <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms">Terms & Conditions</Link><span aria-hidden="true">|</span><Link href="/privacy">Privacy Policy</Link></div><p>Where Strategy Meets Execution</p></div>
+        <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-and-conditions">Terms & Conditions</Link><span aria-hidden="true">|</span><Link href="/privacy-policy">Privacy Policy</Link></div><p>Where Strategy Meets Execution</p></div>
       </div>
     </footer>
   );
