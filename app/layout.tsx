@@ -66,13 +66,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
-      <body className="ge-loaded" suppressHydrationWarning>
-        <Script
+      <head>
+        <script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="ilS/q7/J4bpZlkyqyoNbWA"
-          strategy="afterInteractive"
           async
         />
+      </head>
+      <body className="ge-loaded" suppressHydrationWarning>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-T0VM2DPWQK"
           strategy="afterInteractive"
