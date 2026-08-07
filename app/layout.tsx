@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import { ExecutingLoader } from "@/components/executing-loader";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SiteEffects } from "@/components/site-effects";
@@ -51,6 +52,9 @@ export const metadata: Metadata = {
       "Go Execution is a leading digital marketing agency in USA. We specialize in custom web development in USA, targeted digital marketing in USA, SEO, branding, and mobile apps to scale US businesses.",
     images: ["/opengraph-image.png"],
   },
+  verification: {
+    google: "googlef9d6a777118f2fa7",
+  },
 };
 
 export const viewport: Viewport = {
@@ -63,6 +67,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={poppins.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="ge-loaded" suppressHydrationWarning>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="ilS/q7/J4bpZlkyqyoNbWA"
+          strategy="afterInteractive"
+          async
+        />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-T0VM2DPWQK"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T0VM2DPWQK');
+          `}
+        </Script>
         <ExecutingLoader />
         <a className="ge-skip-link" href="#primary">
           Skip to content
