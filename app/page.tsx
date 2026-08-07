@@ -8,7 +8,7 @@ export default function Home() {
       buildOrganization(),
       buildPlace(),
       buildWebSite(),
-      buildWebPage({ path: "/", title: "Digital Marketing & Web Design Agency | Go Execution" }),
+      buildWebPage({ path: "/", title: "Go Execution | Top Digital Marketing Agency & Web Development in USA" }),
     ],
   };
 

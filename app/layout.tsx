@@ -16,11 +16,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://goexecution.com"),
   title: {
-    default: "Digital Marketing & Web Design Agency | Go Execution",
+    default: "Go Execution | Top Digital Marketing Agency & Web Development in USA",
     template: "%s | Go Execution",
   },
   description:
-    "Go Execution helps US businesses grow with web design, SEO, digital marketing, branding, mobile apps, and video animation focused on measurable results.",
+    "Go Execution is a leading digital marketing agency in USA. We specialize in custom web development in USA, targeted digital marketing in USA, SEO, branding, and mobile apps to scale US businesses.",
   applicationName: "Go Execution",
   alternates: { canonical: "/" },
   robots: {
@@ -39,16 +39,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Go Execution",
-    title: "Digital Marketing & Web Design Agency | Go Execution",
+    title: "Go Execution | Top Digital Marketing Agency & Web Development in USA",
     description:
-      "Go Execution helps US businesses grow with web design, SEO, digital marketing, branding, mobile apps, and video animation focused on measurable results.",
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Go Execution" }],
+      "Go Execution is a leading digital marketing agency in USA. We specialize in custom web development in USA, targeted digital marketing in USA, SEO, branding, and mobile apps to scale US businesses.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Go Execution Digital Marketing Agency in USA" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing & Web Design Agency | Go Execution",
+    title: "Go Execution | Top Digital Marketing Agency & Web Development in USA",
     description:
-      "Go Execution helps US businesses grow with web design, SEO, digital marketing, branding, mobile apps, and video animation focused on measurable results.",
+      "Go Execution is a leading digital marketing agency in USA. We specialize in custom web development in USA, targeted digital marketing in USA, SEO, branding, and mobile apps to scale US businesses.",
     images: ["/opengraph-image.png"],
   },
 };
