@@ -16,7 +16,7 @@ const staticPages = [
 ];
 
 const servicePages = Object.keys(content.services as Record<string, unknown>).map(
-  (slug) => `/services/${slug}/`
+  (slug) => `/${slug}/`
 );
 
 const categoryPages = Array.from(new Set(blogPosts.map((post) => post.categorySlug))).map(
@@ -24,24 +24,24 @@ const categoryPages = Array.from(new Set(blogPosts.map((post) => post.categorySl
 );
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date().toISOString();
+  const siteLastUpdated = new Date("2026-08-07T00:00:00.000Z");
 
   return [
     ...staticPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
+      lastModified: siteLastUpdated,
+      changeFrequency: path === "/" ? ("weekly" as const) : ("monthly" as const),
       priority: path === "/" ? 1.0 : 0.8,
     })),
     ...servicePages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
+      lastModified: siteLastUpdated,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
     })),
     ...categoryPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: now,
+      lastModified: siteLastUpdated,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     })),

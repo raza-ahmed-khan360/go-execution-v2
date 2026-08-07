@@ -12,9 +12,33 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Service pages: redirect /services/:slug to top-level /:slug/
+      // Service pages: redirect /services/:slug and /service/:slug to top-level /:slug/
       { source: "/services/:slug/", destination: "/:slug/", permanent: true },
       { source: "/services/:slug", destination: "/:slug/", permanent: true },
+      { source: "/service/:slug/", destination: "/:slug/", permanent: true },
+      { source: "/service/:slug", destination: "/:slug/", permanent: true },
+
+      // Legacy WordPress page variations
+      { source: "/about-us/", destination: "/about/", permanent: true },
+      { source: "/about-us", destination: "/about/", permanent: true },
+      { source: "/contact-us/", destination: "/contact/", permanent: true },
+      { source: "/contact-us", destination: "/contact/", permanent: true },
+      { source: "/services-2/", destination: "/services/", permanent: true },
+      { source: "/services-2", destination: "/services/", permanent: true },
+
+      // Legacy portfolio individual pages (redirect to main portfolio gallery)
+      { source: "/portfolio/:slug/", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/:slug", destination: "/portfolio/", permanent: true },
+
+      // Junk / WP defaults
+      { source: "/elementor-24/", destination: "/", permanent: true },
+      { source: "/elementor-24", destination: "/", permanent: true },
+      { source: "/elementor-page-201/", destination: "/", permanent: true },
+      { source: "/elementor-page-201", destination: "/", permanent: true },
+      { source: "/hello-world/", destination: "/blog/", permanent: true },
+      { source: "/hello-world", destination: "/blog/", permanent: true },
+      { source: "/category/uncategorized/", destination: "/blog/", permanent: true },
+      { source: "/category/uncategorized", destination: "/blog/", permanent: true },
 
       // Renamed legal pages
       { source: "/privacy/", destination: "/privacy-policy/", permanent: true },
