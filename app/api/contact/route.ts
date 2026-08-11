@@ -63,10 +63,10 @@ export async function POST(request: Request) {
       });
 
       await transporter.sendMail({
-        from: `"${enquiry.name} via Go Execution" <${smtpUser}>`,
+        from: `"Go Execution Leads" <${smtpUser}>`,
         to: recipient,
         replyTo: enquiry.email,
-        subject: `New Brief Submission: ${enquiry.service} - ${enquiry.name}`,
+        subject: `New Lead: ${enquiry.service} - ${enquiry.name}`,
         html: template.html,
         text: template.text,
       });
