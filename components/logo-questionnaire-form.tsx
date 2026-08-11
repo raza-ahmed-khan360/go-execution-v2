@@ -151,7 +151,7 @@ Phone: ${phone || "N/A"}
 
   if (submitted) {
     return (
-      <div className="ge-questionnaire-success ge-reveal">
+      <div className="ge-questionnaire-success">
         <div className="ge-success-icon">✓</div>
         <h2>Logo Brief Submitted Successfully!</h2>
         <p>
@@ -204,7 +204,7 @@ Phone: ${phone || "N/A"}
 
         {/* STEP 1: Brand Name & Business */}
         {step === 1 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 01 of 04</span>
               <h2>Brand Name & Business Overview</h2>
@@ -305,7 +305,7 @@ Phone: ${phone || "N/A"}
 
         {/* STEP 2: Aesthetic Style & Color Palette */}
         {step === 2 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 02 of 04</span>
               <h2>Visual Style & Color Preferences</h2>
@@ -378,7 +378,7 @@ Phone: ${phone || "N/A"}
 
         {/* STEP 3: Symbols, Inspiration & Usage */}
         {step === 3 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 03 of 04</span>
               <h2>Symbols, Examples & Logo Placements</h2>
@@ -451,7 +451,7 @@ Phone: ${phone || "N/A"}
 
         {/* STEP 4: Brand Values, Notes & Submit */}
         {step === 4 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 04 of 04</span>
               <h2>Brand Values & Additional Notes</h2>

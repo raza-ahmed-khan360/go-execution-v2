@@ -165,7 +165,7 @@ export function WebsiteQuestionnaireForm() {
 
   if (submitted) {
     return (
-      <div className="ge-questionnaire-success ge-reveal">
+      <div className="ge-questionnaire-success">
         <div className="ge-success-icon">✓</div>
         <h2>Project Brief Submitted Successfully!</h2>
         <p>
@@ -218,7 +218,7 @@ export function WebsiteQuestionnaireForm() {
 
         {/* STEP 1: Contact & Business Info */}
         {step === 1 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 01 of 04</span>
               <h2>Contact & Business Information</h2>
@@ -296,7 +296,7 @@ export function WebsiteQuestionnaireForm() {
 
         {/* STEP 2: Goals, Pages & Style */}
         {step === 2 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 02 of 04</span>
               <h2>Website Goals, Structure & Aesthetics</h2>
@@ -415,7 +415,7 @@ export function WebsiteQuestionnaireForm() {
 
         {/* STEP 3: Inspiration & Content Assets */}
         {step === 3 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 03 of 04</span>
               <h2>Design Inspiration & Available Assets</h2>
@@ -468,7 +468,7 @@ export function WebsiteQuestionnaireForm() {
 
         {/* STEP 4: Features, Additional Notes & Launch */}
         {step === 4 && (
-          <div className="ge-questionnaire-step ge-reveal">
+          <div className="ge-questionnaire-step">
             <div className="ge-step-header">
               <span className="ge-eyebrow ge-eyebrow--gold">Step 04 of 04</span>
               <h2>Specific Features & Target Launch Date</h2>

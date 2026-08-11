@@ -51,7 +51,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
               aria-hidden={!isVisible ? true : undefined}
               tabIndex={isVisible ? 0 : -1}
               onMouseEnter={() => {
-                if (!isVisible) return;
+                setActive(index);
                 setHovered(index);
                 setPaused(true);
               }}
@@ -59,7 +59,10 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
                 setHovered((current) => (current === index ? null : current));
                 setPaused(false);
               }}
-              onFocus={() => isVisible && setHovered(index)}
+              onFocus={() => {
+                setActive(index);
+                setHovered(index);
+              }}
               onBlur={() => setHovered((current) => (current === index ? null : current))}
               key={service.slug}
             >
@@ -84,6 +87,12 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
               type="button"
               className={index === active ? "is-active" : ""}
               onClick={() => setActive(index)}
+              onMouseEnter={() => {
+                setActive(index);
+                setHovered(index);
+                setPaused(true);
+              }}
+              onMouseLeave={() => setPaused(false)}
               aria-label={`Show ${service.title}`}
               aria-current={index === active ? "true" : undefined}
               key={service.slug}

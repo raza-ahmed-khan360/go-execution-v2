@@ -98,6 +98,63 @@ const growthSteps = [
   },
 ] as const;
 
+const homepageIndustries = [
+  {
+    slug: "real-estate",
+    number: "01",
+    tag: "PROPERTY & MLS",
+    title: "Real Estate & Development",
+    desc: "Custom MLS/IDX property search platforms, seller valuation funnels, and high-converting brokerage websites.",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&fit=crop",
+    feature: "MLS/IDX Integration & Listing Leads",
+  },
+  {
+    slug: "fashion",
+    number: "02",
+    tag: "E-COMMERCE & LUXURY",
+    title: "Fashion & Apparel",
+    desc: "Sub-second Shopify & Next.js luxury storefronts, paid social video campaigns, and brand identity systems.",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80&fit=crop",
+    feature: "Headless E-Commerce & UGC Ads",
+  },
+  {
+    slug: "health-wellness",
+    number: "03",
+    tag: "CLINICAL & WELLNESS",
+    title: "Health & Wellness",
+    desc: "HIPAA-compliant patient booking portals, local search optimization, and reputation management funnels.",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&fit=crop",
+    feature: "HIPAA Portals & Local Map Pack SEO",
+  },
+  {
+    slug: "technology",
+    number: "04",
+    tag: "SAAS & TECH",
+    title: "Technology & B2B SaaS",
+    desc: "High-converting product landing pages, technical SEO, demo booking funnels, and brand positioning.",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&fit=crop",
+    feature: "Demo Booking & Technical SEO",
+  },
+  {
+    slug: "professional-services",
+    number: "05",
+    tag: "LEGAL & FINANCIAL",
+    title: "Professional Services",
+    desc: "Authority-building digital platforms, practice area SEO, and high-value consultation lead generation.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80&fit=crop",
+    feature: "Consultation Funnels & Organic Growth",
+  },
+  {
+    slug: "hospitality",
+    number: "06",
+    tag: "HOTELS & DINING",
+    title: "Hospitality & Leisure",
+    desc: "Immersive venue showcases, direct booking engines, promo video animation, and local search campaigns.",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&fit=crop",
+    feature: "Direct Booking & Video Marketing",
+  },
+];
+
 const testimonials: readonly Testimonial[] = [
   { quote: "Go Execution completely transformed our digital trajectory. The new custom web platform increased qualified consultation requests by 127% in Q1 alone.", name: "Maya Chen", role: "CEO, Meridian Labs", metric: "127%", metricLabel: "more qualified leads" },
   { quote: "We reached $2.4M in revenue during our first year on the ecommerce platform built by Go Execution. Their strategic guidance was instrumental to our growth.", name: "Raj Patel", role: "Founder, Coastal Roasters", metric: "$2.4M", metricLabel: "first-year revenue" },
@@ -165,17 +222,14 @@ export function Homepage() {
 
       {/* --- SERVICES SECTION --- */}
       <section id="services" className="ge-section ge-services"><div className="ge-container">
-        <div className="ge-section-heading ge-section-heading--wide ge-reveal">
+        <div className="ge-section-heading ge-section-heading--wide ge-reveal" style={{ marginBottom: 20 }}>
           <div>
             <p className="ge-eyebrow">360° Growth Spectrum</p>
             <h2>Digital Marketing Services That Drive Business Growth</h2>
           </div>
           <div>
-            <p style={{ marginBottom: 14 }}>
-              Successful digital growth requires more than a website or a single marketing channel. Go Execution brings strategy, technology, creative and performance marketing together to help US businesses attract the right audience, convert more visitors and build a stronger digital presence.
-            </p>
-            <p style={{ marginBottom: 20 }}>
-              From custom websites and ecommerce platforms to SEO, paid advertising, content and conversion strategy, our team builds connected digital experiences designed around measurable business goals.
+            <p style={{ marginBottom: 18 }}>
+              Go Execution brings strategy, web engineering, creative design, and performance marketing together under one roof. We build connected digital experiences that help US businesses attract qualified traffic, convert visitors, and scale measurable revenue.
             </p>
             <Link className="ge-button ge-button--outline" href="/services/">
               <span>Explore All Services ↗</span>
@@ -199,37 +253,74 @@ export function Homepage() {
         <PortfolioGrid items={content.portfolio.filter((project) => project.category === "Website Design & Development")} initialLimit={6} includeAll={false} deferCatalogue />
       </div></section>
 
-      {/* --- INDUSTRIES SECTION --- */}
-      <section className="ge-industries ge-section" style={{ background: "#f8fafc", padding: "60px 0 40px", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0", overflow: "hidden" }}>
-        <div className="ge-container ge-reveal">
-          <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 32 }}>
+      {/* --- INDUSTRIES SECTION (REDESIGNED LUXURY BENTO GRID) --- */}
+      <section className="ge-section ge-bento-industries-section">
+        <div className="ge-container">
+          <div className="ge-section-heading ge-section-heading--wide ge-reveal" style={{ marginBottom: 36 }}>
             <div>
               <p className="ge-eyebrow">Sector-Specific Strategy</p>
               <h2 style={{ color: "#0d1b2a" }}>Digital Marketing for US Businesses Across Industries</h2>
             </div>
-            <p style={{ color: "#475569" }}>
-              Our digital strategies are adapted to the audience, buying journey and competitive environment of each business. Explore solutions for industries where strong digital experiences and measurable marketing can create meaningful growth.
-            </p>
+            <div>
+              <p style={{ color: "#475569", marginBottom: 18 }}>
+                Our digital strategies are adapted to the audience, buying journey, and competitive environment of each business sector. Explore custom web &amp; marketing solutions designed around measurable growth.
+              </p>
+              <Link className="ge-button ge-button--outline" href="/industries/">
+                <span>Explore All Industries ↗</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="ge-bento-industries-grid">
+            {homepageIndustries.map((ind, index) => (
+              <article
+                key={ind.slug}
+                className="ge-bento-industry-card"
+                style={
+                  {
+                    backgroundImage: `linear-gradient(180deg, rgba(13, 27, 42, 0.45) 0%, rgba(13, 27, 42, 0.85) 55%, rgba(11, 26, 43, 0.98) 100%), url(${ind.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    "--card-index": index,
+                  } as React.CSSProperties
+                }
+              >
+                <div className="ge-bento-card-content">
+                  <div className="ge-bento-card-header">
+                    <span className="ge-bento-card-num">{ind.number}</span>
+                    <span className="ge-bento-card-tag">{ind.tag}</span>
+                  </div>
+                  <div>
+                    <h3 className="ge-bento-card-title">{ind.title}</h3>
+                    <p className="ge-bento-card-desc">{ind.desc}</p>
+                    <div className="ge-bento-card-feature">
+                      <i>✦</i> <span>{ind.feature}</span>
+                    </div>
+                  </div>
+                  <Link className="ge-bento-card-btn" href={`/industries/${ind.slug}/`}>
+                    <span>Explore Strategy</span> <b aria-hidden="true">→</b>
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
 
-        {/* 100% Full-Width Edge-to-Edge Slider */}
-        <div className="ge-marquee" aria-label="Industries">
-          <div>
-            <Link href="/industries/fashion/"><span>Fashion &amp; Retail</span></Link><i>✦</i>
-            <Link href="/industries/health-wellness/"><span>Health &amp; Wellness</span></Link><i>✦</i>
-            <Link href="/industries/real-estate/"><span>Real Estate</span></Link><i>✦</i>
-            <Link href="/industries/technology/"><span>Technology &amp; SaaS</span></Link><i>✦</i>
-            <Link href="/industries/professional-services/"><span>Professional Services</span></Link><i>✦</i>
-            <Link href="/industries/hospitality/"><span>Hospitality</span></Link><i>✦</i>
-
-            {/* Seamless duplicate loop for edge-to-edge scroll */}
-            <Link href="/industries/fashion/"><span>Fashion &amp; Retail</span></Link><i>✦</i>
-            <Link href="/industries/health-wellness/"><span>Health &amp; Wellness</span></Link><i>✦</i>
-            <Link href="/industries/real-estate/"><span>Real Estate</span></Link><i>✦</i>
-            <Link href="/industries/technology/"><span>Technology &amp; SaaS</span></Link><i>✦</i>
-            <Link href="/industries/professional-services/"><span>Professional Services</span></Link><i>✦</i>
-            <Link href="/industries/hospitality/"><span>Hospitality</span></Link><i>✦</i>
+        {/* Sleek Ticker Marquee */}
+        <div className="ge-bento-marquee" aria-label="Industries ticker">
+          <div className="ge-bento-marquee-track">
+            <span>REAL ESTATE</span><i>✦</i>
+            <span>FASHION &amp; LUXURY</span><i>✦</i>
+            <span>HEALTH &amp; WELLNESS</span><i>✦</i>
+            <span>SAAS &amp; TECHNOLOGY</span><i>✦</i>
+            <span>PROFESSIONAL SERVICES</span><i>✦</i>
+            <span>HOSPITALITY</span><i>✦</i>
+            <span>REAL ESTATE</span><i>✦</i>
+            <span>FASHION &amp; LUXURY</span><i>✦</i>
+            <span>HEALTH &amp; WELLNESS</span><i>✦</i>
+            <span>SAAS &amp; TECHNOLOGY</span><i>✦</i>
+            <span>PROFESSIONAL SERVICES</span><i>✦</i>
+            <span>HOSPITALITY</span><i>✦</i>
           </div>
         </div>
       </section>
@@ -270,7 +361,7 @@ export function Homepage() {
         </div>
         <div className="ge-scroll-section"><div className="ge-scroll-text">
           {growthSteps.map((step, index) => (
-            <article className={`ge-scroll-step ge-growth-card ge-growth-story ge-reveal${index === 0 ? " is-active" : ""}`} data-index={index} data-reveal={index % 2 === 0 ? "left" : "right"} key={step.title} style={{ "--card-index": index } as React.CSSProperties}>
+            <article className={`ge-scroll-step ge-growth-card ge-growth-story${index === 0 ? " is-active" : ""}`} data-index={index} key={step.title} style={{ "--card-index": index } as React.CSSProperties}>
               <div className="ge-scroll-step__mobile-img-wrap">
                 <Image src={step.image} alt={step.alt} fill sizes="(max-width: 820px) 100vw, 50vw" quality={80} />
               </div>
