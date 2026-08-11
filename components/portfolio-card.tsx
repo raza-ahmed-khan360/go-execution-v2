@@ -7,6 +7,18 @@ export type PortfolioItem = {
   title: string;
   category: string;
   image: string;
+  alt?: string;
+};
+
+const projectAltMap: Record<string, string> = {
+  "Band Of Travellers": "Band of Travellers website design by Go Execution",
+  "Convoy Platform": "Convoy Platform website design and interface by Go Execution",
+  "Ka’Chava": "Ka’Chava website design and ecommerce interface by Go Execution",
+  "Ka'Chava": "Ka’Chava website design and ecommerce interface by Go Execution",
+  "Lorraine Travel": "Lorraine Travel website design by Go Execution",
+  "Stone Wood Construction": "Stone Wood Construction website design by Go Execution",
+  "Vee-Vee’s African Restaurant": "Vee-Vee's African Restaurant website design by Go Execution",
+  "Vee-Vee's African Restaurant": "Vee-Vee's African Restaurant website design by Go Execution",
 };
 
 const videoPattern = /\.(mp4|webm|ogg)(?:[?#].*)?$/i;
@@ -15,6 +27,7 @@ export function PortfolioCard({ item, index }: { item: PortfolioItem; index: num
   const videoRef = useRef<HTMLVideoElement>(null);
   const hasMedia = Boolean(item.image && item.image !== "#");
   const isVideo = hasMedia && videoPattern.test(item.image);
+  const altText = item.alt || projectAltMap[item.title] || `${item.title} project by Go Execution`;
 
   const playPreview = () => {
     if (!videoRef.current) return;
@@ -56,7 +69,7 @@ export function PortfolioCard({ item, index }: { item: PortfolioItem; index: num
             aria-label={`${item.title} muted preview`}
           />
         ) : hasMedia ? (
-          <Image src={item.image} alt={item.title} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" />
+          <Image src={item.image} alt={altText} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" />
         ) : (
           <span className="ge-project__placeholder">Portfolio Preview</span>
         )}

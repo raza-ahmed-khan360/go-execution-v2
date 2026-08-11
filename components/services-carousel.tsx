@@ -9,6 +9,7 @@ type Service = {
   copy: string;
   number: string;
   image: string;
+  anchorText?: string;
 };
 
 export function ServicesCarousel({ services }: { services: Service[] }) {
@@ -68,7 +69,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
               <span className="ge-services-3d__content">
                 <strong>{service.title}</strong>
                 <span>{service.copy}</span>
-                <b>Explore Service <i aria-hidden="true">→</i></b>
+                <b>{service.anchorText || "Explore Service"} <i aria-hidden="true">→</i></b>
               </span>
             </a>
           );
