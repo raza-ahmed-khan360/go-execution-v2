@@ -257,7 +257,7 @@ export default function About() {
                     <strong style={{ color: "#0d1b2a" }}>📞 Phone:</strong> <a href="tel:+15872004832" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (587) 200-4832</a> / <a href="https://wa.me/17738653770" target="_blank" rel="noreferrer" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (773) 865-3770 (WhatsApp)</a>
                   </p>
                   <p>
-                    <strong style={{ color: "#0d1b2a" }}>✉️ Email:</strong> <a href="mailto:justin@goexecution.com" style={{ color: "#b8860b", fontWeight: 600 }}>justin@goexecution.com</a>
+                    <strong style={{ color: "#0d1b2a" }}>✉️ Email:</strong> <a href="mailto:justin@goexecution.com" style={{ color: "#b8860b", fontWeight: 600 }}>info@goexecution.com</a>
                   </p>
                 </div>
               </div>

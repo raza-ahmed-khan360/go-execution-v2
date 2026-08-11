@@ -178,11 +178,10 @@ export function Header() {
             {renderDropdown("services", "Services")}
             {renderDropdown("industries", "Industries")}
             <li><Link href="/pricing" onClick={closeNavigation}>Pricing</Link></li>
-            <li><Link href="/blog" onClick={closeNavigation}>Blog</Link></li>
             <li><Link href="/about" onClick={closeNavigation}>About</Link></li>
             <li><Link href="/contact" onClick={closeNavigation}>Contact</Link></li>
           </ul>
-          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Free Consultation ↗</span></Link>
+          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Consultation ↗</span></Link>
         </nav>
       </div>
     </header>
@@ -620,7 +619,7 @@ export function Footer() {
         <div className="ge-footer__details">
           <a href="https://www.google.com/maps/search/?api=1&query=13345+N+Central+Expy,+Suite+203,+Dallas,+Texas+75243" target="_blank" rel="noreferrer">13345 N Central Expy, Suite#203<br />Dallas, Texas 75243</a>
           <a href="tel:+15872004832">+1 (587) 200-4832</a>
-          <a href="mailto:justin@goexecution.com">justin@goexecution.com</a>
+          <a href="mailto:justin@goexecution.com">info@goexecution.com</a>
         </div>
         <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-and-conditions">Terms & Conditions</Link><span aria-hidden="true">|</span><Link href="/privacy-policy">Privacy Policy</Link></div><p>Where Strategy Meets Execution</p></div>
       </div>

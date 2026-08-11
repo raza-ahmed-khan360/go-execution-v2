@@ -163,26 +163,6 @@ export function Homepage() {
         ))}
       </div></section>
 
-      {/* --- INTRODUCTION SECTION --- */}
-      <section className="ge-section ge-about-story-section" style={{ background: "#ffffff", padding: "70px 0" }}>
-        <div className="ge-container">
-          <div className="ge-section-heading ge-section-heading--wide ge-reveal" style={{ marginBottom: 28 }}>
-            <div>
-              <p className="ge-eyebrow">Strategic Digital Agency</p>
-              <h2>Digital Growth Solutions Built Around Your Business</h2>
-            </div>
-            <div style={{ color: "#475569", fontSize: "1.05rem", lineHeight: 1.75 }}>
-              <p style={{ marginBottom: 16 }}>
-                Successful digital growth requires more than a website or a single marketing channel. Go Execution brings strategy, technology, creative and performance marketing together to help US businesses attract the right audience, convert more visitors and build a stronger digital presence.
-              </p>
-              <p>
-                From custom websites and ecommerce platforms to SEO, paid advertising, content and conversion optimisation, our team builds connected digital experiences around measurable business goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* --- SERVICES SECTION --- */}
       <section id="services" className="ge-section ge-services"><div className="ge-container">
         <div className="ge-section-heading ge-section-heading--wide ge-reveal">
@@ -191,8 +171,11 @@ export function Homepage() {
             <h2>Digital Marketing Services That Drive Business Growth</h2>
           </div>
           <div>
+            <p style={{ marginBottom: 14 }}>
+              Successful digital growth requires more than a website or a single marketing channel. Go Execution brings strategy, technology, creative and performance marketing together to help US businesses attract the right audience, convert more visitors and build a stronger digital presence.
+            </p>
             <p style={{ marginBottom: 20 }}>
-              Our full-service approach combines web development, search marketing, paid media, creative and conversion strategy so your digital channels work together instead of operating in isolation.
+              From custom websites and ecommerce platforms to SEO, paid advertising, content and conversion strategy, our team builds connected digital experiences designed around measurable business goals.
             </p>
             <Link className="ge-button ge-button--outline" href="/services/">
               <span>Explore All Services ↗</span>
@@ -217,7 +200,7 @@ export function Homepage() {
       </div></section>
 
       {/* --- INDUSTRIES SECTION --- */}
-      <section className="ge-industries ge-section" style={{ background: "#f8fafc", padding: "60px 0", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
+      <section className="ge-industries ge-section" style={{ background: "#f8fafc", padding: "60px 0 40px", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0", overflow: "hidden" }}>
         <div className="ge-container ge-reveal">
           <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 32 }}>
             <div>
@@ -228,15 +211,25 @@ export function Homepage() {
               Our digital strategies are adapted to the audience, buying journey and competitive environment of each business. Explore solutions for industries where strong digital experiences and measurable marketing can create meaningful growth.
             </p>
           </div>
-          <div className="ge-marquee" aria-label="Industries">
-            <div>
-              <Link href="/industries/fashion/"><span>Fashion &amp; Retail</span></Link><i>✦</i>
-              <Link href="/industries/health-wellness/"><span>Health &amp; Wellness</span></Link><i>✦</i>
-              <Link href="/industries/real-estate/"><span>Real Estate</span></Link><i>✦</i>
-              <Link href="/industries/technology/"><span>Technology &amp; SaaS</span></Link><i>✦</i>
-              <Link href="/industries/professional-services/"><span>Professional Services</span></Link><i>✦</i>
-              <Link href="/industries/hospitality/"><span>Hospitality</span></Link><i>✦</i>
-            </div>
+        </div>
+
+        {/* 100% Full-Width Edge-to-Edge Slider */}
+        <div className="ge-marquee" aria-label="Industries">
+          <div>
+            <Link href="/industries/fashion/"><span>Fashion &amp; Retail</span></Link><i>✦</i>
+            <Link href="/industries/health-wellness/"><span>Health &amp; Wellness</span></Link><i>✦</i>
+            <Link href="/industries/real-estate/"><span>Real Estate</span></Link><i>✦</i>
+            <Link href="/industries/technology/"><span>Technology &amp; SaaS</span></Link><i>✦</i>
+            <Link href="/industries/professional-services/"><span>Professional Services</span></Link><i>✦</i>
+            <Link href="/industries/hospitality/"><span>Hospitality</span></Link><i>✦</i>
+
+            {/* Seamless duplicate loop for edge-to-edge scroll */}
+            <Link href="/industries/fashion/"><span>Fashion &amp; Retail</span></Link><i>✦</i>
+            <Link href="/industries/health-wellness/"><span>Health &amp; Wellness</span></Link><i>✦</i>
+            <Link href="/industries/real-estate/"><span>Real Estate</span></Link><i>✦</i>
+            <Link href="/industries/technology/"><span>Technology &amp; SaaS</span></Link><i>✦</i>
+            <Link href="/industries/professional-services/"><span>Professional Services</span></Link><i>✦</i>
+            <Link href="/industries/hospitality/"><span>Hospitality</span></Link><i>✦</i>
           </div>
         </div>
       </section>
@@ -315,7 +308,7 @@ export function Homepage() {
           <p className="ge-eyebrow">Clear Answers</p>
           <h2>Frequently Asked Questions</h2>
         </div>
-        <div className="ge-faq-grid ge-reveal"><div className="ge-faq-card"><div className="ge-faq-card-header"><div className="ge-faq-email"><span className="ge-faq-email-label">Have questions for our US team?</span><a href="mailto:justin@goexecution.com" className="ge-faq-email-link">justin@goexecution.com</a></div><Link href="/contact/" className="ge-button ge-button--gold ge-magnetic ge-faq-contact-btn"><span>Get in touch</span><span aria-hidden="true">↗</span></Link></div>
+        <div className="ge-faq-grid ge-reveal"><div className="ge-faq-card"><div className="ge-faq-card-header"><div className="ge-faq-email"><span className="ge-faq-email-label">Have questions for our US team?</span></div><Link href="/contact/" className="ge-button ge-button--gold ge-magnetic ge-faq-contact-btn"><span>Get in touch</span><span aria-hidden="true">↗</span></Link></div>
           <FaqAccordion items={faqs} hoverToOpen idPrefix="home-faq" className="ge-faq-accordion" />
         </div><div className="ge-faq-image-wrapper"><Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=70&fit=crop" alt="Go Execution Digital Marketing Agency in USA Team" className="ge-faq-img" fill sizes="(max-width: 991px) 100vw, 50vw" quality={85} /><div className="ge-faq-image-badge"><span className="ge-faq-image-badge__dot" /><div className="ge-faq-image-badge__text"><strong>Direct Access to Founders</strong><span>Fast responses within 2 hours</span></div></div></div></div>
       </div></section>

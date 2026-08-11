@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 import { createContactRequestEmail, type ContactRequest } from "@/lib/contact-request-email";
 
 export const runtime = "nodejs";
@@ -34,36 +35,71 @@ export async function POST(request: Request) {
     return error("Please complete all required fields with valid information.");
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.RESEND_FROM_EMAIL ?? "Go Execution <website@send.goexecution.com>";
   const recipient = process.env.CONTACT_RECIPIENT_EMAIL ?? "justin@goexecution.com";
-  if (!apiKey) return error("Email delivery is not configured yet. Please try again shortly.", 503);
-
   const template = createContactRequestEmail(enquiry);
-  try {
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from,
-        to: [recipient],
-        reply_to: enquiry.email,
-        subject: `goexecution.com "${enquiry.service}"`,
+
+  // 1. SMTP (Hostinger / Gmail / Google Workspace)
+  const smtpHost = process.env.SMTP_HOST ?? "smtp.gmail.com";
+  const smtpPort = Number(process.env.SMTP_PORT ?? 465);
+  const smtpUser = process.env.SMTP_USER ?? "justin@goexecution.com";
+  const smtpPass = process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD || process.env.HOSTINGER_SMTP_PASS;
+
+  if (smtpPass) {
+    try {
+      const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port: smtpPort,
+        secure: smtpPort === 465,
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      });
+
+      await transporter.sendMail({
+        from: `"${enquiry.name} via Go Execution" <${smtpUser}>`,
+        to: recipient,
+        replyTo: enquiry.email,
+        subject: `New Brief Submission: ${enquiry.service} - ${enquiry.name}`,
         html: template.html,
         text: template.text,
-      }),
-    });
+      });
 
-    if (!response.ok) {
-      console.error("Resend contact request delivery failed", response.status);
-      return error("We couldn’t send your request right now. Please try again shortly.", 502);
+      return NextResponse.json({ success: true, message: "Thank you—your request has been sent to Justin. We’ll be in touch shortly." });
+    } catch (err) {
+      console.error("SMTP delivery error:", err);
+      return error("Email delivery failed via SMTP. Please verify App Password or SMTP credentials.", 502);
     }
-  } catch {
-    return error("We couldn’t send your request right now. Please try again shortly.", 502);
   }
 
-  return NextResponse.json({ success: true, message: "Thank you—your request has been sent. We’ll be in touch shortly." });
+  // 2. RESEND API FALLBACK
+  const apiKey = process.env.RESEND_API_KEY;
+  if (apiKey) {
+    const from = process.env.RESEND_FROM_EMAIL ?? "Go Execution <website@send.goexecution.com>";
+    try {
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from,
+          to: [recipient],
+          reply_to: enquiry.email,
+          subject: `goexecution.com "${enquiry.service}"`,
+          html: template.html,
+          text: template.text,
+        }),
+      });
+
+      if (response.ok) {
+        return NextResponse.json({ success: true, message: "Thank you—your request has been sent. We’ll be in touch shortly." });
+      }
+    } catch (err) {
+      console.error("Resend API delivery error:", err);
+    }
+  }
+
+  return error("Email delivery is not configured yet. Please set SMTP_PASS (or GMAIL_APP_PASSWORD) in environment variables.", 503);
 }
