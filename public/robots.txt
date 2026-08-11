@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+Sitemap: https://goexecution.com/sitemap.xml
+Host: https://goexecution.com

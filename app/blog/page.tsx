@@ -45,29 +45,37 @@ export default function BlogPage() {
               <b>{String(blogPosts.length).padStart(2, "0")} published insights</b>
             </div>
             <article className="ge-blog-featured">
-              <Link href={`/${featured.slug}/`} className="ge-blog-featured__visual" aria-label={`Read ${featured.title}`}>
-                {featured.image ? <Image src={featured.image} alt={featured.imageAlt ?? ""} fill sizes="(max-width: 900px) 100vw, 52vw" priority /> : <><span>SEO</span><strong>Search<br />visibility<br />starts here.</strong><i>01</i></>}
+              <Link href={`/blog/${featured.slug}/`} className="ge-blog-featured__visual" aria-label={`Read ${featured.title}`}>
+                {featured.image ? (
+                  <Image src={featured.image} alt={featured.imageAlt ?? ""} fill sizes="(max-width: 900px) 100vw, 52vw" priority />
+                ) : (
+                  <>
+                    <span>SEO</span>
+                    <strong>Search<br />visibility<br />starts here.</strong>
+                    <i>01</i>
+                  </>
+                )}
               </Link>
               <div className="ge-blog-featured__content">
                 <p className="ge-eyebrow">{featured.category} <span /> {formatBlogDate(featured.date)}</p>
-                <h2><Link href={`/${featured.slug}/`}>{featured.title}</Link></h2>
+                <h2><Link href={`/blog/${featured.slug}/`}>{featured.title}</Link></h2>
                 <p>{featured.excerpt}</p>
-                <Link className="ge-text-link" href={`/${featured.slug}/`}>Read article <span aria-hidden="true">↗</span></Link>
+                <Link className="ge-text-link" href={`/blog/${featured.slug}/`}>Read article <span aria-hidden="true">↗</span></Link>
               </div>
             </article>
             {posts.length > 0 && (
               <div className="ge-blog-grid">
                 {posts.map((post, index) => (
                   <article className="ge-blog-card" key={post.slug}>
-                    <Link className="ge-blog-card__image" href={`/${post.slug}/`}>
+                    <Link className="ge-blog-card__image" href={`/blog/${post.slug}/`}>
                       {post.image ? <Image src={post.image} alt={post.imageAlt ?? ""} fill sizes="(max-width: 700px) 100vw, 50vw" /> : <span>{String(index + 2).padStart(2, "0")}</span>}
                     </Link>
                     <p className="ge-eyebrow">{post.category}</p>
-                    <h3><Link href={`/${post.slug}/`}>{post.title}</Link></h3>
+                    <h3><Link href={`/blog/${post.slug}/`}>{post.title}</Link></h3>
                     <p>{post.excerpt}</p>
                     <div>
                       <time dateTime={post.date}>{formatBlogDate(post.date)}</time>
-                      <Link href={`/${post.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
+                      <Link href={`/blog/${post.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
                     </div>
                   </article>
                 ))}

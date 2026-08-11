@@ -30,17 +30,11 @@ export const blogPosts: readonly BlogPost[] = [
       <figure><table><thead><tr><th>Symptom</th><th>Evidence to check</th><th>Likely interpretation</th><th>Recommended action</th><th>Verification method</th></tr></thead><tbody><tr><td>URL not found in search results</td><td>Search Console says “URL is not on Google”</td><td>Technical indexing barrier or crawl block</td><td>Audit robots.txt, canonical tags, and meta noindex tags</td><td>Use Search Console’s live URL test</td></tr><tr><td>High impressions but low clicks</td><td>Search Console performance report</td><td>Meta title or description may not match user intent</td><td>Rewrite search snippets around the page’s real value</td><td>Monitor CTR trends in Search Console</td></tr><tr><td>Visibility drop around a core update</td><td>Compare affected pages, queries, technical changes, competitors, and Google’s update guidance</td><td>Timing alone does not prove the update caused the change</td><td>Investigate page-level evidence before changing content</td><td>Compare Search Console data over a suitable date range</td></tr><tr><td>No traffic for service terms</td><td>Impressions appear only for generic or non-commercial terms</td><td>Search intent mismatch or insufficient evidence to diagnose</td><td>Map pages to specific buyer journey stages</td><td>Filter Search Console queries by service intent</td></tr><tr><td>Slow mobile experience</td><td>Core Web Vitals report for LCP, INP, and CLS</td><td>Technical performance friction</td><td>Improve server response, image delivery, and script execution</td><td>Check PageSpeed Insights and field data</td></tr></tbody></table></figure>
       <h2>Technical health and performance standards</h2>
       <p>Mobile usability and HTTPS support a better user experience and stronger security, but neither guarantees search visibility on its own. Core Web Vitals measure aspects of loading, responsiveness, and visual stability through Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS).</p>
-      <p>Google documents Core Web Vitals as one set of page experience signals, but strong scores do not guarantee top positions. Source: <a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer">Google Search Central Core Web Vitals documentation</a>.</p>
-      <p>Search Console and analytics metrics such as impressions, clicks, bounce rate, and verified conversions are useful diagnostic and business measurements. They should guide investigation, but they should not be treated as proof of one direct ranking cause.</p>
-      <h2>Content quality and search intent alignment</h2>
-      <p>A page can be indexed yet remain difficult to find for its target queries when it does not answer the searcher’s actual need. Google’s people-first content guidance recommends useful content created primarily for people and asks publishers to consider whether their work demonstrates first-hand expertise and provides substantial value.</p>
-      <p>Source: <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener noreferrer">Google Search Central guidance on helpful, reliable, people-first content</a>. Review whether each business page answers a specific customer problem with accurate, useful detail instead of repeating generic keyword-focused copy.</p>
+      <p>Google documents Core Web Vitals as one set of page experience signals. Learn more on our <a href="/services/seo/technical-seo/">Technical SEO Services</a> page.</p>
       <h2>Go Execution review checkpoints</h2>
-      <p>The following checkpoints are part of a standard Go Execution SEO review schedule. These milestones are designed to verify technical health and content relevance. They are not promises of specific ranking, traffic, lead, or performance outcomes.</p>
-      <ul><li><strong>Month 0–1: Technical audit and baseline setup.</strong> We analyze Search Console coverage and baseline performance metrics to verify technical eligibility for indexing.</li><li><strong>Month 1–3: Index verification and remediation.</strong> We focus on resolving critical technical barriers and verifying that primary service pages are eligible for discovery.</li><li><strong>Month 3–6: Visibility development and intent alignment.</strong> We refine content to better match user intent and verify that it answers the intended audience’s questions with useful, original detail.</li></ul>
-      <p>For more context on organic growth cycles, read <a href="/how-long-does-seo-take-for-new-website/">How Long Does SEO Take for a New Website?</a>. Professional <a href="/services/seo-services/">SEO services for sustainable growth</a> can help identify these barriers through data-led diagnostics rather than guesswork.</p>
+      <p>For more context on organic growth cycles, read <a href="/blog/how-long-does-seo-take-for-new-website/">How Long Does SEO Take for a New Website?</a>. Professional <a href="/services/seo/">SEO services for sustainable growth</a> can help identify these barriers through data-led diagnostics rather than guesswork.</p>
       <h2>Need a prioritized diagnosis?</h2>
-      <p>If you need a practical next-step plan, <a href="/contact/">request an SEO readiness review</a>. The review checks indexing, technical health, search intent alignment, and priority actions. It does not promise rankings, traffic, leads, or a fixed recovery time.</p>`,
+      <p>If you need a practical next-step plan, <a href="/contact/">request an SEO readiness review</a> with Go Execution.</p>`,
   },
   {
     slug: "how-long-does-seo-take-for-new-website",
@@ -51,24 +45,112 @@ export const blogPosts: readonly BlogPost[] = [
     category: "SEO",
     categorySlug: "seo-services",
     contentHtml: `
-      <p><strong>How long does SEO take for a new website?</strong> There is no guaranteed deadline. Google says crawling can take a few days to a few weeks in its <a href="https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl" target="_blank" rel="noopener noreferrer">recrawl guidance</a>, while the <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener noreferrer">SEO Starter Guide</a> says some changes may appear within hours and others may take several months. For planning—not prediction—Go Execution uses Month 0–1 for audit and baseline setup, Month 1–3 for index coverage verification, Month 3–6 for visibility development, and Month 6–12+ for strategy review. These are process checkpoints, not guarantees of rankings, traffic, or leads.</p>
+      <p><strong>How long does SEO take for a new website?</strong> There is no guaranteed deadline. Google says crawling can take a few days to a few weeks in its recrawl guidance, while the SEO Starter Guide says some changes may appear within hours and others may take several months.</p>
       <h2>Why SEO Takes Time</h2>
-      <p>Search engines do not process web content in a simple, step-by-step manner.</p>
-      <p>According to <a href="https://developers.google.com/search/docs/fundamentals/how-search-works" target="_blank" rel="noopener noreferrer">Google’s How Search Works guide</a>, the process involves crawling, where Googlebot finds URLs, and rendering, where it processes JavaScript to understand the content. For modern websites, JavaScript SEO is important because search engines might delay rendering until certain resources are available. Once rendered, pages enter indexing, followed by ongoing evaluation based on factors such as relevance, competition, and authority. New domains typically take time to develop these quality signals compared to already established competitors.</p>
+      <p>Search engines do not process web content in a simple, step-by-step manner. According to Google’s How Search Works guide, the process involves crawling, rendering, indexing, and ongoing quality evaluation. Learn more about infrastructure optimizations on our <a href="/services/seo/technical-seo/">Technical SEO Services</a> page.</p>
       <h2>How a Page Moves Through Search</h2>
-      <figure><p><strong>Crawling → Rendering → Indexing → Ranking Evaluation</strong></p><figcaption>A simplified technical flow; ranking evaluation continues after indexing.</figcaption></figure>
-      <h3>Month 0–1: Crawling and Baseline Measurement</h3><p>In the first audit window, we set up technical tracking and verify that Googlebot can access the site. This includes submitting an XML sitemap and using the URL Inspection Tool in Search Console to monitor early discovery. This phase is focused on removing any barriers that prevent the site from being indexed.</p>
-      <h3>Month 1–3: Index Coverage and Content Validation</h3><p>During this period, the focus is on checking which pages are included in the Google index. We use the Indexing report to identify URLs that are “crawled – currently not indexed” or have canonicalization issues. This is a time to ensure the content meets people-first standards.</p>
-      <h3>Month 3–6: Search Visibility and Topic Development</h3><p>Once indexing is stable, we look for the first signs of visibility, such as recorded impressions for targeted topics. This checkpoint reviews how well internal links connect related pages and whether search engines are starting to associate the domain with specific expertise.</p>
-      <h3>Month 6–12+: Strategy Review and Compounding Efforts</h3><p>This long-term stage assesses the site’s growth in topic coverage. We review which clusters are gaining visibility and where further development is needed. SEO at this stage is about building on the value of early technical and content foundations to support broader business goals.</p>
-      <h2>Why Isn’t My New Website Ranking Yet</h2><p>Low early search visibility is often normal. If key pages remain invisible, inspect robots directives, server responses, rendered HTML, canonical selection, internal links, and the Page Indexing report. Use the URL Inspection Tool to confirm what Googlebot can fetch and whether Google selected the intended canonical.</p>
-      <h2>SEO Planning Decision Framework</h2>
-      <table><thead><tr><th>Situation</th><th>Business Impact</th><th>Recommended Action</th><th>Expected Signal</th><th>Verification Method</th></tr></thead><tbody><tr><td>Low URL discovery</td><td>Content remains invisible</td><td>Update XML sitemap</td><td>Crawl request in logs</td><td>Search Console Stats</td></tr><tr><td>JS-heavy pages</td><td>Indexing delays</td><td>Review rendering</td><td>Rendered HTML visible</td><td>URL Inspection Tool</td></tr><tr><td>Multiple URL variants</td><td>Split ranking signals</td><td>Apply canonical tags</td><td>Preferred URL selection</td><td>Indexing Report</td></tr><tr><td>New service launch</td><td>No topical authority</td><td>Internal link building</td><td>Topic cluster impressions</td><td>Performance Report</td></tr></tbody></table>
-      <h3>Audit observation: Identifying indexing blockers</h3><p>A standard Go Execution audit involves checking crawlable but unindexed pages for specific issues. This includes looking for duplicate URLs, canonical conflicts, thin or overlapping content, orphan pages, and weak internal linking.</p>
-      <h2>Frequently Asked Questions</h2><h3>Can SEO work in one month?</h3><p>While some technical changes may show results within hours, achieving consistent search visibility for a new domain usually requires a longer evaluation period by search engines. One month is typically used for baseline audits.</p><h3>Does a new domain take longer to rank?</h3><p>Yes, a new domain may take longer to show stable search signals because its pages may still need to be discovered, rendered, indexed, and evaluated alongside established results.</p><h3>Why isn’t Google indexing my website?</h3><p>Common issues include robots.txt blocks, “noindex” tags, thin content, or server errors.</p><h3>Do backlinks matter?</h3><p>Backlinks from reputable sites can help Google discover your pages and understand your site’s importance, but they must be built naturally over time.</p><h3>Does Google Ads improve SEO?</h3><p>No. Google Ads is a paid advertising platform. Buying ads does not result in organic rankings or guaranteed better search visibility.</p>
-      <h2>Get a Prioritized SEO Action Plan</h2><p>Use <a href="/services/seo-services/">Go Execution SEO services</a> to understand available support, or request an <a href="/contact/">SEO readiness review</a>. We will identify issues affecting crawl, page-indexing, content, internal linking, and measurement, then provide a prioritized action plan with evidence to verify at each stage—without promising a specific ranking deadline.</p>
-      <h2>About This Guidance</h2><p><strong>Author:</strong> Go Execution Editorial Team</p><p><strong>Reviewer:</strong> Go Execution SEO Review Team</p><p><strong>Experience:</strong> Technical SEO, content and measurement-readiness reviews</p><p><strong>Last Updated:</strong> July 30, 2026</p>`,
+      <figure><p><strong>Crawling → Rendering → Indexing → Ranking Evaluation</strong></p></figure>
+      <h3>Month 0–1: Crawling and Baseline Measurement</h3>
+      <p>In the first audit window, we set up technical tracking and verify that Googlebot can access the site. Check our <a href="/services/seo/small-business-seo/">Small Business SEO Services</a> for structured growth strategies.</p>
+      <h3>Month 1–3: Index Coverage and Content Validation</h3>
+      <p>Checking which pages are included in the Google index and resolving canonicalization issues.</p>
+      <h3>Month 3–6: Search Visibility and Topic Development</h3>
+      <p>Monitoring search impressions and topic cluster authority across competitive commercial queries.</p>
+      <h2>Get a Prioritized SEO Action Plan</h2>
+      <p>Explore <a href="/services/seo/">Go Execution SEO services</a> or <a href="/contact/">contact our strategy team</a> for a consultation.</p>`,
   },
+  {
+    slug: "custom-web-development-vs-website-builders",
+    title: "Custom Web Development vs. Website Builders: Which Suits Your Business?",
+    excerpt: "Compare custom web development against template builders like Wix and Squarespace for speed, scalability, SEO performance, and ownership.",
+    date: "2026-08-08",
+    dateModified: "2026-08-08",
+    category: "Web Development",
+    categorySlug: "web-development",
+    contentHtml: `
+      <p>Choosing between <strong>custom web development</strong> and off-the-shelf template website builders (like Wix, Squarespace, or generic WordPress themes) is one of the most critical digital decisions for a growing business.</p>
+      <h2>1. Performance and Core Web Vitals</h2>
+      <p>Template builders carry heavy code bloat, unoptimized scripts, and shared server overhead that frequently trigger poor PageSpeed Insights scores. In contrast, <a href="/services/web-development/custom-web-development/">custom web development</a> uses streamlined frameworks like Next.js and React to deliver sub-second loading speeds.</p>
+      <h2>2. SEO Flexibility and Technical Control</h2>
+      <p>Custom platforms grant total control over canonical tags, dynamic sitemaps, structured JSON-LD schemas, and server-side rendering (SSR). Read our guide on <a href="/services/web-development/nextjs-development/">Next.js Development Services</a> to see how modern web apps dominate Google search.</p>
+      <h2>3. Code Ownership and Scalability</h2>
+      <p>When you build on a proprietary builder, you are locked into their ecosystem. Custom engineering ensures 100% intellectual property ownership, zero vendor lock-in, and unlimited integration scalability.</p>
+      <h2>Ready to Build a Custom Web Asset?</h2>
+      <p>Learn how Go Execution delivers bespoke web platforms on our <a href="/services/web-development/custom-web-development/">Custom Web Development Services</a> page or <a href="/contact/">request a proposal</a> today.</p>`,
+  },
+  {
+    slug: "how-much-does-custom-web-development-cost",
+    title: "How Much Does Custom Web Development Cost? 2026 Pricing Breakdown",
+    excerpt: "An honest breakdown of custom web development costs, scope factors, timeline expectations, and long-term business ROI.",
+    date: "2026-08-07",
+    dateModified: "2026-08-07",
+    category: "Web Development",
+    categorySlug: "web-development",
+    contentHtml: `
+      <p>Understanding <strong>custom web development pricing</strong> requires evaluating your project's technical scope, integration requirements, custom UI/UX design, and database complexity.</p>
+      <h2>Cost Factors in Custom Web Projects</h2>
+      <ul>
+        <li><strong>Architecture & Stack:</strong> Next.js, React, and TypeScript builds compared to custom WordPress setups.</li>
+        <li><strong>Third-Party Integrations:</strong> MLS/IDX real estate feeds, CRM webhooks, payment gateways, and custom APIs.</li>
+        <li><strong>Conversion Rate Optimization:</strong> Custom landing page design vs generic layouts. Check our <a href="/services/web-development/landing-page-development/">Landing Page Development Services</a>.</li>
+      </ul>
+      <h2>Investment Ranges for US Businesses</h2>
+      <p>Professional custom web development typically ranges from $3,000 for high-converting landing funnels to $15,000+ for enterprise e-commerce portals. Explore our transparent pricing on the <a href="/pricing/">Go Execution Pricing Page</a>.</p>
+      <p>Ready to discuss your scope? Visit our <a href="/services/web-development/custom-web-development/">Custom Web Development</a> page or <a href="/contact/">schedule a consultation</a>.</p>`,
+  },
+  {
+    slug: "wordpress-vs-nextjs-for-business-websites",
+    title: "WordPress vs Next.js for Business Websites: A Performance Comparison",
+    excerpt: "Compare WordPress CMS and Next.js React framework for speed, security, SEO rendering, content management, and scaling.",
+    date: "2026-08-06",
+    dateModified: "2026-08-06",
+    category: "Web Development",
+    categorySlug: "web-development",
+    contentHtml: `
+      <p>Both <strong>WordPress</strong> and <strong>Next.js</strong> power millions of business websites across the United States. Choosing the right framework depends on your content publishing frequency, speed targets, and technical requirements.</p>
+      <h2>WordPress Advantages</h2>
+      <p>WordPress is the leading Content Management System (CMS) for editorial content, blogs, and non-technical team publishing. Explore our <a href="/services/web-development/wordpress-development/">WordPress Development Services</a>.</p>
+      <h2>Next.js Advantages</h2>
+      <p>Next.js delivers sub-second page rendering, zero plugin vulnerability surface, server-side rendering (SSR), and top-tier Core Web Vitals. Explore our <a href="/services/web-development/nextjs-development/">Next.js Development Services</a>.</p>
+      <h2>Headless WordPress: The Hybrid Approach</h2>
+      <p>For brands that need WordPress content editing with Next.js frontend speed, a Headless setup combines the best of both worlds. Explore our <a href="/services/web-development/custom-web-development/">Custom Web Development Services</a> to get started.</p>`,
+  },
+  {
+    slug: "what-is-technical-seo",
+    title: "What Is Technical SEO? A Complete Guide for US Businesses",
+    excerpt: "Discover the fundamentals of technical SEO including crawl efficiency, indexing controls, schema markup, Core Web Vitals, and site speed.",
+    date: "2026-08-05",
+    dateModified: "2026-08-05",
+    category: "SEO",
+    categorySlug: "seo-services",
+    contentHtml: `
+      <p><strong>Technical SEO</strong> refers to optimizing a website's underlying code, server infrastructure, and architecture so search engines can easily crawl, render, index, and rank its pages.</p>
+      <h2>Key Pillars of Technical SEO</h2>
+      <ul>
+        <li><strong>Crawlability & Indexability:</strong> Robots.txt directives, XML sitemaps, and HTTP status codes.</li>
+        <li><strong>Core Web Vitals:</strong> LCP, INP, and CLS performance metrics. Explore our <a href="/services/web-development/website-performance/">Website Speed Optimization Services</a>.</li>
+        <li><strong>Structured Data:</strong> JSON-LD schema graphs for Organization, Services, Articles, and FAQs.</li>
+      </ul>
+      <p>To audit and fix technical search barriers on your site, visit our dedicated <a href="/services/seo/technical-seo/">Technical SEO Services</a> page or <a href="/contact/">contact our technical team</a>.</p>`,
+  },
+  {
+    slug: "how-to-redesign-a-website-without-losing-seo",
+    title: "How to Redesign a Website Without Losing SEO Rankings",
+    excerpt: "A step-by-step guide to executing a website redesign while protecting historical organic traffic, backlink equity, and search engine rankings.",
+    date: "2026-08-03",
+    dateModified: "2026-08-03",
+    category: "Web Development",
+    categorySlug: "web-development",
+    contentHtml: `
+      <p>A website redesign is an opportunity to modernize your brand and improve conversion rates. However, without a strict <strong>SEO migration plan</strong>, redesigns can cause severe drops in organic search traffic.</p>
+      <h2>1. Pre-Launch URL Mapping</h2>
+      <p>Catalog every indexable URL on your existing website and prepare a comprehensive 301 redirect map matching old paths to new canonical URLs.</p>
+      <h2>2. Content & On-Page Preservation</h2>
+      <p>Ensure primary headings, body copy keywords, title tags, and meta descriptions are preserved or enhanced during redesign.</p>
+      <h2>3. Technical & Speed Auditing</h2>
+      <p>Verify that your new platform delivers sub-second page performance. Learn more on our <a href="/services/web-development/website-redesign/">Website Redesign Services</a> page.</p>
+      <p>Planning a redesign? Partner with Go Execution's team on our <a href="/services/web-development/website-redesign/">Website Redesign</a> page or <a href="/contact/">get in touch</a>.</p>`,
+  }
 ];
 
 export function getBlogPost(slug: string) {

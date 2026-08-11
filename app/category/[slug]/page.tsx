@@ -78,15 +78,15 @@ export default async function CategoryPage({ params }: Props) {
             <div className="ge-blog-grid">
               {posts.map((post, index) => (
                 <article className="ge-blog-card" key={post.slug}>
-                  <Link className="ge-blog-card__image" href={`/${post.slug}/`}>
+                  <Link className="ge-blog-card__image" href={`/blog/${post.slug}/`}>
                     {post.image ? <Image src={post.image} alt={post.imageAlt ?? ""} fill sizes="(max-width: 700px) 100vw, 50vw" /> : <span>{String(index + 1).padStart(2, "0")}</span>}
                   </Link>
                   <p className="ge-eyebrow">{post.category}</p>
-                  <h2><Link href={`/${post.slug}/`}>{post.title}</Link></h2>
+                  <h2><Link href={`/blog/${post.slug}/`}>{post.title}</Link></h2>
                   <p>{post.excerpt}</p>
                   <div>
                     <time dateTime={post.date}>{formatBlogDate(post.date)}</time>
-                    <Link href={`/${post.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
+                    <Link href={`/blog/${post.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
                   </div>
                 </article>
               ))}

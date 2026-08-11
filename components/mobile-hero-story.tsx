@@ -18,13 +18,13 @@ type MobileHeroStoryProps = {
 };
 
 export function MobileHeroStory({
-  eyebrow = "#1 Digital Marketing Agency in USA",
-  title = "Web Development in USA.",
-  titleAccent = "Go Execution Drives Real Growth.",
-  copy = "Go Execution is a premier digital marketing agency in USA. We integrate high-performing web development in USA, data-driven SEO, and strategic marketing in USA to scale ambitious brands.",
-  primaryLabel = "Book Free Consultation",
+  eyebrow = "Full-Service Growth Partner for US Businesses",
+  title = "Strategy Meets Precision.",
+  titleAccent = "Execution Drives Growth.",
+  copy = "Go Execution helps ambitious American brands outpace competition. We engineer sub-second web platforms, execute technical search engine strategies, and launch data-driven marketing campaigns that convert digital visibility into bottom-line revenue.",
+  primaryLabel = "Get Free Growth Audit",
   primaryHref = "/contact",
-  secondaryLabel = "Explore Our Work",
+  secondaryLabel = "Explore Our Services",
   secondaryHref = "#work",
   variant = "home",
 }: MobileHeroStoryProps = {}) {

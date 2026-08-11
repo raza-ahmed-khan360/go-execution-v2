@@ -222,7 +222,7 @@ export function ServiceDetailView({
               return (
                 <Link
                   key={item.slug}
-                  href={`/${item.slug}/`}
+                  href={`/services/${item.slug}/`}
                   className={`ge-service-drawer-link${isActive ? " is-active" : ""}`}
                   onClick={() => setDrawerOpen(false)}
                 >
@@ -282,7 +282,7 @@ export function ServiceDetailView({
                     return (
                       <Link
                         key={item.slug}
-                        href={`/${item.slug}/`}
+                        href={`/services/${item.slug}/`}
                         className={`ge-service-sidebar__link${isActive ? " is-active" : ""}`}
                       >
                         <span>{item.title}</span>

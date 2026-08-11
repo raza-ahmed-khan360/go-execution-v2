@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { type FormEvent, useEffect, useRef, useState } from "react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
-
+import { usePathname } from "next/navigation";
 
 const dropdowns = {
   portfolio: [
@@ -16,12 +16,21 @@ const dropdowns = {
     ["Mobile Apps", "/portfolio?category=mobile-apps"],
   ],
   services: [
-    ["Website Design & Development", "/website-design-development/"],
-    ["Graphic Designing", "/logo-design/"],
-    ["Video Animation", "/video-animation/"],
-    ["SEO Services", "/seo-services/"],
-    ["Digital Marketing", "/digital-marketing/"],
-    ["Mobile Apps", "/mobile-apps/"],
+    ["Web Development", "/services/web-development/"],
+    ["SEO Services", "/services/seo/"],
+    ["Digital Marketing", "/services/digital-marketing/"],
+    ["Design & Branding", "/services/design-branding/"],
+    ["Video Animation", "/services/video/"],
+    ["Mobile Apps", "/services/mobile-app-development/"],
+  ],
+  industries: [
+    ["Real Estate", "/industries/real-estate/"],
+    ["Fashion", "/industries/fashion/"],
+    ["Retail", "/industries/retail/"],
+    ["Hospitality", "/industries/hospitality/"],
+    ["Technology & SaaS", "/industries/technology/"],
+    ["Professional Services", "/industries/professional-services/"],
+    ["Health & Wellness", "/industries/health-wellness/"],
   ],
 } as const;
 
@@ -31,6 +40,14 @@ function ChevronDownIcon({ className }: { className: string }) {
   return (
     <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
       <path d="m5.25 7.5 4.75 4.75 4.75-4.75" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ChevronUpIcon({ className }: { className: string }) {
+  return (
+    <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+      <path d="m14.75 12.5-4.75-4.75-4.75 4.75" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -159,7 +176,9 @@ export function Header() {
             <li><Link href="/" onClick={closeNavigation}>Home</Link></li>
             {renderDropdown("portfolio", "Portfolio")}
             {renderDropdown("services", "Services")}
+            {renderDropdown("industries", "Industries")}
             <li><Link href="/pricing" onClick={closeNavigation}>Pricing</Link></li>
+            <li><Link href="/blog" onClick={closeNavigation}>Blog</Link></li>
             <li><Link href="/about" onClick={closeNavigation}>About</Link></li>
             <li><Link href="/contact" onClick={closeNavigation}>Contact</Link></li>
           </ul>
@@ -170,8 +189,249 @@ export function Header() {
   );
 }
 
+function getPageSpecificCta(pathname: string) {
+  if (pathname === "/contact" || pathname === "/contact/") {
+    return null;
+  }
+
+  // Web Development Sub-services
+  if (pathname.includes("/services/web-development/custom-web-development")) {
+    return {
+      eyebrow: "Custom Full-Stack Engineering",
+      headline: "Build Your Custom Next.js Platform.",
+      copy: "Zero template bloat. Enterprise Next.js and React architectures built for sub-second speeds.",
+    };
+  }
+  if (pathname.includes("/services/web-development/wordpress-development")) {
+    return {
+      eyebrow: "Enterprise WordPress Architecture",
+      headline: "Upgrade Your WordPress Platform.",
+      copy: "Custom WordPress theme development, Gutenberg blocks, and speed-optimized CMS platforms.",
+    };
+  }
+  if (pathname.includes("/services/web-development/nextjs-development")) {
+    return {
+      eyebrow: "Next.js 16 & React 19 Engineering",
+      headline: "Accelerate Your Web Application.",
+      copy: "Server-side rendering, static site generation, and sub-second Core Web Vitals performance.",
+    };
+  }
+  if (pathname.includes("/services/web-development/ecommerce-development")) {
+    return {
+      eyebrow: "High-Converting Online Storefronts",
+      headline: "Scale Your E-Commerce Sales.",
+      copy: "Headless Shopify, custom WooCommerce, and frictionless checkout conversion flows.",
+    };
+  }
+  if (pathname.includes("/services/web-development/landing-page-development")) {
+    return {
+      eyebrow: "Paid Campaign Lead Funnels",
+      headline: "Launch Your High-ROAS Landing Page.",
+      copy: "Conversion rate optimized landing pages designed to turn ad clicks into sales leads.",
+    };
+  }
+  if (pathname.includes("/services/web-development/website-redesign")) {
+    return {
+      eyebrow: "Brand Modernization & Migration",
+      headline: "Redesign Without Losing SEO Ranks.",
+      copy: "Modernize your website UX while preserving search engine traffic and authority.",
+    };
+  }
+  if (pathname.includes("/services/web-development/website-speed")) {
+    return {
+      eyebrow: "Core Web Vitals Remediation",
+      headline: "Achieve Sub-Second Load Speeds.",
+      copy: "Eliminate code bloat, optimize JavaScript bundles, and pass Google PageSpeed audits.",
+    };
+  }
+  if (pathname.includes("/services/web-development")) {
+    return {
+      eyebrow: "Enterprise Web Engineering",
+      headline: "Build Your High-Performance Web Platform.",
+      copy: "Custom Next.js, React, and WordPress web development tailored for market dominance.",
+    };
+  }
+
+  // SEO Services Sub-services
+  if (pathname.includes("/services/seo/technical-seo")) {
+    return {
+      eyebrow: "Search Engine Infrastructure",
+      headline: "Audit Your Technical SEO Graph.",
+      copy: "Structured schema graphs, crawl budget optimization, and Core Web Vitals technical fixes.",
+    };
+  }
+  if (pathname.includes("/services/seo/local-seo")) {
+    return {
+      eyebrow: "Geo-Targeted Customer Acquisition",
+      headline: "Dominate Local Search & Maps.",
+      copy: "Rank your business in Google Local 3-Pack search results and capture nearby buyers.",
+    };
+  }
+  if (pathname.includes("/services/seo/ecommerce-seo")) {
+    return {
+      eyebrow: "Organic Product Catalog Revenue",
+      headline: "Rank Product Collections on Google.",
+      copy: "Product schema, faceted filter SEO, and organic collection page optimization.",
+    };
+  }
+  if (pathname.includes("/services/seo/small-business-seo")) {
+    return {
+      eyebrow: "Targeted Organic Growth",
+      headline: "Outrank Competitors in Your Market.",
+      copy: "High-intent commercial keyword targeting and content optimization for US businesses.",
+    };
+  }
+  if (pathname.includes("/services/seo")) {
+    return {
+      eyebrow: "Search Engine Dominance",
+      headline: "Capture Organic Buyer Traffic.",
+      copy: "Technical SEO, local maps optimization, and revenue-driven search engine strategies.",
+    };
+  }
+
+  // Digital Marketing
+  if (pathname.includes("/services/digital-marketing")) {
+    return {
+      eyebrow: "Paid Growth & Customer Acquisition",
+      headline: "Scale Your Performance Campaign ROAS.",
+      copy: "Data-driven Google Ads, Meta Ads, and conversion rate optimization campaigns.",
+    };
+  }
+
+  // Design & Branding
+  if (pathname.includes("/services/design-branding")) {
+    return {
+      eyebrow: "Luxury Brand Identity & Design",
+      headline: "Elevate Your Brand Perception.",
+      copy: "Iconic brand identity systems, UI/UX interface design, and premium creative assets.",
+    };
+  }
+
+  // Video Animation
+  if (pathname.includes("/services/video")) {
+    return {
+      eyebrow: "Commercial Motion Graphics",
+      headline: "Bring Your Product Story to Life.",
+      copy: "Custom 2D/3D animation, explainer videos, and high-converting video ad creatives.",
+    };
+  }
+
+  // Mobile Apps
+  if (pathname.includes("/services/mobile-app")) {
+    return {
+      eyebrow: "Cross-Platform Mobile Engineering",
+      headline: "Launch Your Custom Mobile App.",
+      copy: "Native-performing iOS and Android mobile applications built for scale.",
+    };
+  }
+
+  // General Services Hub
+  if (pathname.startsWith("/services")) {
+    return {
+      eyebrow: "360° Commercial Growth Spectrum",
+      headline: "Engineer Your Market Advantage.",
+      copy: "Select a specialized service hub or request a custom growth strategy proposal.",
+    };
+  }
+
+  // Industries
+  if (pathname.includes("/industries/real-estate")) {
+    return {
+      eyebrow: "Real Estate Growth Platforms",
+      headline: "Scale Your Property Deals & Listings.",
+      copy: "Custom MLS web integrations, IDX listing search, and real estate lead funnels.",
+    };
+  }
+  if (pathname.includes("/industries/fashion")) {
+    return {
+      eyebrow: "Luxury Apparel Storefronts",
+      headline: "Build Your High-Converting Fashion Brand.",
+      copy: "Headless e-commerce, lookbook UX design, and social media growth campaigns.",
+    };
+  }
+  if (pathname.includes("/industries/retail")) {
+    return {
+      eyebrow: "Omnichannel Commerce",
+      headline: "Scale Your Retail Operations Online.",
+      copy: "Inventory synchronization, local store pickup, and high-ROAS ad funnels.",
+    };
+  }
+  if (pathname.includes("/industries/hospitality")) {
+    return {
+      eyebrow: "Direct Hotel & Resort Bookings",
+      headline: "Drive Direct Guest Revenue.",
+      copy: "Direct booking engines, local search optimization, and luxury hospitality branding.",
+    };
+  }
+  if (pathname.includes("/industries/technology")) {
+    return {
+      eyebrow: "SaaS & Tech Scaleups",
+      headline: "Accelerate User Acquisition & Demos.",
+      copy: "Sub-second Next.js marketing sites, product onboarding UX, and tech SEO graphs.",
+    };
+  }
+  if (pathname.includes("/industries/professional-services")) {
+    return {
+      eyebrow: "B2B Practice Growth",
+      headline: "Attract High-Value Business Clients.",
+      copy: "High-trust corporate website design, local SEO, and B2B lead generation.",
+    };
+  }
+  if (pathname.includes("/industries/health-wellness")) {
+    return {
+      eyebrow: "Healthcare & Clinic Growth",
+      headline: "Expand Patient Consultations & Appointments.",
+      copy: "HIPAA-compliant appointment booking, local maps SEO, and patient trust design.",
+    };
+  }
+  if (pathname.startsWith("/industries")) {
+    return {
+      eyebrow: "Sector-Specific Growth Solutions",
+      headline: "Dominate Your Vertical Industry.",
+      copy: "Custom digital platforms and search strategies engineered for your market segment.",
+    };
+  }
+
+  // Pricing
+  if (pathname.startsWith("/pricing")) {
+    return {
+      eyebrow: "Transparent Investment Frameworks",
+      headline: "Request Your Custom Scope & Proposal.",
+      copy: "Get an itemized technical proposal and growth scope tailored to your business goals.",
+    };
+  }
+
+  // Portfolio
+  if (pathname.startsWith("/portfolio")) {
+    return {
+      eyebrow: "Proven Commercial Case Studies",
+      headline: "Start Your Digital Transformation.",
+      copy: "Explore past case studies and discover how we scale brands through custom engineering.",
+    };
+  }
+
+  // Blog
+  if (pathname.startsWith("/blog")) {
+    return {
+      eyebrow: "Actionable Digital Insights",
+      headline: "Elevate Your Digital Strategy.",
+      copy: "Read our technical web, search engine, and marketing guides or request a strategy audit.",
+    };
+  }
+
+  // Default Homepage & General Pages
+  return {
+    eyebrow: "Have a commercial goal in mind?",
+    headline: "Let’s execute your growth strategy.",
+    copy: "Strategy, creative, technology, and growth—aligned around your next commercial move.",
+  };
+}
+
 export function Footer() {
+  const pathname = usePathname();
   const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "invalid" | "ready">("idle");
+  const [footerDropdown, setFooterDropdown] = useState<DropdownName | null>(null);
+  const ctaData = getPageSpecificCta(pathname || "/");
 
   const handleNewsletterSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -185,13 +445,116 @@ export function Footer() {
     form.reset();
   };
 
+  const renderFooterDropdownNav = (name: DropdownName, label: string) => (
+    <div
+      className={`ge-footer__nav-dropdown-wrap${footerDropdown === name ? " is-open" : ""}`}
+      onMouseEnter={() => setFooterDropdown(name)}
+      onMouseLeave={() => setFooterDropdown(null)}
+    >
+      <button
+        type="button"
+        className="ge-footer__nav-trigger"
+        onClick={() => setFooterDropdown((cur) => (cur === name ? null : name))}
+        aria-expanded={footerDropdown === name}
+      >
+        <span>{label}</span>
+        {footerDropdown === name ? <ChevronUpIcon className="ge-nav-chevron" /> : <ChevronDownIcon className="ge-nav-chevron" />}
+      </button>
+      <ul className="ge-footer__popover-menu">
+        {dropdowns[name].map(([itemLabel, href]) => (
+          <li key={href}>
+            <Link href={href} onClick={() => setFooterDropdown(null)}>
+              <span>{itemLabel}</span>
+              <span aria-hidden="true">↗</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <footer className="ge-footer">
       <div className="ge-container">
-        <div className="ge-footer__lead ge-reveal">
-          <div className="ge-footer__lead-background" aria-hidden="true"><span className="ge-footer__lead-glow" /><span className="ge-footer__lead-orbit" /><span className="ge-footer__lead-orbit ge-footer__lead-orbit--inner" /><span className="ge-footer__lead-cross">+</span><span className="ge-footer__lead-dot" /></div>
-          <div className="ge-footer__lead-content"><p className="ge-eyebrow ge-eyebrow--light">Have a project in mind?</p><Link className="ge-footer__headline" href="/contact">Let’s execute it.<span aria-hidden="true">↗</span></Link><p className="ge-footer__lead-copy">Strategy, creative, technology and growth—aligned around your next commercial move.</p></div>
+        {ctaData && (
+          <div className="ge-footer__lead ge-reveal">
+            <div className="ge-footer__lead-background" aria-hidden="true">
+              <span className="ge-footer__lead-glow" />
+              <span className="ge-footer__lead-orbit" />
+              <span className="ge-footer__lead-orbit ge-footer__lead-orbit--inner" />
+              <span className="ge-footer__lead-cross">+</span>
+              <span className="ge-footer__lead-dot" />
+            </div>
+            <div className="ge-footer__lead-content">
+              <p className="ge-eyebrow ge-eyebrow--light">{ctaData.eyebrow}</p>
+              <Link className="ge-footer__headline" href="/contact">
+                {ctaData.headline}<span aria-hidden="true">↗</span>
+              </Link>
+              <p className="ge-footer__lead-copy">{ctaData.copy}</p>
+            </div>
+          </div>
+        )}
+
+        {/* --- MULTI-COLUMN LINK TREE GRID --- */}
+        <div className="ge-footer__columns ge-reveal">
+          {/* Col 1: Services */}
+          <div>
+            <h4 className="ge-footer__col-title">Services Hub</h4>
+            <ul className="ge-footer__col-links">
+              <li><Link href="/services/web-development/">Web Development ↗</Link></li>
+              <li><Link href="/services/web-development/custom-web-development/">Custom Web Dev</Link></li>
+              <li><Link href="/services/web-development/nextjs-development/">Next.js 16 Engineering</Link></li>
+              <li><Link href="/services/web-development/wordpress-development/">WordPress Platforms</Link></li>
+              <li><Link href="/services/seo/">Search Engine Optimization ↗</Link></li>
+              <li><Link href="/services/seo/technical-seo/">Technical SEO Graph</Link></li>
+              <li><Link href="/services/digital-marketing/">Digital Marketing</Link></li>
+              <li><Link href="/services/design-branding/">Design &amp; Branding</Link></li>
+              <li><Link href="/services/video/">Video Animation</Link></li>
+              <li><Link href="/services/mobile-app-development/">Mobile App Dev</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 2: Industries */}
+          <div>
+            <h4 className="ge-footer__col-title">Industry Verticals</h4>
+            <ul className="ge-footer__col-links">
+              <li><Link href="/industries/real-estate/">Real Estate Platforms</Link></li>
+              <li><Link href="/industries/fashion/">Luxury Fashion Brands</Link></li>
+              <li><Link href="/industries/retail/">Omnichannel Retail</Link></li>
+              <li><Link href="/industries/hospitality/">Hotel &amp; Direct Booking</Link></li>
+              <li><Link href="/industries/technology/">SaaS &amp; Tech Scaleups</Link></li>
+              <li><Link href="/industries/professional-services/">B2B Practice Growth</Link></li>
+              <li><Link href="/industries/health-wellness/">Healthcare &amp; Clinics</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 3: Portfolio */}
+          <div>
+            <h4 className="ge-footer__col-title">Portfolio &amp; Work</h4>
+            <ul className="ge-footer__col-links">
+              <li><Link href="/portfolio?category=all-projects">View All Projects ↗</Link></li>
+              <li><Link href="/portfolio?category=website-design-development">Web Engineering</Link></li>
+              <li><Link href="/portfolio?category=graphic-designing">Graphic &amp; UI Design</Link></li>
+              <li><Link href="/portfolio?category=digital-marketing">Digital Ad Campaigns</Link></li>
+              <li><Link href="/portfolio?category=video-animation">Video Motion Ads</Link></li>
+              <li><Link href="/portfolio?category=mobile-apps">Mobile Apps</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 4: Company */}
+          <div>
+            <h4 className="ge-footer__col-title">Company</h4>
+            <ul className="ge-footer__col-links">
+              <li><Link href="/about">About Go Execution</Link></li>
+              <li><Link href="/pricing">Investment &amp; Pricing</Link></li>
+              <li><Link href="/blog">Industry Insights &amp; Blog</Link></li>
+              <li><Link href="/contact">Book Strategy Consultation</Link></li>
+              <li><Link href="/terms-and-conditions">Terms &amp; Conditions</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+            </ul>
+          </div>
         </div>
+
         <div className="ge-footer__main">
           <div className="ge-footer__brand-block">
             <Image className="ge-footer__logo" src="/assets/images/logo-light.png" alt="Go Execution" width={360} height={84} />
@@ -239,10 +602,13 @@ export function Footer() {
             </p>
           </div>
         </div>
+
+        {/* --- INTERACTIVE FOOTER NAV BAR WITH DROPDOWNS --- */}
         <nav className="ge-footer__nav" aria-label="Footer navigation">
           <Link className="is-active" href="/">Home</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/services">Services</Link>
+          {renderFooterDropdownNav("portfolio", "Portfolio")}
+          {renderFooterDropdownNav("services", "Services")}
+          {renderFooterDropdownNav("industries", "Industries")}
           <Link href="/pricing">Pricing</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
@@ -250,6 +616,7 @@ export function Footer() {
           <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
         </nav>
+
         <div className="ge-footer__details">
           <a href="https://www.google.com/maps/search/?api=1&query=13345+N+Central+Expy,+Suite+203,+Dallas,+Texas+75243" target="_blank" rel="noreferrer">13345 N Central Expy, Suite#203<br />Dallas, Texas 75243</a>
           <a href="tel:+15872004832">+1 (587) 200-4832</a>

@@ -1,21 +1,65 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ConsultationCta, PageHero } from "@/components/page-hero";
+import Link from "next/link";
+import { FaqAccordion } from "@/components/interactive-sections";
 import { JsonLd, buildAboutPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Go Execution | US Digital Growth Agency Team" },
+  title: { absolute: "About Go Execution | US Digital Growth & Web Engineering Agency" },
   description:
-    "Meet the Go Execution team and learn how we combine strategy, design, development, SEO, and marketing to help US businesses achieve sustainable growth.",
+    "Learn how Go Execution combines custom web development, technical SEO, performance marketing, and brand strategy to help US businesses scale revenue.",
   alternates: { canonical: "/about/" },
   openGraph: { url: "/about/" },
 };
 
-const values = [
-  ["01", "Clarity before activity", "We define the real objective before recommending deliverables, channels, or technology."],
-  ["02", "Craft with purpose", "Every visual and interaction should support understanding, trust, or action."],
-  ["03", "Visible ownership", "Clear communication, defined responsibilities, and accountable next steps keep work moving."],
-  ["04", "Evidence over ego", "We improve the work through useful feedback, real data, and the needs of the audience."],
+const principles = [
+  {
+    num: "01",
+    eyebrow: "COMMERCIAL STRATEGY",
+    title: "Clarity Before Code",
+    desc: "We define commercial growth goals, audience search intent, and conversion metrics before recommending technology, channels, or design.",
+    icon: "🎯",
+  },
+  {
+    num: "02",
+    eyebrow: "SUB-SECOND SPEED",
+    title: "Crafted With Purpose",
+    desc: "Every component, layout, and line of code is engineered to load in under 1 second and turn site visitors into paying clients.",
+    icon: "⚡",
+  },
+  {
+    num: "03",
+    eyebrow: "DIRECT ACCOUNTABILITY",
+    title: "Transparent Ownership",
+    desc: "Dedicated senior lead communication, milestone-based delivery, and clear reporting keep your digital projects moving rapidly.",
+    icon: "🤝",
+  },
+  {
+    num: "04",
+    eyebrow: "DATA DRIVEN",
+    title: "Evidence Over Ego",
+    desc: "We continuously optimize campaigns and web platforms using real user data, Core Web Vitals audits, and conversion performance.",
+    icon: "📊",
+  },
+];
+
+const aboutFaqs = [
+  [
+    "What sets Go Execution apart from generic web agencies?",
+    "We do not use slow, bloated pre-made templates. We engineer custom high-performance web platforms (Next.js, React, custom WordPress) integrated with technical SEO graphs and high-ROAS marketing funnels under one roof.",
+  ],
+  [
+    "Where is Go Execution located?",
+    "Our agency headquarters is located in Dallas, Texas (13345 N Central Expy, Suite#203, Dallas, TX 75243). We work directly with growth-focused businesses across the United States.",
+  ],
+  [
+    "What industries do you specialize in?",
+    "We specialize in Real Estate, Fashion & Apparel, Omnichannel Retail, Hospitality, Technology & SaaS, Professional B2B Services, and Health & Wellness Clinics.",
+  ],
+  [
+    "How do you ensure sub-second page load speeds?",
+    "We build modern server-side rendered (SSR) and static site generated (SSG) architectures using Next.js 16 and React 19, stripping out unnecessary plugins and optimizing media assets to achieve top Google PageSpeed scores.",
+  ],
 ] as const;
 
 export default function About() {
@@ -33,57 +77,228 @@ export default function About() {
   return (
     <>
       <JsonLd data={schema} />
-      <main id="primary" className="site-main">
-      <PageHero
-        eyebrow="About Go Execution"
-        title="About Us: Strategy & Execution"
-        copy="We are a multidisciplinary digital agency built for businesses that expect more than attractive ideas—they expect progress."
-      />
-      <section className="ge-section ge-about-story">
-        <div className="ge-container ge-split ge-split--balanced">
-          <div className="ge-section-heading ge-reveal">
-            <p className="ge-eyebrow">Our point of view</p>
-            <h2>Creative Work With Purpose</h2>
+      <main id="primary" className="site-main ge-about-light-page" style={{ background: "#ffffff" }}>
+        {/* --- LIGHT MODERN AGENCY HERO --- */}
+        <section className="ge-hero ge-hero--inner" style={{ background: "#ffffff", color: "#0d1b2a", paddingTop: 160, paddingBottom: 80 }}>
+          <div className="ge-container">
+            <div className="ge-hero__badge-wrap" style={{ background: "#f8fafc", border: "1px solid rgba(229, 193, 88, 0.4)" }}>
+              <span className="ge-eyebrow" style={{ color: "#0d1b2a", margin: 0 }}>● US DIGITAL GROWTH &amp; WEB ENGINEERING AGENCY</span>
+            </div>
+
+            <h1 className="ge-hero__title" style={{ color: "#0d1b2a", margin: "24px 0" }}>
+              We Engineer Digital Growth <br />
+              <span className="ge-title-accent">For Ambitious US Brands</span>
+            </h1>
+
+            <p className="ge-hero__copy" style={{ color: "#475569", maxWidth: 720 }}>
+              Go Execution is an elite multidisciplinary digital agency uniting custom Next.js web engineering, technical SEO, performance advertising, and luxury brand design for businesses that expect progress.
+            </p>
+
+            {/* Stat Pills Grid */}
+            <div className="ge-hero-stats" style={{ marginTop: 36, marginBottom: 40 }}>
+              <div className="ge-hero-stat-pill" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                <strong style={{ color: "#0d1b2a" }}>250+ Projects</strong>
+                <span style={{ color: "#64748b" }}>Delivered for US Brands</span>
+              </div>
+              <div className="ge-hero-stat-pill" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                <strong style={{ color: "#0d1b2a" }}>Sub-1s Speeds</strong>
+                <span style={{ color: "#64748b" }}>Next.js 16 Standard</span>
+              </div>
+              <div className="ge-hero-stat-pill" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                <strong style={{ color: "#0d1b2a" }}>3.8x Avg ROAS</strong>
+                <span style={{ color: "#64748b" }}>Performance Marketing</span>
+              </div>
+              <div className="ge-hero-stat-pill" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
+                <strong style={{ color: "#0d1b2a" }}>Dallas, Texas</strong>
+                <span style={{ color: "#64748b" }}>Agency Headquarters</span>
+              </div>
+            </div>
+
+            <div className="ge-hero__actions" style={{ justifyContent: "flex-start", gap: 24 }}>
+              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+                <span>Book Strategy Consultation ↗</span>
+              </Link>
+              <a className="ge-button ge-button--outline" href="#our-story">
+                <span>Explore Agency Story ↓</span>
+              </a>
+            </div>
           </div>
-          <div className="ge-about-story__copy ge-reveal">
-            <p>Go Execution brings designers, developers, strategists, writers, and growth specialists together around one shared objective: helping ambitious businesses communicate better and move faster.</p>
-            <p>We value thoughtful strategy, transparent relationships, and disciplined follow-through. That means less noise, clearer ownership, and work designed to perform in the real world—not just look impressive in a presentation.</p>
+        </section>
+
+        {/* --- HERO MEDIA SHOWCASE BANNER --- */}
+        <section className="ge-section" style={{ padding: "0 0 60px" }}>
+          <div className="ge-container">
+            <div style={{ position: "relative", width: "100%", height: 420, borderRadius: 28, overflow: "hidden", boxShadow: "0 20px 60px rgba(13, 27, 42, 0.08)" }}>
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&fit=crop"
+                alt="Go Execution Digital Agency Team"
+                fill
+                priority
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                quality={85}
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="ge-section ge-values">
-        <div className="ge-container">
-          <div className="ge-section-heading ge-reveal">
-            <p className="ge-eyebrow ge-eyebrow--light">How we work</p>
-            <h2>Our Core Principles</h2>
+        </section>
+
+        {/* --- OUR STORY & PHILOSOPHY (LIGHT BENTO SPLIT) --- */}
+        <section id="our-story" className="ge-section" style={{ background: "#f8fafc", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
+          <div className="ge-container">
+            <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 44 }}>
+              <div>
+                <p className="ge-eyebrow">Our Agency Story</p>
+                <h2>Built for Businesses That Expect Revenue Growth</h2>
+              </div>
+              <p style={{ color: "#475569" }}>
+                Go Execution was founded on a simple realization: most businesses are let down by agencies that deliver either pretty designs with slow code, or technical code with zero conversion psychology.
+              </p>
+            </div>
+
+            <div className="ge-grid ge-grid--2col ge-split-challenge-grid">
+              {/* Mission Statement */}
+              <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: 24, padding: 36, boxShadow: "0 12px 36px rgba(13, 27, 42, 0.04)" }}>
+                <div style={{ marginBottom: 20 }}>
+                  <span style={{ background: "#f8fafc", border: "1px solid rgba(229, 193, 88, 0.5)", color: "#0d1b2a", fontSize: "0.78rem", fontWeight: 700, padding: "4px 14px", borderRadius: 20 }}>Our Point of View</span>
+                  <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#0d1b2a", marginTop: 14, marginBottom: 12 }}>Creative Engineering With Commercial Purpose</h3>
+                </div>
+                <p style={{ color: "#334155", lineHeight: 1.7, fontSize: "1rem", marginBottom: 16 }}>
+                  We bring senior designers, full-stack developers, search strategists, and performance marketers together under one disciplined execution process.
+                </p>
+                <p style={{ color: "#64748b", lineHeight: 1.65, fontSize: "0.95rem" }}>
+                  We value thoughtful strategy, transparent communication, and clean follow-through. That means zero code bloat, clear project ownership, and platforms designed to outrank competitors in the real world.
+                </p>
+              </div>
+
+              {/* Agency Guarantees */}
+              <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: 24, padding: 36, boxShadow: "0 12px 36px rgba(13, 27, 42, 0.04)" }}>
+                <div style={{ marginBottom: 20 }}>
+                  <span style={{ background: "rgba(229, 193, 88, 0.12)", color: "#b8860b", fontSize: "0.78rem", fontWeight: 700, padding: "4px 14px", borderRadius: 20 }}>The Go Execution Standard</span>
+                  <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#0d1b2a", marginTop: 14, marginBottom: 12 }}>Our Core Commitments</h3>
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 16 }}>
+                  {[
+                    ["100% Custom Engineering", "Zero pre-made template bloat or slow plugins."],
+                    ["Sub-Second Speed Guarantee", "Core Web Vitals optimized for top Google rankings."],
+                    ["Revenue & ROAS Accountability", "Campaigns and web funnels connected to real leads and sales."],
+                    ["Direct Senior Lead Accessibility", "Direct communication with senior engineers and strategists."],
+                  ].map(([title, desc]) => (
+                    <li key={title} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                      <span style={{ color: "#d4af37", fontWeight: 700, fontSize: "1.1rem" }}>✓</span>
+                      <div>
+                        <strong style={{ color: "#0d1b2a", fontSize: "0.98rem", display: "block" }}>{title}</strong>
+                        <p style={{ color: "#64748b", fontSize: "0.88rem", margin: "2px 0 0" }}>{desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="ge-values__grid">
-            {values.map(([number, title, copy]) => (
-              <article className="ge-value ge-reveal" key={number}>
-                <span>{number}</span><h3>{title}</h3><p>{copy}</p>
-              </article>
-            ))}
+        </section>
+
+        {/* --- CORE PRINCIPLES (LIGHT CARD GRID) --- */}
+        <section className="ge-section" style={{ background: "#ffffff" }}>
+          <div className="ge-container">
+            <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 44 }}>
+              <div>
+                <p className="ge-eyebrow">How We Work</p>
+                <h2 style={{ color: "#0d1b2a" }}>
+                  Our 4 Core <span className="ge-title-accent">Operating Principles</span>
+                </h2>
+              </div>
+              <p style={{ color: "#64748b" }}>
+                The foundational values that guide every line of code, design system, and marketing campaign we launch.
+              </p>
+            </div>
+
+            <div className="ge-grid ge-grid--4col">
+              {principles.map((item) => (
+                <article key={item.num} style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 20, padding: 28, display: "flex", flexDirection: "column", gap: 12 }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#d4af37", fontFamily: "var(--ge-font-heading)" }}>{item.num}</span>
+                    <span style={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.08em", color: "#64748b", background: "#ffffff", padding: "4px 10px", borderRadius: 12, border: "1px solid #e2e8f0" }}>{item.eyebrow}</span>
+                  </div>
+                  <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#0d1b2a", margin: "4px 0" }}>{item.title}</h3>
+                  <p style={{ fontSize: "0.9rem", color: "#475569", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="ge-section ge-about-facts">
-        <div className="ge-container ge-about-facts__grid">
-          <div className="ge-reveal">
-            <Image src="/assets/images/ce-icon.png" alt="" width={720} height={720} sizes="(max-width: 820px) 72vw, 360px" />
+        </section>
+
+        {/* --- HEADQUARTERS & CAPABILITIES SHOWCASE --- */}
+        <section className="ge-section" style={{ background: "#f8fafc", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
+          <div className="ge-container">
+            <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 44 }}>
+              <div>
+                <p className="ge-eyebrow">Agency Infrastructure</p>
+                <h2 style={{ color: "#0d1b2a" }}>Dallas, Texas Headquarters &amp; Execution Powerhouse</h2>
+              </div>
+              <p style={{ color: "#475569" }}>
+                Strategically headquartered in Dallas, Texas, we serve clients across North America with responsive communication and disciplined project delivery.
+              </p>
+            </div>
+
+            <div className="ge-grid ge-grid--2col ge-split-challenge-grid">
+              {/* HQ Details Card */}
+              <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: 24, padding: 36, boxShadow: "0 12px 36px rgba(13, 27, 42, 0.04)" }}>
+                <div style={{ marginBottom: 20 }}>
+                  <span style={{ background: "rgba(229, 193, 88, 0.12)", color: "#b8860b", fontSize: "0.78rem", fontWeight: 700, padding: "4px 14px", borderRadius: 20 }}>Dallas Headquarters</span>
+                  <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#0d1b2a", marginTop: 14, marginBottom: 12 }}>Office &amp; Contact Details</h3>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 14, color: "#475569", fontSize: "0.95rem" }}>
+                  <p>
+                    <strong style={{ color: "#0d1b2a" }}>📍 Address:</strong><br />
+                    13345 N Central Expy, Suite#203<br />
+                    Dallas, Texas 75243, United States
+                  </p>
+                  <p>
+                    <strong style={{ color: "#0d1b2a" }}>📞 Phone:</strong> <a href="tel:+15872004832" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (587) 200-4832</a> / <a href="https://wa.me/17738653770" target="_blank" rel="noreferrer" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (773) 865-3770 (WhatsApp)</a>
+                  </p>
+                  <p>
+                    <strong style={{ color: "#0d1b2a" }}>✉️ Email:</strong> <a href="mailto:justin@goexecution.com" style={{ color: "#b8860b", fontWeight: 600 }}>justin@goexecution.com</a>
+                  </p>
+                </div>
+              </div>
+
+              {/* Capabilities Stack */}
+              <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: 24, padding: 36, boxShadow: "0 12px 36px rgba(13, 27, 42, 0.04)" }}>
+                <div style={{ marginBottom: 20 }}>
+                  <span style={{ background: "rgba(229, 193, 88, 0.12)", color: "#b8860b", fontSize: "0.78rem", fontWeight: 700, padding: "4px 14px", borderRadius: 20 }}>Full-Stack Spectrum</span>
+                  <h3 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#0d1b2a", marginTop: 14, marginBottom: 12 }}>Our Multidisciplinary Expertise</h3>
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 16 }}>
+                  {[
+                    ["Web Engineering & Next.js 16", "Custom React applications, headless Shopify, and WordPress platforms."],
+                    ["Technical SEO & Organic Rankings", "Schema graphs, crawl budget remediation, and local search dominance."],
+                    ["Performance Advertising & ROAS", "Google Ads, Meta Ads, and conversion funnel optimization."],
+                    ["Luxury Brand Design & Motion", "Brand identity systems, UI/UX design, and 2D/3D explainer videos."],
+                  ].map(([title, desc]) => (
+                    <li key={title} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                      <span style={{ color: "#d4af37", fontWeight: 700, fontSize: "1.1rem" }}>⚡</span>
+                      <div>
+                        <strong style={{ color: "#0d1b2a", fontSize: "0.98rem", display: "block" }}>{title}</strong>
+                        <p style={{ color: "#64748b", fontSize: "0.88rem", margin: "2px 0 0" }}>{desc}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="ge-section-heading ge-reveal">
-            <p className="ge-eyebrow">Built to execute</p>
-            <h2>Our Expert Team</h2>
-            <p>We assemble the right expertise for the objective while keeping the strategy and customer experience connected from beginning to end.</p>
-            <ul className="ge-check-list">
-              <li>Brand, digital product, content, and growth expertise</li>
-              <li>Clear milestones and review stages</li>
-              <li>Responsive collaboration across time zones</li>
-              <li>Systems designed for long-term usability</li>
-            </ul>
+        </section>
+
+        {/* --- ABOUT FAQS --- */}
+        <section className="ge-section" style={{ background: "#ffffff" }}>
+          <div className="ge-container">
+            <div className="ge-section-heading" style={{ marginBottom: 48 }}>
+              <p className="ge-eyebrow">Agency Insights</p>
+              <h2 style={{ color: "#0d1b2a" }}>Frequently Asked Questions</h2>
+            </div>
+            <FaqAccordion items={aboutFaqs} idPrefix="about" />
           </div>
-        </div>
-      </section>
+        </section>
       </main>
     </>
   );
