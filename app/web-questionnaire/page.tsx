@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: { absolute: "Website Project Brief & Questionnaire | Go Execution" },
   description:
     "Complete our interactive Website Project Brief to share your scope, design preferences, required features, and commercial goals with Go Execution.",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
   alternates: { canonical: "/web-questionnaire/" },
   openGraph: {
     title: "Website Project Brief & Questionnaire | Go Execution",

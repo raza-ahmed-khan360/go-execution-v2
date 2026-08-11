@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: { absolute: "Logo Design Brief & Questionnaire | Go Execution" },
   description:
     "Complete our interactive Logo Design Brief to share your brand name, tagline, preferred style, colors, symbols, and brand identity goals with Go Execution.",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
   alternates: { canonical: "/logo-questionnaire/" },
   openGraph: {
     title: "Logo Design Brief & Questionnaire | Go Execution",
