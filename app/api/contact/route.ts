@@ -38,11 +38,11 @@ export async function POST(request: Request) {
   const recipient = process.env.CONTACT_RECIPIENT_EMAIL ?? "justin@goexecution.com";
   const template = createContactRequestEmail(enquiry);
 
-  // 1. SMTP (Hostinger / Gmail / Google Workspace)
-  const smtpHost = process.env.SMTP_HOST ?? "smtp.gmail.com";
+  // 1. HOSTINGER & GMAIL SMTP SMART CONFIGURATION
+  const smtpHost = process.env.SMTP_HOST ?? "smtp.hostinger.com";
   const smtpPort = Number(process.env.SMTP_PORT ?? 465);
   const smtpUser = process.env.SMTP_USER ?? "justin@goexecution.com";
-  const smtpPass = process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD || process.env.HOSTINGER_SMTP_PASS;
+  const smtpPass = process.env.SMTP_PASS || process.env.HOSTINGER_SMTP_PASS || process.env.GMAIL_APP_PASSWORD;
 
   if (smtpPass) {
     try {
@@ -53,6 +53,9 @@ export async function POST(request: Request) {
         auth: {
           user: smtpUser,
           pass: smtpPass,
+        },
+        tls: {
+          rejectUnauthorized: false, // Prevents self-signed cert issues on hosting environments
         },
       });
 
@@ -66,9 +69,10 @@ export async function POST(request: Request) {
       });
 
       return NextResponse.json({ success: true, message: "Thank you—your request has been sent to Justin. We’ll be in touch shortly." });
-    } catch (err) {
-      console.error("SMTP delivery error:", err);
-      return error("Email delivery failed via SMTP. Please verify App Password or SMTP credentials.", 502);
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : String(err);
+      console.error("SMTP delivery failure details:", { host: smtpHost, port: smtpPort, user: smtpUser, err: errorMessage });
+      return error(`Email delivery failed via ${smtpHost} (${errorMessage}). Please check SMTP password in hosting env.`, 502);
     }
   }
 
@@ -101,5 +105,5 @@ export async function POST(request: Request) {
     }
   }
 
-  return error("Email delivery is not configured yet. Please set SMTP_PASS (or GMAIL_APP_PASSWORD) in environment variables.", 503);
+  return error("Email delivery is not configured yet. Please set SMTP_PASS in environment variables.", 503);
 }
