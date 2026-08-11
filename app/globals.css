@@ -3210,10 +3210,6 @@ body.ge-loaded .ge-hero__title .ge-split-word,
 	color: var(--ge-gold);
 }
 
-.ge-stat:hover span {
-	/* Keep original text color */
-}
-
 .ge-stat:hover::after {
 	opacity: 0.3;
 	transform: none;
@@ -4288,6 +4284,9 @@ body.ge-loaded .ge-hero__visual {
 	0%   { transform: translateX(0)    scale(1); }
 	50%  { transform: translateX(30px) scale(1.25); }
 	100% { transform: translateX(60px) scale(1); }
+}
+
+.ge-digital-services-grid {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	gap: 24px;
