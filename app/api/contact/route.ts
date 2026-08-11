@@ -39,10 +39,13 @@ export async function POST(request: Request) {
   const template = createContactRequestEmail(enquiry);
 
   // 1. HOSTINGER & GMAIL SMTP SMART CONFIGURATION
-  const smtpHost = process.env.SMTP_HOST ?? "smtp.hostinger.com";
+  const smtpHost = process.env.SMTP_HOST ?? (process.env.GMAIL_APP_PASSWORD ? "smtp.gmail.com" : "smtp.hostinger.com");
   const smtpPort = Number(process.env.SMTP_PORT ?? 465);
   const smtpUser = process.env.SMTP_USER ?? "justin@goexecution.com";
-  const smtpPass = process.env.SMTP_PASS || process.env.HOSTINGER_SMTP_PASS || process.env.GMAIL_APP_PASSWORD;
+  const rawPass = process.env.SMTP_PASS || process.env.HOSTINGER_SMTP_PASS || process.env.GMAIL_APP_PASSWORD;
+
+  // Clean password (strips leading/trailing quotes if user entered them in hosting dashboard)
+  const smtpPass = rawPass ? rawPass.trim().replace(/^["']|["']$/g, "") : "";
 
   if (smtpPass) {
     try {
@@ -55,7 +58,7 @@ export async function POST(request: Request) {
           pass: smtpPass,
         },
         tls: {
-          rejectUnauthorized: false, // Prevents self-signed cert issues on hosting environments
+          rejectUnauthorized: false,
         },
       });
 
