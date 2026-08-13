@@ -268,7 +268,7 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
 
 export function FaqAccordion({
   items,
-  hoverToOpen = false,
+  hoverToOpen = true,
   idPrefix,
   className = "",
 }: {
@@ -287,6 +287,7 @@ export function FaqAccordion({
         return (
           <div
             className="ge-accordion__item"
+            data-open={isOpen ? "true" : "false"}
             onMouseEnter={hoverToOpen ? () => setOpen(index) : undefined}
             onMouseLeave={hoverToOpen ? () => setOpen(null) : undefined}
             key={question}
@@ -300,8 +301,10 @@ export function FaqAccordion({
               <span>{question}</span>
               <b aria-hidden="true">+</b>
             </button>
-            <div id={panelId} className="ge-accordion__panel" hidden={!hoverToOpen && !isOpen}>
-              <div><p>{answer}</p></div>
+            <div id={panelId} className="ge-accordion__panel" role="region">
+              <div className="ge-accordion__panel-inner">
+                <p>{answer}</p>
+              </div>
             </div>
           </div>
         );

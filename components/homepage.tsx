@@ -12,42 +12,42 @@ const servicesCarouselData = [
     slug: "web-development",
     title: "Web Development Services",
     copy: "Build fast, responsive and conversion-focused websites with custom development, WordPress, Next.js, ecommerce and landing page solutions.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/web-dev.jpg",
     anchorText: "Explore Web Development",
   },
   {
     slug: "seo",
     title: "SEO Services",
     copy: "Improve organic visibility and attract high-intent customers through technical SEO, local SEO, ecommerce SEO and search strategies built around your business.",
-    image: "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/seo-analytics.jpg",
     anchorText: "Explore SEO Services",
   },
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
     copy: "Create measurable growth with content marketing, social media marketing, paid advertising and conversion optimisation designed around your customer journey.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/digital-mktg.jpg",
     anchorText: "Explore Digital Marketing",
   },
   {
     slug: "design-branding",
     title: "Design & Branding",
     copy: "Build a consistent and recognisable brand through logo design, graphic design, brand identity and creative marketing assets.",
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/branding-design.jpg",
     anchorText: "Explore Design & Branding",
   },
   {
     slug: "video",
     title: "Video & Animation",
     copy: "Explain products, services and ideas through engaging 2D, 3D and explainer animation created for digital marketing and customer engagement.",
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/video-motion.jpg",
     anchorText: "Explore Video & Animation",
   },
   {
     slug: "mobile-app-development",
     title: "Mobile App Development",
     copy: "Develop custom mobile applications for businesses and digital products across iOS and Android.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/mobile-apps.jpg",
     anchorText: "Explore Mobile App Development",
   },
 ].map((service, index) => ({
@@ -69,7 +69,7 @@ const growthSteps = [
     label: "Strategise",
     title: "Strategise & Plan",
     copy: "We turn those findings into a practical digital strategy aligned with your commercial objectives.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/generated/seo-analytics.jpg",
     alt: "Digital Strategy Planning by Go Execution",
   },
   {
@@ -77,7 +77,7 @@ const growthSteps = [
     label: "Build",
     title: "Build & Execute",
     copy: "Our developers, designers and marketers create the website, campaigns and digital experiences required to execute the strategy.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/generated/web-dev.jpg",
     alt: "Web Engineering & Marketing Execution by Go Execution",
   },
   {
@@ -93,7 +93,7 @@ const growthSteps = [
     label: "Optimise",
     title: "Optimise & Scale",
     copy: "We use performance data to identify improvements and continuously refine your digital presence and marketing activity.",
-    image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/digital-mktg.jpg",
     alt: "Digital Performance Optimization by Go Execution",
   },
 ] as const;
@@ -105,7 +105,7 @@ const homepageIndustries = [
     tag: "PROPERTY & MLS",
     title: "Real Estate & Development",
     desc: "Custom MLS/IDX property search platforms, seller valuation funnels, and high-converting brokerage websites.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/real-estate.jpg",
     feature: "MLS/IDX Integration & Listing Leads",
   },
   {
@@ -114,7 +114,7 @@ const homepageIndustries = [
     tag: "E-COMMERCE & LUXURY",
     title: "Fashion & Apparel",
     desc: "Sub-second Shopify & Next.js luxury storefronts, paid social video campaigns, and brand identity systems.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/fashion-apparel.jpg",
     feature: "Headless E-Commerce & UGC Ads",
   },
   {
@@ -123,7 +123,7 @@ const homepageIndustries = [
     tag: "CLINICAL & WELLNESS",
     title: "Health & Wellness",
     desc: "HIPAA-compliant patient booking portals, local search optimization, and reputation management funnels.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/prof-services.jpg",
     feature: "HIPAA Portals & Local Map Pack SEO",
   },
   {
@@ -132,7 +132,7 @@ const homepageIndustries = [
     tag: "SAAS & TECH",
     title: "Technology & B2B SaaS",
     desc: "High-converting product landing pages, technical SEO, demo booking funnels, and brand positioning.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/tech-saas.jpg",
     feature: "Demo Booking & Technical SEO",
   },
   {
@@ -141,7 +141,7 @@ const homepageIndustries = [
     tag: "LEGAL & FINANCIAL",
     title: "Professional Services",
     desc: "Authority-building digital platforms, practice area SEO, and high-value consultation lead generation.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/prof-services.jpg",
     feature: "Consultation Funnels & Organic Growth",
   },
   {
@@ -150,7 +150,7 @@ const homepageIndustries = [
     tag: "HOTELS & DINING",
     title: "Hospitality & Leisure",
     desc: "Immersive venue showcases, direct booking engines, promo video animation, and local search campaigns.",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&fit=crop",
+    image: "/assets/images/generated/hospitality.jpg",
     feature: "Direct Booking & Video Marketing",
   },
 ];
@@ -394,15 +394,17 @@ export function Homepage() {
       </div></section>
 
       {/* --- FAQ SECTION --- */}
-      <section className="ge-section ge-faq"><div className="ge-container">
-        <div className="ge-section-heading ge-reveal" style={{ marginBottom: 48 }}>
-          <p className="ge-eyebrow">Clear Answers</p>
-          <h2>Frequently Asked Questions</h2>
+      <section className="ge-section ge-faq">
+        <div className="ge-container">
+          <div className="ge-section-heading ge-reveal" style={{ marginBottom: 48 }}>
+            <p className="ge-eyebrow">Clear Answers</p>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div className="ge-reveal">
+            <FaqAccordion items={faqs} idPrefix="home-faq" />
+          </div>
         </div>
-        <div className="ge-faq-grid ge-reveal"><div className="ge-faq-card"><div className="ge-faq-card-header"><div className="ge-faq-email"><span className="ge-faq-email-label">Have questions for our US team?</span></div><Link href="/contact/" className="ge-button ge-button--gold ge-magnetic ge-faq-contact-btn"><span>Get in touch</span><span aria-hidden="true">↗</span></Link></div>
-          <FaqAccordion items={faqs} hoverToOpen idPrefix="home-faq" className="ge-faq-accordion" />
-        </div><div className="ge-faq-image-wrapper"><Image src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=70&fit=crop" alt="Go Execution Digital Marketing Agency in USA Team" className="ge-faq-img" fill sizes="(max-width: 991px) 100vw, 50vw" quality={85} /><div className="ge-faq-image-badge"><span className="ge-faq-image-badge__dot" /><div className="ge-faq-image-badge__text"><strong>Direct Access to Founders</strong><span>Fast responses within 2 hours</span></div></div></div></div>
-      </div></section>
+      </section>
 
     </main>
   );

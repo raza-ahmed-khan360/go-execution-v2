@@ -4,19 +4,19 @@ import { JsonLd, buildOrganization, buildWebSite, buildWebPage } from "@/lib/seo
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Digital Marketing Agency in USA | Web, SEO & Growth | Go Execution",
+    absolute: "Digital Marketing Agency USA | Web, SEO & Growth | Go Execution",
   },
   description:
-    "Go Execution is a full-service digital marketing agency in the USA offering web development, SEO, paid advertising, branding and growth solutions for businesses ready to scale.",
+    "Go Execution is a premier full-service digital marketing agency in the USA offering custom web development, SEO, paid advertising, and growth marketing services for US businesses.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     url: "/",
-    title: "Digital Marketing Agency in USA | Web, SEO & Growth | Go Execution",
+    title: "Digital Marketing Agency USA | Web, SEO & Growth | Go Execution",
     description:
-      "Go Execution is a full-service digital marketing agency in the USA offering web development, SEO, paid advertising, branding and growth solutions for businesses ready to scale.",
+      "Go Execution is a premier full-service digital marketing agency in the USA offering custom web development, SEO, paid advertising, and growth marketing services for US businesses.",
   },
   twitter: {
     card: "summary_large_image",

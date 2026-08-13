@@ -17,14 +17,14 @@ export const industries: Record<string, Industry> = {
   "real-estate": {
     slug: "real-estate",
     title: "Real Estate",
-    seoTitle: "Real Estate Web Design & Digital Marketing Agency in USA | Go Execution",
+    seoTitle: "Real Estate Digital Marketing & Web Development Agency | Go Execution",
     eyebrow: "Lead Generation & Digital Platforms for Real Estate",
-    description: "Go Execution crafts high-converting real estate websites, property portals, and digital marketing campaigns for brokerages, developers, and agents in USA.",
-    intro: "Real estate decisions start online. We design immersive property showcase platforms, interactive map search tools, and lead generation funnels that capture high-intent buyers and sellers.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80&fit=crop",
+    description: "Go Execution is a top real estate marketing agency in the USA providing real estate digital marketing, real estate website development, real estate web development, and real estate SEO services.",
+    intro: "Real estate decisions start online. Our real estate marketing agency builds immersive property showcase platforms, MLS search tools, and real estate digital marketing campaigns.",
+    image: "/assets/images/generated/real-estate.jpg",
     stats: [
       ["MLS/IDX Sync", "Sub-second Property Search"],
-      ["+240%", "Average Seller Lead Growth"],
+      ["+240%", "Real Estate Digital Marketing Growth"],
       ["Hyper-Targeted", "PPC & Meta Campaign ROAS"]
     ],
     challenges: [
@@ -33,32 +33,32 @@ export const industries: Record<string, Industry> = {
       "Slow property search interfaces causing high bounce rates"
     ],
     solutions: [
-      "Custom MLS/IDX integrated web platforms with sub-second search filtering",
-      "Hyper-targeted PPC lead generation campaigns for seller listings",
-      "High-end visual branding and property video marketing assets"
+      "Real estate web development with sub-second property search filtering",
+      "Real estate digital marketing campaigns for seller listings",
+      "Real estate SEO services and local Map Pack dominance"
     ],
     services: [
-      { categorySlug: "web-development", slug: "custom-web-development", title: "Property Web Portals", desc: "Fast MLS/IDX map search portals built with Next.js." },
-      { categorySlug: "web-development", slug: "landing-page-development", title: "Seller Valuation Landers", desc: "High-converting valuation landing pages for listing leads." },
-      { categorySlug: "digital-marketing", slug: "paid-advertising", title: "PPC Lead Generation", desc: "Targeted Google Ads capturing active home buyers & sellers." },
-      { categorySlug: "seo", slug: "local-seo", title: "Local Map Pack SEO", desc: "Dominating local search in target property markets." }
+      { categorySlug: "web-development", slug: "custom-web-development", title: "Real Estate Web Development", desc: "Fast MLS/IDX map search portals built with Next.js." },
+      { categorySlug: "web-development", slug: "landing-page-development", title: "Real Estate Website Development", desc: "High-converting valuation landing pages for listing leads." },
+      { categorySlug: "digital-marketing", slug: "paid-advertising", title: "Real Estate Digital Marketing", desc: "Targeted Google Ads capturing active home buyers & sellers." },
+      { categorySlug: "seo", slug: "local-seo", title: "Real Estate SEO Services", desc: "Dominating local search in target property markets." }
     ],
     faq: [
-      ["Can you integrate MLS/IDX feeds into our real estate website?", "Yes, we build custom MLS/IDX integrations with fast map searches, saved favorites, and automated lead capture."],
-      ["How do you generate seller leads for real estate agents?", "We combine targeted Google Search ads with high-converting property valuation landing pages to capture motivated sellers."]
+      ["Why hire a specialized real estate marketing agency?", "A real estate marketing agency builds high-converting MLS portals and executes real estate digital marketing tailored to home buyers and sellers."],
+      ["What is included in your real estate SEO services?", "Our real estate SEO services optimize property collection pages, local Map pack visibility, and neighborhood keyword targeting."]
     ]
   },
   "fashion": {
     slug: "fashion",
     title: "Fashion & Apparel",
-    seoTitle: "Fashion Web Design & Digital Marketing Services in USA | Go Execution",
+    seoTitle: "Fashion Digital Marketing & Fashion Website Development Agency",
     eyebrow: "E-Commerce & Digital Growth for Fashion Brands",
-    description: "Go Execution provides luxury fashion web design, e-commerce development, and social media marketing in USA for fashion labels and apparel brands.",
-    intro: "Fashion and apparel brands require visual elegance, sub-second web performance, and conversion-focused shopping experiences. We engineer luxury e-commerce platforms and performance marketing campaigns.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80&fit=crop",
+    description: "Go Execution is a premier fashion marketing agency in the USA providing fashion digital marketing, fashion website development, fashion ecommerce marketing, and fashion SEO services.",
+    intro: "Fashion and apparel brands require visual elegance and high performance. Our fashion marketing agency engineers luxury ecommerce platforms and fashion digital marketing campaigns.",
+    image: "/assets/images/generated/fashion-apparel.jpg",
     stats: [
-      ["< 1.0s", "Mobile Store Load Speed"],
-      ["3.8x Avg", "Paid Social Campaign ROAS"],
+      ["< 1.0s", "Fashion Store Load Speed"],
+      ["3.8x Avg", "Fashion Ecommerce Marketing ROAS"],
       ["100% Custom", "Shopify & Headless UX"]
     ],
     challenges: [
@@ -67,31 +67,31 @@ export const industries: Record<string, Industry> = {
       "Low customer lifetime value and retention across seasonal collections"
     ],
     solutions: [
-      "Sub-second Next.js and Shopify custom storefront development",
-      "High-ROI paid social & UGC performance video marketing",
-      "Automated email & SMS post-purchase retention funnels"
+      "Sub-second fashion website development for mobile storefronts",
+      "Fashion ecommerce marketing with UGC video motion graphics",
+      "Fashion SEO services targeting high-volume category terms"
     ],
     services: [
-      { categorySlug: "web-development", slug: "ecommerce-development", title: "Luxury E-Commerce Storefronts", desc: "Mobile-first Shopify & Next.js stores engineered for conversion." },
-      { categorySlug: "digital-marketing", slug: "social-media-marketing", title: "Paid Social & UGC Ads", desc: "High-converting video creative campaigns across Meta & TikTok." },
-      { categorySlug: "design-branding", slug: "brand-identity", title: "Fashion Brand Systems", desc: "Luxury identity, typography, and visual brand guidelines." }
+      { categorySlug: "web-development", slug: "ecommerce-development", title: "Fashion Website Development", desc: "Mobile-first Shopify & Next.js stores engineered for conversion." },
+      { categorySlug: "digital-marketing", slug: "social-media-marketing", title: "Fashion Ecommerce Marketing", desc: "High-converting video creative campaigns across Meta & TikTok." },
+      { categorySlug: "seo", slug: "ecommerce-seo", title: "Fashion SEO Services", desc: "Ranking apparel collection categories at top of Google." }
     ],
     faq: [
-      ["Why choose Go Execution for fashion web design?", "We build luxury e-commerce platforms with mobile-first checkout flows, sub-second loading speeds, and seamless inventory management."],
-      ["Can you integrate our fashion store with Shopify or custom backends?", "Yes, we develop custom headless storefronts using Next.js and Shopify APIs for ultimate performance."]
+      ["Why choose Go Execution for fashion website development?", "We build luxury e-commerce platforms with sub-second loading speeds, mobile-first navigation, and seamless checkout flows."],
+      ["What results do fashion digital marketing campaigns deliver?", "Our fashion digital marketing strategies combine paid social ads, influencer UGC, and fashion SEO services to scale online orders."]
     ]
   },
   "retail": {
     slug: "retail",
     title: "Retail & Consumer Goods",
-    seoTitle: "Retail Web Development & Digital Marketing Agency in USA | Go Execution",
+    seoTitle: "Retail Digital Marketing & Retail Ecommerce Development Agency",
     eyebrow: "Omnichannel Growth & E-Commerce Platforms",
-    description: "Go Execution builds high-converting retail e-commerce websites, product catalog SEO, and performance advertising for retail brands across the USA.",
-    intro: "Modern retail demands seamless integration between online store experiences and customer acquisition channels. We engineer fast retail storefronts that scale transaction volume.",
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&q=80&fit=crop",
+    description: "Go Execution is a top retail marketing agency in the USA offering retail digital marketing, retail website development, retail ecommerce development, and retail SEO services.",
+    intro: "Modern retail demands seamless integration between online stores and customer acquisition channels. Our retail marketing agency builds scalable retail ecommerce development storefronts.",
+    image: "/assets/images/generated/retail-ecommerce.jpg",
     stats: [
       ["1-Click Checkout", "Instant Frictionless Purchasing"],
-      ["+210%", "Organic Search Transaction Growth"],
+      ["+210%", "Retail SEO Services Transaction Growth"],
       ["Multi-Channel", "Catalog & Inventory Sync"]
     ],
     challenges: [
@@ -100,31 +100,31 @@ export const industries: Record<string, Industry> = {
       "High customer acquisition cost in competitive retail categories"
     ],
     solutions: [
-      "Custom Shopify & Next.js storefronts with instant 1-click checkout",
-      "E-Commerce SEO targeting high-volume category search queries",
-      "Retargeting ad campaigns to convert browsing shoppers into buyers"
+      "Retail website development and custom Shopify storefronts",
+      "Retail SEO services targeting commercial product keywords",
+      "Retail digital marketing campaigns to re-engage browsing shoppers"
     ],
     services: [
-      { categorySlug: "web-development", slug: "ecommerce-development", title: "Omnichannel Retail Stores", desc: "Scalable e-commerce platforms with real-time inventory sync." },
-      { categorySlug: "seo", slug: "ecommerce-seo", title: "Product Catalog SEO", desc: "Ranking category pages and product SKUs at top of Google." },
-      { categorySlug: "digital-marketing", slug: "conversion-optimisation", title: "Conversion Rate Optimization", desc: "Streamlining cart flows to boost Average Order Value (AOV)." }
+      { categorySlug: "web-development", slug: "ecommerce-development", title: "Retail Ecommerce Development", desc: "Scalable e-commerce platforms with real-time inventory sync." },
+      { categorySlug: "seo", slug: "ecommerce-seo", title: "Retail SEO Services", desc: "Ranking category pages and product SKUs at top of Google." },
+      { categorySlug: "digital-marketing", slug: "conversion-optimisation", title: "Retail Digital Marketing", desc: "Streamlining cart flows to boost Average Order Value (AOV)." }
     ],
     faq: [
-      ["How do you optimize retail sites for higher conversions?", "We streamline navigation, optimize mobile speed, simplify checkout steps, and run A/B conversion tests."],
-      ["Can you optimize our product catalogs for Google Search?", "Yes, we execute full e-commerce SEO optimization across category and product pages."]
+      ["How does retail ecommerce development boost sales?", "By offering 1-click checkout, fast page speeds, and clean product discovery navigation."],
+      ["What is included in retail SEO services?", "We optimize category hierarchy, product schema data, and high-volume commercial retail search terms."]
     ]
   },
   "hospitality": {
     slug: "hospitality",
     title: "Hospitality & Leisure",
-    seoTitle: "Hospitality Web Design & Direct Booking Services in USA | Go Execution",
+    seoTitle: "Hospitality Digital Marketing & Website Development Agency",
     eyebrow: "Direct Booking Platforms & Growth for Hotels & Venues",
-    description: "Go Execution designs luxury websites, direct booking engines, and digital marketing campaigns for hotels, resorts, luxury venues, and hospitality brands in USA.",
-    intro: "Hospitality brands thrive on sensory storytelling and seamless direct bookings. We create visual web experiences and multi-channel marketing campaigns that drive direct reservations and lower OTA commissions.",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&fit=crop",
+    description: "Go Execution is a premier hospitality marketing agency in the USA offering hospitality digital marketing, hospitality website development, hotel digital marketing, and hospitality SEO services.",
+    intro: "Hospitality brands thrive on sensory storytelling and direct bookings. Our hospitality marketing agency engineers fast booking portals and hotel digital marketing campaigns.",
+    image: "/assets/images/generated/hospitality.jpg",
     stats: [
       ["0% Commission", "Direct Booking Engines"],
-      ["4K Motion", "Visual Sensory Storytelling"],
+      ["4K Motion", "Hotel Digital Marketing"],
       ["+175%", "Direct Reservation Revenue"]
     ],
     challenges: [
@@ -133,31 +133,31 @@ export const industries: Record<string, Industry> = {
       "Building brand loyalty across seasonal travel periods"
     ],
     solutions: [
-      "Custom luxury web portals with frictionless direct booking integration",
-      "Visual storytelling with motion graphics and immersive gallery design",
-      "Hyper-targeted social and search ad campaigns for seasonal travel packages"
+      "Hospitality website development with direct booking engines",
+      "Hotel digital marketing campaigns for targeted travel intent",
+      "Hospitality SEO services targeting destination search terms"
     ],
     services: [
-      { categorySlug: "web-development", slug: "custom-web-development", title: "Direct Booking Portals", desc: "Luxury resort & hotel sites with zero OTA commission friction." },
-      { categorySlug: "video", slug: "video-animation", title: "Hospitality Motion Video", desc: "High-end 4K video storytelling for destinations and venues." },
-      { categorySlug: "seo", slug: "local-seo", title: "Destination Search SEO", desc: "Capturing local travel queries and Google Maps positioning." }
+      { categorySlug: "web-development", slug: "custom-web-development", title: "Hospitality Website Development", desc: "Luxury resort & hotel sites with zero OTA commission friction." },
+      { categorySlug: "digital-marketing", slug: "social-media-marketing", title: "Hotel Digital Marketing", desc: "Visual ad campaigns targeting travelers actively planning trips." },
+      { categorySlug: "seo", slug: "local-seo", title: "Hospitality SEO Services", desc: "Capturing local travel queries and Google Maps positioning." }
     ],
     faq: [
-      ["How can a custom website increase direct bookings?", "By offering a faster, visually stunning experience with zero booking friction and exclusive direct-book perks."],
-      ["Do you handle social media ad campaigns for hospitality brands?", "Yes, we design visual ad campaigns targeting travelers actively planning trips to your destination."]
+      ["How can hospitality website development reduce OTA commissions?", "Custom direct booking portals offer faster reservations, exclusive rates, and zero third-party fees."],
+      ["What makes hospitality SEO services essential?", "Hospitality SEO puts your resort or venue at the top of Google search when travelers look for destination accommodations."]
     ]
   },
   "technology": {
     slug: "technology",
     title: "Technology & SaaS",
-    seoTitle: "Tech & SaaS Web Development & Marketing Agency in USA | Go Execution",
+    seoTitle: "Technology Digital Marketing Agency & SaaS Marketing | Go Execution",
     eyebrow: "Scalable Web Platforms & Growth Funnels for Tech Companies",
-    description: "Go Execution builds high-speed Next.js web applications, product landing pages, and B2B SaaS digital marketing campaigns for tech companies in USA.",
-    intro: "Tech companies demand cutting-edge engineering and clear value propositions. We design high-converting SaaS websites, custom mobile apps, and technical B2B growth engines.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&fit=crop",
+    description: "Go Execution is a leading technology digital marketing agency and SaaS marketing agency providing technology website development, SaaS digital marketing, and technology SEO services.",
+    intro: "Tech companies demand technical precision and clear value propositions. Our technology digital marketing agency builds Next.js platforms and SaaS growth engines.",
+    image: "/assets/images/generated/tech-saas.jpg",
     stats: [
-      ["Next.js SSR", "Sub-second Page Speeds"],
-      ["Lower CAC", "Optimized B2B Acquisition"],
+      ["Next.js SSR", "Technology Website Development"],
+      ["Lower CAC", "SaaS Digital Marketing"],
       ["Interactive", "SaaS Demo & Trial Funnels"]
     ],
     challenges: [
@@ -166,31 +166,31 @@ export const industries: Record<string, Industry> = {
       "Converting free trial users into long-term paid subscribers"
     ],
     solutions: [
-      "Lightning-fast Next.js marketing sites with interactive product demos",
-      "Targeted LinkedIn and Google Search campaigns for enterprise decision makers",
-      "2D/3D animated product explainer videos that boost trial signups"
+      "Sub-second technology website development using Next.js",
+      "SaaS digital marketing campaigns targeting decision makers",
+      "Technology SEO services capturing high-intent B2B search volume"
     ],
     services: [
-      { categorySlug: "web-development", slug: "nextjs-development", title: "Next.js Web Platforms", desc: "Sub-second SSR web applications built with Next.js and React." },
-      { categorySlug: "mobile-app-development", slug: "custom-mobile-app-development", title: "Custom Mobile Applications", desc: "Cross-platform iOS and Android apps with cloud backends." },
-      { categorySlug: "video", slug: "explainer-videos", title: "Animated Explainer Videos", desc: "60-second animated product demos that boost trial signups." }
+      { categorySlug: "web-development", slug: "nextjs-development", title: "Technology Website Development", desc: "Sub-second SSR web applications built with Next.js and React." },
+      { categorySlug: "digital-marketing", slug: "paid-advertising", title: "SaaS Digital Marketing", desc: "Targeted LinkedIn and Google Search campaigns for decision makers." },
+      { categorySlug: "seo", slug: "technical-seo", title: "Technology SEO Services", desc: "Technical B2B SEO strategies for tech platforms." }
     ],
     faq: [
-      ["Why is Next.js ideal for tech and SaaS websites?", "Next.js offers sub-second load times, superior SEO rendering, enterprise security, and effortless scaling for global traffic."],
-      ["How do you reduce customer acquisition costs (CAC) for SaaS?", "We optimize user signup funnels, refine ad copy targeting high-intent decision makers, and implement automated retargeting."]
+      ["Why hire a dedicated technology marketing agency?", "We understand complex SaaS products, technical target audiences, and B2B customer acquisition funnels."],
+      ["What is included in SaaS digital marketing?", "We combine search ads, LinkedIn lead generation, automated trial retargeting, and technology SEO services."]
     ]
   },
   "professional-services": {
     slug: "professional-services",
     title: "Professional Services",
-    seoTitle: "Professional Services Web Design & SEO Agency in USA | Go Execution",
+    seoTitle: "Professional Services Marketing Agency & SEO Services | Go Execution",
     eyebrow: "Authority-Driven Digital Growth for Law, Finance & Consulting",
-    description: "Go Execution builds authoritative websites and targeted lead generation campaigns for law firms, financial advisors, consulting agencies, and B2B firms in USA.",
-    intro: "High-ticket professional services win on trust, reputation, and authority. We build premium corporate websites and execute targeted SEO strategies that generate high-value client inquiries.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&fit=crop",
+    description: "Go Execution is a top professional services marketing agency in the USA providing professional services digital marketing, professional services website development, and professional services SEO.",
+    intro: "High-ticket professional services win on authority. Our professional services marketing agency builds high-trust corporate websites and targeted SEO lead engines.",
+    image: "/assets/images/generated/prof-services.jpg",
     stats: [
       ["Authority-First", "High-Trust Corporate Identity"],
-      ["Page 1 Rankings", "High-Value Commercial Queries"],
+      ["Page 1 Rankings", "Professional Services SEO"],
       ["3.5x More", "Qualified Lead Inquiries"]
     ],
     challenges: [
@@ -199,32 +199,32 @@ export const industries: Record<string, Industry> = {
       "Dominating Google Page 1 search results for high-value legal and financial terms"
     ],
     solutions: [
-      "Authority-building corporate web design with clear consultation scheduling",
-      "High-intent SEO campaigns targeting high-value commercial queries",
-      "Corporate brand identity and executive presentation materials"
+      "Professional services website development built for consultations",
+      "Professional services SEO campaigns targeting commercial queries",
+      "Professional services digital marketing driving qualified client leads"
     ],
     services: [
-      { categorySlug: "web-development", slug: "custom-web-development", title: "Corporate Web Portals", desc: "High-trust corporate web design built for consultation bookings." },
-      { categorySlug: "seo", slug: "technical-seo", title: "Technical & B2B SEO", desc: "Dominating high-value commercial search terms in your market." },
-      { categorySlug: "design-branding", slug: "brand-identity", title: "Brand Identity Systems", desc: "Corporate branding and executive media kits." }
+      { categorySlug: "web-development", slug: "custom-web-development", title: "Professional Services Web Development", desc: "High-trust corporate web design built for consultation bookings." },
+      { categorySlug: "seo", slug: "technical-seo", title: "Professional Services SEO", desc: "Dominating high-value commercial search terms in your market." },
+      { categorySlug: "digital-marketing", slug: "paid-advertising", title: "Professional Services Marketing", desc: "Targeted B2B lead generation campaigns for law, finance & consulting." }
     ],
     faq: [
-      ["How can a website redesign help our firm win bigger clients?", "A premium, fast website signals market leadership, presents clear case results, and makes consultation scheduling effortless."],
-      ["How do you measure SEO success for professional service firms?", "We track high-intent organic search rankings, qualified phone calls, form submissions, and actual consultation bookings."]
+      ["How does professional services marketing generate corporate leads?", "We target high-intent decision makers through search ads, authority web platforms, and consultation booking flows."],
+      ["What results can we expect from professional services SEO?", "Our professional services SEO strategies secure Page 1 rankings for competitive legal, financial, and consulting search terms."]
     ]
   },
   "health-wellness": {
     slug: "health-wellness",
     title: "Health & Wellness",
-    seoTitle: "Health & Wellness Web Design & Marketing Services in USA | Go Execution",
+    seoTitle: "Healthcare Digital Marketing Agency & Wellness Marketing",
     eyebrow: "HIPAA-Compliant Digital Solutions for Healthcare & Wellness",
-    description: "Go Execution builds trusted health & wellness websites, booking platforms, and local SEO marketing campaigns for clinics, wellness brands, and medical practices in USA.",
-    intro: "Trust and credibility are paramount in healthcare. We build secure, accessible digital experiences and local SEO search strategies that attract and retain wellness clients.",
-    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80&fit=crop",
+    description: "Go Execution is a premier health and wellness marketing agency and healthcare digital marketing agency providing healthcare website development and healthcare SEO services.",
+    intro: "Trust and credibility are essential in healthcare. Our health and wellness marketing agency builds secure web portals and healthcare digital marketing strategies.",
+    image: "/assets/images/generated/prof-services.jpg",
     stats: [
       ["Encrypted & Secure", "Patient Intake & Booking"],
       ["Top Local Rank", "Google Map Pack Dominance"],
-      ["High-Trust", "Patient Acquisition Engine"]
+      ["High-Trust", "Healthcare SEO Services Engine"]
     ],
     challenges: [
       "Building patient trust online while complying with privacy standards",
@@ -232,18 +232,18 @@ export const industries: Record<string, Industry> = {
       "High customer acquisition costs in competitive local markets"
     ],
     solutions: [
-      "Secure, responsive web portals with integrated appointment booking",
-      "Local SEO and Google Business Profile optimization for patient acquisition",
-      "Educative video animation content that clarifies treatment value"
+      "Healthcare website development with online booking integration",
+      "Healthcare digital marketing and local search campaigns",
+      "Healthcare SEO services driving clinic and practice visibility"
     ],
     services: [
-      { categorySlug: "web-development", slug: "custom-web-development", title: "Healthcare Web Portals", desc: "Encrypted, accessible websites with seamless online booking." },
-      { categorySlug: "seo", slug: "local-seo", title: "Local Patient SEO", desc: "Dominating local clinic searches and Google Maps results." },
-      { categorySlug: "video", slug: "video-animation", title: "Treatment Explainer Videos", desc: "Educative motion graphics clarifying medical treatments." }
+      { categorySlug: "web-development", slug: "custom-web-development", title: "Healthcare Website Development", desc: "Encrypted, accessible websites with seamless online booking." },
+      { categorySlug: "seo", slug: "local-seo", title: "Healthcare SEO Services", desc: "Dominating local clinic searches and Google Maps results." },
+      { categorySlug: "digital-marketing", slug: "social-media-marketing", title: "Healthcare Digital Marketing", desc: "Targeted patient awareness campaigns for clinics and wellness practices." }
     ],
     faq: [
-      ["Are your health and wellness websites secure?", "Yes, we build encrypted, accessible, and compliant web platforms designed to protect patient inquiries and data."],
-      ["How can local SEO help our wellness clinic?", "Local SEO puts your clinic at the top of Google Maps and local search when patients in your area search for your services."]
+      ["Why hire a specialized healthcare digital marketing agency?", "A healthcare digital marketing agency understands medical trust, local patient acquisition, and compliant booking flows."],
+      ["How do healthcare SEO services increase patient appointments?", "Healthcare SEO services optimize your practice for local searches like 'best clinic near me' and top medical treatment terms."]
     ]
   }
 };

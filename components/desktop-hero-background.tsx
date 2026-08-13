@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const cards = [
-  ["top: -8%; left: -12%", "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=520&q=65&fit=crop"],
-  ["bottom: -12%; left: 5%", "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=520&q=65&fit=crop"],
-  ["top: -10%; right: -8%", "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=520&q=65&fit=crop"],
-  ["bottom: -8%; right: -5%", "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=520&q=65&fit=crop"],
-  ["top: 55%; left: 80%", "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=520&q=65&fit=crop"],
+  ["top: -8%; left: -12%", "/assets/images/generated/web-dev.jpg"],
+  ["bottom: -12%; left: 5%", "/assets/images/generated/seo-analytics.jpg"],
+  ["top: -10%; right: -8%", "/assets/images/generated/video-motion.jpg"],
+  ["bottom: -8%; right: -5%", "/assets/images/generated/digital-mktg.jpg"],
+  ["top: 55%; left: 80%", "/assets/images/generated/mobile-apps.jpg"],
 ] as const;
 
 export function DesktopHeroBackground() {

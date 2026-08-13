@@ -130,7 +130,7 @@ export default function About() {
           <div className="ge-container">
             <div style={{ position: "relative", width: "100%", height: 420, borderRadius: 28, overflow: "hidden", boxShadow: "0 20px 60px rgba(13, 27, 42, 0.08)" }}>
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&fit=crop"
+                src="/assets/images/generated/team-workspace.jpg"
                 alt="Go Execution Digital Agency Team"
                 fill
                 priority
@@ -290,11 +290,11 @@ export default function About() {
         </section>
 
         {/* --- ABOUT FAQS --- */}
-        <section className="ge-section" style={{ background: "#ffffff" }}>
+        <section className="ge-section ge-faq">
           <div className="ge-container">
             <div className="ge-section-heading" style={{ marginBottom: 48 }}>
               <p className="ge-eyebrow">Agency Insights</p>
-              <h2 style={{ color: "#0d1b2a" }}>Frequently Asked Questions</h2>
+              <h2>Frequently Asked Questions</h2>
             </div>
             <FaqAccordion items={aboutFaqs} idPrefix="about" />
           </div>
