@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="ge-container ge-container--narrow">
             <div
-              className="ge-blog-post__content"
+              className="ge-blog-post__content ge-prose"
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
           </div>

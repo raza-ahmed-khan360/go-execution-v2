@@ -9344,20 +9344,229 @@ body:not(.home) .ge-header,
 .ge-blog-post__share { display: flex; flex-direction: column; align-items: flex-start; padding-top: 8px; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; gap: 14px; }
 .ge-blog-post__share span { color: var(--ge-gold); }
 .ge-blog-post__share a { color: var(--ge-navy); letter-spacing: .03em; text-transform: none; }
-.ge-prose { color: #334252; font-size: 17px; line-height: 1.85; }
-.ge-prose > :first-child { margin-top: 0; font-size: 20px; color: var(--ge-navy); }
-.ge-prose h2 { margin: 58px 0 18px; color: var(--ge-navy); font-size: clamp(29px, 3.4vw, 43px); font-weight: 600; letter-spacing: -.055em; line-height: 1.1; }
-.ge-prose h3 { margin: 38px 0 13px; color: var(--ge-navy); font-size: 23px; letter-spacing: -.035em; line-height: 1.25; }
-.ge-prose p, .ge-prose ul { margin: 0 0 22px; }
-.ge-prose ul { padding-left: 22px; }
-.ge-prose li + li { margin-top: 10px; }
-.ge-prose a { color: #9b711f; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(155,113,31,.35); text-underline-offset: 3px; }
-.ge-prose figure { margin: 34px 0; overflow-x: auto; padding: 24px; border-left: 3px solid var(--ge-gold); background: #f7f8f8; }
-.ge-prose figure img { display: block; width: 100%; height: auto; }
-.ge-prose figcaption { margin-top: 12px; color: var(--ge-slate); font-size: 12px; line-height: 1.55; }
-.ge-prose table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px; line-height: 1.55; }
-.ge-prose th, .ge-prose td { padding: 13px; border: 1px solid #dce1e5; text-align: left; vertical-align: top; }
-.ge-prose th { color: var(--ge-navy); background: #ebeeef; font-size: 11px; text-transform: uppercase; }
+.ge-container--narrow {
+	max-width: 860px;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+
+.ge-blog-post__hero-image {
+	margin: 36px auto;
+	max-width: 1020px;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 20px 50px rgba(13, 27, 42, 0.12);
+}
+
+.ge-blog-post__hero-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.ge-blog-post__meta-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.ge-blog-post__category {
+	display: inline-block;
+	padding: 4px 14px;
+	border-radius: 100px;
+	background: rgba(201, 168, 106, 0.2);
+	color: var(--ge-gold-light) !important;
+	font-weight: 700;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	transition: background 0.2s ease;
+}
+
+.ge-blog-post__category:hover {
+	background: rgba(201, 168, 106, 0.35);
+}
+
+.ge-blog-post__title {
+	font-size: clamp(32px, 4.5vw, 54px);
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	line-height: 1.15;
+	margin: 0 0 20px;
+	color: #ffffff;
+}
+
+.ge-blog-post__lead {
+	font-size: clamp(17px, 2vw, 20px);
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.82);
+	max-width: 820px;
+	margin: 0 auto 32px;
+}
+
+.ge-blog-post__author {
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+	text-align: left;
+	padding: 10px 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 100px;
+}
+
+.ge-blog-post__author-avatar {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	background: var(--ge-gold);
+	color: #091827;
+	font-weight: 800;
+	font-size: 16px;
+	display: grid;
+	place-items: center;
+}
+
+.ge-blog-post__author strong {
+	display: block;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.ge-blog-post__author span {
+	display: block;
+	font-size: 12px;
+	color: var(--ge-gold-light);
+}
+
+/* --- High-Visibility Blog Content & Hyperlinks --- */
+.ge-blog-post__content,
+.ge-prose {
+	color: #243242;
+	font-size: 18px;
+	line-height: 1.85;
+	padding-top: 20px;
+	padding-bottom: 70px;
+}
+
+.ge-blog-post__content a,
+.ge-prose a {
+	color: #b37e28 !important;
+	font-weight: 600 !important;
+	text-decoration: underline !important;
+	text-decoration-color: rgba(201, 168, 106, 0.75) !important;
+	text-decoration-thickness: 1.5px !important;
+	text-underline-offset: 4px !important;
+	transition: all 0.2s ease !important;
+	cursor: pointer;
+}
+
+.ge-blog-post__content a:hover,
+.ge-prose a:hover {
+	color: #8a5c12 !important;
+	text-decoration-color: #8a5c12 !important;
+	background-color: rgba(201, 168, 106, 0.14) !important;
+	border-radius: 3px;
+	padding-inline: 2px;
+}
+
+.ge-blog-post__content h2,
+.ge-prose h2 {
+	margin: 54px 0 20px;
+	color: var(--ge-navy);
+	font-size: clamp(26px, 3.2vw, 36px);
+	font-weight: 700;
+	letter-spacing: -0.035em;
+	line-height: 1.2;
+}
+
+.ge-blog-post__content h3,
+.ge-prose h3 {
+	margin: 36px 0 16px;
+	color: var(--ge-navy);
+	font-size: clamp(20px, 2.4vw, 25px);
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.3;
+}
+
+.ge-blog-post__content p,
+.ge-blog-post__content ul,
+.ge-blog-post__content ol,
+.ge-prose p,
+.ge-prose ul,
+.ge-prose ol {
+	margin: 0 0 24px;
+}
+
+.ge-blog-post__content ul,
+.ge-blog-post__content ol,
+.ge-prose ul,
+.ge-prose ol {
+	padding-left: 28px;
+}
+
+.ge-blog-post__content li,
+.ge-prose li {
+	margin-bottom: 12px;
+	line-height: 1.75;
+}
+
+.ge-blog-post__content code,
+.ge-prose code {
+	background: #edf2f7;
+	color: #0f172a;
+	padding: 2px 7px;
+	border-radius: 6px;
+	font-size: 0.9em;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.ge-blog-post__content figure,
+.ge-prose figure {
+	margin: 36px 0;
+	overflow-x: auto;
+	padding: 20px;
+	border-radius: 14px;
+	background: #091827;
+	color: #ffffff;
+	box-shadow: 0 16px 40px rgba(9, 24, 39, 0.15);
+}
+
+.ge-blog-post__content figure table,
+.ge-prose table {
+	width: 100%;
+	min-width: 620px;
+	border-collapse: collapse;
+	font-size: 14.5px;
+	line-height: 1.6;
+}
+
+.ge-blog-post__content figure th,
+.ge-blog-post__content figure td,
+.ge-prose th,
+.ge-prose td {
+	padding: 14px 16px;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	text-align: left;
+	vertical-align: middle;
+}
+
+.ge-blog-post__content figure th,
+.ge-prose th {
+	color: var(--ge-gold);
+	background: rgba(255, 255, 255, 0.06);
+	font-weight: 700;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
 .ge-blog-post__related { padding: 65px 0; color: var(--ge-white); background: #0a1928; }
 .ge-blog-post__related a { position: relative; display: grid; grid-template-columns: 130px minmax(0, 1fr) auto; align-items: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); color: var(--ge-white); gap: 30px; }
 .ge-blog-post__related a span { color: var(--ge-gold-light); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
