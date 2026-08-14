@@ -4,5 +4,71 @@ Disallow: /api/
 Disallow: /preview/
 Disallow: /drafts/
 
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /preview/
+Disallow: /drafts/
+
 Sitemap: https://goexecution.com/sitemap.xml
 Host: https://goexecution.com
