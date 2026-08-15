@@ -140,10 +140,10 @@ export function ServiceDetailView({
 
               <div className="ge-service-hero__actions">
                 <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                  Discuss Your Project <span aria-hidden="true">↗</span>
+                  Discuss Your Project
                 </Link>
                 <Link className="ge-text-link ge-text-link--light" href="#capabilities">
-                  Explore Capabilities <span aria-hidden="true">↓</span>
+                  Explore Capabilities
                 </Link>
               </div>
 
@@ -190,7 +190,7 @@ export function ServiceDetailView({
         >
           <span className="ge-service-drawer-btn__icon">⚡</span>
           <span className="ge-service-drawer-btn__label">Our Capabilities ({currentServiceIndex}/6)</span>
-          <span className="ge-service-drawer-btn__arrow">View All ↗</span>
+          <span className="ge-service-drawer-btn__arrow">View All</span>
         </button>
       </div>
 
@@ -227,9 +227,6 @@ export function ServiceDetailView({
                   onClick={() => setDrawerOpen(false)}
                 >
                   <span>{item.title}</span>
-                  <span className="ge-service-drawer-arrow" aria-hidden="true">
-                    ↗
-                  </span>
                 </Link>
               );
             })}
@@ -244,7 +241,7 @@ export function ServiceDetailView({
               href="/contact"
               onClick={() => setDrawerOpen(false)}
             >
-              Book Free Consultation ↗
+              Book Free Consultation
             </Link>
           </div>
         </div>
@@ -258,10 +255,10 @@ export function ServiceDetailView({
             return (
               <Link
                 key={item.slug}
-                href={`/${item.slug}/`}
+                href={`/services/${item.slug}/`}
                 className={`ge-service-mobile-tab${isActive ? " is-active" : ""}`}
               >
-                {item.title}
+                <span>{item.title}</span>
               </Link>
             );
           })}
@@ -286,9 +283,6 @@ export function ServiceDetailView({
                         className={`ge-service-sidebar__link${isActive ? " is-active" : ""}`}
                       >
                         <span>{item.title}</span>
-                        <span className="ge-service-sidebar__arrow" aria-hidden="true">
-                          ↗
-                        </span>
                       </Link>
                     );
                   })}
@@ -299,7 +293,7 @@ export function ServiceDetailView({
                   <p className="ge-eyebrow ge-eyebrow--light">Need a custom scope?</p>
                   <h4>Let’s build a solution tailored to your target.</h4>
                   <Link className="ge-button ge-button--gold" href="/contact">
-                    Book Free Consultation ↗
+                    Book Free Consultation
                   </Link>
                 </div>
               </div>

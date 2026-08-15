@@ -30,7 +30,7 @@ export const blogPosts: readonly BlogPost[] = [
       </div>
 
       <h2>Why Is My Website Not Ranking on Google?</h2>
-      <p>To understand why your website is not ranking on Google, it helps to view search through Google's technical pipeline: <strong>Crawling &rarr; Indexing &rarr; Understanding &rarr; Intent Matching &rarr; Ranking Evaluation</strong>.</p>
+      <p>To understand why your website is not ranking on Google, it helps to view search through Google's technical pipeline: <strong>Crawling • Indexing • Understanding • Intent Matching • Ranking Evaluation</strong>.</p>
       <p>If a breakdown happens at any stage in this sequence, your pages will not appear for commercial or informational queries. Before rewriting page copy or changing marketing strategies, use the following ten diagnostic checkpoints to isolate the exact cause.</p>
 
       <h2>1. Your Website or Page Isn’t Indexed</h2>
@@ -204,7 +204,7 @@ export const blogPosts: readonly BlogPost[] = [
       <h2>Why SEO Takes Time</h2>
       <p>Search engines do not process web content in a simple, step-by-step manner. According to Google’s How Search Works guide, the process involves crawling, rendering, indexing, and ongoing quality evaluation. Learn more about infrastructure optimizations on our <a href="/services/seo/technical-seo/">Technical SEO Services</a> page.</p>
       <h2>How a Page Moves Through Search</h2>
-      <figure><p><strong>Crawling → Rendering → Indexing → Ranking Evaluation</strong></p></figure>
+      <figure><p><strong>Crawling • Rendering • Indexing • Ranking Evaluation</strong></p></figure>
       <h3>Month 0–1: Crawling and Baseline Measurement</h3>
       <p>In the first audit window, we set up technical tracking and verify that Googlebot can access the site. Check our <a href="/services/seo/small-business-seo/">Small Business SEO Services</a> for structured growth strategies.</p>
       <h3>Month 1–3: Index Coverage and Content Validation</h3>

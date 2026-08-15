@@ -18,14 +18,14 @@ type MobileHeroStoryProps = {
 };
 
 export function MobileHeroStory({
-  eyebrow = "Full-Service Growth Partner for US Businesses",
-  title = "Strategy Meets Precision.",
-  titleAccent = "Execution Drives Growth.",
-  copy = "Go Execution helps ambitious American brands outpace competition. We engineer sub-second web platforms, execute technical search engine strategies, and launch data-driven marketing campaigns that convert digital visibility into bottom-line revenue.",
-  primaryLabel = "Get Free Growth Audit",
+  eyebrow = "FULL-SERVICE DIGITAL MARKETING AGENCY",
+  title = "Full-Service Digital",
+  titleAccent = "Marketing Agency in USA",
+  copy = "Go Execution helps US businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
+  primaryLabel = "Get a Free Growth Audit",
   primaryHref = "/contact",
   secondaryLabel = "Explore Our Services",
-  secondaryHref = "#work",
+  secondaryHref = "/services",
   variant = "home",
 }: MobileHeroStoryProps = {}) {
   const storyRef = useRef<HTMLElement>(null);
@@ -36,33 +36,55 @@ export function MobileHeroStory({
     if (!story) return;
 
     const mobile = window.matchMedia("(max-width: 1024px)");
-    story.style.setProperty("--ge-mobile-story", "0");
-
     let frame = 0;
-    const update = () => {
-      frame = 0;
-      const travel = Math.max(1, story.offsetHeight - window.innerHeight);
-      const progress = Math.min(1, Math.max(0, -story.getBoundingClientRect().top / travel));
-      story.style.setProperty("--ge-mobile-story", progress.toFixed(4));
+    let targetProgress = 0;
+    let currentProgress = 0;
+    let cachedOffsetTop = 0;
+    let cachedTravel = 1;
+
+    const measure = () => {
+      const rect = story.getBoundingClientRect();
+      cachedOffsetTop = rect.top + window.scrollY;
+      cachedTravel = Math.max(1, story.offsetHeight - window.innerHeight);
     };
-    const requestUpdate = () => {
+
+    const render = () => {
+      // Butter-smooth spring interpolation on mobile scroll
+      currentProgress += (targetProgress - currentProgress) * 0.2;
+      if (Math.abs(targetProgress - currentProgress) < 0.001) {
+        currentProgress = targetProgress;
+      }
+      story.style.setProperty("--ge-mobile-story", currentProgress.toFixed(4));
+      if (currentProgress !== targetProgress) {
+        frame = window.requestAnimationFrame(render);
+      } else {
+        frame = 0;
+      }
+    };
+
+    const handleScroll = () => {
       if (!mobile.matches) return;
-      if (!frame) frame = window.requestAnimationFrame(update);
+      const scrollY = window.scrollY;
+      const progress = Math.min(1, Math.max(0, (scrollY - cachedOffsetTop) / cachedTravel));
+      targetProgress = progress;
+      if (!frame) frame = window.requestAnimationFrame(render);
     };
 
     const sync = () => {
       if (frame) cancelAnimationFrame(frame);
+      frame = 0;
       if (!mobile.matches) return;
-      update();
+      measure();
+      handleScroll();
     };
 
     sync();
-    window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", sync, { passive: true });
     mobile.addEventListener("change", sync);
     return () => {
-      window.removeEventListener("scroll", requestUpdate);
-      window.removeEventListener("resize", requestUpdate);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", sync);
       mobile.removeEventListener("change", sync);
       if (frame) window.cancelAnimationFrame(frame);
     };
@@ -81,7 +103,7 @@ export function MobileHeroStory({
           <span className="ge-mobile-machine__piece ge-mobile-machine__e-a" />
           <span className="ge-mobile-machine__piece ge-mobile-machine__e-b" />
           <div className="ge-mobile-machine__glow" />
-          <div className="ge-mobile-machine__final"><Image src="/assets/images/ce-icon.png" alt="" width={512} height={512} sizes="320px" /></div>
+          <div className="ge-mobile-machine__final"><Image src="/assets/images/ce-icon.png" alt="" width={512} height={512} sizes="320px" priority /></div>
           <div className="ge-mobile-machine__label"><span>Strategy</span><i /><strong>Execution</strong></div>
         </div>
 
@@ -91,11 +113,14 @@ export function MobileHeroStory({
 
         <div className="ge-mobile-story__copy">
           <p className="ge-mobile-story__kicker">{eyebrow}</p>
-          <h1><span>{title}</span>{titleAccent ? <> {titleAccent}</> : null}</h1>
+          <h1>
+            <span>{title}</span>
+            {titleAccent ? <span className="ge-hero__title-accent">{titleAccent}</span> : null}
+          </h1>
           <p className="ge-mobile-story__lead">{copy}</p>
           <div className="ge-mobile-story__actions">
-            <Link className="ge-mobile-story__button" href={primaryHref}>{primaryLabel} <b aria-hidden="true">↗</b></Link>
-            <Link className="ge-mobile-story__link" href={secondaryHref}>{secondaryLabel} <b aria-hidden="true">↓</b></Link>
+            <Link className="ge-mobile-story__button" href={primaryHref}>{primaryLabel}</Link>
+            <Link className="ge-mobile-story__link" href={secondaryHref}>{secondaryLabel}</Link>
           </div>
         </div>
 

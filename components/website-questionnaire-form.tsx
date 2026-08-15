@@ -288,7 +288,7 @@ export function WebsiteQuestionnaireForm() {
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--gold" onClick={nextStep}>
-                <span>Next: Goals & Style →</span>
+                <span>Next: Goals & Style</span>
               </button>
             </div>
           </div>
@@ -404,10 +404,10 @@ export function WebsiteQuestionnaireForm() {
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--outline" onClick={prevStep}>
-                <span>← Back</span>
+                <span>Back</span>
               </button>
               <button type="button" className="ge-button ge-button--gold" onClick={nextStep}>
-                <span>Next: Assets & Links →</span>
+                <span>Next: Assets & Links</span>
               </button>
             </div>
           </div>
@@ -457,10 +457,10 @@ export function WebsiteQuestionnaireForm() {
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--outline" onClick={prevStep}>
-                <span>← Back</span>
+                <span>Back</span>
               </button>
               <button type="button" className="ge-button ge-button--gold" onClick={nextStep}>
-                <span>Next: Features & Launch →</span>
+                <span>Next: Features & Launch</span>
               </button>
             </div>
           </div>
@@ -515,14 +515,14 @@ export function WebsiteQuestionnaireForm() {
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--outline" onClick={prevStep}>
-                <span>← Back</span>
+                <span>Back</span>
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className="ge-button ge-button--gold ge-submit-brief-btn"
               >
-                <span>{isSubmitting ? "Submitting Brief..." : "Submit Project Brief ↗"}</span>
+                <span>{isSubmitting ? "Submitting Brief..." : "Submit Project Brief"}</span>
               </button>
             </div>
           </div>

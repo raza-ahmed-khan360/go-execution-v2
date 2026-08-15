@@ -236,8 +236,9 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
         {packages.map((pkg, index) => {
           const id = `${slug(active)}-${index}`;
           const isOpen = openFeatures === id;
+          const isFeatured = index === 1;
           return (
-            <article className="ge-package" key={`${active}-${pkg.name}`} style={{ "--card-index": index } as React.CSSProperties}>
+            <article className={`ge-package ${isFeatured ? "ge-package--featured" : ""}`} key={`${active}-${pkg.name}`} style={{ "--card-index": index } as React.CSSProperties}>
               <div>
                 <p>{active}</p>
                 <h2>{pkg.name}</h2>
@@ -257,7 +258,7 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
               <ul id={`features-${id}`} className="ge-package-features-list" hidden={!isOpen}>
                 {pkg.benefits.map((benefit, benefitIndex) => <li key={`${benefit}-${benefitIndex}`}>{benefit}</li>)}
               </ul>
-              <Link className={`ge-button ${index === 1 ? "ge-button--gold" : "ge-button--outline"}`} href="/contact">Book a Free Consultation</Link>
+              <Link className={`ge-button ${isFeatured ? "ge-button--gold" : "ge-button--outline"}`} href="/contact">Book a Free Consultation</Link>
             </article>
           );
         })}

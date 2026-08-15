@@ -70,7 +70,7 @@ export default function ServicesPage() {
 
             <div className="ge-hero__actions" style={{ marginTop: 32 }}>
               <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                <span>Book Strategy Consultation ↗</span>
+                <span>Book Strategy Consultation</span>
               </Link>
             </div>
           </div>
@@ -148,7 +148,6 @@ export default function ServicesPage() {
                           href={`/services/${cat.slug}/`}
                         >
                           <span>Explore {cat.title}</span>
-                          <span className="ge-btn-arrow" aria-hidden="true">→</span>
                         </Link>
                       </div>
                     </div>

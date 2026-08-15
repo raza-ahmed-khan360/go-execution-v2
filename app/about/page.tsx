@@ -116,10 +116,10 @@ export default function About() {
 
             <div className="ge-hero__actions" style={{ justifyContent: "flex-start", gap: 24 }}>
               <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                <span>Book Strategy Consultation ↗</span>
+                <span>Book Strategy Consultation</span>
               </Link>
               <a className="ge-button ge-button--outline" href="#our-story">
-                <span>Explore Agency Story ↓</span>
+                <span>Explore Agency Story</span>
               </a>
             </div>
           </div>

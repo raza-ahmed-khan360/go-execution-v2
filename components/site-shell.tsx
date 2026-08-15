@@ -147,7 +147,7 @@ export function Header() {
       <ul id={`ge-${name}-dropdown`} className="ge-nav-dropdown">
         {dropdowns[name].map(([itemLabel, href]) => (
           <li key={href}>
-            <Link href={href} onClick={closeNavigation}><span>{itemLabel}</span><b aria-hidden="true">↗</b></Link>
+            <Link href={href} onClick={closeNavigation}><span>{itemLabel}</span></Link>
           </li>
         ))}
       </ul>
@@ -181,7 +181,7 @@ export function Header() {
             <li><Link href="/about" onClick={closeNavigation}>About</Link></li>
             <li><Link href="/contact" onClick={closeNavigation}>Contact</Link></li>
           </ul>
-          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Consultation ↗</span></Link>
+          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Free Consultation</span></Link>
         </nav>
       </div>
     </header>
@@ -464,7 +464,6 @@ export function Footer() {
           <li key={href}>
             <Link href={href} onClick={() => setFooterDropdown(null)}>
               <span>{itemLabel}</span>
-              <span aria-hidden="true">↗</span>
             </Link>
           </li>
         ))}
@@ -487,9 +486,14 @@ export function Footer() {
             <div className="ge-footer__lead-content">
               <p className="ge-eyebrow ge-eyebrow--light">{ctaData.eyebrow}</p>
               <Link className="ge-footer__headline" href="/contact">
-                {ctaData.headline}<span aria-hidden="true">↗</span>
+                {ctaData.headline}
               </Link>
               <p className="ge-footer__lead-copy">{ctaData.copy}</p>
+              <div className="ge-footer__lead-action">
+                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+                  <span>Book a Free Consultation</span>
+                </Link>
+              </div>
             </div>
           </div>
         )}
@@ -500,11 +504,11 @@ export function Footer() {
           <div>
             <h4 className="ge-footer__col-title">Services Hub</h4>
             <ul className="ge-footer__col-links">
-              <li><Link href="/services/web-development/">Web Development ↗</Link></li>
+              <li><Link href="/services/web-development/">Web Development</Link></li>
               <li><Link href="/services/web-development/custom-web-development/">Custom Web Dev</Link></li>
               <li><Link href="/services/web-development/nextjs-development/">Next.js 16 Engineering</Link></li>
               <li><Link href="/services/web-development/wordpress-development/">WordPress Platforms</Link></li>
-              <li><Link href="/services/seo/">Search Engine Optimization ↗</Link></li>
+              <li><Link href="/services/seo/">Search Engine Optimization</Link></li>
               <li><Link href="/services/seo/technical-seo/">Technical SEO Graph</Link></li>
               <li><Link href="/services/digital-marketing/">Digital Marketing</Link></li>
               <li><Link href="/services/design-branding/">Design &amp; Branding</Link></li>
@@ -531,7 +535,7 @@ export function Footer() {
           <div>
             <h4 className="ge-footer__col-title">Portfolio &amp; Work</h4>
             <ul className="ge-footer__col-links">
-              <li><Link href="/portfolio?category=all-projects">View All Projects ↗</Link></li>
+              <li><Link href="/portfolio?category=all-projects">View All Projects</Link></li>
               <li><Link href="/portfolio?category=website-design-development">Web Engineering</Link></li>
               <li><Link href="/portfolio?category=graphic-designing">Graphic &amp; UI Design</Link></li>
               <li><Link href="/portfolio?category=digital-marketing">Digital Ad Campaigns</Link></li>

@@ -86,7 +86,7 @@ export default async function CategoryPage({ params }: Props) {
                   <p>{post.excerpt}</p>
                   <div>
                     <time dateTime={post.date}>{formatBlogDate(post.date)}</time>
-                    <Link href={`/blog/${post.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
+                    <Link href={`/blog/${post.slug}/`}>Read more</Link>
                   </div>
                 </article>
               ))}

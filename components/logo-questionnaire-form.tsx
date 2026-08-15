@@ -297,7 +297,7 @@ Phone: ${phone || "N/A"}
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--gold" onClick={nextStep}>
-                <span>Next: Aesthetic & Colors →</span>
+                <span>Next: Aesthetic & Colors</span>
               </button>
             </div>
           </div>
@@ -367,10 +367,10 @@ Phone: ${phone || "N/A"}
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--outline" onClick={prevStep}>
-                <span>← Back</span>
+                <span>Back</span>
               </button>
               <button type="button" className="ge-button ge-button--gold" onClick={nextStep}>
-                <span>Next: Inspiration & Usage →</span>
+                <span>Next: Inspiration & Usage</span>
               </button>
             </div>
           </div>
@@ -440,10 +440,10 @@ Phone: ${phone || "N/A"}
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--outline" onClick={prevStep}>
-                <span>← Back</span>
+                <span>Back</span>
               </button>
               <button type="button" className="ge-button ge-button--gold" onClick={nextStep}>
-                <span>Next: Brand Communication →</span>
+                <span>Next: Brand Communication</span>
               </button>
             </div>
           </div>
@@ -486,14 +486,14 @@ Phone: ${phone || "N/A"}
 
             <div className="ge-step-actions">
               <button type="button" className="ge-button ge-button--outline" onClick={prevStep}>
-                <span>← Back</span>
+                <span>Back</span>
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className="ge-button ge-button--gold ge-submit-brief-btn"
               >
-                <span>{isSubmitting ? "Submitting Brief..." : "Submit Logo Brief ↗"}</span>
+                <span>{isSubmitting ? "Submitting Brief..." : "Submit Logo Brief"}</span>
               </button>
             </div>
           </div>

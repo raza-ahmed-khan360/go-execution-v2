@@ -108,10 +108,10 @@ export default async function SubServicePage({ params }: Props) {
 
             <div className="ge-hero__actions">
               <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                <span>Request Free Custom Proposal</span> <span aria-hidden="true">↗</span>
+                <span>Request Free Custom Proposal</span>
               </Link>
               <a className="ge-button ge-button--outline" href="#overview">
-                <span>Explore Service Details</span> <span aria-hidden="true">↓</span>
+                <span>Explore Service Details</span>
               </a>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default async function SubServicePage({ params }: Props) {
                 </p>
                 <div style={{ marginTop: "auto" }}>
                   <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                    <span>Discuss Your Scope ↗</span>
+                    <span>Discuss Your Scope</span>
                   </Link>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export default async function SubServicePage({ params }: Props) {
                           className="ge-button ge-button--gold ge-button--full ge-magnetic"
                           href={`/services/${rel.categorySlug}/${rel.slug}/`}
                         >
-                          <span>Explore Solution</span> <span className="ge-btn-arrow" aria-hidden="true">→</span>
+                          <span>Explore Solution</span>
                         </Link>
                       </div>
                     </div>

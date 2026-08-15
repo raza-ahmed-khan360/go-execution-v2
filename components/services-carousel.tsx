@@ -72,7 +72,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
               <span className="ge-services-3d__content">
                 <strong>{service.title}</strong>
                 <span>{service.copy}</span>
-                <b>{service.anchorText || "Explore Service"} <i aria-hidden="true">→</i></b>
+                <b>{service.anchorText || "Explore Service"}</b>
               </span>
             </a>
           );
@@ -80,7 +80,6 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
       </div>
 
       <div className="ge-services-3d__controls">
-        <button type="button" onClick={() => move(-1)} aria-label="Previous service">←</button>
         <div className="ge-services-3d__dots" aria-label={`Service ${active + 1} of ${services.length}`}>
           {services.map((service, index) => (
             <button
@@ -99,7 +98,6 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
             />
           ))}
         </div>
-        <button type="button" onClick={() => move(1)} aria-label="Next service">→</button>
       </div>
     </div>
   );

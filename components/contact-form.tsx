@@ -59,7 +59,7 @@ export function ContactForm({ services }: { services: string[] }) {
         <label>Service Interested In<select name="service" required defaultValue=""><option value="">Select a service</option>{services.map((service) => <option value={service} key={service}>{service}</option>)}</select></label>
       </div>
       <label>Message<textarea name="message" rows={5} required /></label>
-      <button className="ge-button ge-button--navy" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request Consultation"}<span aria-hidden="true">↗</span></button>
+      <button className="ge-button ge-button--navy" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request Consultation"}</button>
       {status !== "idle" && (
         <p className={`ge-form__status${status === "error" ? " is-error" : ""}${status === "success" ? " is-success" : ""}`} role="status" aria-live="polite">
           {message}

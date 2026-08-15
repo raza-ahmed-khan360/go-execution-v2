@@ -61,7 +61,7 @@ const growthSteps = [
     label: "Discover",
     title: "Discover & Analyze",
     copy: "We analyse your business, audience, competitors and existing digital presence to identify the highest-value opportunities.",
-    image: "/assets/images/Brand_Value_Com.jpeg",
+    image: "/assets/images/generated/branding-design.jpg",
     alt: "Digital Agency Discovery & Analysis by Go Execution",
   },
   {
@@ -85,7 +85,7 @@ const growthSteps = [
     label: "Launch",
     title: "Launch & Measure",
     copy: "We launch your digital assets and establish the measurement systems needed to track performance.",
-    image: "/assets/images/UFS.jpeg",
+    image: "/assets/images/generated/tech-saas.jpg",
     alt: "Digital Asset Launch & Performance Tracking by Go Execution",
   },
   {
@@ -123,7 +123,7 @@ const homepageIndustries = [
     tag: "CLINICAL & WELLNESS",
     title: "Health & Wellness",
     desc: "HIPAA-compliant patient booking portals, local search optimization, and reputation management funnels.",
-    image: "/assets/images/generated/prof-services.jpg",
+    image: "/assets/images/generated/retail-ecommerce.jpg",
     feature: "HIPAA Portals & Local Map Pack SEO",
   },
   {
@@ -175,23 +175,34 @@ const faqs = [
   ["How much do digital marketing services cost?", "Pricing depends on your scope, technical requirements, and business objectives. Explore our starting packages or request a custom proposal."],
 ] as const;
 
+const homeHeroContent = {
+  eyebrow: "FULL-SERVICE DIGITAL MARKETING AGENCY",
+  title: "Full-Service Digital",
+  titleAccent: "Marketing Agency",
+  copy: "Go Execution helps US businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
+  primaryLabel: "Get a Free Growth Audit",
+  primaryHref: "/contact/",
+  secondaryLabel: "Explore Our Services",
+  secondaryHref: "/services/",
+} as const;
+
 function HeroContent() {
   return (
     <div className="ge-hero__content">
-      <p className="ge-eyebrow ge-hero-reveal"><span />FULL-SERVICE DIGITAL MARKETING AGENCY</p>
+      <p className="ge-eyebrow ge-hero-reveal"><span />{homeHeroContent.eyebrow}</p>
       <h1 className="ge-hero__title">
-        <span className="ge-hero-reveal">Full-Service Digital</span>
-        <span className="ge-hero-reveal ge-hero__title-accent">Marketing Agency in USA</span>
+        <span className="ge-hero-reveal">{homeHeroContent.title}</span>
+        <span className="ge-hero-reveal ge-hero__title-accent">{homeHeroContent.titleAccent}</span>
       </h1>
       <p className="ge-hero__copy ge-hero-reveal">
-        Go Execution helps US businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.
+        {homeHeroContent.copy}
       </p>
       <div className="ge-hero__actions ge-hero-reveal">
-        <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
-          <span>Get a Free Growth Audit ↗</span>
+        <Link className="ge-button ge-button--gold ge-magnetic" href={homeHeroContent.primaryHref}>
+          <span>{homeHeroContent.primaryLabel}</span>
         </Link>
-        <Link className="ge-button ge-button--outline" href="/services/">
-          <span>Explore Our Services ↓</span>
+        <Link className="ge-button ge-button--outline" href={homeHeroContent.secondaryHref}>
+          <span>{homeHeroContent.secondaryLabel}</span>
         </Link>
       </div>
     </div>
@@ -208,7 +219,7 @@ export function Homepage() {
         <div className="ge-hero__scroll" aria-hidden="true"><span />Scroll to explore</div>
       </section>
 
-      <MobileHeroStory />
+      <MobileHeroStory {...homeHeroContent} />
 
       {/* --- TRUST STATISTICS --- */}
       <section className="ge-stats" aria-label="Agency statistics"><div className="ge-container ge-stats__grid ge-stats--navy">
@@ -232,7 +243,7 @@ export function Homepage() {
               Go Execution brings strategy, web engineering, creative design, and performance marketing together under one roof. We build connected digital experiences that help US businesses attract qualified traffic, convert visitors, and scale measurable revenue.
             </p>
             <Link className="ge-button ge-button--outline" href="/services/">
-              <span>Explore All Services ↗</span>
+              <span>Explore All Services</span>
             </Link>
           </div>
         </div>
@@ -266,7 +277,7 @@ export function Homepage() {
                 Our digital strategies are adapted to the audience, buying journey, and competitive environment of each business sector. Explore custom web &amp; marketing solutions designed around measurable growth.
               </p>
               <Link className="ge-button ge-button--outline" href="/industries/">
-                <span>Explore All Industries ↗</span>
+                <span>Explore All Industries</span>
               </Link>
             </div>
           </div>
@@ -298,7 +309,7 @@ export function Homepage() {
                     </div>
                   </div>
                   <Link className="ge-bento-card-btn" href={`/industries/${ind.slug}/`}>
-                    <span>Explore Strategy</span> <b aria-hidden="true">→</b>
+                    <span>Explore Strategy</span>
                   </Link>
                 </div>
               </article>
@@ -331,7 +342,7 @@ export function Homepage() {
           <p className="ge-eyebrow ge-eyebrow--light">Integrated Growth Team</p>
           <h2>Why Businesses Choose Go Execution</h2>
           <p>Strategy, technology, creative and performance marketing work together under one team, giving businesses a clearer path from digital presence to measurable growth.</p>
-          <Link className="ge-why__cta-btn" href="/about/"><span>Discover Our Approach</span><b aria-hidden="true">↗</b></Link>
+          <Link className="ge-why__cta-btn" href="/about/"><span>Discover Our Approach</span></Link>
         </div>
         <div className="ge-why-cards">
           {[
@@ -343,7 +354,6 @@ export function Homepage() {
             <div className="ge-why-card ge-reveal" data-reveal="right" style={{ "--card-index": index, transitionDelay: `${index * 120}ms` } as React.CSSProperties} key={item.title}>
               <div className="ge-why-card__top">
                 <span className="ge-why-card__num">{String(index + 1).padStart(2, "0")}</span>
-                <span className="ge-why-card__arrow" aria-hidden="true">↗</span>
               </div>
               <h3>{item.title}</h3>
               <p>{item.copy}</p>

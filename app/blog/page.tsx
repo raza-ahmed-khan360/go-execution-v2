@@ -60,7 +60,7 @@ export default function BlogPage() {
                 <p className="ge-eyebrow">{featured.category} <span /> {formatBlogDate(featured.date)}</p>
                 <h2><Link href={`/blog/${featured.slug}/`}>{featured.title}</Link></h2>
                 <p>{featured.excerpt}</p>
-                <Link className="ge-text-link" href={`/blog/${featured.slug}/`}>Read article <span aria-hidden="true">↗</span></Link>
+                <Link className="ge-text-link" href={`/blog/${featured.slug}/`}>Read article</Link>
               </div>
             </article>
             {posts.length > 0 && (
@@ -75,7 +75,7 @@ export default function BlogPage() {
                     <p>{post.excerpt}</p>
                     <div>
                       <time dateTime={post.date}>{formatBlogDate(post.date)}</time>
-                      <Link href={`/blog/${post.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
+                      <Link href={`/blog/${post.slug}/`}>Read more</Link>
                     </div>
                   </article>
                 ))}

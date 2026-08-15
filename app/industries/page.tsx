@@ -131,7 +131,7 @@ export default function IndustriesIndexPage() {
                       </td>
                       <td>
                         <Link className="ge-text-link ge-matrix-link" href={`/industries/${ind.slug}/`}>
-                          <span>View Solutions</span> <span aria-hidden="true">↗</span>
+                          <span>View Solutions</span>
                         </Link>
                       </td>
                     </tr>

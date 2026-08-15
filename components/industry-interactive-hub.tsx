@@ -102,7 +102,6 @@ export function IndustryInteractiveHub({ industries }: Props) {
                   href={`/industries/${ind.slug}/`}
                 >
                   <span>Explore {ind.title} Architecture</span>
-                  <span className="ge-btn-arrow" aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>

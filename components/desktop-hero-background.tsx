@@ -4,11 +4,51 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const cards = [
-  ["top: -8%; left: -12%", "/assets/images/generated/web-dev.jpg"],
-  ["bottom: -12%; left: 5%", "/assets/images/generated/seo-analytics.jpg"],
-  ["top: -10%; right: -8%", "/assets/images/generated/video-motion.jpg"],
-  ["bottom: -8%; right: -5%", "/assets/images/generated/digital-mktg.jpg"],
-  ["top: 55%; left: 80%", "/assets/images/generated/mobile-apps.jpg"],
+  {
+    id: "branding-design",
+    source: "/assets/images/generated/branding-design.jpg",
+    style: { top: "4%", left: "2%", width: "390px", height: "365px" },
+  },
+  {
+    id: "web-dev",
+    source: "/assets/images/generated/web-dev.jpg",
+    style: { top: "3%", left: "36%", width: "355px", height: "415px" },
+  },
+  {
+    id: "video-motion",
+    source: "/assets/images/generated/video-motion.jpg",
+    style: { top: "5%", left: "69%", width: "375px", height: "350px" },
+  },
+  {
+    id: "seo-analytics",
+    source: "/assets/images/generated/seo-analytics.jpg",
+    style: { top: "36%", left: "18%", width: "365px", height: "395px" },
+  },
+  {
+    id: "tech-saas",
+    source: "/assets/images/generated/tech-saas.jpg",
+    style: { top: "34%", left: "51%", width: "410px", height: "360px" },
+  },
+  {
+    id: "mobile-apps",
+    source: "/assets/images/generated/mobile-apps.jpg",
+    style: { top: "37%", right: "2%", width: "360px", height: "390px" },
+  },
+  {
+    id: "real-estate",
+    source: "/assets/images/generated/real-estate.jpg",
+    style: { top: "68%", left: "3%", width: "385px", height: "370px" },
+  },
+  {
+    id: "digital-mktg",
+    source: "/assets/images/generated/digital-mktg.jpg",
+    style: { top: "66%", left: "37%", width: "350px", height: "420px" },
+  },
+  {
+    id: "retail-ecommerce",
+    source: "/assets/images/generated/retail-ecommerce.jpg",
+    style: { top: "69%", left: "70%", width: "400px", height: "355px" },
+  },
 ] as const;
 
 export function DesktopHeroBackground() {
@@ -27,25 +67,29 @@ export function DesktopHeroBackground() {
     let currentY = 0;
 
     const render = () => {
-      // Match the broad, weighty cursor parallax used by the Outrbuzz hero.
-      // The low interpolation value keeps the layer catching up after the
-      // pointer stops instead of snapping directly to its destination.
-      currentX += (targetX - currentX) * 0.075;
-      currentY += (targetY - currentY) * 0.075;
+      // Smooth responsive spring interpolation
+      currentX += (targetX - currentX) * 0.12;
+      currentY += (targetY - currentY) * 0.12;
       layer.style.transform = `translate3d(${currentX.toFixed(2)}px, ${currentY.toFixed(2)}px, 0)`;
-      const stillMoving = Math.abs(targetX - currentX) > 0.2 || Math.abs(targetY - currentY) > 0.2;
+      const stillMoving = Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1;
       frame = stillMoving ? window.requestAnimationFrame(render) : 0;
     };
+
     const move = (event: PointerEvent) => {
-      targetX = (event.clientX - window.innerWidth / 2) * -1.5;
-      targetY = (event.clientY - window.innerHeight / 2) * -1.5;
+      // High-sensitivity dynamic parallax response across 200vw x 200vh canvas
+      const normX = (event.clientX / window.innerWidth - 0.5) * 2;
+      const normY = (event.clientY / window.innerHeight - 0.5) * 2;
+      targetX = normX * -880;
+      targetY = normY * -660;
       if (!frame) frame = window.requestAnimationFrame(render);
     };
+
     const reset = () => {
       targetX = 0;
       targetY = 0;
       if (!frame) frame = window.requestAnimationFrame(render);
     };
+
     const stop = () => {
       window.removeEventListener("pointermove", move);
       document.documentElement.removeEventListener("mouseleave", reset);
@@ -53,6 +97,7 @@ export function DesktopHeroBackground() {
       frame = 0;
       layer.style.transform = "translate3d(0, 0, 0)";
     };
+
     const sync = () => {
       stop();
       if (!desktop.matches || reduced.matches) return;
@@ -71,17 +116,14 @@ export function DesktopHeroBackground() {
   }, []);
 
   return (
-    <div ref={layerRef} className="ge-hero__image-layer ge-hero__image-layer--interactive" aria-hidden="true">
-      {cards.map(([position, source], index) => (
+    <div ref={layerRef} className="ge-hero__image-layer" aria-hidden="true">
+      {cards.map((card) => (
         <div
-          className="ge-hero__image-card ge-hero__image-card--floating"
-          style={{
-            ...Object.fromEntries(position.split("; ").map((rule) => rule.split(": "))),
-            animationDelay: `${index * -1.7}s`,
-          }}
-          key={source}
+          key={card.id}
+          className="ge-hero__image-card"
+          style={card.style as React.CSSProperties}
         >
-          <Image src={source} alt="" fill sizes="460px" quality={70} />
+          <Image src={card.source} alt="" fill sizes="(max-width: 1400px) 380px, 450px" quality={85} priority />
         </div>
       ))}
     </div>

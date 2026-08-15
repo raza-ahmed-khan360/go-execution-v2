@@ -100,10 +100,10 @@ export default async function CategoryHubPage({ params }: Props) {
 
             <div className="ge-hero__actions">
               <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                <span>Book Free Strategy Consultation</span> <span aria-hidden="true">↗</span>
+                <span>Book Free Strategy Consultation</span>
               </Link>
               <a className="ge-button ge-button--outline" href="#sub-services">
-                <span>Explore Specialized Services</span> <span aria-hidden="true">↓</span>
+                <span>Explore Specialized Services</span>
               </a>
             </div>
           </div>
@@ -207,7 +207,6 @@ export default async function CategoryHubPage({ params }: Props) {
                     <div className="ge-service-feature-row__action">
                       <Link className="ge-btn-capsule ge-magnetic" href={`/services/${cat.slug}/${sub.slug}/`}>
                         <span>Explore {sub.title} Architecture</span>
-                        <span aria-hidden="true">→</span>
                       </Link>
                     </div>
                   </div>
