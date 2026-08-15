@@ -35,7 +35,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     eyebrow: "Enterprise Web Engineering & Architectures",
     description: "Go Execution is a leading web development company in the USA providing custom web development agency services, Next.js engineering, WordPress CMS builds, and scalable e-commerce storefronts.",
     intro: "We build sub-second web platforms engineered for maximum search visibility, enterprise security, and seamless user experiences across all devices.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Custom Web Development USA",
       "Enterprise WordPress Development USA",
@@ -62,7 +62,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     eyebrow: "Search Engine Optimization & Organic Growth",
     description: "Go Execution is a top SEO agency in the USA offering professional SEO services, search engine optimization services, technical SEO, local SEO, and e-commerce SEO.",
     intro: "We eliminate technical crawl barriers, engineer topical keyword authority, and secure high-intent search rankings that turn organic search into a predictable revenue stream.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Technical SEO Services & Audits",
       "Local SEO Services USA & Maps Optimization",
@@ -83,7 +83,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     eyebrow: "Performance Marketing & Customer Acquisition",
     description: "Go Execution is a premier digital marketing agency in the USA providing digital marketing services, PPC management, content marketing, social media marketing, and CRO solutions.",
     intro: "We unify paid search, social ad creatives, content strategy, and conversion rate optimization into a single accountable customer acquisition engine.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Content Marketing Services & Strategy",
       "Social Media Marketing Services USA",
@@ -104,7 +104,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     eyebrow: "Strategic Brand Identity & Graphic Design",
     description: "Go Execution is a leading branding agency in the USA offering graphic design and branding services, custom logo design services, brand identity systems, and creative direction.",
     intro: "We shape visual identities that command authority, build instant consumer trust, and differentiate your brand across every digital touchpoint.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Graphic Design Services USA",
       "Logo Design Services USA",
@@ -125,7 +125,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     eyebrow: "High-Impact Video Motion & Animation",
     description: "Go Execution is a video animation agency in the USA providing 2D animation services, 3D product animation, and animated explainer video production.",
     intro: "We translate complex value propositions into engaging visual stories, high-end motion graphics, and conversion-focused animated explainer videos.",
-    image: "/assets/images/generated/video-motion.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Video Animation Services & Motion Graphics",
       "2D Animation Services & Character Art",
@@ -146,7 +146,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     eyebrow: "Native & Cross-Platform Mobile Engineering",
     description: "Go Execution is a premier mobile app development company in the USA providing custom mobile app development services for iOS and Android platforms.",
     intro: "We build intuitive, high-speed mobile experiences that connect businesses directly with users on iOS and Android platforms.",
-    image: "/assets/images/generated/mobile-apps.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Mobile App Development Services USA",
       "Custom iOS & Android App Development",
@@ -170,7 +170,7 @@ export const subServices: Record<string, SubService> = {
     description: "Leading custom web development company in the USA. Go Execution provides custom website development services, bespoke web platforms, and custom web development services.",
     intro: "Off-the-shelf templates limit scalability. We build bespoke custom web development solutions engineered around your exact commercial goals, technical integrations, and user acquisition funnels.",
     overview: "Our custom web development company combines clean modern architecture, Next.js framework power, and robust API backends to deliver sub-second page performance.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Custom Web Development USA",
       "Custom Website Development Services",
@@ -199,7 +199,7 @@ export const subServices: Record<string, SubService> = {
     description: "Top-rated WordPress development company in the USA. Custom WordPress web development services, enterprise CMS builds, and custom WordPress development by Go Execution.",
     intro: "We transform WordPress into a lightning-fast, highly secure content platform with custom WordPress development, theme architecture, zero plugin bloat, and intuitive editing tools.",
     overview: "Our WordPress development company builds custom themes and plugins tailored to your brand, ensuring sub-second speeds and complete editor autonomy.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "WordPress Development Company USA Architecture",
       "WordPress Development Services USA & Theme Engineering",
@@ -228,7 +228,7 @@ export const subServices: Record<string, SubService> = {
     description: "Premier Next.js development company in the USA. Go Execution delivers custom Next.js development services, headless web applications, and React platforms.",
     intro: "Next.js is the gold standard for modern web performance. We build lightning-fast Next.js web development SSR applications that rank higher and convert faster.",
     overview: "As a premier Next.js development agency, we leverage Next.js App Router, Turbopack, and Vercel edge deployment to build sub-second web platforms.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Next.js Development Company USA Engineering",
       "Next.js Development Services & App Router",
@@ -257,7 +257,7 @@ export const subServices: Record<string, SubService> = {
     description: "Leading ecommerce web development agency in the USA. Custom ecommerce website development services, Shopify builds, and custom ecommerce development.",
     intro: "We engineer online storefronts with custom ecommerce development, mobile-first navigation, and rapid page load speeds that turn store visitors into repeat buyers.",
     overview: "As a top ecommerce website development company, whether you need Shopify or custom headless commerce, we build storefronts that maximize sales.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Ecommerce Web Development USA Storefronts",
       "Ecommerce Website Development Services",
@@ -286,7 +286,7 @@ export const subServices: Record<string, SubService> = {
     description: "Expert landing page design and development agency in the USA. We craft conversion focused landing page design and high converting landing pages.",
     intro: "Don't waste ad spend on slow, generic pages. Our landing page design agency builds high converting landing pages engineered to convert ad clicks into revenue.",
     overview: "Our landing page development USA services pair psychological copy, sub-second load speeds, and clear conversion focused landing page design.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Landing Page Design and Development",
       "Landing Page Development USA Campaigns",
@@ -315,7 +315,7 @@ export const subServices: Record<string, SubService> = {
     description: "Professional website redesign services in the USA. Go Execution is a top website redesign agency helping businesses redesign websites for better conversions.",
     intro: "Transform your outdated website into a modern market leader with our website redesign company, preserving historical search engine rankings and domain authority.",
     overview: "Our website redesign agency analyzes current site performance, rebuilds user journeys, modernizes visual branding, and executes seamless 301 SEO migrations.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Website Redesign Services USA",
       "Website Redesign Company Strategy",
@@ -344,7 +344,7 @@ export const subServices: Record<string, SubService> = {
     description: "Professional website speed optimization services in the USA. Expert page speed optimization services, Core Web Vitals optimization, and website performance optimization.",
     intro: "Every 100ms delay costs revenue. Our website speed optimization services resolve JavaScript execution bottlenecks, media assets, and server delivery.",
     overview: "Our website performance optimization engineers eliminate render-blocking scripts and optimize Core Web Vitals to maximize search visibility and conversions.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Website Speed Optimization Services USA",
       "Website Performance Optimization & Audits",
@@ -375,7 +375,7 @@ export const subServices: Record<string, SubService> = {
     description: "Expert technical SEO services and technical website SEO audits in the USA. Resolve crawl barriers with a leading technical SEO agency and technical SEO company.",
     intro: "Search engines cannot rank content they cannot properly crawl or index. Our technical SEO services audit and resolve deep technical infrastructure barriers.",
     overview: "As a specialized technical SEO agency, we fix crawl errors, implement schema graph markups, clean XML sitemaps, and optimize JavaScript rendering.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Technical SEO Services & Infrastructure",
       "Technical SEO Agency USA Audits",
@@ -404,7 +404,7 @@ export const subServices: Record<string, SubService> = {
     description: "Top-rated local SEO services in the USA. Go Execution is a leading local SEO company and agency specializing in local search engine optimization & Google Maps SEO.",
     intro: "Capture ready-to-buy customers in your target area. Our local SEO services USA optimize Google Business Profiles and establish local search engine optimization authority.",
     overview: "Our local SEO agency strategies drive qualified calls and walk-in inquiries by claiming dominant Google Maps SEO rankings across your service areas.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Local SEO Services USA",
       "Local SEO Agency & Map Pack Dominance",
@@ -433,7 +433,7 @@ export const subServices: Record<string, SubService> = {
     description: "Specialized ecommerce SEO services for US online stores. Our ecommerce search engine optimization agency drives organic revenue on Shopify & WooCommerce.",
     intro: "Stop relying solely on paid ad spend. Our ecommerce SEO services rank product categories and high-intent commercial terms at the top of Google search results.",
     overview: "As a dedicated ecommerce SEO agency, we optimize product titles, schema markup, collection page copy, and internal linking to maximize organic sales.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Ecommerce SEO Services & Category Optimization",
       "Ecommerce SEO Agency & Merchant Center",
@@ -462,7 +462,7 @@ export const subServices: Record<string, SubService> = {
     description: "Affordable small business SEO services in the USA. Tailored SEO for small businesses and small business search engine optimization strategies by Go Execution.",
     intro: "Level the playing field against larger market competitors with targeted small business SEO services tailored for growing US service providers.",
     overview: "Our small business SEO agency focuses on high-intent buyer search terms, affordable SEO for small business packages, and transparent ROI reporting.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Small Business SEO Services USA",
       "Small Business SEO Agency Strategy",
@@ -493,7 +493,7 @@ export const subServices: Record<string, SubService> = {
     description: "High-impact content marketing services in the USA. Go Execution is a top content marketing agency delivering SEO content marketing and content strategy services.",
     intro: "Quality content builds consumer trust before the sale. Our content marketing services research, draft, and publish high-authority articles and strategic guides.",
     overview: "As a leading content marketing company, our strategists engineer SEO content marketing campaigns aligned with real search intent and buyer journeys.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Content Marketing Services & Editorial Strategy",
       "Content Marketing Agency USA Authority Content",
@@ -522,7 +522,7 @@ export const subServices: Record<string, SubService> = {
     description: "Leading social media marketing services in the USA. Go Execution is a social media marketing agency providing social media management services & advertising.",
     intro: "Build active brand communities and launch high-converting ad campaigns with our social media marketing services USA across Meta, LinkedIn, and TikTok.",
     overview: "As a premier social media marketing company, we combine eye-catching graphics, UGC video creatives, and social media advertising services.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Social Media Marketing Services USA",
       "Social Media Marketing Agency USA Campaigns",
@@ -551,7 +551,7 @@ export const subServices: Record<string, SubService> = {
     description: "High-ROAS PPC management services in the USA. Premier paid search marketing agency and PPC agency offering Google Ads management & paid advertising.",
     intro: "Capture buyers at the exact moment they search online. Our PPC management services USA build targeted Google Search and paid advertising campaigns.",
     overview: "As a top PPC agency USA, we eliminate wasted ad spend through negative keyword sculpting, Google Ads management, and high-converting landing pages.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "PPC Management Services USA",
       "PPC Agency USA & Campaign Strategy",
@@ -580,7 +580,7 @@ export const subServices: Record<string, SubService> = {
     description: "Data-driven conversion rate optimization services in the USA. Go Execution is a top CRO agency optimizing website conversion rate optimization and leads.",
     intro: "Scale revenue without buying more ad traffic. Our conversion rate optimization services evaluate heatmaps and user journeys to turn clicks into sales.",
     overview: "As a specialized CRO agency USA, we combine behavioral analytics, A/B split testing, and website conversion optimization to increase customer conversions.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Conversion Rate Optimization Services",
       "CRO Agency USA & Behavioral Analytics",
@@ -611,7 +611,7 @@ export const subServices: Record<string, SubService> = {
     description: "Professional graphic design services in the USA. Premier graphic design agency delivering professional graphic design services for US business collateral.",
     intro: "Distinction begins with exceptional visual design. Our graphic design services USA craft custom visual collateral that builds undeniable brand authority.",
     overview: "Our graphic design agency produces vector marketing materials, social media graphics, pitch decks, and business collateral tailored to your brand.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Graphic Design Services USA",
       "Graphic Design Agency Collateral",
@@ -640,7 +640,7 @@ export const subServices: Record<string, SubService> = {
     description: "Custom logo design services in the USA. Go Execution is a professional logo design company & logo design agency crafting iconic custom logos.",
     intro: "Your logo represents your company's identity. Our logo design services USA craft timeless vector marks that convey instant quality and market leadership.",
     overview: "As a leading logo design company USA, we craft custom logo marks engineered for flawless scalability across digital and physical touchpoints.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Logo Design Services USA",
       "Logo Design Agency & Icon Vectoring",
@@ -669,7 +669,7 @@ export const subServices: Record<string, SubService> = {
     description: "Comprehensive brand identity design services in the USA. Corporate brand identity agency building branding and identity design systems that command authority.",
     intro: "Establish an unmistakable corporate presence. Our brand identity design services build cohesive visual guidelines and brand style standards.",
     overview: "As a corporate brand identity agency, we define color tokens, typography rules, logo usage, and visual identity design assets for long-term consistency.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Brand Identity Design Services",
       "Brand Identity Agency & Style Books",
@@ -698,7 +698,7 @@ export const subServices: Record<string, SubService> = {
     description: "Innovative creative design services in the USA. Full-service creative agency offering digital creative services and marketing design services.",
     intro: "Break through digital noise with our creative design services. We build bold visual campaign art and marketing design assets that captivate prospects.",
     overview: "As a full-service creative agency USA, we blend artistic vision with marketing strategy to produce digital creative services that drive engagement.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Creative Design Services",
       "Creative Design Agency Art Direction",
@@ -729,7 +729,7 @@ export const subServices: Record<string, SubService> = {
     description: "Professional video animation services in the USA. Go Execution is a top animation company USA offering animated video production and video animation agency services.",
     intro: "Hook audience attention in seconds. Our video animation services produce dynamic motion graphics, 2D/3D visual assets, and animated explainer videos.",
     overview: "As a video animation agency USA, we combine scriptwriting, custom sound design, and 4K motion graphics to communicate complex product value.",
-    image: "/assets/images/generated/video-motion.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Video Animation Services USA",
       "Video Animation Agency Motion Graphics",
@@ -758,7 +758,7 @@ export const subServices: Record<string, SubService> = {
     description: "Professional 2D animation services in the USA. Go Execution is a leading 2D animation company & 2D animation agency producing custom 2D animated videos.",
     intro: "Engage prospects with fluid 2D animation services. Perfect for storytelling, explaining service workflows, and launching social media video ads.",
     overview: "Our 2D animation company USA crafts custom character rigs, vibrant vector scenes, and smooth transition motion for 2D animated videos.",
-    image: "/assets/images/generated/video-motion.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "2D Animation Services",
       "2D Animation Company USA Rigs",
@@ -787,7 +787,7 @@ export const subServices: Record<string, SubService> = {
     description: "High-end 3D animation services in the USA. Premier 3D animation agency and 3D animation company specializing in 3D product animation & cinematic motion.",
     intro: "Showcase products with photorealistic 3D detail. Our 3D animation services model, texture, and animate complex physical products and environments.",
     overview: "Our 3D animation company USA builds photorealistic renders, exploded CAD views, and 3D product animation for tech, real estate, and retail brands.",
-    image: "/assets/images/generated/video-motion.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "3D Animation Services USA",
       "3D Animation Company USA Renders",
@@ -816,7 +816,7 @@ export const subServices: Record<string, SubService> = {
     description: "High-converting explainer video services in the USA. Professional explainer video agency crafting animated explainer videos for companies.",
     intro: "Turn complex service models into simple 60-second animated video stories with our explainer video services, driving website conversion rates.",
     overview: "As a leading explainer video company USA, we combine persuasive problem-solution scripts with animated explainer videos that convert prospects.",
-    image: "/assets/images/generated/video-motion.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Explainer Video Services USA",
       "Explainer Video Company Scripts",
@@ -847,7 +847,7 @@ export const subServices: Record<string, SubService> = {
     description: "Top mobile app development company in the USA. Mobile app development services USA, custom mobile app development, iOS and Android app development agency.",
     intro: "Bring your commercial platform into users' hands. As a leading mobile app development company USA, we build custom mobile apps for iOS and Android.",
     overview: "Our mobile app development agency engineers React Native and Flutter cross-platform applications with secure cloud backends and push notifications.",
-    image: "/assets/images/generated/mobile-apps.jpg",
+    image: "/assets/images/logo-light.png",
     capabilities: [
       "Mobile App Development Company USA",
       "Mobile App Development Services USA",

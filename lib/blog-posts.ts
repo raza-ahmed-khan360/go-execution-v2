@@ -20,7 +20,7 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-15",
     category: "SEO",
     categorySlug: "seo-services",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     imageAlt: "SEO analytics dashboard displaying website ranking diagnostics by Go Execution",
     contentHtml: `
       <p>Building a website is only the first step; getting it to appear in Google search results is an entirely separate technical and editorial process. If your website is not appearing where you expect, the cause is rarely mysterious. In most cases, a website fails to rank because Google cannot crawl or index its pages, the content fails to satisfy search intent, technical barriers block search bots, or competing pages provide clearer and more authoritative answers.</p>

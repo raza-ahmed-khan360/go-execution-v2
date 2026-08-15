@@ -258,7 +258,7 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
               <ul id={`features-${id}`} className="ge-package-features-list" hidden={!isOpen}>
                 {pkg.benefits.map((benefit, benefitIndex) => <li key={`${benefit}-${benefitIndex}`}>{benefit}</li>)}
               </ul>
-              <Link className={`ge-button ${isFeatured ? "ge-button--gold" : "ge-button--outline"}`} href="/contact">Book a Free Consultation</Link>
+              <Link className={`ge-button ge-button--outline`} href="/contact">Book a Free Consultation</Link>
             </article>
           );
         })}

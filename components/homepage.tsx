@@ -12,42 +12,42 @@ const servicesCarouselData = [
     slug: "web-development",
     title: "Web Development Services",
     copy: "Build fast, responsive and conversion-focused websites with custom development, WordPress, Next.js, ecommerce and landing page solutions.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     anchorText: "Explore Web Development",
   },
   {
     slug: "seo",
     title: "SEO Services",
     copy: "Improve organic visibility and attract high-intent customers through technical SEO, local SEO, ecommerce SEO and search strategies built around your business.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     anchorText: "Explore SEO Services",
   },
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
     copy: "Create measurable growth with content marketing, social media marketing, paid advertising and conversion optimisation designed around your customer journey.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     anchorText: "Explore Digital Marketing",
   },
   {
     slug: "design-branding",
     title: "Design & Branding",
     copy: "Build a consistent and recognisable brand through logo design, graphic design, brand identity and creative marketing assets.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     anchorText: "Explore Design & Branding",
   },
   {
     slug: "video",
     title: "Video & Animation",
     copy: "Explain products, services and ideas through engaging 2D, 3D and explainer animation created for digital marketing and customer engagement.",
-    image: "/assets/images/generated/video-motion.jpg",
+    image: "/assets/images/logo-light.png",
     anchorText: "Explore Video & Animation",
   },
   {
     slug: "mobile-app-development",
     title: "Mobile App Development",
     copy: "Develop custom mobile applications for businesses and digital products across iOS and Android.",
-    image: "/assets/images/generated/mobile-apps.jpg",
+    image: "/assets/images/logo-light.png",
     anchorText: "Explore Mobile App Development",
   },
 ].map((service, index) => ({
@@ -61,7 +61,7 @@ const growthSteps = [
     label: "Discover",
     title: "Discover & Analyze",
     copy: "We analyse your business, audience, competitors and existing digital presence to identify the highest-value opportunities.",
-    image: "/assets/images/generated/branding-design.jpg",
+    image: "/assets/images/logo-light.png",
     alt: "Digital Agency Discovery & Analysis by Go Execution",
   },
   {
@@ -69,7 +69,7 @@ const growthSteps = [
     label: "Strategise",
     title: "Strategise & Plan",
     copy: "We turn those findings into a practical digital strategy aligned with your commercial objectives.",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/assets/images/logo-light.png",
     alt: "Digital Strategy Planning by Go Execution",
   },
   {
@@ -77,7 +77,7 @@ const growthSteps = [
     label: "Build",
     title: "Build & Execute",
     copy: "Our developers, designers and marketers create the website, campaigns and digital experiences required to execute the strategy.",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/assets/images/logo-light.png",
     alt: "Web Engineering & Marketing Execution by Go Execution",
   },
   {
@@ -85,7 +85,7 @@ const growthSteps = [
     label: "Launch",
     title: "Launch & Measure",
     copy: "We launch your digital assets and establish the measurement systems needed to track performance.",
-    image: "/assets/images/generated/tech-saas.jpg",
+    image: "/assets/images/logo-light.png",
     alt: "Digital Asset Launch & Performance Tracking by Go Execution",
   },
   {
@@ -93,7 +93,7 @@ const growthSteps = [
     label: "Optimise",
     title: "Optimise & Scale",
     copy: "We use performance data to identify improvements and continuously refine your digital presence and marketing activity.",
-    image: "/assets/images/generated/digital-mktg.jpg",
+    image: "/assets/images/logo-light.png",
     alt: "Digital Performance Optimization by Go Execution",
   },
 ] as const;
@@ -105,7 +105,7 @@ const homepageIndustries = [
     tag: "PROPERTY & MLS",
     title: "Real Estate & Development",
     desc: "Custom MLS/IDX property search platforms, seller valuation funnels, and high-converting brokerage websites.",
-    image: "/assets/images/generated/real-estate.jpg",
+    image: "/assets/images/logo-light.png",
     feature: "MLS/IDX Integration & Listing Leads",
   },
   {
@@ -114,7 +114,7 @@ const homepageIndustries = [
     tag: "E-COMMERCE & LUXURY",
     title: "Fashion & Apparel",
     desc: "Sub-second Shopify & Next.js luxury storefronts, paid social video campaigns, and brand identity systems.",
-    image: "/assets/images/generated/fashion-apparel.jpg",
+    image: "/assets/images/logo-light.png",
     feature: "Headless E-Commerce & UGC Ads",
   },
   {
@@ -123,7 +123,7 @@ const homepageIndustries = [
     tag: "CLINICAL & WELLNESS",
     title: "Health & Wellness",
     desc: "HIPAA-compliant patient booking portals, local search optimization, and reputation management funnels.",
-    image: "/assets/images/generated/retail-ecommerce.jpg",
+    image: "/assets/images/logo-light.png",
     feature: "HIPAA Portals & Local Map Pack SEO",
   },
   {
@@ -132,7 +132,7 @@ const homepageIndustries = [
     tag: "SAAS & TECH",
     title: "Technology & B2B SaaS",
     desc: "High-converting product landing pages, technical SEO, demo booking funnels, and brand positioning.",
-    image: "/assets/images/generated/tech-saas.jpg",
+    image: "/assets/images/logo-light.png",
     feature: "Demo Booking & Technical SEO",
   },
   {
@@ -141,7 +141,7 @@ const homepageIndustries = [
     tag: "LEGAL & FINANCIAL",
     title: "Professional Services",
     desc: "Authority-building digital platforms, practice area SEO, and high-value consultation lead generation.",
-    image: "/assets/images/generated/prof-services.jpg",
+    image: "/assets/images/logo-light.png",
     feature: "Consultation Funnels & Organic Growth",
   },
   {
@@ -150,7 +150,7 @@ const homepageIndustries = [
     tag: "HOTELS & DINING",
     title: "Hospitality & Leisure",
     desc: "Immersive venue showcases, direct booking engines, promo video animation, and local search campaigns.",
-    image: "/assets/images/generated/hospitality.jpg",
+    image: "/assets/images/logo-light.png",
     feature: "Direct Booking & Video Marketing",
   },
 ];

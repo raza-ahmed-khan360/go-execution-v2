@@ -2,7 +2,7 @@
   "services": {
     "website-design-development": {
       "title": "Web Development in USA & Custom Website Design",
-      "image": "/assets/images/generated/web-dev.jpg",
+      "image": "/assets/images/logo-light.png",
       "eyebrow": "#1 Custom Web Development Agency in USA",
       "intro": "Go Execution delivers premier web development in USA. We build high-speed, conversion-driven custom websites that elevate your brand, rank high on Google, and turn visitors into paying clients.",
       "overview": "Your website is the digital storefront of your business. Go Execution combines custom web development in USA with responsive UX design, modern frontend architecture, and robust e-commerce capabilities to give US businesses a distinct commercial edge.",
@@ -49,7 +49,7 @@
     },
     "logo-design": {
       "title": "Logo Design & Graphic Designing Agency in USA",
-      "image": "/assets/images/generated/branding-design.jpg",
+      "image": "/assets/images/logo-light.png",
       "eyebrow": "Premier Branding & Graphic Designing in USA",
       "intro": "Go Execution is a leading graphic designing agency in USA. We craft memorable business logo designs, complete visual identities, and marketing collateral that set US brands apart.",
       "overview": "A strong logo design and brand identity are essential for building trust in the competitive US market. Go Execution merges strategic storytelling with high-end graphic design to create brand systems that capture attention and drive sales.",
@@ -96,7 +96,7 @@
     },
     "video-animation": {
       "title": "Video Animation Services in USA",
-      "image": "/assets/images/generated/video-motion.jpg",
+      "image": "/assets/images/logo-light.png",
       "eyebrow": "Top Video Animation & Motion Graphics in USA",
       "intro": "Go Execution provides expert video animation services in USA. We produce high-converting animated explainer videos, 2D/3D motion graphics, and corporate videos that engage US audiences.",
       "overview": "Animated video is one of the most effective tools for video marketing in USA. Go Execution combines scriptwriting, custom animation, voiceovers, and motion design to explain complex products and increase conversion rates.",
@@ -143,7 +143,7 @@
     },
     "seo-services": {
       "title": "SEO Services in USA | Search Engine Optimization Agency",
-      "image": "/assets/images/generated/mobile-apps.jpg",
+      "image": "/assets/images/logo-light.png",
       "eyebrow": "Top SEO Agency in USA for High-Intent Organic Growth",
       "intro": "Go Execution delivers results-driven SEO services in USA. We optimize your website with technical clarity, high-converting keyword research, on-page SEO, and authority building to dominate Google rankings.",
       "overview": "Ranking #1 on search engines requires a structured system. Go Execution provides comprehensive search engine optimization in USA that drives qualified organic traffic, improves domain authority, and lowers customer acquisition costs.",
@@ -190,7 +190,7 @@
     },
     "digital-marketing": {
       "title": "Digital Marketing in USA & Lead Generation Agency",
-      "image": "/assets/images/generated/digital-mktg.jpg",
+      "image": "/assets/images/logo-light.png",
       "eyebrow": "#1 Performance Digital Marketing Agency in USA",
       "intro": "Go Execution is a premier digital marketing agency in USA. We run high-ROI digital marketing in USA campaigns, PPC ads, social media strategies, and lead generation funnels designed to scale sales.",
       "overview": "Growth requires more than random ad campaigns. Go Execution integrates data analytics, creative ad copy, landing page optimization, and multi-channel marketing in USA to turn ad dollars into predictable revenue.",
@@ -237,7 +237,7 @@
     },
     "mobile-apps": {
       "title": "Mobile App Development in USA",
-      "image": "/assets/images/generated/mobile-apps.jpg",
+      "image": "/assets/images/logo-light.png",
       "eyebrow": "Custom Mobile App Development Company in USA",
       "intro": "Go Execution offers high-performance mobile app development in USA. We build custom iOS and Android applications, cross-platform Flutter/React Native solutions, and enterprise software.",
       "overview": "A successful app requires intuitive UX design, fast native performance, and secure cloud backend architecture. Go Execution turns app ideas into scalable, production-ready mobile products for the US market.",

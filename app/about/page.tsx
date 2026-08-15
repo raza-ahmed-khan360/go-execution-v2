@@ -130,7 +130,7 @@ export default function About() {
           <div className="ge-container">
             <div style={{ position: "relative", width: "100%", height: 420, borderRadius: 28, overflow: "hidden", boxShadow: "0 20px 60px rgba(13, 27, 42, 0.08)" }}>
               <Image
-                src="/assets/images/generated/team-workspace.jpg"
+                src="/assets/images/logo-light.png"
                 alt="Go Execution Digital Agency Team"
                 fill
                 priority

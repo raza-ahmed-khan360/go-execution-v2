@@ -79,8 +79,8 @@ export function DesktopHeroBackground() {
       // High-sensitivity dynamic parallax response across 200vw x 200vh canvas
       const normX = (event.clientX / window.innerWidth - 0.5) * 2;
       const normY = (event.clientY / window.innerHeight - 0.5) * 2;
-      targetX = normX * -880;
-      targetY = normY * -660;
+      targetX = normX * -1800;
+      targetY = normY * -1300;
       if (!frame) frame = window.requestAnimationFrame(render);
     };
 
