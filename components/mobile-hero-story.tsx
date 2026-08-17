@@ -14,7 +14,8 @@ type MobileHeroStoryProps = {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
-  variant?: "home" | "inner";
+  variant?: "home" | "inner" | "contact";
+  disableMotion?: boolean;
 };
 
 export function MobileHeroStory({
@@ -27,6 +28,7 @@ export function MobileHeroStory({
   secondaryLabel = "Explore Our Services",
   secondaryHref = "/services",
   variant = "home",
+  disableMotion = false,
 }: MobileHeroStoryProps = {}) {
   const storyRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -34,6 +36,11 @@ export function MobileHeroStory({
   useEffect(() => {
     const story = storyRef.current;
     if (!story) return;
+
+    if (disableMotion) {
+      story.style.setProperty("--ge-mobile-story", "0");
+      return;
+    }
 
     const mobile = window.matchMedia("(max-width: 1024px)");
     let frame = 0;
@@ -88,7 +95,7 @@ export function MobileHeroStory({
       mobile.removeEventListener("change", sync);
       if (frame) window.cancelAnimationFrame(frame);
     };
-  }, [pathname]);
+  }, [disableMotion, pathname]);
 
   return (
     <section ref={storyRef} className={`ge-mobile-story ge-mobile-story--${variant}`} aria-label={`${eyebrow} introduction`}>
@@ -103,7 +110,7 @@ export function MobileHeroStory({
           <span className="ge-mobile-machine__piece ge-mobile-machine__e-a" />
           <span className="ge-mobile-machine__piece ge-mobile-machine__e-b" />
           <div className="ge-mobile-machine__glow" />
-          <div className="ge-mobile-machine__final"><Image src="/assets/images/ce-icon.png" alt="" width={512} height={512} sizes="320px" priority /></div>
+          <div className="ge-mobile-machine__final"><Image src="/assets/images/ce-icon.png" alt="" width={512} height={512} sizes="320px" quality={60} /></div>
           <div className="ge-mobile-machine__label"><span>Strategy</span><i /><strong>Execution</strong></div>
         </div>
 

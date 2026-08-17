@@ -158,7 +158,15 @@ export function Header() {
     <header ref={headerRef} className={`ge-header${isFixed ? " is-fixed" : ""}${isOverDark ? " is-over-dark" : ""}`}>
       <div className="ge-container ge-header__inner">
         <Link className="ge-brand" href="/" aria-label="Go Execution home">
-          <Image src="/assets/images/logo-dark.png" alt="Go Execution" width={340} height={79} priority />
+          <Image
+            src="/assets/images/logo-dark.png"
+            alt="Go Execution"
+            width={340}
+            height={79}
+            sizes="(max-width: 580px) 140px, (max-width: 1100px) 220px, 270px"
+            quality={60}
+            preload
+          />
         </Link>
         <button className="ge-menu-toggle" type="button" aria-expanded={open} aria-controls="ge-primary-menu" onClick={() => { setOpen((current) => !current); setDropdown(null); }}>
           <span /><span /><span className="screen-reader-text">Toggle menu</span>
@@ -166,7 +174,7 @@ export function Header() {
         <nav id="ge-primary-menu" className={`ge-navigation ${open ? "is-open" : ""}`} aria-label="Primary navigation">
           <div className="ge-mobile-menu-header">
             <Link className="ge-brand" href="/" onClick={closeNavigation} aria-label="Go Execution home">
-              <Image src="/assets/images/logo-light.png" alt="Go Execution" width={180} height={42} priority />
+              <Image src="/assets/images/logo-light.png" alt="Go Execution" width={180} height={42} sizes="180px" />
             </Link>
             <button className="ge-mobile-menu-close" type="button" onClick={closeNavigation} aria-label="Close menu">
               ✕
@@ -562,7 +570,14 @@ export function Footer() {
 
         <div className="ge-footer__main">
           <div className="ge-footer__brand-block">
-            <Image className="ge-footer__logo" src="/assets/images/logo-light.png" alt="Go Execution" width={360} height={84} />
+            <Image
+              className="ge-footer__logo"
+              src="/assets/images/logo-light.png"
+              alt="Go Execution"
+              width={360}
+              height={84}
+              sizes="(max-width: 580px) 220px, 275px"
+            />
             <p>We are a multidisciplinary digital agency built for businesses that expect more than attractive ideas—they expect progress.</p>
             <div className="ge-footer__socials" aria-label="Social Media Links">
               <a

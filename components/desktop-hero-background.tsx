@@ -51,7 +51,7 @@ const cards = [
   },
 ] as const;
 
-export function DesktopHeroBackground() {
+export function DesktopHeroBackground({ interactive = true }: { interactive?: boolean }) {
   const layerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -100,7 +100,7 @@ export function DesktopHeroBackground() {
 
     const sync = () => {
       stop();
-      if (!desktop.matches || reduced.matches) return;
+      if (!interactive || !desktop.matches || reduced.matches) return;
       window.addEventListener("pointermove", move, { passive: true });
       document.documentElement.addEventListener("mouseleave", reset);
     };
@@ -113,7 +113,7 @@ export function DesktopHeroBackground() {
       desktop.removeEventListener("change", sync);
       reduced.removeEventListener("change", sync);
     };
-  }, []);
+  }, [interactive]);
 
   return (
     <div ref={layerRef} className="ge-hero__image-layer" aria-hidden="true">
@@ -123,7 +123,7 @@ export function DesktopHeroBackground() {
           className="ge-hero__image-card"
           style={card.style as React.CSSProperties}
         >
-          <Image src={card.source} alt="" fill sizes="(max-width: 1400px) 380px, 450px" quality={85} priority />
+          <Image src={card.source} alt="" fill sizes="(max-width: 1400px) 380px, 450px" />
         </div>
       ))}
     </div>

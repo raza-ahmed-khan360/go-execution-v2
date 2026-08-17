@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
+import { DeferredAnalytics } from "@/components/deferred-analytics";
 import { ExecutingLoader } from "@/components/executing-loader";
+import { FloatingConsultation } from "@/components/floating-consultation";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
+import { SiteChatbot } from "@/components/site-chatbot";
 import { SiteEffects } from "@/components/site-effects";
 import { Footer, Header } from "@/components/site-shell";
 import "./globals.css";
@@ -67,23 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={poppins.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="ge-loaded" suppressHydrationWarning>
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="ilS/q7/J4bpZlkyqyoNbWA"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-T0VM2DPWQK"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-T0VM2DPWQK');
-          `}
-        </Script>
+        <DeferredAnalytics />
         <ExecutingLoader />
         <a className="ge-skip-link" href="#primary">
           Skip to content
@@ -92,6 +78,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <FloatingWhatsApp />
+        <FloatingConsultation />
+        <SiteChatbot />
         <div className="ge-custom-cursor" aria-hidden="true" />
         <SiteEffects />
       </body>

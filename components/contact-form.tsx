@@ -48,7 +48,7 @@ export function ContactForm({ services }: { services: string[] }) {
   };
 
   return (
-    <form className="ge-form ge-reveal" noValidate onSubmit={submit} aria-busy={status === "sending"}>
+    <form id="contact-form" className="ge-form ge-reveal" noValidate onSubmit={submit} aria-busy={status === "sending"}>
       <input className="ge-form__botcheck" type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div className="ge-form__row">
         <label>Name<input name="name" type="text" autoComplete="name" required /></label>

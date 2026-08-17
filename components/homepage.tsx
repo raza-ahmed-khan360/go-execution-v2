@@ -290,18 +290,21 @@ export function Homepage() {
                 className="ge-bento-industry-card"
                 style={
                   {
-                    backgroundImage: `linear-gradient(180deg, rgba(13, 27, 42, 0.45) 0%, rgba(13, 27, 42, 0.85) 55%, rgba(11, 26, 43, 0.98) 100%), url(${ind.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
                     "--card-index": index,
                   } as React.CSSProperties
                 }
               >
+                <Image
+                  className="ge-bento-industry-card__image"
+                  src={ind.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <span className="ge-bento-industry-card__shade" aria-hidden="true" />
                 <div className="ge-bento-card-content">
-                  <BrandMediaMark />
                   <div className="ge-bento-card-header">
                     <span className="ge-bento-card-num">{ind.number}</span>
-                    <span className="ge-bento-card-tag">{ind.tag}</span>
                   </div>
                   <div>
                     <h3 className="ge-bento-card-title">{ind.title}</h3>

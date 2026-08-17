@@ -8,7 +8,7 @@ export function BrandMediaMark({ className = "" }: { className?: string }) {
         alt=""
         width={180}
         height={44}
-        sizes="180px"
+        sizes="(max-width: 768px) 112px, 154px"
       />
     </span>
   );

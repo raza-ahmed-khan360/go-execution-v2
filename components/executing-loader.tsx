@@ -7,6 +7,12 @@ export function ExecutingLoader() {
 
   useEffect(() => {
     const root = document.documentElement;
+    const mobile = window.matchMedia("(max-width: 1024px)").matches;
+
+    // The branded loader remains part of the desktop experience. On mobile it
+    // must not cover the real hero or wait for every image/script to finish.
+    if (mobile) return;
+
     const previousOverflow = root.style.overflow;
     root.style.overflow = "hidden";
 
