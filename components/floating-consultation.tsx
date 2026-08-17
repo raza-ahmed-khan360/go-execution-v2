@@ -9,7 +9,6 @@ export function FloatingConsultation() {
         <small>Ready to grow?</small>
         <strong>Book a FREE Consultation</strong>
       </span>
-      <span className="ge-consultation-float__arrow" aria-hidden="true">→</span>
     </Link>
   );
 }

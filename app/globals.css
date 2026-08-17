@@ -10422,8 +10422,7 @@ body:not(.home) .ge-header,
 }
 
 .ge-consultation-float__icon,
-.ge-consultation-float__arrow,
-.ge-consultation-float > span:not(.ge-consultation-float__icon):not(.ge-consultation-float__arrow) {
+.ge-consultation-float > span:not(.ge-consultation-float__icon) {
 	position: relative;
 	z-index: 1;
 }
@@ -10554,10 +10553,10 @@ body:not(.home) .ge-header,
 	width: min(360px, calc(100vw - 32px));
 	max-height: min(520px, calc(100vh - 180px));
 	overflow: hidden;
-	border: 1px solid rgba(13, 27, 42, 0.13);
+	border: 0;
 	border-radius: 20px;
-	background: #fff;
-	box-shadow: 0 28px 70px rgba(13, 27, 42, 0.28);
+	background: var(--ge-light);
+	box-shadow: 0 24px 60px rgba(13, 27, 42, 0.28), 0 8px 18px rgba(13, 27, 42, 0.12);
 	animation: ge-chatbot-reveal 180ms ease-out both;
 }
 
@@ -10571,7 +10570,8 @@ body:not(.home) .ge-header,
 	align-items: center;
 	gap: 10px;
 	padding: 15px 16px;
-	background: #0b1c2c;
+	background: var(--ge-navy);
+	border-bottom: 3px solid var(--ge-gold);
 	color: #fff;
 }
 
@@ -10585,8 +10585,8 @@ body:not(.home) .ge-header,
 	height: 33px;
 	place-items: center;
 	border-radius: 10px;
-	background: #c69843;
-	color: #0b1c2c;
+	background: var(--ge-gold);
+	color: var(--ge-navy);
 }
 
 .ge-chatbot__brand-icon svg,
@@ -10612,8 +10612,13 @@ body:not(.home) .ge-header,
 	gap: 9px;
 	overflow-y: auto;
 	padding: 14px 14px 8px;
-	background: #f7f8f9;
+	background: var(--ge-light);
+	scrollbar-color: var(--ge-gold) rgba(13, 27, 42, 0.08);
 }
+
+.ge-chatbot__messages::-webkit-scrollbar { width: 5px; }
+.ge-chatbot__messages::-webkit-scrollbar-track { background: rgba(13, 27, 42, 0.08); }
+.ge-chatbot__messages::-webkit-scrollbar-thumb { border: 1px solid var(--ge-light); background: var(--ge-gold); }
 
 .ge-chatbot__message {
 	width: fit-content;
@@ -10625,8 +10630,8 @@ body:not(.home) .ge-header,
 	line-height: 1.55;
 }
 
-.ge-chatbot__message--assistant { background: #fff; color: #314254; box-shadow: 0 2px 8px rgba(13, 27, 42, 0.07); }
-.ge-chatbot__message--user { justify-self: end; background: #0b1c2c; color: #fff; }
+.ge-chatbot__message--assistant { background: var(--ge-white); color: var(--ge-navy); box-shadow: 0 2px 8px rgba(13, 27, 42, 0.07); }
+.ge-chatbot__message--user { justify-self: end; background: var(--ge-navy); color: var(--ge-white); }
 
 .ge-chatbot__typing { display: flex; gap: 4px; margin: 0; padding: 10px 12px; width: fit-content; border-radius: 13px; background: #fff; }
 .ge-chatbot__typing i { width: 5px; height: 5px; border-radius: 50%; background: #c69843; animation: ge-chatbot-dot 900ms infinite ease-in-out; }
@@ -10634,18 +10639,26 @@ body:not(.home) .ge-header,
 .ge-chatbot__typing i:nth-child(3) { animation-delay: 240ms; }
 @keyframes ge-chatbot-dot { 50% { transform: translateY(-3px); opacity: 0.5; } }
 
-.ge-chatbot__prompts { display: flex; gap: 6px; overflow-x: auto; padding: 9px 12px 4px; background: #fff; }
-.ge-chatbot__prompts button { flex: 0 0 auto; padding: 6px 8px; border: 1px solid rgba(13, 27, 42, 0.13); border-radius: 999px; background: #fffdf7; color: #6e5431; font: 600 9px/1.3 var(--font-poppins), sans-serif; cursor: pointer; }
+.ge-chatbot__prompts-wrap { position: relative; background: var(--ge-light); }
+.ge-chatbot__prompts-wrap::after { position: absolute; top: 0; right: 0; bottom: 0; width: 48px; background: linear-gradient(90deg, rgba(242, 244, 247, 0), var(--ge-light) 76%); content: ""; pointer-events: none; }
+.ge-chatbot__prompts { display: flex; gap: 6px; overflow-x: auto; padding: 9px 40px 4px 12px; background: var(--ge-light); cursor: grab; scrollbar-width: none; touch-action: pan-y; user-select: none; }
+.ge-chatbot__prompts:active { cursor: grabbing; }
+.ge-chatbot__prompts::-webkit-scrollbar { display: none; }
+.ge-chatbot__prompts button { flex: 0 0 auto; padding: 6px 9px; border: 1px solid rgba(13, 27, 42, 0.16); border-radius: 999px; background: var(--ge-white); color: var(--ge-navy); font: 600 9px/1.3 var(--font-poppins), sans-serif; cursor: pointer; transition: border-color 160ms ease, background-color 160ms ease; }
+.ge-chatbot__prompts button:hover, .ge-chatbot__prompts button:focus-visible { border-color: var(--ge-gold); background: var(--ge-gold-light); outline: none; }
 .ge-chatbot__prompts button:disabled { opacity: 0.55; cursor: wait; }
+.ge-chatbot__email-label { display: grid; gap: 5px; padding: 8px 12px 2px; background: var(--ge-light); color: var(--ge-navy); font: 700 9px/1.3 var(--font-poppins), sans-serif; }
+.ge-chatbot__email-label span { color: #98a0a8; font-weight: 500; }
+.ge-chatbot__email-label input { width: 100%; box-sizing: border-box; border: 1px solid var(--ge-line); border-radius: 9px; padding: 8px 10px; color: var(--ge-navy); background: var(--ge-white); font: 500 11px/1.3 var(--font-poppins), sans-serif; outline: none; }
+.ge-chatbot__email-label input:focus { border-color: var(--ge-gold); box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.2); }
 
-.ge-chatbot__form { display: flex; gap: 7px; padding: 8px 12px; background: #fff; }
-.ge-chatbot__form input { min-width: 0; flex: 1; border: 1px solid rgba(13, 27, 42, 0.16); border-radius: 10px; padding: 9px 10px; color: #0b1c2c; font: 500 11px/1.3 var(--font-poppins), sans-serif; outline: none; }
-.ge-chatbot__form input:focus { border-color: #c69843; box-shadow: 0 0 0 3px rgba(198, 152, 67, 0.13); }
-.ge-chatbot__form button { display: grid; width: 37px; place-items: center; border: 0; border-radius: 10px; background: #c69843; color: #0b1c2c; cursor: pointer; }
+.ge-chatbot__form { display: flex; gap: 7px; padding: 8px 12px; background: var(--ge-light); }
+.ge-chatbot__form input { min-width: 0; flex: 1; border: 1px solid var(--ge-line); border-radius: 10px; padding: 9px 10px; color: var(--ge-navy); background: var(--ge-white); font: 500 11px/1.3 var(--font-poppins), sans-serif; outline: none; }
+.ge-chatbot__form input:focus { border-color: var(--ge-gold); box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.2); }
+.ge-chatbot__form button { display: grid; width: 37px; place-items: center; border: 0; border-radius: 10px; background: var(--ge-gold); color: var(--ge-navy); cursor: pointer; }
 .ge-chatbot__form button:disabled { cursor: not-allowed; opacity: 0.5; }
 
-.ge-chatbot__consult-link { display: flex; align-items: center; justify-content: space-between; padding: 10px 13px 12px; color: #0b1c2c; font-size: 10px; font-weight: 700; text-decoration: none; }
-.ge-chatbot__consult-link span { color: #b68227; font-size: 16px; }
+.ge-chatbot__consult-link { display: flex; align-items: center; padding: 10px 13px 12px; border-top: 1px solid var(--ge-line); background: var(--ge-light); color: var(--ge-navy); font-size: 10px; font-weight: 700; text-decoration: none; }
 
 @media (max-width: 768px) {
 	.ge-chatbot { right: 20px; bottom: 90px; }
