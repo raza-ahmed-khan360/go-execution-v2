@@ -6,48 +6,49 @@ import { MobileHeroStory } from "@/components/mobile-hero-story";
 import { DesktopHeroBackground } from "@/components/desktop-hero-background";
 import { FaqAccordion, PortfolioGrid, PricingGrid } from "@/components/interactive-sections";
 import { TestimonialShowcase, type Testimonial } from "@/components/testimonial-showcase";
+import { BrandMediaMark } from "@/components/brand-media-mark";
 
 const servicesCarouselData = [
   {
     slug: "web-development",
     title: "Web Development Services",
     copy: "Build fast, responsive and conversion-focused websites with custom development, WordPress, Next.js, ecommerce and landing page solutions.",
-    image: "/assets/images/generated/test_web_dev_logo_1786984145212.jpg",
+    image: "/assets/images/generated/web-dev.jpg",
     anchorText: "Explore Web Development",
   },
   {
     slug: "seo",
     title: "SEO Services",
     copy: "Improve organic visibility and attract high-intent customers through technical SEO, local SEO, ecommerce SEO and search strategies built around your business.",
-    image: "/assets/images/generated/service_seo_logo_1786984280651.jpg",
+    image: "/assets/images/generated/seo-analytics.jpg",
     anchorText: "Explore SEO Services",
   },
   {
     slug: "digital-marketing",
     title: "Digital Marketing",
     copy: "Create measurable growth with content marketing, social media marketing, paid advertising and conversion optimisation designed around your customer journey.",
-    image: "/assets/images/generated/service_marketing_logo_1786984294450.jpg",
+    image: "/assets/images/generated/digital-mktg.jpg",
     anchorText: "Explore Digital Marketing",
   },
   {
     slug: "design-branding",
     title: "Design & Branding",
     copy: "Build a consistent and recognisable brand through logo design, graphic design, brand identity and creative marketing assets.",
-    image: "/assets/images/generated/service_design_logo_1786984307330.jpg",
+    image: "/assets/images/generated/branding-design.jpg",
     anchorText: "Explore Design & Branding",
   },
   {
     slug: "video",
     title: "Video & Animation",
     copy: "Explain products, services and ideas through engaging 2D, 3D and explainer animation created for digital marketing and customer engagement.",
-    image: "/assets/images/generated/service_video_logo_1786984320064.jpg",
+    image: "/assets/images/generated/video-motion.jpg",
     anchorText: "Explore Video & Animation",
   },
   {
     slug: "mobile-app-development",
     title: "Mobile App Development",
     copy: "Develop custom mobile applications for businesses and digital products across iOS and Android.",
-    image: "/assets/images/generated/service_mobile_logo_1786984335144.jpg",
+    image: "/assets/images/generated/mobile-apps.jpg",
     anchorText: "Explore Mobile App Development",
   },
 ].map((service, index) => ({
@@ -61,7 +62,7 @@ const growthSteps = [
     label: "Discover",
     title: "Discover & Analyze",
     copy: "We analyse your business, audience, competitors and existing digital presence to identify the highest-value opportunities.",
-    image: "/assets/images/generated/discover_process_logo_1786984175597.jpg",
+    image: "/assets/images/generated/team-workspace.jpg",
     alt: "Digital Agency Discovery & Analysis by Go Execution",
   },
   {
@@ -69,7 +70,7 @@ const growthSteps = [
     label: "Strategise",
     title: "Strategise & Plan",
     copy: "We turn those findings into a practical digital strategy aligned with your commercial objectives.",
-    image: "/assets/images/generated/strategise_process_logo_1786984190401.jpg",
+    image: "/assets/images/generated/digital-mktg.jpg",
     alt: "Digital Strategy Planning by Go Execution",
   },
   {
@@ -77,7 +78,7 @@ const growthSteps = [
     label: "Build",
     title: "Build & Execute",
     copy: "Our developers, designers and marketers create the website, campaigns and digital experiences required to execute the strategy.",
-    image: "/assets/images/generated/build_process_logo_1786984208217.jpg",
+    image: "/assets/images/generated/web-dev.jpg",
     alt: "Web Engineering & Marketing Execution by Go Execution",
   },
   {
@@ -85,7 +86,7 @@ const growthSteps = [
     label: "Launch",
     title: "Launch & Measure",
     copy: "We launch your digital assets and establish the measurement systems needed to track performance.",
-    image: "/assets/images/generated/launch_process_logo_1786984222880.jpg",
+    image: "/assets/images/generated/mobile-apps.jpg",
     alt: "Digital Asset Launch & Performance Tracking by Go Execution",
   },
   {
@@ -93,7 +94,7 @@ const growthSteps = [
     label: "Optimise",
     title: "Optimise & Scale",
     copy: "We use performance data to identify improvements and continuously refine your digital presence and marketing activity.",
-    image: "/assets/images/generated/optimise_process_logo_1786984234171.jpg",
+    image: "/assets/images/generated/seo-analytics.jpg",
     alt: "Digital Performance Optimization by Go Execution",
   },
 ] as const;
@@ -105,7 +106,7 @@ const homepageIndustries = [
     tag: "PROPERTY & MLS",
     title: "Real Estate & Development",
     desc: "Custom MLS/IDX property search platforms, seller valuation funnels, and high-converting brokerage websites.",
-    image: "/assets/images/generated/industry_realestate_logo_1786984399647.jpg",
+    image: "/assets/images/generated/real-estate.jpg",
     feature: "MLS/IDX Integration & Listing Leads",
   },
   {
@@ -114,7 +115,7 @@ const homepageIndustries = [
     tag: "E-COMMERCE & LUXURY",
     title: "Fashion & Apparel",
     desc: "Sub-second Shopify & Next.js luxury storefronts, paid social video campaigns, and brand identity systems.",
-    image: "/assets/images/generated/industry_fashion_logo_1786984411004.jpg",
+    image: "/assets/images/generated/fashion-apparel.jpg",
     feature: "Headless E-Commerce & UGC Ads",
   },
   {
@@ -123,7 +124,7 @@ const homepageIndustries = [
     tag: "CLINICAL & WELLNESS",
     title: "Health & Wellness",
     desc: "HIPAA-compliant patient booking portals, local search optimization, and reputation management funnels.",
-    image: "/assets/images/logo-light.png",
+    image: "/assets/images/generated/health-wellness-growth.png",
     feature: "HIPAA Portals & Local Map Pack SEO",
   },
   {
@@ -132,7 +133,7 @@ const homepageIndustries = [
     tag: "SAAS & TECH",
     title: "Technology & B2B SaaS",
     desc: "High-converting product landing pages, technical SEO, demo booking funnels, and brand positioning.",
-    image: "/assets/images/logo-light.png",
+    image: "/assets/images/generated/tech-saas.jpg",
     feature: "Demo Booking & Technical SEO",
   },
   {
@@ -141,7 +142,7 @@ const homepageIndustries = [
     tag: "LEGAL & FINANCIAL",
     title: "Professional Services",
     desc: "Authority-building digital platforms, practice area SEO, and high-value consultation lead generation.",
-    image: "/assets/images/logo-light.png",
+    image: "/assets/images/generated/prof-services.jpg",
     feature: "Consultation Funnels & Organic Growth",
   },
   {
@@ -150,7 +151,7 @@ const homepageIndustries = [
     tag: "HOTELS & DINING",
     title: "Hospitality & Leisure",
     desc: "Immersive venue showcases, direct booking engines, promo video animation, and local search campaigns.",
-    image: "/assets/images/logo-light.png",
+    image: "/assets/images/generated/hospitality.jpg",
     feature: "Direct Booking & Video Marketing",
   },
 ];
@@ -297,6 +298,7 @@ export function Homepage() {
                 }
               >
                 <div className="ge-bento-card-content">
+                  <BrandMediaMark />
                   <div className="ge-bento-card-header">
                     <span className="ge-bento-card-num">{ind.number}</span>
                     <span className="ge-bento-card-tag">{ind.tag}</span>
@@ -374,6 +376,7 @@ export function Homepage() {
             <article className={`ge-scroll-step ge-growth-card ge-growth-story${index === 0 ? " is-active" : ""}`} data-index={index} key={step.title} style={{ "--card-index": index } as React.CSSProperties}>
               <div className="ge-scroll-step__mobile-img-wrap">
                 <Image src={step.image} alt={step.alt} fill sizes="(max-width: 820px) 100vw, 50vw" quality={80} />
+                <BrandMediaMark />
               </div>
               <div className="ge-growth-story__content">
                 <div className="ge-scroll-step__header">

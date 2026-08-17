@@ -113,10 +113,10 @@ export function MobileHeroStory({
 
         <div className="ge-mobile-story__copy">
           <p className="ge-mobile-story__kicker">{eyebrow}</p>
-          <h1>
+          <div className="ge-mobile-story__title" role="heading" aria-level={1}>
             <span>{title}</span>
             {titleAccent ? <span className="ge-hero__title-accent">{titleAccent}</span> : null}
-          </h1>
+          </div>
           <p className="ge-mobile-story__lead">{copy}</p>
           <div className="ge-mobile-story__actions">
             <Link className="ge-mobile-story__button" href={primaryHref}>{primaryLabel}</Link>

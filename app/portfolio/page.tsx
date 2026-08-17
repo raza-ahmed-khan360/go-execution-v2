@@ -5,7 +5,7 @@ import { ConsultationCta, PageHero } from "@/components/page-hero";
 import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: { absolute: "Digital Marketing Portfolio & Case Studies | Go Execution" },
   description: "See how we combine strategy, design, and technology to solve real business challenges.",
   alternates: { canonical: "/portfolio/" },
   openGraph: { url: "/portfolio/" },

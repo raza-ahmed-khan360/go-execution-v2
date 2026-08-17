@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { industries } from "@/lib/industries";
+import { subServices } from "@/lib/services";
 import { FaqAccordion } from "@/components/interactive-sections";
 import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -110,7 +112,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <h2>Overcoming {ind.title} Market Friction</h2>
               </div>
               <p>
-                We analyze your sector's distinct buyer friction points and deploy custom engineered solutions that outpace competitors.
+                We analyze your sector&apos;s distinct buyer friction points and deploy custom engineered solutions that outpace competitors.
               </p>
             </div>
 
@@ -172,6 +174,17 @@ export default async function IndustryDetailPage({ params }: Props) {
             <div className="ge-grid ge-grid--3col ge-industry-services-grid">
               {ind.services.map((srv) => (
                 <div key={srv.slug} className="ge-industry-service-card ge-reveal">
+                  <div className="ge-industry-service-card__media">
+                    <Image
+                      src={subServices[srv.slug]?.image ?? ind.image}
+                      alt={`${srv.title} for ${ind.title}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={80}
+                    />
+                    <div className="ge-industry-service-card__media-shade" />
+                    <BrandMediaMark />
+                  </div>
                   <span className="ge-eyebrow ge-eyebrow--gold">Core Capability</span>
                   <h3>{srv.title}</h3>
                   <p>{srv.desc}</p>
@@ -195,7 +208,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <p className="ge-eyebrow ge-eyebrow--light">Accountable Results</p>
                 <h2>Why {ind.title} Brands Partner With Go Execution</h2>
                 <p className="ge-light-copy">
-                  We don't deliver generic templates. We build custom web applications, high-converting search funnels, and data-driven ad campaigns focused strictly on your bottom-line return on investment.
+                  We don&apos;t deliver generic templates. We build custom web applications, high-converting search funnels, and data-driven ad campaigns focused strictly on your bottom-line return on investment.
                 </p>
               </div>
               <div className="ge-impact-card__actions">

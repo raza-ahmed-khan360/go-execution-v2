@@ -5,7 +5,7 @@ import { FaqAccordion } from "@/components/interactive-sections";
 import { JsonLd, buildAboutPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Go Execution | US Digital Growth & Web Engineering Agency" },
+  title: { absolute: "About Our Digital Growth Agency | Go Execution" },
   description:
     "Learn how Go Execution combines custom web development, technical SEO, performance marketing, and brand strategy to help US businesses scale revenue.",
   alternates: { canonical: "/about/" },
@@ -130,7 +130,7 @@ export default function About() {
           <div className="ge-container">
             <div style={{ position: "relative", width: "100%", height: 420, borderRadius: 28, overflow: "hidden", boxShadow: "0 20px 60px rgba(13, 27, 42, 0.08)" }}>
               <Image
-                src="/assets/images/logo-light.png"
+                src="/assets/images/generated/team-workspace.jpg"
                 alt="Go Execution Digital Agency Team"
                 fill
                 priority

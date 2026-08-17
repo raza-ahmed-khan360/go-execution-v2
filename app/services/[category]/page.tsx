@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCategory, getSubServicesForCategory, serviceCategories } from "@/lib/services";
 import { JsonLd, buildService, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -181,6 +182,7 @@ export default async function CategoryHubPage({ params }: Props) {
                       className="ge-service-feature-row__img"
                     />
                     <div className="ge-service-feature-row__media-shade" />
+                    <BrandMediaMark />
                     <span className="ge-service-feature-row__num">0{idx + 1}</span>
                   </div>
 
@@ -229,6 +231,19 @@ export default async function CategoryHubPage({ params }: Props) {
               <p className="ge-light-copy">
                 A proven, transparent engineering process ensuring zero technical debt and high-converting commercial results.
               </p>
+            </div>
+
+            <div className="ge-process-media-strip">
+              <Image
+                src={cat.image}
+                alt={`${cat.title} team delivery process`}
+                fill
+                sizes="(max-width: 900px) 100vw, 1200px"
+                quality={85}
+              />
+              <div className="ge-process-media-strip__shade" />
+              <BrandMediaMark />
+              <p>People, process and technology aligned from discovery through launch.</p>
             </div>
 
             <div className="ge-grid ge-grid--4col" style={{ marginTop: 24 }}>

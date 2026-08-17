@@ -13,13 +13,23 @@ export type Industry = {
   faq: string[][];
 };
 
-export const industries: Record<string, Industry> = {
+const industryVisuals: Record<string, string> = {
+  "real-estate": "/assets/images/generated/real-estate.jpg",
+  fashion: "/assets/images/generated/fashion-apparel.jpg",
+  retail: "/assets/images/generated/retail-ecommerce.jpg",
+  hospitality: "/assets/images/generated/hospitality.jpg",
+  technology: "/assets/images/generated/tech-saas.jpg",
+  "professional-services": "/assets/images/generated/prof-services.jpg",
+  "health-wellness": "/assets/images/generated/health-wellness-growth.png",
+};
+
+const industryEntries: Record<string, Industry> = {
   "real-estate": {
     slug: "real-estate",
     title: "Real Estate",
-    seoTitle: "Real Estate Digital Marketing & Web Development Agency | Go Execution",
+    seoTitle: "Real Estate Digital Marketing Agency | Go Execution",
     eyebrow: "Lead Generation & Digital Platforms for Real Estate",
-    description: "Go Execution is a top real estate marketing agency in the USA providing real estate digital marketing, real estate website development, real estate web development, and real estate SEO services.",
+    description: "Digital marketing for real estate businesses, combining property websites, lead generation, local SEO, paid media, and conversion-focused journeys.",
     intro: "Real estate decisions start online. Our real estate marketing agency builds immersive property showcase platforms, MLS search tools, and real estate digital marketing campaigns.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -51,9 +61,9 @@ export const industries: Record<string, Industry> = {
   "fashion": {
     slug: "fashion",
     title: "Fashion & Apparel",
-    seoTitle: "Fashion Digital Marketing & Fashion Website Development Agency",
+    seoTitle: "Fashion Digital Marketing Agency | Go Execution",
     eyebrow: "E-Commerce & Digital Growth for Fashion Brands",
-    description: "Go Execution is a premier fashion marketing agency in the USA providing fashion digital marketing, fashion website development, fashion ecommerce marketing, and fashion SEO services.",
+    description: "Digital marketing for fashion brands, combining ecommerce development, campaign strategy, visual content, paid media, and organic search growth.",
     intro: "Fashion and apparel brands require visual elegance and high performance. Our fashion marketing agency engineers luxury ecommerce platforms and fashion digital marketing campaigns.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -84,9 +94,9 @@ export const industries: Record<string, Industry> = {
   "retail": {
     slug: "retail",
     title: "Retail & Consumer Goods",
-    seoTitle: "Retail Digital Marketing & Retail Ecommerce Development Agency",
+    seoTitle: "Retail Digital Marketing Agency | Go Execution",
     eyebrow: "Omnichannel Growth & E-Commerce Platforms",
-    description: "Go Execution is a top retail marketing agency in the USA offering retail digital marketing, retail website development, retail ecommerce development, and retail SEO services.",
+    description: "Digital marketing for retail brands, combining ecommerce development, local visibility, paid campaigns, content, and conversion optimization.",
     intro: "Modern retail demands seamless integration between online stores and customer acquisition channels. Our retail marketing agency builds scalable retail ecommerce development storefronts.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -119,7 +129,7 @@ export const industries: Record<string, Industry> = {
     title: "Hospitality & Leisure",
     seoTitle: "Hospitality Digital Marketing & Website Development Agency",
     eyebrow: "Direct Booking Platforms & Growth for Hotels & Venues",
-    description: "Go Execution is a premier hospitality marketing agency in the USA offering hospitality digital marketing, hospitality website development, hotel digital marketing, and hospitality SEO services.",
+    description: "Digital marketing for hospitality brands, including booking-focused websites, local SEO, paid media, content, and guest acquisition.",
     intro: "Hospitality brands thrive on sensory storytelling and direct bookings. Our hospitality marketing agency engineers fast booking portals and hotel digital marketing campaigns.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -150,9 +160,9 @@ export const industries: Record<string, Industry> = {
   "technology": {
     slug: "technology",
     title: "Technology & SaaS",
-    seoTitle: "Technology Digital Marketing Agency & SaaS Marketing | Go Execution",
+    seoTitle: "Technology & SaaS Marketing Agency | Go Execution",
     eyebrow: "Scalable Web Platforms & Growth Funnels for Tech Companies",
-    description: "Go Execution is a leading technology digital marketing agency and SaaS marketing agency providing technology website development, SaaS digital marketing, and technology SEO services.",
+    description: "Digital marketing for technology and SaaS companies, combining conversion-focused websites, demand generation, content, SEO, and paid acquisition.",
     intro: "Tech companies demand technical precision and clear value propositions. Our technology digital marketing agency builds Next.js platforms and SaaS growth engines.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -183,9 +193,9 @@ export const industries: Record<string, Industry> = {
   "professional-services": {
     slug: "professional-services",
     title: "Professional Services",
-    seoTitle: "Professional Services Marketing Agency & SEO Services | Go Execution",
+    seoTitle: "Professional Services Marketing Agency | Go Execution",
     eyebrow: "Authority-Driven Digital Growth for Law, Finance & Consulting",
-    description: "Go Execution is a top professional services marketing agency in the USA providing professional services digital marketing, professional services website development, and professional services SEO.",
+    description: "Digital marketing for professional service firms, combining credible websites, lead generation, content, SEO, paid media, and conversion strategy.",
     intro: "High-ticket professional services win on authority. Our professional services marketing agency builds high-trust corporate websites and targeted SEO lead engines.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -218,7 +228,7 @@ export const industries: Record<string, Industry> = {
     title: "Health & Wellness",
     seoTitle: "Healthcare Digital Marketing Agency & Wellness Marketing",
     eyebrow: "HIPAA-Compliant Digital Solutions for Healthcare & Wellness",
-    description: "Go Execution is a premier health and wellness marketing agency and healthcare digital marketing agency providing healthcare website development and healthcare SEO services.",
+    description: "Digital marketing for health and wellness brands, including accessible websites, local SEO, content, paid campaigns, and customer acquisition.",
     intro: "Trust and credibility are essential in healthcare. Our health and wellness marketing agency builds secure web portals and healthcare digital marketing strategies.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -247,5 +257,15 @@ export const industries: Record<string, Industry> = {
     ]
   }
 };
+
+export const industries: Record<string, Industry> = Object.fromEntries(
+  Object.entries(industryEntries).map(([slug, industry]) => [
+    slug,
+    {
+      ...industry,
+      image: industryVisuals[slug] ?? industry.image,
+    },
+  ]),
+);
 
 export const industryList = Object.values(industries);

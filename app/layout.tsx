@@ -17,11 +17,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://goexecution.com"),
   title: {
-    default: "Digital Marketing Agency in USA | Web, SEO & Growth | Go Execution",
+    default: "Digital Marketing Agency USA | Go Execution",
     template: "%s | Go Execution",
   },
   description:
-    "Go Execution is a full-service digital marketing agency in the USA offering web development, SEO, paid advertising, branding and growth solutions for businesses ready to scale.",
+    "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious US businesses.",
   applicationName: "Go Execution",
   alternates: { canonical: "/" },
   robots: {
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Go Execution",
-    title: "Go Execution | Top Digital Marketing Agency & Web Development in USA",
+    title: "Digital Marketing Agency USA | Go Execution",
     description:
-      "Go Execution is a leading digital marketing agency in USA. We specialize in custom web development in USA, targeted digital marketing in USA, SEO, branding, and mobile apps to scale US businesses.",
+      "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious US businesses.",
     images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Go Execution Digital Marketing Agency in USA" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Go Execution | Top Digital Marketing Agency & Web Development in USA",
+    title: "Digital Marketing Agency USA | Go Execution",
     description:
-      "Go Execution is a leading digital marketing agency in USA. We specialize in custom web development in USA, targeted digital marketing in USA, SEO, branding, and mobile apps to scale US businesses.",
+      "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious US businesses.",
     images: ["/opengraph-image.png"],
   },
   verification: {

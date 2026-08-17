@@ -7720,7 +7720,7 @@ input, textarea, select {
 		letter-spacing: .22em;
 		text-transform: uppercase;
 	}
-	.ge-mobile-story h1 {
+	.ge-mobile-story__title {
 		max-width: 590px;
 		margin: 20px 0 16px;
 		font-size: clamp(36px, 9.8vw, 48px);
@@ -7729,9 +7729,9 @@ input, textarea, select {
 		line-height: 1.04;
 		text-wrap: balance;
 	}
-	.ge-mobile-story h1 span { display: block; font-weight: 450; }
-	.ge-mobile-story h1 span.ge-hero__title-accent { display: block; font-weight: 700; color: var(--ge-gold) !important; -webkit-text-fill-color: var(--ge-gold) !important; -webkit-text-stroke: 0 !important; }
-	.ge-mobile-story--inner h1 span { font-weight: 650; }
+	.ge-mobile-story__title span { display: block; font-weight: 450; }
+	.ge-mobile-story__title span.ge-hero__title-accent { display: block; font-weight: 700; color: var(--ge-gold) !important; -webkit-text-fill-color: var(--ge-gold) !important; -webkit-text-stroke: 0 !important; }
+	.ge-mobile-story--inner .ge-mobile-story__title span { font-weight: 650; }
 	.ge-mobile-story__lead {
 		max-width: 95%;
 		margin: 0;
@@ -8004,7 +8004,7 @@ input, textarea, select {
 		padding: clamp(128px, 15vh, 164px) clamp(54px, 8vw, 92px) 54px;
 	}
 	.ge-mobile-story__copy { max-width: 620px; }
-	.ge-mobile-story h1 {
+	.ge-mobile-story__title {
 		max-width: 660px;
 		font-size: clamp(50px, 6.2vw, 66px);
 	}
@@ -8050,7 +8050,7 @@ input, textarea, select {
 	.ge-mobile-story__copy {
 		z-index: 5;
 	}
-	.ge-mobile-story h1,
+	.ge-mobile-story__title,
 	.ge-mobile-story__lead {
 		position: relative;
 		z-index: 2;
@@ -9976,6 +9976,153 @@ body:not(.home) .ge-header,
 	border-radius: 6px;
 	font-size: 0.9em;
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Contextual brand marks and people/process/technology media */
+.ge-media-brand-mark {
+	position: absolute;
+	right: 18px;
+	bottom: 18px;
+	z-index: 8;
+	display: grid;
+	place-items: center;
+	width: clamp(112px, 28%, 154px);
+	padding: 7px 10px;
+	border: 1px solid rgba(229, 193, 88, 0.4);
+	border-radius: 10px;
+	background: rgba(7, 19, 32, 0.72);
+	box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+	backdrop-filter: blur(10px);
+	pointer-events: none;
+}
+
+.ge-media-brand-mark > img {
+	position: static !important;
+	inset: auto !important;
+	display: block !important;
+	width: 100% !important;
+	height: auto !important;
+	object-fit: contain !important;
+	transform: none !important;
+}
+
+.ge-services-3d__card .ge-media-brand-mark {
+	top: 18px;
+	right: 18px;
+	bottom: auto;
+}
+
+.ge-dark-bento-card__media .ge-media-brand-mark,
+.ge-industry-service-card__media .ge-media-brand-mark {
+	right: 16px;
+	bottom: 14px;
+}
+
+.ge-service-feature-row__media .ge-media-brand-mark,
+.ge-growth-story .ge-media-brand-mark {
+	left: 16px;
+	right: auto;
+	bottom: 14px;
+}
+
+.ge-bento-card-content > .ge-media-brand-mark {
+	top: 64px;
+	right: 20px;
+	bottom: auto;
+	width: 132px;
+}
+
+.ge-process-media-strip {
+	position: relative;
+	width: 100%;
+	height: clamp(220px, 28vw, 340px);
+	margin: 10px 0 34px;
+	overflow: hidden;
+	border: 1px solid rgba(229, 193, 88, 0.35);
+	border-radius: 24px;
+	background: #091a2b;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.ge-process-media-strip > img {
+	object-fit: cover;
+	object-position: center 42%;
+}
+
+.ge-process-media-strip__shade {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(90deg, rgba(7, 19, 32, 0.88) 0%, rgba(7, 19, 32, 0.16) 54%, rgba(7, 19, 32, 0.45) 100%), linear-gradient(0deg, rgba(7, 19, 32, 0.68), transparent 55%);
+}
+
+.ge-process-media-strip > p {
+	position: absolute;
+	left: clamp(20px, 4vw, 48px);
+	bottom: clamp(22px, 4vw, 42px);
+	z-index: 3;
+	max-width: 520px;
+	margin: 0;
+	color: #ffffff;
+	font-family: var(--ge-font-heading);
+	font-size: clamp(20px, 2.5vw, 34px);
+	font-weight: 700;
+	line-height: 1.15;
+}
+
+.ge-process-media-strip .ge-media-brand-mark {
+	top: 22px;
+	right: 22px;
+	bottom: auto;
+}
+
+.ge-industry-service-card {
+	overflow: hidden;
+}
+
+.ge-industry-service-card__media {
+	position: relative;
+	height: 190px;
+	margin: -32px -28px 26px;
+	overflow: hidden;
+	background: #091a2b;
+}
+
+.ge-industry-service-card__media > img {
+	object-fit: cover;
+	transition: transform 0.6s var(--ge-ease);
+}
+
+.ge-industry-service-card:hover .ge-industry-service-card__media > img {
+	transform: scale(1.045);
+}
+
+.ge-industry-service-card__media-shade {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(180deg, rgba(9, 26, 43, 0.08), rgba(9, 26, 43, 0.62));
+}
+
+@media (max-width: 700px) {
+	.ge-media-brand-mark {
+		width: 108px;
+	}
+
+	.ge-process-media-strip {
+		height: 260px;
+		border-radius: 18px;
+	}
+
+	.ge-process-media-strip > p {
+		max-width: calc(100% - 40px);
+		font-size: 22px;
+	}
+
+	.ge-process-media-strip .ge-media-brand-mark {
+		top: 16px;
+		right: 16px;
+	}
 }
 
 .ge-direct-answer-box {

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Service = {
   slug: string;
@@ -22,10 +23,6 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
     const timer = window.setInterval(() => setActive((current) => (current + 1) % services.length), 3200);
     return () => window.clearInterval(timer);
   }, [paused, services.length]);
-
-  const move = (direction: number) => {
-    setActive((current) => (current + direction + services.length) % services.length);
-  };
 
   return (
     <div
@@ -68,6 +65,7 @@ export function ServicesCarousel({ services }: { services: Service[] }) {
             >
               <Image src={service.image} alt={service.title} fill sizes="(max-width: 700px) 72vw, (max-width: 1100px) 44vw, 32vw" />
               <span className="ge-services-3d__shade" aria-hidden="true" />
+              <BrandMediaMark />
               <span className="ge-services-3d__number">{service.number}</span>
               <span className="ge-services-3d__content">
                 <strong>{service.title}</strong>

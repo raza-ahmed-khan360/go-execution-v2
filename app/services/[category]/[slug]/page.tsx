@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getCategory, getSubService, allSubServices } from "@/lib/services";
 import { FaqAccordion } from "@/components/interactive-sections";
 import { JsonLd, buildService, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -182,6 +183,19 @@ export default async function SubServicePage({ params }: Props) {
               </p>
             </div>
 
+            <div className="ge-process-media-strip">
+              <Image
+                src={sub.image}
+                alt={`${sub.title} team execution process`}
+                fill
+                sizes="(max-width: 900px) 100vw, 1200px"
+                quality={85}
+              />
+              <div className="ge-process-media-strip__shade" />
+              <BrandMediaMark />
+              <p>Senior specialists, clear milestones and measurable digital systems.</p>
+            </div>
+
             <div className="ge-grid ge-grid--4col" style={{ marginTop: 24 }}>
               {sub.process.map(([title, desc], i) => (
                 <div key={i} className="ge-process-step-v5">
@@ -222,6 +236,7 @@ export default async function SubServicePage({ params }: Props) {
                         className="ge-dark-bento-card__img"
                       />
                       <div className="ge-dark-bento-card__shade" />
+                      <BrandMediaMark />
                       <div className="ge-dark-bento-card__header-bar">
                         <span className="ge-dark-bento-card__num-pill">RELATED SOLUTION</span>
                       </div>

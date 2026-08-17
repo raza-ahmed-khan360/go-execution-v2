@@ -1,6 +1,7 @@
 export type BlogPost = {
   slug: string;
   title: string;
+  seoTitle: string;
   excerpt: string;
   date: string;
   dateModified: string;
@@ -15,9 +16,10 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "why-is-my-website-not-ranking-on-google",
     title: "Why Is My Website Not Ranking on Google? A Complete Diagnostic Guide",
-    excerpt: "Discover why your website is not ranking on Google with a step-by-step diagnostic framework covering crawling, indexing, technical SEO, search intent, and Core Web Vitals.",
+    seoTitle: "Why Is My Website Not Ranking on Google? | Go Execution",
+    excerpt: "Find out why your website is not ranking on Google with a diagnostic guide to crawling, indexing, search intent, technical SEO, and performance.",
     date: "2026-08-04",
-    dateModified: "2026-08-17",
+    dateModified: "2026-08-18",
     category: "SEO",
     categorySlug: "seo-services",
     imageAlt: "Google Search Console-style ranking diagnostics for a business website",
@@ -113,7 +115,8 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "how-long-does-seo-take-for-new-website",
     title: "How Long Does SEO Take for a New Website? Timeline Guide",
-    excerpt: "Learn about the technical process-based checkpoints for new websites, including crawling, indexing, and search visibility milestones using official Google guidance.",
+    seoTitle: "How Long Does SEO Take for a New Website? | Go Execution",
+    excerpt: "Learn how long SEO can take for a new website, from discovery and indexing to content development, technical validation, and search visibility.",
     date: "2026-07-31",
     dateModified: "2026-07-30",
     category: "SEO",
@@ -136,6 +139,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "custom-web-development-vs-website-builders",
     title: "Custom Web Development vs. Website Builders: Which Suits Your Business?",
+    seoTitle: "Custom Web Development vs. Website Builders | Go Execution",
     excerpt: "Compare custom web development against template builders like Wix and Squarespace for speed, scalability, SEO performance, and ownership.",
     date: "2026-08-08",
     dateModified: "2026-08-08",
@@ -155,6 +159,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "how-much-does-custom-web-development-cost",
     title: "How Much Does Custom Web Development Cost? 2026 Pricing Breakdown",
+    seoTitle: "Custom Web Development Cost in 2026 | Go Execution",
     excerpt: "An honest breakdown of custom web development costs, scope factors, timeline expectations, and long-term business ROI.",
     date: "2026-08-07",
     dateModified: "2026-08-07",
@@ -175,6 +180,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "wordpress-vs-nextjs-for-business-websites",
     title: "WordPress vs Next.js for Business Websites: A Performance Comparison",
+    seoTitle: "WordPress vs. Next.js for Business Websites | Go Execution",
     excerpt: "Compare WordPress CMS and Next.js React framework for speed, security, SEO rendering, content management, and scaling.",
     date: "2026-08-06",
     dateModified: "2026-08-06",
@@ -192,6 +198,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "what-is-technical-seo",
     title: "What Is Technical SEO? A Complete Guide for US Businesses",
+    seoTitle: "Technical SEO Guide for US Businesses | Go Execution",
     excerpt: "Discover the fundamentals of technical SEO including crawl efficiency, indexing controls, schema markup, Core Web Vitals, and site speed.",
     date: "2026-08-05",
     dateModified: "2026-08-05",
@@ -210,6 +217,7 @@ export const blogPosts: readonly BlogPost[] = [
   {
     slug: "how-to-redesign-a-website-without-losing-seo",
     title: "How to Redesign a Website Without Losing SEO Rankings",
+    seoTitle: "Redesign a Website Without Losing SEO | Go Execution",
     excerpt: "A step-by-step guide to executing a website redesign while protecting historical organic traffic, backlink equity, and search engine rankings.",
     date: "2026-08-03",
     dateModified: "2026-08-03",

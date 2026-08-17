@@ -35,7 +35,7 @@ const blogCategoryPages = Array.from(new Set(blogPosts.map((post) => post.catego
 );
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteLastUpdated = new Date("2026-08-07T00:00:00.000Z");
+  const siteLastUpdated = new Date("2026-08-18T00:00:00.000Z");
 
   return [
     ...staticPages.map((path) => ({
