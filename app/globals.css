@@ -9978,6 +9978,21 @@ body:not(.home) .ge-header,
 	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+.ge-direct-answer-box {
+  margin: 30px 0 34px;
+  padding: 22px 24px;
+  border: 1px solid rgba(201, 168, 106, 0.28);
+  border-left: 4px solid var(--ge-gold);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(201, 168, 106, 0.14), rgba(255, 255, 255, 0.88));
+  box-shadow: 0 14px 30px rgba(13, 27, 42, 0.07);
+}
+
+.ge-direct-answer-box p {
+  margin: 0 !important;
+  color: var(--ge-navy);
+}
+
 .ge-blog-post__content figure,
 .ge-prose figure {
 	margin: 36px 0;

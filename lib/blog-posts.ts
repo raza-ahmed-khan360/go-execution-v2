@@ -13,182 +13,101 @@ export type BlogPost = {
 
 export const blogPosts: readonly BlogPost[] = [
   {
-    slug: "why-your-business-website-is-not-ranking",
+    slug: "why-is-my-website-not-ranking-on-google",
     title: "Why Is My Website Not Ranking on Google? A Complete Diagnostic Guide",
     excerpt: "Discover why your website is not ranking on Google with a step-by-step diagnostic framework covering crawling, indexing, technical SEO, search intent, and Core Web Vitals.",
-    date: "2026-08-15",
-    dateModified: "2026-08-15",
+    date: "2026-08-04",
+    dateModified: "2026-08-17",
     category: "SEO",
     categorySlug: "seo-services",
-    image: "/assets/images/logo-light.png",
-    imageAlt: "SEO analytics dashboard displaying website ranking diagnostics by Go Execution",
+    imageAlt: "Google Search Console-style ranking diagnostics for a business website",
     contentHtml: `
-      <p>Building a website is only the first step; getting it to appear in Google search results is an entirely separate technical and editorial process. If your website is not appearing where you expect, the cause is rarely mysterious. In most cases, a website fails to rank because Google cannot crawl or index its pages, the content fails to satisfy search intent, technical barriers block search bots, or competing pages provide clearer and more authoritative answers.</p>
+      <p>If you are asking, “why is my website not ranking on Google?”, start with the basics: Google has to find the page, crawl it, decide it can be indexed, understand what it is about, and see a strong enough reason to show it ahead of other results. A problem at any one of those stages can hold a page back.</p>
 
-      <div class="ge-direct-answer-box" style="background: rgba(201, 168, 106, 0.08); border-left: 4px solid #c9a86a; padding: 20px 24px; border-radius: 12px; margin: 28px 0;">
-        <p style="margin: 0; font-weight: 500; color: #f8fafc;"><strong>Direct Answer:</strong> A website usually fails to rank on Google due to one of three core bottlenecks: <strong>discovery and crawling barriers</strong> (such as blocked robots.txt or crawl errors), <strong>indexing restrictions</strong> (such as accidental noindex tags or canonical conflicts), or <strong>relevance and authority deficits</strong> (such as failing to satisfy search intent or lacking topical depth compared to competing pages).</p>
-      </div>
+      <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> your website may not rank because it is not indexed, Google cannot crawl it correctly, the page does not match what searchers want, or competing pages are a better fit. Diagnose access and indexing first; then improve relevance, content quality, internal links, and technical performance.</p></aside>
 
       <h2>Why Is My Website Not Ranking on Google?</h2>
-      <p>To understand why your website is not ranking on Google, it helps to view search through Google's technical pipeline: <strong>Crawling • Indexing • Understanding • Intent Matching • Ranking Evaluation</strong>.</p>
-      <p>If a breakdown happens at any stage in this sequence, your pages will not appear for commercial or informational queries. Before rewriting page copy or changing marketing strategies, use the following ten diagnostic checkpoints to isolate the exact cause.</p>
+      <p>Ranking is not a single setting you can switch on. Use this guide as a diagnostic order, beginning with the checks that can make a page impossible to rank and ending with the competitive work that can improve visibility over time.</p>
 
       <h2>1. Your Website or Page Isn’t Indexed</h2>
-      <p>Google cannot rank a URL that is not in its index. A page might exist on your server and load perfectly in your browser, but still remain invisible to search engines.</p>
+      <p>Google cannot rank a URL it has not added to its index. A page can load perfectly in a browser and still be absent from Google.</p>
       <ul>
-        <li><strong>How to check:</strong> Open Google Search Console (GSC) and enter your URL into the <em>URL Inspection Tool</em>. If the status returns <em>"URL is not on Google"</em>, the page is not indexed.</li>
-        <li><strong>Check for <code>noindex</code> tags:</strong> Inspect your page's source code for <code>&lt;meta name="robots" content="noindex"&gt;</code> or an HTTP response header containing <code>X-Robots-Tag: noindex</code>. Staging environments frequently leave these tags behind during site migrations.</li>
-        <li><strong>Canonical tag conflicts:</strong> Verify that the <code>rel="canonical"</code> tag points directly to the current URL. If it points to another page, Google may consolidate ranking signals to the other address.</li>
-        <li><strong>Newly published pages:</strong> Fresh URLs can take anywhere from a few days to several weeks for Googlebot to discover and evaluate.</li>
+        <li>Use Google Search Console’s URL Inspection tool to see whether the URL is on Google and to review its indexing status.</li>
+        <li>Check for a <code>noindex</code> meta tag or an <code>X-Robots-Tag: noindex</code> response header, especially after a staging launch or migration.</li>
+        <li>Confirm the page’s canonical URL points to the preferred version. Google may choose a different canonical when the signals conflict.</li>
+        <li>For a new page, submit a clean sitemap and link to it from a crawlable page. Requesting indexing can help discovery, but it does not guarantee indexing or rankings.</li>
       </ul>
 
       <h2>2. Google Can’t Crawl Your Website Properly</h2>
-      <p>Crawling is the discovery process where Googlebot fetches page code, images, and links. If search crawlers encounter server barriers or access blocks, indexing stops immediately.</p>
+      <p>Before a page can be indexed, Google needs access to it. Check the URL itself as well as the routes that lead to it.</p>
       <ul>
-        <li><strong>Blocked in <code>robots.txt</code>:</strong> Review your <code>/robots.txt</code> file to ensure critical page directories (like <code>/services/</code> or <code>/blog/</code>) are not accidentally disallowed.</li>
-        <li><strong>HTTP status code errors:</strong> Server errors (<code>500</code>, <code>502</code>, <code>503</code>) and broken links (<code>404</code>) waste crawl budget and prevent search engines from parsing your content.</li>
-        <li><strong>Redirect loops & chains:</strong> Multiple sequential <code>301</code> redirects cause crawler timeouts and dilute link equity.</li>
-        <li><strong>XML sitemap omissions:</strong> Confirm your XML sitemap is submitted in Google Search Console, returns a clean <code>200 OK</code> status, and lists only canonical, indexable URLs. Learn more about infrastructure fixes on our <a href="/services/seo/technical-seo/">Technical SEO Services</a> page.</li>
+        <li>Review <code>/robots.txt</code> for accidental blocks on important directories. A robots rule prevents crawling; it is not the right substitute for a <code>noindex</code> directive.</li>
+        <li>Make sure the page is public, returns a successful HTTP response, and does not require a login or blocked resource to reveal its main content.</li>
+        <li>Fix broken internal links, redirect loops, and unnecessarily long redirect chains.</li>
+        <li>Keep XML sitemaps focused on canonical URLs you actually want indexed. Our <a href="/services/seo/technical-seo/">technical SEO services</a> can help when these checks uncover a broader site issue.</li>
       </ul>
 
       <h2>3. Your Content Doesn’t Match Search Intent</h2>
-      <p>Search intent represents the primary goal a user has when typing a query into Google. Even a technically flawless page will fail to rank if it does not deliver what searchers expect.</p>
-      <ul>
-        <li><strong>Informational vs. Commercial Intent:</strong> If users searching a query expect a detailed comparative guide (informational), Google will not rank a short product sales page (commercial).</li>
-        <li><strong>Depth of direct answers:</strong> If competing pages provide clear data tables, diagnostic checklists, and step-by-step instructions while your page contains vague promotional copy, search algorithms will favor the more comprehensive resource.</li>
-        <li><strong>Query satisfaction:</strong> Google's ranking systems evaluate whether searchers find their answer immediately or bounce back to search results to click a competitor.</li>
-      </ul>
+      <p>Google tries to return the type of answer people expect. A service page will often struggle for a query where the results are diagnostic guides, and a short blog post can struggle where people expect a comparison, calculator, local result, or product page.</p>
+      <p>Search the target phrase, review the current results, and compare the intent, format, scope, and questions they answer. Do not copy competitors; make your page more useful for the same searcher need.</p>
 
       <h2>4. Your On-Page SEO Needs Improvement</h2>
-      <p>On-page SEO helps search algorithms understand the topical context and relevance of your pages. Missing or disorganized metadata creates ambiguity.</p>
+      <p>On-page SEO gives Google and readers a clear description of the page. It is not about repeating one keyword in every paragraph.</p>
       <ul>
-        <li><strong>Title Tags & H1 Headings:</strong> Ensure your target topic is clearly reflected in your <code>&lt;title&gt;</code> tag and single <code>&lt;h1&gt;</code> heading. Avoid vague titles like <em>"Home"</em> or <em>"Services"</em>.</li>
-        <li><strong>Logical Heading Hierarchy:</strong> Structure your subheadings (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) logically to organize information for both human readers and AI crawlers.</li>
-        <li><strong>Descriptive URLs:</strong> Use concise, descriptive URL slugs (e.g., <code>/services/seo/technical-seo/</code>) rather than auto-generated parameter strings.</li>
-        <li><strong>Strategic Internal Linking:</strong> Link relevant service pages and supporting articles to pass contextual authority across your domain.</li>
-        <li><strong>Image Alt Text:</strong> Provide descriptive alt attributes for visual assets to assist accessibility and contextual image indexing.</li>
+        <li>Write a descriptive title and a single, clear H1 that accurately represent the page.</li>
+        <li>Use logical headings to answer the supporting questions a visitor is likely to have.</li>
+        <li>Use a readable URL and write a useful meta description for searchers deciding whether to click.</li>
+        <li>Add contextual internal links from relevant pages—not a generic list of links in the footer.</li>
+        <li>Use meaningful image alt text where an image contributes information.</li>
       </ul>
 
       <h2>5. Your Website Doesn’t Have Enough Relevant Content</h2>
-      <p>Single isolated pages rarely rank for competitive business terms without supporting topical depth. Search engines evaluate your entire website's authority within its niche.</p>
-      <ul>
-        <li><strong>Topical Coverage & Clusters:</strong> If you offer web development or legal services, publishing supporting articles, case studies, and specialized FAQs demonstrates topical expertise.</li>
-        <li><strong>Avoiding Thin Content:</strong> Pages with less than 200–300 words of superficial text provide little value to users and struggle to secure indexation.</li>
-        <li><strong>Duplicate Content:</strong> Having multiple pages that target identical keywords causes keyword cannibalization, forcing Google to choose between competing pages on your own domain.</li>
-      </ul>
+      <p>There is no universal word-count threshold for ranking. The real question is whether the page solves the query better than available alternatives. Thin, duplicated, or vague pages often fail because they add little unique value.</p>
+      <p>Build useful supporting content around your services, customer questions, case studies, and expertise. Avoid creating several near-identical pages that compete for the same search intent.</p>
 
       <h2>6. Your Website Has Technical SEO Problems</h2>
-      <p>Technical SEO ensures that search bots can interpret, parse, and render your site's codebase seamlessly without rendering bugs.</p>
-      <ul>
-        <li><strong>Mobile Usability:</strong> Google uses mobile-first indexing for all websites. Unresponsive viewports, overlapping elements, or unclickable tap targets degrade search viability.</li>
-        <li><strong>Structured Data (Schema.org):</strong> Implement JSON-LD structured data (such as <code>Organization</code>, <code>Service</code>, <code>FAQPage</code>, and <code>BreadcrumbList</code>) to clarify entity relationships.</li>
-        <li><strong>HTTPS Security:</strong> Ensure valid SSL/TLS certificates are active across your entire domain to maintain browser security and data integrity.</li>
-        <li><strong>JavaScript Rendering Issues:</strong> Heavy client-side JavaScript that fails to render static HTML server-side can delay or prevent content indexing. Explore our <a href="/services/web-development/nextjs-development/">Next.js Development Services</a> for sub-second server-rendered architectures.</li>
-      </ul>
+      <p>Technical issues can make good content difficult for Google to interpret or consolidate correctly. Review mobile rendering, canonical signals, internal links, duplicate versions of URLs, HTTPS, structured data validity, and the HTML Google receives.</p>
+      <p>Modern JavaScript does not automatically prevent ranking, but important content should be reliably available when Google renders the page. Server-rendered, well-structured pages are generally easier to inspect and maintain.</p>
 
       <h2>7. Your Website Is Slow or Has Poor Core Web Vitals</h2>
-      <p>Page speed and user experience metrics are confirmed Google page experience signals. Slow loading speeds increase bounce rates and lower user engagement.</p>
-      <ul>
-        <li><strong>Largest Contentful Paint (LCP):</strong> Measures when the main content of a page is visible (target: under 2.5 seconds).</li>
-        <li><strong>Interaction to Next Paint (INP):</strong> Measures responsiveness to user taps, clicks, and keyboard inputs (target: under 200ms).</li>
-        <li><strong>Cumulative Layout Shift (CLS):</strong> Measures unexpected layout shifts during page loading (target: under 0.1).</li>
-      </ul>
-      <p><em>Note:</em> Improving Core Web Vitals alone does not guarantee a top ranking without high-quality content and relevance, but poor performance will undermine your visibility. Review our <a href="/services/web-development/website-performance/">Website Speed Optimization Services</a> for performance tuning.</p>
+      <p>Performance affects how people experience a website. Core Web Vitals are useful field metrics: aim for an LCP of 2.5 seconds or less, INP under 200 milliseconds, and CLS under 0.1 for a good experience.</p>
+      <p>Improving these metrics is worthwhile, but it is not a guaranteed route to a top position. Fix oversized images, unnecessary scripts, layout shifts, and slow server responses alongside your content work. See our <a href="/services/web-development/website-performance/">website performance service</a> for implementation support.</p>
 
       <h2>8. Your Website Is New</h2>
-      <p>If your website or domain was launched recently, lack of search visibility is normal. New websites must progress through discovery, technical validation, and trust evaluation before ranking for competitive keywords.</p>
-      <p>Googlebot crawls new domains gradually, measuring user engagement and verifying that content remains consistent over time. For a realistic breakdown of milestones, read our detailed guide on <a href="/blog/how-long-does-seo-take-for-new-website/">How Long Does SEO Take for a New Website?</a>.</p>
+      <p>New sites need time to be discovered, crawled, and evaluated. Google says crawling can take from a few days to a few weeks, and visibility for competitive topics can take longer. Publishing consistently and fixing basic technical issues gives Google a clearer site to understand; it does not create an instant ranking guarantee.</p>
+      <p>For a practical expectation-setting guide, read <a href="/blog/how-long-does-seo-take-for-new-website/">How Long Does SEO Take for a New Website?</a>.</p>
 
       <h2>9. Your Competitors Have Stronger Search Visibility</h2>
-      <p>Search rankings are relative. Even if your page is well-written, competing websites may rank higher because they provide more exhaustive information, hold longer domain history, or maintain clearer authority signals.</p>
-      <ul>
-        <li><strong>Topical Breadth:</strong> Market leaders often maintain hundreds of supporting articles that establish deep domain authority.</li>
-        <li><strong>Natural Backlink Profile:</strong> Established businesses earn organic references, press coverage, and industry citations over years of operation.</li>
-        <li><strong>Brand Entity Strength:</strong> Google's Knowledge Graph recognizes established brands with verified corporate profiles, reviews, and industry accreditations.</li>
-      </ul>
+      <p>Search results are comparative. Competitors may have a more complete answer, clearer specialization, better internal linking, stronger brand recognition, or relevant independent mentions. Start by improving the page and site experience rather than chasing shortcuts or low-quality links.</p>
 
-      <h2>10. Your Website Recently Changed (Redesign or Migration)</h2>
-      <p>A sudden drop in organic rankings frequently follows a website redesign or CMS migration. Common post-launch pitfalls include:</p>
-      <ul>
-        <li><strong>Missing 301 Redirects:</strong> Changing URL structures without mapping old URLs to new counterparts produces 404 errors and destroys accumulated search equity.</li>
-        <li><strong>Accidental Content Removal:</strong> Deleting paragraphs, FAQs, or keyword-rich headings during design overhauls removes the text signals Google originally ranked.</li>
-        <li><strong>Unintended <code>noindex</code> Directives:</strong> Forgetting to remove test environment headers after deployment. Learn how our <a href="/services/web-development/website-redesign/">Website Redesign Services</a> safeguard rankings through strict 301 SEO migration protocols.</li>
-      </ul>
+      <h2>10. Your Website Recently Changed</h2>
+      <p>Redesigns, CMS moves, and URL changes can interrupt organic visibility. Check that old pages permanently redirect to their closest new equivalents, indexable content was not removed accidentally, canonicals match the new URLs, and no staging directives survived the launch.</p>
+      <p>Planning a redesign? Our <a href="/services/web-development/website-redesign/">website redesign service</a> and guide to <a href="/blog/how-to-redesign-a-website-without-losing-seo/">redesigning without losing SEO</a> cover the key migration safeguards.</p>
 
-      <h2>How to Find Out Why Your Website Isn’t Ranking: Diagnostic Checklist</h2>
-      <p>Follow this practical diagnostic checklist using Google Search Console and browser developer tools to isolate your site's ranking bottleneck:</p>
+      <h2>How to Find Out Why Your Website Isn’t Ranking</h2>
+      <figure><table><thead><tr><th>Check</th><th>Where to look</th><th>What a healthy result looks like</th></tr></thead><tbody><tr><td>Indexing</td><td>Search Console URL Inspection</td><td>The preferred URL is indexed or has a clear, actionable exclusion reason.</td></tr><tr><td>Crawling</td><td>Robots rules, live URL test, server response</td><td>Google can fetch a public page that returns successfully.</td></tr><tr><td>Canonical</td><td>Page source and Search Console</td><td>Your preferred canonical is consistent with site signals.</td></tr><tr><td>Demand and relevance</td><td>Search Console Performance and result-page review</td><td>The page format and subject address the query’s intent.</td></tr><tr><td>Experience</td><td>PageSpeed Insights and real-device testing</td><td>Important content loads, responds, and remains stable.</td></tr></tbody></table></figure>
 
-      <figure>
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background: rgba(255, 255, 255, 0.06); border-bottom: 2px solid rgba(255, 255, 255, 0.12);">
-              <th style="padding: 14px; text-align: left; color: #f8fafc;">Diagnostic Step</th>
-              <th style="padding: 14px; text-align: left; color: #f8fafc;">Tool / Report</th>
-              <th style="padding: 14px; text-align: left; color: #f8fafc;">What to Check</th>
-              <th style="padding: 14px; text-align: left; color: #f8fafc;">Healthy Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-              <td style="padding: 12px 14px; font-weight: 600; color: #c9a86a;">1. Index Status</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">GSC URL Inspection</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">Check if URL is indexed on Google</td>
-              <td style="padding: 12px 14px; color: #38bdf8;">"URL is on Google"</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-              <td style="padding: 12px 14px; font-weight: 600; color: #c9a86a;">2. Crawl Directives</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;"><code>/robots.txt</code> & Live Test</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">Verify Googlebot is not blocked</td>
-              <td style="padding: 12px 14px; color: #38bdf8;">HTTP 200 / Allowed</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-              <td style="padding: 12px 14px; font-weight: 600; color: #c9a86a;">3. Canonicals</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">GSC Page Indexing</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">Check Google-selected canonical vs user canonical</td>
-              <td style="padding: 12px 14px; color: #38bdf8;">Both canonicals match</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-              <td style="padding: 12px 14px; font-weight: 600; color: #c9a86a;">4. Query Clicks & CTR</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">GSC Performance Report</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">Check impressions vs clicks for target keywords</td>
-              <td style="padding: 12px 14px; color: #38bdf8;">Growing impressions & healthy CTR</td>
-            </tr>
-            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-              <td style="padding: 12px 14px; font-weight: 600; color: #c9a86a;">5. Core Web Vitals</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">PageSpeed Insights</td>
-              <td style="padding: 12px 14px; color: #cbd5e1;">Evaluate LCP, INP, and CLS field data</td>
-              <td style="padding: 12px 14px; color: #38bdf8;">All metrics in "Good" (Green)</td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-
-      <h2>What Should You Fix First? (Prioritized Sequence)</h2>
-      <p>When troubleshooting why your business website is not ranking on Google, prioritize technical blockers before making cosmetic or editorial revisions:</p>
+      <h2>What Should You Fix First?</h2>
       <ol>
-        <li><strong>Confirm Crawlability:</strong> Verify that <code>robots.txt</code> and server status codes allow access to Googlebot.</li>
-        <li><strong>Confirm Indexation:</strong> Remove accidental <code>noindex</code> meta tags and submit your XML sitemap in GSC.</li>
-        <li><strong>Evaluate Search Intent:</strong> Compare top-ranking competitor pages against yours to ensure format, depth, and tone match user expectations.</li>
-        <li><strong>Optimize On-Page Elements:</strong> Align title tags, H1 headings, and meta descriptions with your primary topic.</li>
-        <li><strong>Remediate Technical SEO Issues:</strong> Resolve duplicate content, broken internal links, and canonical mismatches.</li>
-        <li><strong>Strengthen Internal Linking:</strong> Connect related service pages and informational posts to distribute page authority.</li>
-        <li><strong>Enhance Page Performance:</strong> Optimize images, clean JavaScript bloat, and achieve green Core Web Vitals scores.</li>
-        <li><strong>Build Authentic Topical Authority:</strong> Expand content depth with case studies, original research, and customer FAQs.</li>
-        <li><strong>Track Search Console Trends:</strong> Monitor impressions, average position, and query clicks over a 30-to-60-day evaluation window.</li>
+        <li>Confirm the page is accessible, crawlable, and eligible for indexing.</li>
+        <li>Resolve accidental <code>noindex</code> directives, canonical conflicts, redirects, and sitemap mistakes.</li>
+        <li>Compare the page with the current search results and improve its intent match.</li>
+        <li>Improve the title, headings, useful detail, and contextual internal links.</li>
+        <li>Address material mobile, rendering, and performance issues.</li>
+        <li>Measure Search Console impressions, clicks, and indexing changes over time before making the next round of decisions.</li>
       </ol>
 
       <h2>When Should You Hire an SEO Professional?</h2>
-      <p>While basic indexing and metadata updates can be diagnosed internally, complex search visibility challenges benefit from professional technical SEO auditing:</p>
-      <ul>
-        <li><strong>Persistent Indexing Failures:</strong> When pages are crawled but repeatedly marked <em>"Discovered - currently not indexed"</em> or <em>"Crawled - currently not indexed"</em>.</li>
-        <li><strong>Sudden Organic Traffic Losses:</strong> Following major Google core algorithm updates or platform migrations.</li>
-        <li><strong>Complex E-Commerce or CMS Architectures:</strong> Managing thousands of faceted filter URLs, parameter tags, and duplicate product listings.</li>
-        <li><strong>Competitive US Markets:</strong> Scaling search visibility against well-funded national competitors.</li>
-      </ul>
+      <p>Bring in technical SEO help when indexing exclusions keep returning, traffic drops after a migration, a large site has duplicate or parameterized URLs, or your team cannot determine whether the problem is technical, editorial, or competitive. A good audit should prioritize the changes most likely to remove the actual blocker.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>Why is my website not showing up on Google?</h3><p>Check whether the specific URL is indexed in Google Search Console. If it is not, investigate crawl access, <code>noindex</code>, canonical selection, and whether Google has discovered the page.</p>
+      <h3>How long does it take for a website to rank on Google?</h3><p>There is no fixed timeline. Crawling may take days or weeks, while earning visibility for competitive queries can take longer. The right next step depends on the page’s indexing and competitive situation.</p>
+      <h3>Can a slow website hurt SEO?</h3><p>A slow or unstable experience can hurt users and makes performance work worthwhile. It should be addressed with content and technical fundamentals, not treated as a standalone ranking guarantee.</p>
+      <h3>Do I need backlinks to rank?</h3><p>Relevant independent references can help establish trust, but links cannot compensate for pages that are blocked, unindexed, or a poor match for the query. Fix those fundamentals first.</p>
 
       <h2>Need Help Finding Out Why Your Website Isn’t Ranking?</h2>
-      <p>If you are unsure why your website is not appearing in Google search results, Go Execution can audit your site's technical infrastructure, index coverage, on-page architecture, and competitive search visibility.</p>
-      <p>Explore our comprehensive <a href="/services/seo/">SEO Services</a> or <a href="/contact/">request a technical SEO strategy consultation</a> with our US engineering team today.</p>
+      <p>Go Execution can assess index coverage, crawlability, on-page relevance, technical SEO, and the competitive landscape to create a prioritized plan. Explore our <a href="/services/seo/">SEO services</a> or <a href="/contact/">start a consultation</a>.</p>
     `,
   },
   {
