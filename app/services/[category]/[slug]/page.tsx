@@ -60,6 +60,11 @@ export default async function SubServicePage({ params }: Props) {
   const related = sub.relatedServices
     ? sub.relatedServices.map((sSlug) => getSubService(sSlug)).filter(Boolean)
     : [];
+  const questionnaire = catSlug === "web-development"
+    ? { href: "/web-questionnaire/", label: "Start Website Questionnaire" }
+    : slug === "logo-design"
+      ? { href: "/logo-questionnaire/", label: "Start Logo Questionnaire" }
+      : { href: "/contact/", label: "Request Free Custom Proposal" };
 
   return (
     <>
@@ -108,8 +113,8 @@ export default async function SubServicePage({ params }: Props) {
             </div>
 
             <div className="ge-hero__actions">
-              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                <span>Request Free Custom Proposal</span>
+              <Link className="ge-button ge-button--gold ge-magnetic" href={questionnaire.href}>
+                <span>{questionnaire.label}</span>
               </Link>
               <a className="ge-button ge-button--outline" href="#overview">
                 <span>Explore Service Details</span>
@@ -140,8 +145,8 @@ export default async function SubServicePage({ params }: Props) {
                   Generic templates limit brand scalability and cause slow load times that hurt conversions. Our {sub.title} services combine sub-second engineering, conversion rate psychology, and robust security to turn visitors into buyers.
                 </p>
                 <div style={{ marginTop: "auto" }}>
-                  <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
-                    <span>Discuss Your Scope</span>
+                  <Link className="ge-button ge-button--gold ge-magnetic" href={questionnaire.href}>
+                    <span>{questionnaire.label}</span>
                   </Link>
                 </div>
               </div>

@@ -165,6 +165,15 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
   const [active, setActive] = useState(names[0]);
   const [openFeatures, setOpenFeatures] = useState<string | null>(null);
   const packages = groups[active] ?? [];
+  const questionnaire = (() => {
+    if (["Website Design", "E-Commerce", "Shopify", "Website Maintenance", "Combo"].includes(active)) {
+      return { href: "/web-questionnaire/", label: "Start Website Questionnaire" };
+    }
+    if (["Logo", "Branding"].includes(active)) {
+      return { href: "/logo-questionnaire/", label: "Start Logo Questionnaire" };
+    }
+    return { href: "/contact/", label: "Book a Free Consultation" };
+  })();
   const tabsRef = useRef<HTMLDivElement>(null);
   const isInteractingRef = useRef(false);
 
@@ -258,7 +267,9 @@ export function PricingGrid({ groups }: { groups: Record<string, Package[]> }) {
               <ul id={`features-${id}`} className="ge-package-features-list" hidden={!isOpen}>
                 {pkg.benefits.map((benefit, benefitIndex) => <li key={`${benefit}-${benefitIndex}`}>{benefit}</li>)}
               </ul>
-              <Link className={`ge-button ge-button--outline`} href="/contact">Book a Free Consultation</Link>
+              <Link className="ge-button ge-button--outline" href={questionnaire.href}>
+                {questionnaire.label}
+              </Link>
             </article>
           );
         })}
