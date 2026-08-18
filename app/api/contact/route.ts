@@ -7,6 +7,7 @@ export const runtime = "nodejs";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const readField = (value: unknown, maximum: number) => typeof value === "string" ? value.trim().slice(0, maximum) : "";
+const readEnv = (value: string | undefined) => value?.trim().replace(/^["']|["']$/g, "") ?? "";
 
 const error = (message: string, status = 400) => NextResponse.json({ success: false, message }, { status });
 
@@ -35,13 +36,15 @@ export async function POST(request: Request) {
     return error("Please complete all required fields with valid information.");
   }
 
-  const recipient = process.env.CONTACT_RECIPIENT_EMAIL ?? "justin@goexecution.com";
+  // Hosting dashboards can save an env key with an empty or quoted value.
+  // An empty string bypasses `??`, so normalize it before applying the fallback.
+  const recipient = readEnv(process.env.CONTACT_RECIPIENT_EMAIL) || "justin@goexecution.com";
   const template = createContactRequestEmail(enquiry);
 
   // 1. HOSTINGER & GMAIL SMTP SMART CONFIGURATION
-  const smtpHost = process.env.SMTP_HOST ?? (process.env.GMAIL_APP_PASSWORD ? "smtp.gmail.com" : "smtp.hostinger.com");
+  const smtpHost = readEnv(process.env.SMTP_HOST) || (process.env.GMAIL_APP_PASSWORD ? "smtp.gmail.com" : "smtp.hostinger.com");
   const smtpPort = Number(process.env.SMTP_PORT ?? 465);
-  const smtpUser = process.env.SMTP_USER ?? "justin@goexecution.com";
+  const smtpUser = readEnv(process.env.SMTP_USER) || "justin@goexecution.com";
   const rawPass = process.env.SMTP_PASS || process.env.HOSTINGER_SMTP_PASS || process.env.GMAIL_APP_PASSWORD;
 
   // Clean password (strips leading/trailing quotes if user entered them in hosting dashboard)
@@ -75,7 +78,7 @@ export async function POST(request: Request) {
     } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : String(err);
       console.error("SMTP delivery failure details:", { host: smtpHost, port: smtpPort, user: smtpUser, err: errorMessage });
-      return error(`Email delivery failed via ${smtpHost} (${errorMessage}). Please check SMTP password in hosting env.`, 502);
+      return error("Email delivery failed. Please try again shortly or email justin@goexecution.com directly.", 502);
     }
   }
 
