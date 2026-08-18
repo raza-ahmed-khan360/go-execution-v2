@@ -104,8 +104,15 @@ export function buildArticle(opts: {
   datePublished: string;
   dateModified: string;
   image?: string;
+  authorName?: string;
+  authorUrl?: string;
+  reviewerName?: string;
 }) {
-  return {
+  const author = opts.authorName
+    ? { "@type": "Person", name: opts.authorName, url: opts.authorUrl || `${site.url}/about/` }
+    : { "@id": `${site.url}/#organization` };
+
+  const article: any = {
     "@type": "Article",
     "@id": `${site.url}${opts.path}#article`,
     headline: opts.headline,
@@ -113,16 +120,26 @@ export function buildArticle(opts: {
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
     mainEntityOfPage: { "@id": `${site.url}${opts.path}#webpage` },
-    author: { "@id": `${site.url}/#organization` },
+    author: author,
     publisher: { "@id": `${site.url}/#organization` },
     inLanguage: "en-US",
-    ...(opts.image && {
-      image: {
-        "@type": "ImageObject",
-        url: opts.image,
-      },
-    }),
   };
+
+  if (opts.reviewerName) {
+    article.reviewedBy = {
+      "@type": "Person",
+      name: opts.reviewerName,
+    };
+  }
+
+  if (opts.image) {
+    article.image = {
+      "@type": "ImageObject",
+      url: opts.image,
+    };
+  }
+
+  return article;
 }
 
 export function buildCollectionPage(opts: { path: string; title: string }) {
@@ -158,5 +175,20 @@ export function buildAboutPage(opts: { path: string; title: string }) {
     isPartOf: { "@id": `${site.url}/#website` },
     about: { "@id": `${site.url}/#organization` },
     inLanguage: "en-US",
+  };
+}
+
+export function buildFAQPage(opts: { path: string }, faqs: { question: string; answer: string }[]) {
+  return {
+    "@type": "FAQPage",
+    "@id": `${site.url}${opts.path}#faq`,
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }

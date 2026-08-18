@@ -34,41 +34,33 @@ const blogCategoryPages = Array.from(
 ).map((slug) => `/category/${slug}/`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Updated automatically on every new build/deployment.
-  const buildDate = new Date();
-
   return [
     ...staticPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: buildDate,
       changeFrequency: path === "/" ? ("weekly" as const) : ("monthly" as const),
       priority: path === "/" ? 1.0 : 0.8,
     })),
 
     ...categoryPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: buildDate,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     })),
 
     ...subServicePages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: buildDate,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     })),
 
     ...industryPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: buildDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
 
     ...blogCategoryPages.map((path) => ({
       url: `${site.url}${path}`,
-      lastModified: buildDate,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     })),

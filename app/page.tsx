@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Homepage } from "@/components/homepage";
-import { JsonLd, buildOrganization, buildWebSite, buildWebPage } from "@/lib/seo/jsonld";
+import { Homepage, homepageFaqs } from "@/components/homepage";
+import { JsonLd, buildOrganization, buildWebSite, buildWebPage, buildFAQPage } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +33,7 @@ export default function Home() {
         path: "/",
         title: "Digital Marketing Agency in USA | Web, SEO & Growth | Go Execution",
       }),
+      buildFAQPage({ path: "/" }, homepageFaqs.map(([q, a]) => ({ question: q, answer: a }))),
     ],
   };
 

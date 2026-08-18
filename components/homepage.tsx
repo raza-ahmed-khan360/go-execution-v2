@@ -165,7 +165,7 @@ const testimonials: readonly Testimonial[] = [
   { quote: "The custom property management portal reduced operational overhead by 73%. We now scale our property portfolio without adding administrative friction.", name: "James Mitchell", role: "Owner, Horizon Real Estate", metric: "73%", metricLabel: "less administration time" },
 ] as const;
 
-const faqs = [
+export const homepageFaqs = [
   ["What does a digital marketing agency do?", "A digital marketing agency helps businesses attract, engage, and convert clients through strategy, custom web development, SEO, paid advertising, content marketing, and conversion optimization."],
   ["What digital marketing services does Go Execution provide?", "We provide full-service digital solutions including web development, technical SEO, digital marketing, design & branding, video animation, and mobile app development."],
   ["How can a digital marketing agency help my business grow?", "By unifying your digital channels, optimizing user journeys for conversion, and continuously refining traffic acquisition strategies based on performance data."],
@@ -417,7 +417,7 @@ export function Homepage() {
             <h2>Frequently Asked Questions</h2>
           </div>
           <div className="ge-reveal">
-            <FaqAccordion items={faqs} idPrefix="home-faq" />
+            <FaqAccordion items={homepageFaqs} idPrefix="home-faq" />
           </div>
         </div>
       </section>

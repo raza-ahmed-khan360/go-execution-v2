@@ -47,14 +47,12 @@ export const metadata: Metadata = {
     title: "Digital Marketing Agency USA | Go Execution",
     description:
       "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious US businesses.",
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Go Execution Digital Marketing Agency in USA" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Digital Marketing Agency USA | Go Execution",
     description:
       "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious US businesses.",
-    images: ["/opengraph-image.png"],
   },
   verification: {
     google: "googlef9d6a777118f2fa7",

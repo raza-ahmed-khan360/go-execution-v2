@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, formatBlogDate, getBlogPost } from "@/lib/blog-posts";
-import { JsonLd, buildArticle, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildArticle, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -50,7 +50,7 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const path = `/blog/${post.slug}/`;
-  const schema = {
+  const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
       buildArticle({
@@ -60,6 +60,9 @@ export default async function BlogPostPage({ params }: Props) {
         datePublished: post.date,
         dateModified: post.dateModified,
         image: post.image,
+        authorName: post.author?.name || "Go Execution Editorial",
+        authorUrl: post.author?.url || "https://goexecution.com/about/",
+        reviewerName: post.reviewer?.name,
       }),
       buildWebPage({ path, title: post.title }),
       buildBreadcrumbList([
@@ -69,6 +72,12 @@ export default async function BlogPostPage({ params }: Props) {
       ]),
     ],
   };
+
+  if (post.faq && post.faq.length > 0) {
+    schema["@graph"].push(
+      buildFAQPage({ path: `/blog/${post.slug}/` }, post.faq.map(([q, a]) => ({ question: q, answer: a })))
+    );
+  }
 
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
@@ -90,12 +99,27 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
               <h1 className="ge-blog-post__title">{post.title}</h1>
               <p className="ge-blog-post__lead">{post.excerpt}</p>
-              <div className="ge-blog-post__author">
-                <div className="ge-blog-post__author-avatar">G</div>
-                <div>
-                  <strong>Go Execution Editorial</strong>
-                  <span>Growth Strategy Team</span>
+              
+              <div className="ge-blog-post__trust-signals" style={{ display: 'flex', gap: '2rem', marginTop: '1.5rem', padding: '1.5rem', backgroundColor: '#f8fafc', borderRadius: '0.5rem', border: '1px solid #e2e8f0' }}>
+                <div className="ge-blog-post__author" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <div className="ge-blog-post__author-avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#1e293b', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>
+                    {post.author?.avatarInitials || 'GE'}
+                  </div>
+                  <div>
+                    <strong style={{ display: 'block', fontSize: '0.9rem', color: '#0f172a' }}>{post.author?.name || 'Go Execution Editorial'}</strong>
+                    <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{post.author?.role || 'Growth Strategy Team'}</span>
+                  </div>
                 </div>
+                
+                {post.reviewer && (
+                  <div className="ge-blog-post__reviewer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderLeft: '1px solid #cbd5e1', paddingLeft: '2rem' }}>
+                    <div>
+                      <span style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#64748b', fontWeight: 'bold' }}>Fact Checked By</span>
+                      <strong style={{ display: 'block', fontSize: '0.9rem', color: '#0f172a' }}>{post.reviewer.name}</strong>
+                      <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{post.reviewer.role}</span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </header>

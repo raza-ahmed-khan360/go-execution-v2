@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCategory, getSubService, allSubServices } from "@/lib/services";
+import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { FaqAccordion } from "@/components/interactive-sections";
-import { JsonLd, buildService, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildService, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
 import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
@@ -43,7 +44,7 @@ export default async function SubServicePage({ params }: Props) {
   }
 
   const path = `/services/${catSlug}/${slug}/`;
-  const schema = {
+  const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
       buildService({ path, name: sub.title, description: sub.intro }),
@@ -56,6 +57,12 @@ export default async function SubServicePage({ params }: Props) {
       ]),
     ],
   };
+
+  if (sub.faq && sub.faq.length > 0) {
+    schema["@graph"].push(
+      buildFAQPage({ path: `/services/${cat.slug}/${sub.slug}/` }, sub.faq.map(([q, a]) => ({ question: q, answer: a })))
+    );
+  }
 
   const related = sub.relatedServices
     ? sub.relatedServices.map((sSlug) => getSubService(sSlug)).filter(Boolean)
@@ -267,6 +274,44 @@ export default async function SubServicePage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* --- RELATED INSIGHTS & ARTICLES (INTERNAL LINKING) --- */}
+        {(() => {
+          const relatedBlogs = blogPosts.filter((p) => p.categorySlug === catSlug).slice(0, 3);
+          if (relatedBlogs.length === 0) return null;
+          return (
+            <section className="ge-section ge-related-posts ge-bg-light">
+              <div className="ge-container ge-container--narrow">
+                <div className="ge-section-heading" style={{ marginBottom: 48 }}>
+                  <p className="ge-eyebrow">Industry Insights</p>
+                  <h2>Related Articles & Resources</h2>
+                </div>
+                <div className="ge-blog-grid">
+                  {relatedBlogs.map((rel) => (
+                    <article key={rel.slug} className="ge-blog-card">
+                      {rel.image && (
+                        <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                          <Image src={rel.image} alt={rel.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
+                        </Link>
+                      )}
+                      <div className="ge-blog-card__content">
+                        <div className="ge-blog-card__meta">
+                          <Link href={`/category/${rel.categorySlug}/`}>{rel.category}</Link>
+                          <span>•</span>
+                          <time>{formatBlogDate(rel.date)}</time>
+                        </div>
+                        <h3>
+                          <Link href={`/blog/${rel.slug}/`}>{rel.title}</Link>
+                        </h3>
+                        <p>{rel.excerpt}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* --- SERVICE FAQS --- */}
         {sub.faq && sub.faq.length > 0 && (

@@ -6,7 +6,7 @@ import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing Portfolio & Case Studies | Go Execution" },
-  description: "See how we combine strategy, design, and technology to solve real business challenges.",
+  description: "See how Go Execution combines data-driven strategy, bespoke UI/UX design, and cutting-edge web development technology to solve real business challenges. Explore our case studies and successful digital marketing projects.",
   alternates: { canonical: "/portfolio/" },
   openGraph: { url: "/portfolio/" },
 };
@@ -28,7 +28,7 @@ export default async function Portfolio({ searchParams }: { searchParams: Promis
   return (
     <>
       <JsonLd data={schema} />
-      <main id="primary" className="site-main"><PageHero eyebrow="Selected portfolio" title="Our Portfolio & Case Studies" copy="See how we combine strategy, design, and technology to solve real business challenges." /><section className="ge-section ge-portfolio-page"><div className="ge-container"><PortfolioGrid items={content.portfolio} initialCategory={category} /></div></section></main>
+      <main id="primary" className="site-main"><PageHero eyebrow="Selected portfolio" title="Our Portfolio & Case Studies" copy="See how Go Execution combines data-driven strategy, bespoke UI/UX design, and cutting-edge web development technology to solve real business challenges. Explore our case studies and successful digital marketing projects." /><section className="ge-section ge-portfolio-page"><div className="ge-container"><PortfolioGrid items={content.portfolio} initialCategory={category} /></div></section></main>
     </>
   );
 }

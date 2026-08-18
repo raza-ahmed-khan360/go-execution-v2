@@ -4,8 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { industries } from "@/lib/industries";
 import { subServices } from "@/lib/services";
+import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { FaqAccordion } from "@/components/interactive-sections";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
 import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -40,7 +41,7 @@ export default async function IndustryDetailPage({ params }: Props) {
   }
 
   const path = `/industries/${slug}/`;
-  const schema = {
+  const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
       buildWebPage({ path, title: ind.seoTitle }),
@@ -51,6 +52,12 @@ export default async function IndustryDetailPage({ params }: Props) {
       ]),
     ],
   };
+
+  if (ind.faq && ind.faq.length > 0) {
+    schema["@graph"].push(
+      buildFAQPage({ path: `/industries/${ind.slug}/` }, ind.faq.map(([q, a]) => ({ question: q, answer: a })))
+    );
+  }
 
   return (
     <>
@@ -219,6 +226,44 @@ export default async function IndustryDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* --- RELATED INSIGHTS & ARTICLES (INTERNAL LINKING) --- */}
+        {(() => {
+          const relatedBlogs = blogPosts.slice(0, 3);
+          if (relatedBlogs.length === 0) return null;
+          return (
+            <section className="ge-section ge-related-posts ge-bg-light">
+              <div className="ge-container ge-container--narrow">
+                <div className="ge-section-heading" style={{ marginBottom: 48 }}>
+                  <p className="ge-eyebrow">Expert Insights</p>
+                  <h2>Digital Strategy & Resources</h2>
+                </div>
+                <div className="ge-blog-grid">
+                  {relatedBlogs.map((rel) => (
+                    <article key={rel.slug} className="ge-blog-card">
+                      {rel.image && (
+                        <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                          <Image src={rel.image} alt={rel.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
+                        </Link>
+                      )}
+                      <div className="ge-blog-card__content">
+                        <div className="ge-blog-card__meta">
+                          <Link href={`/category/${rel.categorySlug}/`}>{rel.category}</Link>
+                          <span>•</span>
+                          <time>{formatBlogDate(rel.date)}</time>
+                        </div>
+                        <h3>
+                          <Link href={`/blog/${rel.slug}/`}>{rel.title}</Link>
+                        </h3>
+                        <p>{rel.excerpt}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* --- INDUSTRY FAQS --- */}
         {ind.faq && ind.faq.length > 0 && (
