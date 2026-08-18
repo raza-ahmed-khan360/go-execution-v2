@@ -10208,8 +10208,8 @@ body:not(.home) .ge-header,
 	.ge-blog-post__feature img { border-radius: 0; }
 	.ge-blog-post__article { display: block; padding: 68px var(--ge-gutter); }
 	.ge-blog-post__share { flex-direction: row; padding: 0 0 22px; border-bottom: 1px solid var(--ge-line); margin-bottom: 36px; }
-	.ge-prose { font-size: 16px; }
-	.ge-prose > :first-child { font-size: 18px; }
+	.ge-prose { font-size: 17px; line-height: 1.75; }
+	.ge-prose > :first-child { font-size: 19px; }
 	.ge-blog-post__related a { grid-template-columns: 1fr auto; gap: 17px; }
 	.ge-blog-post__related a span { grid-column: 1 / -1; }
 }

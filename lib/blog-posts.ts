@@ -831,7 +831,7 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "Web Development",
     categorySlug: "web-development",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/images/blog/reddit_web_dev_consensus.jpg",
     contentHtml: `
       <p>If you search for the <strong>top web development agencies on Reddit</strong>, you won't find a single, unanimous list of company names. Instead, what you find in subreddits like <em>r/webdev</em>, <em>r/Entrepreneur</em>, and <em>r/SaaS</em> is a brutally honest consensus on <strong>what makes a good agency versus a terrible one.</strong></p>
       
@@ -883,7 +883,7 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "Web Development",
     categorySlug: "web-development",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/images/blog/headless_shopify_vs_nextjs.jpg",
     contentHtml: `
       <p>Headless Shopify has been a massive buzzword in the e-commerce space for years. But if you venture into <em>r/webdev</em> or <em>r/Shopify</em> on <strong>Reddit</strong>, the sentiment is overwhelmingly cautious—and in many cases, outright hostile.</p>
       
@@ -932,7 +932,7 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "SEO Services",
     categorySlug: "seo-services",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/images/blog/reddit_b2b_seo_reviews.jpg",
     contentHtml: `
       <p>If you ask Reddit, <em>"Who is the best B2B SEO agency?"</em>, the responses are rarely dropping agency names. Instead, the seasoned veterans in <em>r/SEO</em> and <em>r/marketing</em> provide a masterclass on <strong>how to vet an agency</strong> and avoid getting scammed.</p>
       <p>Here is the ultimate Reddit consensus on what makes a top-tier B2B SEO agency in 2026.</p>
@@ -980,7 +980,7 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "SEO Services",
     categorySlug: "seo-services",
-    image: "/assets/images/generated/seo-analytics.jpg",
+    image: "/images/blog/seo_agency_comparison.jpg",
     contentHtml: `
       <p>Choosing the right enterprise SEO agency can dictate the trajectory of your digital growth for the next decade. Unlike traditional SEO for small businesses, enterprise SEO requires massive scale, deep server log analysis, and seamless integration with your in-house engineering teams.</p>
       
@@ -1074,7 +1074,7 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "Web Development",
     categorySlug: "web-development",
-    image: "/assets/images/generated/web-dev.jpg",
+    image: "/images/blog/nextjs_ecommerce_comparison.jpg",
     contentHtml: `
       <p>Migrating to a headless e-commerce architecture utilizing Next.js is a significant technical undertaking. It requires an agency that deeply understands React server components, caching strategies, and API-first commerce platforms like Swell, Medusa, or Shopify Plus.</p>
       
