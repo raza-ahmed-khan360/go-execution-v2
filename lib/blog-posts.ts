@@ -26,6 +26,7 @@ export type BlogPost = {
 export const blogPosts: readonly BlogPost[] = [
   {
     slug: "why-is-my-website-not-ranking-on-google",
+    image: "/images/blog/why-is-my-website-not-ranking-on-google.png",
     title:
       "Why Is My Website Not Ranking on Google? A Complete Diagnostic Guide",
     seoTitle: "Why Is My Website Not Ranking on Google? | Go Execution",
@@ -146,6 +147,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "how-long-does-seo-take-for-new-website",
+    image: "/images/blog/how-long-does-seo-take-for-new-website.png",
     title: "How Long Does SEO Take for a New Website? A Realistic Timeline",
     seoTitle: "How Long Does SEO Take for a New Website? | Go Execution",
     excerpt:
@@ -200,6 +202,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "custom-web-development-vs-website-builders",
+    image: "/images/blog/custom-web-development-vs-website-builders.png",
     title:
       "Custom Web Development vs. Website Builders: Which Suits Your Business?",
     seoTitle: "Custom Web Development vs. Website Builders | Go Execution",
@@ -244,6 +247,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "how-much-does-custom-web-development-cost",
+    image: "/images/blog/how-much-does-custom-web-development-cost.png",
     title: "How Much Does Custom Web Development Cost? 2026 Pricing Breakdown",
     seoTitle: "Custom Web Development Cost in 2026 | Go Execution",
     excerpt:
@@ -304,6 +308,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "wordpress-vs-nextjs-for-business-websites",
+    image: "/images/blog/wordpress-vs-nextjs-for-business-websites.png",
     title:
       "WordPress vs Next.js for Business Websites: A Performance Comparison",
     seoTitle: "WordPress vs. Next.js for Business Websites | Go Execution",
@@ -358,6 +363,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "what-is-technical-seo",
+    image: "/images/blog/what-is-technical-seo.png",
     title: "What Is Technical SEO? A Complete Guide for US Businesses",
     seoTitle: "Technical SEO Guide for US Businesses | Go Execution",
     excerpt:
@@ -431,6 +437,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "how-to-redesign-a-website-without-losing-seo",
+    image: "/images/blog/how-to-redesign-a-website-without-losing-seo.png",
     title: "How to Redesign a Website Without Losing SEO Rankings",
     seoTitle: "Redesign a Website Without Losing SEO | Go Execution",
     excerpt:
@@ -501,6 +508,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "nextjs-replacing-headless-shopify-enterprise-ecommerce",
+    image: "/images/blog/nextjs-replacing-headless-shopify-enterprise-ecommerce.png",
     title: "Why Next.js is Replacing Headless Shopify for Enterprise E-commerce",
     seoTitle: "Next.js vs Headless Shopify for Enterprise E-commerce | Go Execution",
     excerpt: "Explore why enterprise e-commerce brands are migrating from traditional headless Shopify setups to custom Next.js architectures for superior performance, SEO, and flexibility.",
