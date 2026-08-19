@@ -41,7 +41,11 @@ export default function BlogPage() {
           <div className="ge-container">
             <div className="ge-blog-page__category">
               <span>All articles</span>
-              <Link href="/category/seo-services/">SEO</Link>
+              {Array.from(new Set(blogPosts.map(p => p.categorySlug))).map(slug => (
+                <Link key={slug} href={`/category/${slug}/`}>
+                  {blogPosts.find(p => p.categorySlug === slug)?.category}
+                </Link>
+              ))}
               <b>{String(blogPosts.length).padStart(2, "0")} published insights</b>
             </div>
             <article className="ge-blog-featured">

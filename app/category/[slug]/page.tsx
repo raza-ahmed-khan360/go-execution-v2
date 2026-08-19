@@ -72,7 +72,13 @@ export default async function CategoryPage({ params }: Props) {
           <div className="ge-container">
             <div className="ge-blog-page__category">
               <Link href="/blog/">All articles</Link>
-              <span>{category.name}</span>
+              {categories.map(c => (
+                c.slug === category.slug ? (
+                  <span key={c.slug}>{c.name}</span>
+                ) : (
+                  <Link key={c.slug} href={`/category/${c.slug}/`}>{c.name}</Link>
+                )
+              ))}
               <b>{String(posts.length).padStart(2, "0")} published insights</b>
             </div>
             <div className="ge-blog-grid">
