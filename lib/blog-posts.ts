@@ -545,6 +545,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "enterprise-seo-vs-traditional-seo",
+    image: "/images/blog/enterprise-seo-vs-traditional-seo.png",
     title: "Enterprise SEO vs. Traditional SEO: What Large Scale Brands Need to Know",
     seoTitle: "Enterprise SEO vs Traditional SEO Strategies | Go Execution",
     excerpt: "Discover the critical differences between Enterprise SEO and traditional SEO, from crawl budget management to programmatic content execution at scale.",
@@ -601,6 +602,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "local-seo-for-franchises-multi-location",
+    image: "/images/blog/local-seo-for-franchises-multi-location.png",
     title: "Local SEO for Franchises: Scaling Multi-Location Visibility",
     seoTitle: "Local SEO Strategy for Franchises and Multi-Location Brands | Go Execution",
     excerpt: "Learn how to build a scalable, programmatic technical SEO architecture to rank hundreds of franchise locations without triggering duplicate content penalties.",
@@ -663,6 +665,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "cost-of-poor-core-web-vitals-inp",
+    image: "/images/blog/cost-of-poor-core-web-vitals-inp.png",
     title: "The Financial Cost of Poor Core Web Vitals and INP",
     seoTitle: "The ROI of Core Web Vitals and INP Optimization | Go Execution",
     excerpt: "Understand how poor Core Web Vitals—specifically the new Interaction to Next Paint (INP) metric—directly impact your conversion rates and revenue.",
@@ -722,6 +725,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "b2b-saas-seo-strategy",
+    image: "/images/blog/b2b-saas-seo-strategy.png",
     title: "B2B SaaS SEO Strategy: Building a Product-Led Moat",
     seoTitle: "B2B SaaS SEO Strategy and Agency Guide | Go Execution",
     excerpt: "Learn how B2B SaaS companies generate high-LTV enterprise leads through product-led SEO, competitor comparison pages, and topical authority.",
@@ -774,6 +778,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "top-web-development-agencies-reddit-consensus",
+    image: "/images/blog/top-web-development-agencies-reddit-consensus.png",
     title: "Top Enterprise Web Development Agencies (According to Reddit)",
     seoTitle: "Top Web Development Agencies Reddit Recommends | Go Execution",
     excerpt: "We analyzed hundreds of Reddit threads to find out what real developers and founders consider the best traits of top enterprise web development agencies.",
@@ -781,7 +786,6 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "Web Development",
     categorySlug: "web-development",
-    image: "/images/blog/reddit_web_dev_consensus.jpg",
     contentHtml: `
       <p>If you search for the <strong>top web development agencies on Reddit</strong>, you won't find a single, unanimous list of company names. Instead, what you find in subreddits like <em>r/webdev</em>, <em>r/Entrepreneur</em>, and <em>r/SaaS</em> is a brutally honest consensus on <strong>what makes a good agency versus a terrible one.</strong></p>
       
@@ -822,6 +826,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "why-reddit-hates-headless-shopify",
+    image: "/images/blog/why-reddit-hates-headless-shopify.png",
     title: "Why Reddit Developers Hate Headless Shopify (And The Next.js Alternative)",
     seoTitle: "Why Reddit Hates Headless Shopify & What To Do Instead | Go Execution",
     excerpt: "Thinking of going headless with Shopify? Read this summary of why Reddit developers often advise against it, and discover the Next.js e-commerce alternatives.",
@@ -829,7 +834,6 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "Web Development",
     categorySlug: "web-development",
-    image: "/images/blog/headless_shopify_vs_nextjs.jpg",
     contentHtml: `
       <p>Headless Shopify has been a massive buzzword in the e-commerce space for years. But if you venture into <em>r/webdev</em> or <em>r/Shopify</em> on <strong>Reddit</strong>, the sentiment is overwhelmingly cautious—and in many cases, outright hostile.</p>
       
@@ -867,6 +871,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "best-b2b-seo-agencies-reddit-reviews",
+    image: "/images/blog/best-b2b-seo-agencies-reddit-reviews.png",
     title: "Best B2B SEO Agencies for 2026: Summarizing Reddit Reviews",
     seoTitle: "Best B2B SEO Agencies Reddit Recommends in 2026 | Go Execution",
     excerpt: "Finding a B2B SEO agency is difficult. We summarized the top Reddit advice on how to spot the best B2B SEO agencies and avoid the snake oil.",
@@ -874,7 +879,6 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "SEO Services",
     categorySlug: "seo-services",
-    image: "/images/blog/reddit_b2b_seo_reviews.jpg",
     contentHtml: `
       <p>If you ask Reddit, <em>"Who is the best B2B SEO agency?"</em>, the responses are rarely dropping agency names. Instead, the seasoned veterans in <em>r/SEO</em> and <em>r/marketing</em> provide a masterclass on <strong>how to vet an agency</strong> and avoid getting scammed.</p>
       <p>Here is the ultimate Reddit consensus on what makes a top-tier B2B SEO agency in 2026.</p>
@@ -911,6 +915,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "best-enterprise-seo-agencies-comparison",
+    image: "/images/blog/best-enterprise-seo-agencies-comparison.png",
     title: "7 Best Enterprise SEO Agencies in the US (2026 Comparison)",
     seoTitle: "7 Best Enterprise SEO Agencies in the US (2026 Review) | Go Execution",
     excerpt: "A data-driven comparison of the top enterprise SEO agencies in the United States, evaluating technical depth, engineering integration, and B2B SaaS expertise.",
@@ -918,7 +923,6 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "SEO Services",
     categorySlug: "seo-services",
-    image: "/images/blog/seo_agency_comparison.jpg",
     contentHtml: `
       <p>Choosing the right enterprise SEO agency can dictate the trajectory of your digital growth for the next decade. Unlike traditional SEO for small businesses, enterprise SEO requires massive scale, deep server log analysis, and seamless integration with your in-house engineering teams.</p>
       
@@ -1003,6 +1007,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "top-nextjs-development-agencies-ecommerce",
+    image: "/images/blog/top-nextjs-development-agencies-ecommerce.png",
     title: "5 Top Next.js Development Agencies for Enterprise E-Commerce",
     seoTitle: "Top Next.js Development Agencies for Enterprise | Go Execution",
     excerpt: "Comparing the best Next.js development agencies that specialize in high-performance enterprise e-commerce, headless architectures, and sub-second load times.",
@@ -1010,7 +1015,6 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-08-19",
     category: "Web Development",
     categorySlug: "web-development",
-    image: "/images/blog/nextjs_ecommerce_comparison.jpg",
     contentHtml: `
       <p>Migrating to a headless e-commerce architecture utilizing Next.js is a significant technical undertaking. It requires an agency that deeply understands React server components, caching strategies, and API-first commerce platforms like Swell, Medusa, or Shopify Plus.</p>
       
