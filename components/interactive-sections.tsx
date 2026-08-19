@@ -284,7 +284,7 @@ export function FaqAccordion({
   idPrefix,
   className = "",
 }: {
-  items: readonly (readonly [string, string])[];
+  items: readonly { question: string; answer: string }[];
   hoverToOpen?: boolean;
   idPrefix: string;
   className?: string;
@@ -293,7 +293,7 @@ export function FaqAccordion({
 
   return (
     <div className={`ge-accordion ${className}`.trim()}>
-      {items.map(([question, answer], index) => {
+      {items.map(({ question, answer }, index) => {
         const isOpen = open === index;
         const panelId = `${idPrefix}-${index + 1}`;
         return (

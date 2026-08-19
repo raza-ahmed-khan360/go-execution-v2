@@ -1,3 +1,4 @@
+import { site } from "@/lib/seo/site";
 "use client";
 
 import Image from "next/image";
@@ -16,7 +17,8 @@ const dropdowns = {
     ["Mobile Apps", "/portfolio?category=mobile-apps"],
   ],
   services: [
-    ["Web Development", "/services/web-development/"],
+    ["Web Development", "/services/web-development/"  ["Explore All Services", "/services/"],
+    ],
     ["SEO Services", "/services/seo/"],
     ["Digital Marketing", "/services/digital-marketing/"],
     ["Design & Branding", "/services/design-branding/"],
@@ -24,7 +26,8 @@ const dropdowns = {
     ["Mobile Apps", "/services/mobile-app-development/"],
   ],
   industries: [
-    ["Real Estate", "/industries/real-estate/"],
+    ["Real Estate", "/industries/real-estate/"  ["Explore All Industries", "/industries/"],
+    ],
     ["Fashion", "/industries/fashion/"],
     ["Retail", "/industries/retail/"],
     ["Hospitality", "/industries/hospitality/"],
@@ -188,6 +191,7 @@ export function Header() {
             <li><Link href="/pricing" onClick={closeNavigation}>Pricing</Link></li>
             <li><Link href="/about" onClick={closeNavigation}>About</Link></li>
             <li><Link href="/contact" onClick={closeNavigation}>Contact</Link></li>
+            <li><Link href="/blog" onClick={closeNavigation}>Insights</Link></li>
           </ul>
           <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Free Consultation</span></Link>
         </nav>
@@ -512,7 +516,8 @@ export function Footer() {
           <div>
             <h4 className="ge-footer__col-title">Services Hub</h4>
             <ul className="ge-footer__col-links">
-              <li><Link href="/services/web-development/">Web Development</Link></li>
+              <li><Link href="/services/">All Services</Link></li>
+                <li><Link href="/services/web-development/">Web Development</Link></li>
               <li><Link href="/services/web-development/custom-web-development/">Custom Web Dev</Link></li>
               <li><Link href="/services/web-development/nextjs-development/">Next.js 16 Engineering</Link></li>
               <li><Link href="/services/web-development/wordpress-development/">WordPress Platforms</Link></li>
@@ -529,7 +534,8 @@ export function Footer() {
           <div>
             <h4 className="ge-footer__col-title">Industry Verticals</h4>
             <ul className="ge-footer__col-links">
-              <li><Link href="/industries/real-estate/">Real Estate Platforms</Link></li>
+              <li><Link href="/industries/">All Industries</Link></li>
+                <li><Link href="/industries/real-estate/">Real Estate Platforms</Link></li>
               <li><Link href="/industries/fashion/">Luxury Fashion Brands</Link></li>
               <li><Link href="/industries/retail/">Omnichannel Retail</Link></li>
               <li><Link href="/industries/hospitality/">Hotel &amp; Direct Booking</Link></li>
@@ -639,8 +645,8 @@ export function Footer() {
 
         <div className="ge-footer__details">
           <a href="https://www.google.com/maps/search/?api=1&query=13345+N+Central+Expy,+Suite+203,+Dallas,+Texas+75243" target="_blank" rel="noreferrer">13345 N Central Expy, Suite#203<br />Dallas, Texas 75243</a>
-          <a href="tel:+15872004832">+1 (587) 200-4832</a>
-          <a href="mailto:justin@goexecution.com">info@goexecution.com</a>
+          <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>{site.phone}</a>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
         <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-and-conditions">Terms & Conditions</Link><span aria-hidden="true">|</span><Link href="/privacy-policy">Privacy Policy</Link></div><p>Where Strategy Meets Execution</p></div>
       </div>

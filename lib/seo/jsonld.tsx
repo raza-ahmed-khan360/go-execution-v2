@@ -135,7 +135,7 @@ export function buildArticle(opts: {
   if (opts.image) {
     article.image = {
       "@type": "ImageObject",
-      url: opts.image,
+      url: opts.image.startsWith("http") ? opts.image : `${site.url}${opts.image}`,
     };
   }
 

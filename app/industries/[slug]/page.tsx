@@ -273,7 +273,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                 <p className="ge-eyebrow">Industry Insights</p>
                 <h2>Frequently Asked Questions</h2>
               </div>
-              <FaqAccordion items={ind.faq as unknown as readonly [string, string][]} idPrefix={`ind-${slug}`} />
+              <FaqAccordion items={ind.faq.map(([q, a]) => ({ question: q, answer: a }))} idPrefix={`ind-${slug}`} />
             </div>
           </section>
         )}

@@ -166,14 +166,14 @@ const testimonials: readonly Testimonial[] = [
 ] as const;
 
 export const homepageFaqs = [
-  ["What does a digital marketing agency do?", "A digital marketing agency helps businesses attract, engage, and convert clients through strategy, custom web development, SEO, paid advertising, content marketing, and conversion optimization."],
-  ["What digital marketing services does Go Execution provide?", "We provide full-service digital solutions including web development, technical SEO, digital marketing, design & branding, video animation, and mobile app development."],
-  ["How can a digital marketing agency help my business grow?", "By unifying your digital channels, optimizing user journeys for conversion, and continuously refining traffic acquisition strategies based on performance data."],
-  ["Does Go Execution work with small businesses?", "Yes. We engineer scalable digital platforms and targeted search strategies tailored to the budget, market, and growth goals of US small businesses."],
-  ["Does Go Execution provide SEO services?", "Yes. We deliver technical SEO, local Google Maps optimization, ecommerce SEO, and content strategies designed to increase organic search rankings."],
-  ["Does Go Execution build custom websites?", "Yes. We build high-performance custom websites using Next.js, React, WordPress, Shopify, and custom landing page architectures."],
-  ["How long does a digital marketing project take?", "Project timelines vary by scope: custom website development typically takes 4 to 8 weeks, while marketing campaigns and SEO launch within 1 to 2 weeks."],
-  ["How much do digital marketing services cost?", "Pricing depends on your scope, technical requirements, and business objectives. Explore our starting packages or request a custom proposal."],
+  { question: "What does a digital marketing agency do?", answer: "A digital marketing agency helps businesses attract, engage, and convert clients through strategy, custom web development, SEO, paid advertising, content marketing, and conversion optimization." },
+  { question: "What digital marketing services does Go Execution provide?", answer: "We provide full-service digital solutions including web development, technical SEO, digital marketing, design & branding, video animation, and mobile app development." },
+  { question: "How can a digital marketing agency help my business grow?", answer: "By unifying your digital channels, optimizing user journeys for conversion, and continuously refining traffic acquisition strategies based on performance data." },
+  { question: "Does Go Execution work with small businesses?", answer: "Yes. We engineer scalable digital platforms and targeted search strategies tailored to the budget, market, and growth goals of US small businesses." },
+  { question: "Does Go Execution provide SEO services?", answer: "Yes. We deliver technical SEO, local Google Maps optimization, ecommerce SEO, and content strategies designed to increase organic search rankings." },
+  { question: "Does Go Execution build custom websites?", answer: "Yes. We build high-performance custom websites using Next.js, React, WordPress, Shopify, and custom landing page architectures." },
+  { question: "How long does a digital marketing project take?", answer: "Project timelines vary by scope: custom website development typically takes 4 to 8 weeks, while marketing campaigns and SEO launch within 1 to 2 weeks." },
+  { question: "How much do digital marketing services cost?", answer: "Pricing depends on your scope, technical requirements, and business objectives. Explore our starting packages or request a custom proposal." }
 ] as const;
 
 const homeHeroContent = {

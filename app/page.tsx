@@ -33,7 +33,7 @@ export default function Home() {
         path: "/",
         title: "Digital Marketing Agency in USA | Web, SEO & Growth | Go Execution",
       }),
-      buildFAQPage({ path: "/" }, homepageFaqs.map(([q, a]) => ({ question: q, answer: a }))),
+      buildFAQPage({ path: "/" }, [...homepageFaqs]),
     ],
   };
 

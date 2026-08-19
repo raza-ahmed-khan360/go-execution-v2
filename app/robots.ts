@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/preview/", "/drafts/"],
+        disallow: ["/api/", "/preview/", "/drafts/", "/web-questionnaire/", "/logo-questionnaire/"],
       },
       {
         userAgent: [
@@ -23,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
           "CCBot",
         ],
         allow: "/",
-        disallow: ["/api/", "/preview/", "/drafts/"],
+        disallow: ["/api/", "/preview/", "/drafts/", "/web-questionnaire/", "/logo-questionnaire/"],
       },
     ],
     sitemap: "https://goexecution.com/sitemap.xml",

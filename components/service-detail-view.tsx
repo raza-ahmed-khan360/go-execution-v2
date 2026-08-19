@@ -367,7 +367,7 @@ export function ServiceDetailView({
                 <h2>Frequently Asked Questions</h2>
                 <div className="ge-service-faq-wrapper">
                   <FaqAccordion
-                    items={service.faq.map(([q, a]) => [q, a] as const)}
+                    items={service.faq.map(([q, a]) => ({ question: q, answer: a }))}
                     idPrefix={`service-${slug}-faq`}
                   />
                 </div>

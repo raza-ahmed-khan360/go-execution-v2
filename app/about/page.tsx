@@ -1,3 +1,4 @@
+import { site } from "@/lib/seo/site";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,23 +45,11 @@ const principles = [
 ];
 
 const aboutFaqs = [
-  [
-    "What sets Go Execution apart from generic web agencies?",
-    "We do not use slow, bloated pre-made templates. We engineer custom high-performance web platforms (Next.js, React, custom WordPress) integrated with technical SEO graphs and high-ROAS marketing funnels under one roof.",
-  ],
-  [
-    "Where is Go Execution located?",
-    "Our agency headquarters is located in Dallas, Texas (13345 N Central Expy, Suite#203, Dallas, TX 75243). We work directly with growth-focused businesses across the United States.",
-  ],
-  [
-    "What industries do you specialize in?",
-    "We specialize in Real Estate, Fashion & Apparel, Omnichannel Retail, Hospitality, Technology & SaaS, Professional B2B Services, and Health & Wellness Clinics.",
-  ],
-  [
-    "How do you ensure sub-second page load speeds?",
-    "We build modern server-side rendered (SSR) and static site generated (SSG) architectures using Next.js 16 and React 19, stripping out unnecessary plugins and optimizing media assets to achieve top Google PageSpeed scores.",
-  ],
-] as const;
+  { question: "What sets Go Execution apart from generic web agencies?", answer: "We do not use slow, bloated pre-made templates. We engineer custom high-performance web platforms (Next.js, React, custom WordPress) integrated with technical SEO graphs and high-ROAS marketing funnels under one roof." },
+  { question: "Do you only work with enterprise clients?", answer: "No. We partner with ambitious small and medium-sized US businesses ready to scale. Our strategies adapt to your budget while maintaining enterprise-level execution." },
+  { question: "Where is your team located?", answer: "We are headquartered in Dallas, Texas. Our entire team operates within the US, ensuring seamless communication, cultural alignment, and legal compliance for American businesses." },
+  { question: "Who will manage my project?", answer: "You will be assigned a dedicated Account Strategist based in the US. They will act as your single point of contact, coordinating our internal engineering, design, and marketing teams." }
+];
 
 export default function About() {
   const schema = {
@@ -254,10 +243,10 @@ export default function About() {
                     Dallas, Texas 75243, United States
                   </p>
                   <p>
-                    <strong style={{ color: "#0d1b2a" }}>📞 Phone:</strong> <a href="tel:+15872004832" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (587) 200-4832</a> / <a href="https://wa.me/17738653770" target="_blank" rel="noreferrer" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (773) 865-3770 (WhatsApp)</a>
+                    <strong style={{ color: "#0d1b2a" }}>📞 Phone:</strong> <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`} style={{ color: "#b8860b", fontWeight: 600 }}>{site.phone}</a> / <a href="https://wa.me/17738653770" target="_blank" rel="noreferrer" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (773) 865-3770 (WhatsApp)</a>
                   </p>
                   <p>
-                    <strong style={{ color: "#0d1b2a" }}>✉️ Email:</strong> <a href="mailto:justin@goexecution.com" style={{ color: "#b8860b", fontWeight: 600 }}>info@goexecution.com</a>
+                    <strong style={{ color: "#0d1b2a" }}>✉️ Email:</strong> <a href={`mailto:${site.email}`} style={{ color: "#b8860b", fontWeight: 600 }}>{site.email}</a>
                   </p>
                 </div>
               </div>

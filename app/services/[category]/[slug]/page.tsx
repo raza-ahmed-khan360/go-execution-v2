@@ -321,7 +321,7 @@ export default async function SubServicePage({ params }: Props) {
                 <p className="ge-eyebrow">Service FAQs</p>
                 <h2>Frequently Asked Questions</h2>
               </div>
-              <FaqAccordion items={sub.faq as unknown as readonly [string, string][]} idPrefix={`sub-${slug}`} />
+              <FaqAccordion items={sub.faq.map(([q, a]) => ({ question: q, answer: a }))} idPrefix={`sub-${slug}`} />
             </div>
           </section>
         )}
