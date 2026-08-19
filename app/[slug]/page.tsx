@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug);
   if (!post) return {};
 
-  const path = `/blog/${post.slug}/`;
+  const path = `/${post.slug}/`;
   return {
     title: { absolute: post.seoTitle },
     description: post.excerpt,
@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const path = `/blog/${post.slug}/`;
+  const path = `/${post.slug}/`;
   const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (post.faq && post.faq.length > 0) {
     schema["@graph"].push(
-      buildFAQPage({ path: `/blog/${post.slug}/` }, post.faq.map(([q, a]) => ({ question: q, answer: a })))
+      buildFAQPage({ path: `/${post.slug}/` }, post.faq.map(([q, a]) => ({ question: q, answer: a })))
     );
   }
 
@@ -131,20 +131,20 @@ export default async function BlogPostPage({ params }: Props) {
                 {related.map((rel) => (
                   <article key={rel.slug} className="ge-blog-card">
                     {rel.image ? (
-                      <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                      <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
                         <Image src={rel.image} alt={rel.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
                       </Link>
                     ) : (
-                      <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                      <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
                         <span>{String(1).padStart(2, "0")}</span>
                       </Link>
                     )}
                     <p className="ge-eyebrow">{rel.category}</p>
-                    <h3><Link href={`/blog/${rel.slug}/`}>{rel.title}</Link></h3>
+                    <h3><Link href={`/${rel.slug}/`}>{rel.title}</Link></h3>
                     <p>{rel.excerpt}</p>
                     <div>
                       <time dateTime={rel.date}>{formatBlogDate(rel.date)}</time>
-                      <Link href={`/blog/${rel.slug}/`}>Read more</Link>
+                      <Link href={`/${rel.slug}/`}>Read more</Link>
                     </div>
                   </article>
                 ))}

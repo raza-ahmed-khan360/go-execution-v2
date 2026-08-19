@@ -242,7 +242,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                   {relatedBlogs.map((rel) => (
                     <article key={rel.slug} className="ge-blog-card">
                       {rel.image && (
-                        <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                        <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
                           <Image src={rel.image} alt={rel.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
                         </Link>
                       )}
@@ -253,7 +253,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                           <time>{formatBlogDate(rel.date)}</time>
                         </div>
                         <h3>
-                          <Link href={`/blog/${rel.slug}/`}>{rel.title}</Link>
+                          <Link href={`/${rel.slug}/`}>{rel.title}</Link>
                         </h3>
                         <p>{rel.excerpt}</p>
                       </div>

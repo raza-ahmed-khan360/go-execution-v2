@@ -290,20 +290,20 @@ export default async function SubServicePage({ params }: Props) {
                   {relatedBlogs.map((rel) => (
                     <article key={rel.slug} className="ge-blog-card">
                       {rel.image ? (
-                        <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                        <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
                           <Image src={rel.image} alt={rel.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
                         </Link>
                       ) : (
-                        <Link href={`/blog/${rel.slug}/`} className="ge-blog-card__image">
+                        <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
                           <span>{String(1).padStart(2, "0")}</span>
                         </Link>
                       )}
                       <p className="ge-eyebrow">{rel.category}</p>
-                      <h3><Link href={`/blog/${rel.slug}/`}>{rel.title}</Link></h3>
+                      <h3><Link href={`/${rel.slug}/`}>{rel.title}</Link></h3>
                       <p>{rel.excerpt}</p>
                       <div>
                         <time dateTime={rel.date}>{formatBlogDate(rel.date)}</time>
-                        <Link href={`/blog/${rel.slug}/`}>Read more</Link>
+                        <Link href={`/${rel.slug}/`}>Read more</Link>
                       </div>
                     </article>
                   ))}
