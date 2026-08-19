@@ -17,8 +17,8 @@ const dropdowns = {
     ["Mobile Apps", "/portfolio?category=mobile-apps"],
   ],
   services: [
-    ["Web Development", "/services/web-development/"  ["Explore All Services", "/services/"],
-    ],
+    ["Explore All Services", "/services/"],
+      ["Web Development", "/services/web-development/"],
     ["SEO Services", "/services/seo/"],
     ["Digital Marketing", "/services/digital-marketing/"],
     ["Design & Branding", "/services/design-branding/"],
@@ -26,8 +26,8 @@ const dropdowns = {
     ["Mobile Apps", "/services/mobile-app-development/"],
   ],
   industries: [
-    ["Real Estate", "/industries/real-estate/"  ["Explore All Industries", "/industries/"],
-    ],
+    ["Explore All Industries", "/industries/"],
+      ["Real Estate", "/industries/real-estate/"],
     ["Fashion", "/industries/fashion/"],
     ["Retail", "/industries/retail/"],
     ["Hospitality", "/industries/hospitality/"],
