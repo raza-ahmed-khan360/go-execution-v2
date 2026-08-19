@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import content from "@/lib/wp-content.json";
 import { PortfolioGrid } from "@/components/interactive-sections";
 import { ConsultationCta, PageHero } from "@/components/page-hero";
+import { AutoScrollTo } from "@/components/auto-scroll";
 import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
@@ -28,7 +29,8 @@ export default async function Portfolio({ searchParams }: { searchParams: Promis
   return (
     <>
       <JsonLd data={schema} />
-      <main id="primary" className="site-main"><PageHero eyebrow="Selected portfolio" title="Our Portfolio & Case Studies" copy="See how Go Execution combines data-driven strategy, bespoke UI/UX design, and cutting-edge web development technology to solve real business challenges. Explore our case studies and successful digital marketing projects." /><section className="ge-section ge-portfolio-page"><div className="ge-container"><PortfolioGrid items={content.portfolio} initialCategory={category} /></div></section></main>
+      <main id="primary" className="site-main"><PageHero eyebrow="Selected portfolio" title="Our Portfolio & Case Studies" copy="See how Go Execution combines data-driven strategy, bespoke UI/UX design, and cutting-edge web development technology to solve real business challenges. Explore our case studies and successful digital marketing projects." /><AutoScrollTo targetId="portfolio-grid" delay={600} />
+<section id="portfolio-grid" className="ge-section ge-portfolio-page"><div className="ge-container"><PortfolioGrid items={content.portfolio} initialCategory={category} /></div></section></main>
     </>
   );
 }
