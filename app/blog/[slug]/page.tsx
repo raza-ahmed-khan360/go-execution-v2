@@ -99,28 +99,6 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
               <h1 className="ge-blog-post__title">{post.title}</h1>
               <p className="ge-blog-post__lead">{post.excerpt}</p>
-              
-              <div className="ge-blog-post__trust-signals" style={{ display: 'flex', gap: '2rem', marginTop: '1.5rem', padding: '1.5rem', backgroundColor: '#f8fafc', borderRadius: '0.5rem', border: '1px solid #e2e8f0' }}>
-                <div className="ge-blog-post__author" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div className="ge-blog-post__author-avatar" style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#1e293b', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>
-                    {post.author?.avatarInitials || 'GE'}
-                  </div>
-                  <div>
-                    <strong style={{ display: 'block', fontSize: '0.9rem', color: '#0f172a' }}>{post.author?.name || 'Go Execution Editorial'}</strong>
-                    <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{post.author?.role || 'Growth Strategy Team'}</span>
-                  </div>
-                </div>
-                
-                {post.reviewer && (
-                  <div className="ge-blog-post__reviewer" style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderLeft: '1px solid #cbd5e1', paddingLeft: '2rem' }}>
-                    <div>
-                      <span style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#64748b', fontWeight: 'bold' }}>Fact Checked By</span>
-                      <strong style={{ display: 'block', fontSize: '0.9rem', color: '#0f172a' }}>{post.reviewer.name}</strong>
-                      <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{post.reviewer.role}</span>
-                    </div>
-                  </div>
-                )}
-              </div>
             </div>
           </header>
 
