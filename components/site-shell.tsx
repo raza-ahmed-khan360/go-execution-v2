@@ -1,4 +1,5 @@
-"use client";`nimport { site } from "@/lib/seo/site";
+"use client";
+import { site } from "@/lib/seo/site";
 
 import Image from "next/image";
 import Link from "next/link";
