@@ -26,7 +26,7 @@ export type BlogPost = {
 export const blogPosts: readonly BlogPost[] = [
   {
     slug: "why-is-my-website-not-ranking-on-google",
-    image: "/images/why-is-my-website-not-ranking-on-google/.png",
+    image: "/images/blog/why-is-my-website-not-ranking-on-google.png",
     title:
       "Why Is My Website Not Ranking on Google? A Complete Diagnostic Guide",
     seoTitle: "Why Is My Website Not Ranking on Google? | Go Execution",
@@ -130,7 +130,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "how-long-does-seo-take-for-new-website",
-    image: "/images/how-long-does-seo-take-for-new-website/.png",
+    image: "/images/blog/how-long-does-seo-take-for-new-website.png",
     title: "How Long Does SEO Take for a New Website? A Realistic Timeline",
     seoTitle: "How Long Does SEO Take for a New Website? | Go Execution",
     excerpt:
