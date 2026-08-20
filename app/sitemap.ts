@@ -13,7 +13,8 @@ const staticPages = [
   "/privacy-policy/",
   "/services/",
   "/industries/",
-  "/terms-and-conditions/",
+  "/terms-of-service/",
+  "/cookie-policy/",
   "/portfolio/",
 ];
 
@@ -73,3 +74,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 }
+
