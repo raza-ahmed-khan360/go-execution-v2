@@ -89,9 +89,7 @@ const nextConfig: NextConfig = {
       // Root blog slugs -> /:slug/
       { source: "/why-your-business-website-is-not-ranking/", destination: "/why-is-my-website-not-ranking-on-google/", permanent: true },
       { source: "/why-your-business-website-is-not-ranking", destination: "/why-is-my-website-not-ranking-on-google/", permanent: true },
-      { source: "/how-long-does-seo-take-for-new-website/", destination: "/how-long-does-seo-take-for-new-website/", permanent: true },
-      { source: "/how-long-does-seo-take-for-new-website", destination: "/how-long-does-seo-take-for-new-website/", permanent: true },
-
+            
       // Redirect all old /blog/ slugs to root (except the blog index itself)
       { source: "/blog/:slug/", destination: "/:slug/", permanent: true },
       { source: "/blog/:slug", destination: "/:slug/", permanent: true },

@@ -26,7 +26,7 @@ export type BlogPost = {
 export const blogPosts: readonly BlogPost[] = [
   {
     slug: "why-is-my-website-not-ranking-on-google",
-    image: "/images/blog/why-is-my-website-not-ranking-on-google.png",
+    image: "/images/why-is-my-website-not-ranking-on-google/.png",
     title:
       "Why Is My Website Not Ranking on Google? A Complete Diagnostic Guide",
     seoTitle: "Why Is My Website Not Ranking on Google? | Go Execution",
@@ -82,12 +82,12 @@ export const blogPosts: readonly BlogPost[] = [
       <p>Improving these metrics is worthwhile, but it is not a guaranteed route to a top position. Fix oversized images, unnecessary scripts, layout shifts, and slow server responses alongside your content work. See our <a href="/services/web-development/website-performance/">website performance service</a> for implementation support.</p>
       <h2>8. Your Website Is New</h2>
       <p>New sites need time to be discovered, crawled, and evaluated. Google says crawling can take from a few days to a few weeks, and visibility for competitive topics can take longer. Publishing consistently and fixing basic technical issues gives Google a clearer site to understand; it does not create an instant ranking guarantee.</p>
-      <p>For a practical expectation-setting guide, read <a href="/blog/how-long-does-seo-take-for-new-website/">How Long Does SEO Take for a New Website?</a>.</p>
+      <p>For a practical expectation-setting guide, read <a href="/how-long-does-seo-take-for-new-website/">How Long Does SEO Take for a New Website?</a>.</p>
       <h2>9. Your Competitors Have Stronger Search Visibility</h2>
       <p>Search results are comparative. Competitors may have a more complete answer, clearer specialization, better internal linking, stronger brand recognition, or relevant independent mentions. Start by improving the page and site experience rather than chasing shortcuts or low-quality links.</p>
       <h2>10. Your Website Recently Changed</h2>
       <p>Redesigns, CMS moves, and URL changes can interrupt organic visibility. Check that old pages permanently redirect to their closest new equivalents, indexable content was not removed accidentally, canonicals match the new URLs, and no staging directives survived the launch.</p>
-      <p>Planning a redesign? Our <a href="/services/web-development/website-redesign/">website redesign service</a> and guide to <a href="/blog/how-to-redesign-a-website-without-losing-seo/">redesigning without losing SEO</a> cover the key migration safeguards.</p>
+      <p>Planning a redesign? Our <a href="/services/web-development/website-redesign/">website redesign service</a> and guide to <a href="/how-to-redesign-a-website-without-losing-seo/">redesigning without losing SEO</a> cover the key migration safeguards.</p>
       <h2>How to Find Out Why Your Website Isn’t Ranking</h2>
       <figure><table><thead><tr><th>Check</th><th>Where to look</th><th>What a healthy result looks like</th></tr></thead><tbody><tr><td>Indexing</td><td>Search Console URL Inspection</td><td>The preferred URL is indexed or has a clear, actionable exclusion reason.</td></tr><tr><td>Crawling</td><td>Robots rules, live URL test, server response</td><td>Google can fetch a public page that returns successfully.</td></tr><tr><td>Canonical</td><td>Page source and Search Console</td><td>Your preferred canonical is consistent with site signals.</td></tr><tr><td>Demand and relevance</td><td>Search Console Performance and result-page review</td><td>The page format and subject address the query’s intent.</td></tr><tr><td>Experience</td><td>PageSpeed Insights and real-device testing</td><td>Important content loads, responds, and remains stable.</td></tr></tbody></table></figure>
       <h2>What Should You Fix First?</h2>
@@ -130,7 +130,7 @@ export const blogPosts: readonly BlogPost[] = [
   },
   {
     slug: "how-long-does-seo-take-for-new-website",
-    image: "/images/blog/how-long-does-seo-take-for-new-website.png",
+    image: "/images/how-long-does-seo-take-for-new-website/.png",
     title: "How Long Does SEO Take for a New Website? A Realistic Timeline",
     seoTitle: "How Long Does SEO Take for a New Website? | Go Execution",
     excerpt:
@@ -152,7 +152,7 @@ export const blogPosts: readonly BlogPost[] = [
       <h2>The 6-Month SEO Growth Trajectory</h2>
       
       <h3>Month 1: Discovery & Technical Setup</h3>
-      <p>In the first month, the primary goal is ensuring Googlebot can crawl and index your site without roadblocks. We submit XML sitemaps, verify Search Console, and resolve any rendering issues. A fast framework is crucial here—see our guide on <a href="/blog/wordpress-vs-nextjs-for-business-websites/">WordPress vs Next.js</a> to understand the impact of your tech stack.</p>
+      <p>In the first month, the primary goal is ensuring Googlebot can crawl and index your site without roadblocks. We submit XML sitemaps, verify Search Console, and resolve any rendering issues. A fast framework is crucial here—see our guide on <a href="/wordpress-vs-nextjs-for-business-websites/">WordPress vs Next.js</a> to understand the impact of your tech stack.</p>
       
       <h3>Months 2-3: Content Indexing & Keyword Mapping</h3>
       <p>During this phase, we focus on index coverage. Google starts evaluating your content's relevance against competitors. We publish foundational pillar pages and interlink them to establish topical authority. You'll likely see your first impressions for long-tail keywords, though clicks may still be low.</p>
@@ -164,7 +164,7 @@ export const blogPosts: readonly BlogPost[] = [
       <p>By month six, a well-executed strategy starts yielding consistent organic traffic. The compounding nature of SEO kicks in. If you're a local business, this is when your Google Business Profile and local citations start driving highly qualified local leads. Check our <a href="/services/seo/small-business-seo/">Small Business SEO Services</a> for targeted growth strategies.</p>
       
       <h2>Can You Speed It Up?</h2>
-      <p>Yes, by avoiding technical debt from day one. If you are migrating an existing site to a new domain, read our guide on <a href="/blog/how-to-redesign-a-website-without-losing-seo/">redesigning a website without losing SEO</a> to prevent massive ranking drops.</p>
+      <p>Yes, by avoiding technical debt from day one. If you are migrating an existing site to a new domain, read our guide on <a href="/how-to-redesign-a-website-without-losing-seo/">redesigning a website without losing SEO</a> to prevent massive ranking drops.</p>
       <p>If you're ready to get a customized roadmap for your website, <a href="/contact/">contact the Go Execution team today</a>.</p>
     `,
     faq: [
@@ -247,7 +247,7 @@ export const blogPosts: readonly BlogPost[] = [
         <li><strong>Architecture & Stack:</strong> Modern tech stacks like Next.js, React, and TypeScript generally require more specialized development skills than custom WordPress setups, but they offer significantly better performance and security.</li>
         <li><strong>Third-Party Integrations:</strong> Does your site need MLS/IDX real estate feeds, CRM webhooks, payment gateways, or custom APIs? Each integration adds development time.</li>
         <li><strong>Conversion Rate Optimization (CRO):</strong> A custom landing page designed to convert traffic requires research and testing compared to a generic layout. Check our <a href="/services/web-development/landing-page-development/">Landing Page Development Services</a> for more on this.</li>
-        <li><strong>Content Migration & SEO:</strong> Moving hundreds of pages of content and setting up 301 redirects to preserve SEO adds to the project scope. See our guide on <a href="/blog/how-to-redesign-a-website-without-losing-seo/">how to redesign without losing SEO</a>.</li>
+        <li><strong>Content Migration & SEO:</strong> Moving hundreds of pages of content and setting up 301 redirects to preserve SEO adds to the project scope. See our guide on <a href="/how-to-redesign-a-website-without-losing-seo/">how to redesign without losing SEO</a>.</li>
       </ul>
       <h2>2026 Investment Ranges for US Businesses</h2>
       <p>Based on industry standards and our own data, here is a realistic breakdown of custom web development pricing for 2026:</p>
@@ -260,7 +260,7 @@ export const blogPosts: readonly BlogPost[] = [
       <p>For large organizations requiring highly complex solutions. This involves enterprise architecture, high-security protocols, AI/ML integrations, and a dedicated engineering team.</p>
       <p>Explore our transparent pricing models on the <a href="/pricing/">Go Execution Pricing Page</a>.</p>
       <h2>Why Not Just Use a Website Builder?</h2>
-      <p>While builders like Wix or Squarespace might seem cheaper initially, they often cost more in the long run due to poor SEO performance, slow load times, and limitations on scalability. For a deep dive into this topic, read our comparison on <a href="/blog/custom-web-development-vs-website-builders/">Custom Web Development vs. Website Builders</a>.</p>
+      <p>While builders like Wix or Squarespace might seem cheaper initially, they often cost more in the long run due to poor SEO performance, slow load times, and limitations on scalability. For a deep dive into this topic, read our comparison on <a href="/custom-web-development-vs-website-builders/">Custom Web Development vs. Website Builders</a>.</p>
       <h2>Ready to Discuss Your Scope?</h2>
       <p>If you're ready to get an accurate estimate for your next project, visit our <a href="/services/web-development/custom-web-development/">Custom Web Development</a> page or <a href="/contact/">schedule a consultation</a> with our technical team today.</p>
     `,
