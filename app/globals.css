@@ -13998,3 +13998,14 @@ table {
 .ge-footer__lead-background {
   overflow: hidden;
 }
+
+.ge-legal__content { font-family: var(--font-poppins), sans-serif; color: var(--ge-navy); line-height: 1.8; }
+.ge-legal__content p { margin-bottom: 1.5em; font-size: 16px; }
+.ge-legal__content h2 { margin-top: 2.5em; margin-bottom: 1em; font-size: 28px; font-weight: 700; color: var(--ge-navy); }
+.ge-legal__content h3 { margin-top: 2em; margin-bottom: 0.75em; font-size: 22px; font-weight: 600; color: var(--ge-navy); }
+.ge-legal__content ul { margin-bottom: 1.5em; padding-left: 1.5em; list-style-type: disc; }
+.ge-legal__content li { margin-bottom: 0.5em; font-size: 16px; }
+.ge-legal__content a { color: var(--ge-gold); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s ease; }
+.ge-legal__content a:hover { color: var(--ge-gold-light); }
+.ge-legal__content strong { font-weight: 600; }
+

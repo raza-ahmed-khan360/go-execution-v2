@@ -648,7 +648,7 @@ export function Footer() {
           <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>{site.phone}</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
-        <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-and-conditions">Terms & Conditions</Link><span aria-hidden="true">|</span><Link href="/privacy-policy">Privacy Policy</Link></div><p>Where Strategy Meets Execution</p></div>
+        <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-of-service">Terms of Service</Link><span aria-hidden="true">|</span><Link href="/privacy-policy">Privacy Policy</Link><span aria-hidden="true">|</span><Link href="/cookie-policy">Cookie Policy</Link></div><p>Where Strategy Meets Execution</p></div>
       </div>
     </footer>
   );
