@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
 
               <h2>8. Contact Us</h2>
               <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
-              <p><strong>Email:</strong> <a href="mailto:support@goexecution.com">support@goexecution.com</a></p>
+              <p><strong>Email:</strong> <a href="mailto:justin@goexecution.com">justin@goexecution.com</a></p>
             </div>
           </div>
         </section>
