@@ -3,7 +3,7 @@ import content from "@/lib/wp-content.json";
 import { PortfolioGrid } from "@/components/interactive-sections";
 import { ConsultationCta, PageHero } from "@/components/page-hero";
 import { AutoScrollTo } from "@/components/auto-scroll";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing Portfolio & Case Studies | Go Execution" },
@@ -18,6 +18,8 @@ export default async function Portfolio({ searchParams }: { searchParams: Promis
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/portfolio/", title: "Our Portfolio & Case Studies" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

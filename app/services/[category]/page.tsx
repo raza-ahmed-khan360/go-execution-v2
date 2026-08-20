@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCategory, getSubServicesForCategory, serviceCategories } from "@/lib/services";
-import { JsonLd, buildService, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildService, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -42,6 +42,8 @@ export default async function CategoryHubPage({ params }: Props) {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildService({ path, name: cat.title, description: cat.intro }),
       buildWebPage({ path, title: cat.title }),
       buildBreadcrumbList([

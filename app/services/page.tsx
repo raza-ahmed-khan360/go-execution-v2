@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { allServiceCategories, allSubServices } from "@/lib/services";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing & Web Design Services | Go Execution" },
@@ -16,6 +16,8 @@ export default function ServicesPage() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/services/", title: "Digital Marketing & Web Design Services | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

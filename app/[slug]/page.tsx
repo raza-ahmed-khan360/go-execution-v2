@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, formatBlogDate, getBlogPost } from "@/lib/blog-posts";
-import { JsonLd, buildArticle, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
+import { JsonLd, buildArticle, buildWebPage, buildBreadcrumbList, buildFAQPage , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -53,6 +53,8 @@ export default async function BlogPostPage({ params }: Props) {
   const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildArticle({
         path,
         headline: post.title,

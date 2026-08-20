@@ -3,7 +3,7 @@ import { site } from "@/lib/seo/site";
 import { ContactForm } from "@/components/contact-form";
 import { ContactFormAutofocus } from "@/components/contact-form-autofocus";
 import { PageHero } from "@/components/page-hero";
-import { JsonLd, buildContactPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildContactPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 import content from "@/lib/wp-content.json";
 
 export const metadata: Metadata = {
@@ -20,6 +20,8 @@ export default function Contact() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildContactPage({ path: "/contact/", title: "Contact Go Execution | Start Your Digital Growth Project" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

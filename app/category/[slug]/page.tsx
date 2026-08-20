@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
-import { JsonLd, buildCollectionPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildCollectionPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -48,6 +48,8 @@ export default async function CategoryPage({ params }: Props) {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildCollectionPage({ path, title }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

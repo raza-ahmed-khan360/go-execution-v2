@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LogoQuestionnaireForm } from "@/components/logo-questionnaire-form";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Logo Design Brief & Questionnaire | Go Execution" },
@@ -28,6 +28,8 @@ export default function LogoQuestionnairePage() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/logo-questionnaire/", title: "Logo Design Brief & Questionnaire | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

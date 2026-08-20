@@ -6,7 +6,7 @@ import { industries } from "@/lib/industries";
 import { subServices } from "@/lib/services";
 import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { FaqAccordion } from "@/components/interactive-sections";
-import { JsonLd, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList, buildFAQPage , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -43,6 +43,8 @@ export default async function IndustryDetailPage({ params }: Props) {
   const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path, title: ind.seoTitle }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

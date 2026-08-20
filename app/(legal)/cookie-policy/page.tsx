@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | Go Execution Digital Services" },
@@ -14,6 +14,8 @@ export default function CookiePolicy() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/cookie-policy/", title: "Cookie Policy | Go Execution Digital Services" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

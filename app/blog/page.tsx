@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
-import { JsonLd, buildCollectionPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildCollectionPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "SEO & Digital Marketing Insights Blog | Go Execution" },
@@ -18,6 +18,8 @@ export default function BlogPage() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildCollectionPage({ path: "/blog/", title: "SEO & Digital Marketing Insights Blog | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

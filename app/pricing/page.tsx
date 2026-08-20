@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import content from "@/lib/wp-content.json";
 import { PricingGrid } from "@/components/interactive-sections";
 import { ConsultationCta, PageHero } from "@/components/page-hero";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing & Web Design Pricing | Go Execution" },
@@ -16,6 +16,8 @@ export default function Pricing() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/pricing/", title: "Digital Marketing & Web Design Pricing | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FaqAccordion } from "@/components/interactive-sections";
-import { JsonLd, buildAboutPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildAboutPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "About Our Digital Growth Agency | Go Execution" },
@@ -55,6 +55,8 @@ export default function About() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildAboutPage({ path: "/about/", title: "About Go Execution | US Digital Growth Agency Team" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

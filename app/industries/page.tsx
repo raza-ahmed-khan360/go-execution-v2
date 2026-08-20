@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { industryList } from "@/lib/industries";
 import { IndustryInteractiveHub } from "@/components/industry-interactive-hub";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Industries We Scale in USA | Go Execution",
@@ -21,6 +21,8 @@ export default function IndustriesIndexPage() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/industries/", title: "Industries We Scale in USA | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

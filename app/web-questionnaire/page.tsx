@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { WebsiteQuestionnaireForm } from "@/components/website-questionnaire-form";
-import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
+import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: { absolute: "Website Project Brief & Questionnaire | Go Execution" },
@@ -28,6 +28,8 @@ export default function WebsiteQuestionnairePage() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildWebPage({ path: "/web-questionnaire/", title: "Website Project Brief & Questionnaire | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },

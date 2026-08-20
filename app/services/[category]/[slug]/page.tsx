@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getCategory, getSubService, allSubServices } from "@/lib/services";
 import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { FaqAccordion } from "@/components/interactive-sections";
-import { JsonLd, buildService, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
+import { JsonLd, buildService, buildWebPage, buildBreadcrumbList, buildFAQPage , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -46,6 +46,8 @@ export default async function SubServicePage({ params }: Props) {
   const schema: { "@context": string; "@graph": any[] } = {
     "@context": "https://schema.org",
     "@graph": [
+        buildOrganization(),
+        buildWebSite(),
       buildService({ path, name: sub.title, description: sub.intro }),
       buildWebPage({ path, title: sub.title }),
       buildBreadcrumbList([
