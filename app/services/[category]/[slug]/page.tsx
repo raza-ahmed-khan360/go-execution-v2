@@ -6,7 +6,6 @@ import { getCategory, getSubService, allSubServices } from "@/lib/services";
 import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { FaqAccordion } from "@/components/interactive-sections";
 import { JsonLd, buildService, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
-import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -204,7 +203,7 @@ export default async function SubServicePage({ params }: Props) {
                 quality={85}
               />
               <div className="ge-process-media-strip__shade" />
-              <BrandMediaMark />
+              
               <p>Senior specialists, clear milestones and measurable digital systems.</p>
             </div>
 
@@ -248,7 +247,7 @@ export default async function SubServicePage({ params }: Props) {
                         className="ge-dark-bento-card__img"
                       />
                       <div className="ge-dark-bento-card__shade" />
-                      <BrandMediaMark />
+                      
                       <div className="ge-dark-bento-card__header-bar">
                         <span className="ge-dark-bento-card__num-pill">RELATED SOLUTION</span>
                       </div>

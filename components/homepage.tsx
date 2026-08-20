@@ -6,7 +6,6 @@ import { MobileHeroStory } from "@/components/mobile-hero-story";
 import { DesktopHeroBackground } from "@/components/desktop-hero-background";
 import { FaqAccordion, PortfolioGrid, PricingGrid } from "@/components/interactive-sections";
 import { TestimonialShowcase, type Testimonial } from "@/components/testimonial-showcase";
-import { BrandMediaMark } from "@/components/brand-media-mark";
 
 const servicesCarouselData = [
   {
@@ -379,7 +378,7 @@ export function Homepage() {
             <article className={`ge-scroll-step ge-growth-card ge-growth-story${index === 0 ? " is-active" : ""}`} data-index={index} key={step.title} style={{ "--card-index": index } as React.CSSProperties}>
               <div className="ge-scroll-step__mobile-img-wrap">
                 <Image src={step.image} alt={step.alt} fill sizes="(max-width: 820px) 100vw, 50vw" quality={80} />
-                <BrandMediaMark />
+                
               </div>
               <div className="ge-growth-story__content">
                 <div className="ge-scroll-step__header">

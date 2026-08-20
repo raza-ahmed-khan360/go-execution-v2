@@ -7,7 +7,6 @@ import { subServices } from "@/lib/services";
 import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { FaqAccordion } from "@/components/interactive-sections";
 import { JsonLd, buildWebPage, buildBreadcrumbList, buildFAQPage } from "@/lib/seo/jsonld";
-import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -190,7 +189,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                       quality={80}
                     />
                     <div className="ge-industry-service-card__media-shade" />
-                    <BrandMediaMark />
+                    
                   </div>
                   <span className="ge-eyebrow ge-eyebrow--gold">Core Capability</span>
                   <h3>{srv.title}</h3>

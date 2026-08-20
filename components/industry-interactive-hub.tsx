@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Industry } from "@/lib/industries";
-import { BrandMediaMark } from "@/components/brand-media-mark";
 
 type Props = {
   industries: Industry[];
@@ -60,7 +59,7 @@ export function IndustryInteractiveHub({ industries }: Props) {
                 className="ge-dark-bento-card__img"
               />
               <div className="ge-dark-bento-card__shade" />
-              <BrandMediaMark />
+              
 
               {/* Floating Glass Header Bar */}
               <div className="ge-dark-bento-card__header-bar">

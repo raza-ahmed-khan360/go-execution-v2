@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { allServiceCategories, allSubServices } from "@/lib/services";
 import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
-import { BrandMediaMark } from "@/components/brand-media-mark";
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing & Web Design Services | Go Execution" },
@@ -106,7 +105,7 @@ export default function ServicesPage() {
                         className="ge-dark-bento-card__img"
                       />
                       <div className="ge-dark-bento-card__shade" />
-                      <BrandMediaMark />
+                      
                       <div className="ge-dark-bento-card__header-bar">
                         <span className="ge-dark-bento-card__num-pill">
                           0{idx + 1} &bull; CATEGORY HUB
