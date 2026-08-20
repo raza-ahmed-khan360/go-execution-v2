@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: { canonical: "/web-questionnaire/" },
-  openGraph: {
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }], 
     title: "Website Project Brief & Questionnaire | Go Execution",
     description:
       "Complete our interactive Website Project Brief to share your scope, design preferences, required features, and commercial goals with Go Execution.",

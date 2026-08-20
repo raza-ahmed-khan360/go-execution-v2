@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: { absolute: "Digital Marketing Portfolio & Case Studies | Go Execution" },
   description: "See how Go Execution combines data-driven strategy, bespoke UI/UX design, and cutting-edge web development technology to solve real business challenges. Explore our case studies and successful digital marketing projects.",
   alternates: { canonical: "/portfolio/" },
-  openGraph: { url: "/portfolio/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/portfolio/" },
 };
 
 export default async function Portfolio({ searchParams }: { searchParams: Promise<{ category?: string }> }) {

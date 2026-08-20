@@ -11,8 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  openGraph: {
-    type: "website",
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     url: "/",
     title: "Digital Marketing Agency USA | Go Execution",
     description:

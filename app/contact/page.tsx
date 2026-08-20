@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Contact Go Execution to discuss web design, SEO, digital marketing, branding, mobile apps, or video animation for your US business and growth goals.",
   alternates: { canonical: "/contact/" },
-  openGraph: { url: "/contact/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/contact/" },
 };
 
 export default function Contact() {

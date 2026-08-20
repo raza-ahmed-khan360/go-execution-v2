@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | Go Execution Digital Services" },
   description: "Learn how Go Execution collects, uses, protects, and manages personal information. Read our full Privacy Policy.",
   alternates: { canonical: "/privacy-policy/" },
-  openGraph: { url: "/privacy-policy/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/privacy-policy/" },
 };
 
 export default function PrivacyPolicy() {

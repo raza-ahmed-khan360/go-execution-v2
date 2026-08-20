@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Explore Go Execution services for US businesses, including web design, SEO, digital marketing, branding, mobile app development, and video animation.",
   alternates: { canonical: "/services/" },
-  openGraph: { url: "/services/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/services/" },
 };
 
 export default function ServicesPage() {

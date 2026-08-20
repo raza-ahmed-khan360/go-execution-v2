@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: { canonical: "/logo-questionnaire/" },
-  openGraph: {
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }], 
     title: "Logo Design Brief & Questionnaire | Go Execution",
     description:
       "Complete our interactive Logo Design Brief to share your brand name, tagline, preferred style, colors, symbols, and brand identity goals with Go Execution.",

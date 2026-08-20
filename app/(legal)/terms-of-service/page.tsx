@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { absolute: "Terms of Service | Go Execution Digital Services" },
   description: "Read the Terms of Service for Go Execution. These terms govern your use of our website and digital services.",
   alternates: { canonical: "/terms-of-service/" },
-  openGraph: { url: "/terms-of-service/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/terms-of-service/" },
 };
 
 export default function TermsOfService() {

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: post.seoTitle },
     description: post.excerpt,
     alternates: { canonical: path },
-    openGraph: {
+    openGraph: { siteName: "Go Execution", 
       title: post.seoTitle,
       description: post.excerpt,
       url: path,
@@ -156,3 +156,4 @@ export default async function BlogPostPage({ params }: Props) {
     </>
   );
 }
+

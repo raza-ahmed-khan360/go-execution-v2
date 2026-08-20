@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Practical ideas on SEO, digital strategy, design, and building brands that demand attention, written by the Go Execution editorial team.",
   alternates: { canonical: "/blog/" },
-  openGraph: { url: "/blog/", type: "website" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }], url: "/blog/" },
 };
 
 export default function BlogPage() {
@@ -91,3 +91,4 @@ export default function BlogPage() {
     </>
   );
 }
+

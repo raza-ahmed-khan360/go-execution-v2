@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: { absolute: "Cookie Policy | Go Execution Digital Services" },
   description: "Understand how Go Execution uses cookies and similar technologies on our website to improve user experience and deliver relevant ads.",
   alternates: { canonical: "/cookie-policy/" },
-  openGraph: { url: "/cookie-policy/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/cookie-policy/" },
 };
 
 export default function CookiePolicy() {

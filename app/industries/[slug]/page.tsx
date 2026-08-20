@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: ind.seoTitle },
     description: ind.description,
     alternates: { canonical: path },
-    openGraph: { title: ind.seoTitle, description: ind.description, url: path },
+    openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  title: ind.seoTitle, description: ind.description, url: path },
     twitter: { card: "summary_large_image", title: ind.seoTitle, description: ind.description },
   };
 }

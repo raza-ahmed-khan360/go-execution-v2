@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Review Go Execution pricing options for web design, SEO, branding, digital marketing, mobile apps, and video animation, then request a tailored quote.",
   alternates: { canonical: "/pricing/" },
-  openGraph: { url: "/pricing/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/pricing/" },
 };
 
 export default function Pricing() {

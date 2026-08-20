@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Explore tailored digital marketing, custom web development, and SEO growth solutions engineered for key industries across the United States.",
   alternates: { canonical: "/industries/" },
-  openGraph: {
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }], 
     title: "Industries We Scale in USA | Go Execution",
     description:
       "Explore tailored digital marketing, custom web development, and SEO growth solutions engineered for key industries across the United States.",

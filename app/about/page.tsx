@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Learn how Go Execution combines custom web development, technical SEO, performance marketing, and brand strategy to help US businesses scale revenue.",
   alternates: { canonical: "/about/" },
-  openGraph: { url: "/about/" },
+  openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/about/" },
 };
 
 const principles = [

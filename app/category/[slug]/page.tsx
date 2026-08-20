@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description,
     alternates: { canonical: path },
-    openGraph: { title, description, url: path, type: "website" },
+    openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  title, description, url: path },
   };
 }
 
@@ -103,3 +103,4 @@ export default async function CategoryPage({ params }: Props) {
     </>
   );
 }
+
