@@ -568,8 +568,9 @@ export function Footer() {
               <li><Link href="/why-is-my-website-not-ranking-on-google/">Website Ranking Diagnostic</Link></li>
               <li><Link href="/how-long-does-seo-take-for-new-website/">New Website SEO Timeline</Link></li>
               <li><Link href="/contact">Book Strategy Consultation</Link></li>
-              <li><Link href="/terms-and-conditions">Terms &amp; Conditions</Link></li>
-              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service">Terms of Service</Link></li>
+                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link href="/cookie-policy">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
@@ -639,8 +640,9 @@ export function Footer() {
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/blog">Blog</Link>
-          <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
-          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms-of-service">Terms of Service</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/cookie-policy">Cookie Policy</Link>
         </nav>
 
         <div className="ge-footer__details">
