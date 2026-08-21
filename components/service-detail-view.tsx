@@ -139,7 +139,7 @@ export function ServiceDetailView({
               <p className="ge-service-hero__copy">{service.intro}</p>
 
               <div className="ge-service-hero__actions">
-                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
                   Discuss Your Project
                 </Link>
                 <Link className="ge-text-link ge-text-link--light" href="#capabilities">
@@ -238,7 +238,7 @@ export function ServiceDetailView({
             <h4>Let’s build a solution tailored to your target.</h4>
             <Link
               className="ge-button ge-button--gold"
-              href="/contact"
+              href="/contact/"
               onClick={() => setDrawerOpen(false)}
             >
               Book Free Consultation
@@ -292,7 +292,7 @@ export function ServiceDetailView({
                 <div className="ge-service-sidebar__cta">
                   <p className="ge-eyebrow ge-eyebrow--light">Need a custom scope?</p>
                   <h4>Let’s build a solution tailored to your target.</h4>
-                  <Link className="ge-button ge-button--gold" href="/contact">
+                  <Link className="ge-button ge-button--gold" href="/contact/">
                     Book Free Consultation
                   </Link>
                 </div>

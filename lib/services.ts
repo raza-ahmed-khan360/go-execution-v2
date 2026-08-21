@@ -25,6 +25,7 @@ export type SubService = {
   faq: string[][];
   relatedServices?: string[];
   relatedIndustries?: string[];
+  relatedBlogSlugs?: string[];
 };
 
 const serviceVisuals: Record<string, string> = {
@@ -197,7 +198,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How long does a custom web development project take?", "Timeline varies by scope, but typical custom website development builds take 4 to 8 weeks from design approval to deployment."]
     ],
     relatedServices: ["wordpress-development", "nextjs-development", "ecommerce-development"],
-    relatedIndustries: ["technology", "real-estate", "professional-services"]
+    relatedIndustries: ["technology", "real-estate", "professional-services"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost", "top-web-development-agencies-reddit-consensus"]
   },
   "wordpress-development": {
     slug: "wordpress-development",
@@ -226,7 +228,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Is custom WordPress web development secure?", "With custom code, dedicated security protocols, and proper server setup, WordPress is rock-solid."]
     ],
     relatedServices: ["custom-web-development", "website-performance"],
-    relatedIndustries: ["professional-services", "health-wellness"]
+    relatedIndustries: ["professional-services", "health-wellness"],
+    relatedBlogSlugs: ["wordpress-vs-nextjs-for-business-websites", "custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost"]
   },
   "nextjs-development": {
     slug: "nextjs-development",
@@ -255,7 +258,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Can Next.js web development connect to an existing CMS?", "Yes! Next.js easily connects to WordPress, Shopify, Sanity, or custom GraphQL backends."]
     ],
     relatedServices: ["custom-web-development", "ecommerce-development"],
-    relatedIndustries: ["technology", "fashion"]
+    relatedIndustries: ["technology", "fashion"],
+    relatedBlogSlugs: ["wordpress-vs-nextjs-for-business-websites", "top-nextjs-development-agencies-ecommerce", "nextjs-replacing-headless-shopify-enterprise-ecommerce"]
   },
   "ecommerce-development": {
     slug: "ecommerce-development",
@@ -284,7 +288,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Do you migrate existing stores without losing SEO rankings?", "Yes! We manage full URL mapping, 301 redirects, and data migrations to protect rankings."]
     ],
     relatedServices: ["custom-web-development", "website-performance"],
-    relatedIndustries: ["fashion", "retail"]
+    relatedIndustries: ["fashion", "retail"],
+    relatedBlogSlugs: ["nextjs-replacing-headless-shopify-enterprise-ecommerce", "why-reddit-hates-headless-shopify", "top-nextjs-development-agencies-ecommerce"]
   },
   "landing-page-development": {
     slug: "landing-page-development",
@@ -313,7 +318,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Why are high converting landing pages critical for ad campaigns?", "Dedicated conversion focused landing page design dramatically lowers Cost Per Lead (CPL) compared to generic site pages."]
     ],
     relatedServices: ["paid-advertising", "conversion-optimisation"],
-    relatedIndustries: ["real-estate", "professional-services"]
+    relatedIndustries: ["real-estate", "professional-services"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "cost-of-poor-core-web-vitals-inp", "how-much-does-custom-web-development-cost"]
   },
   "website-redesign": {
     slug: "website-redesign",
@@ -342,7 +348,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How do we know if our business needs to redesign a website for better conversions?", "If your site loads in over 2.5 seconds or has low mobile conversion rates, a professional website redesign company is essential."]
     ],
     relatedServices: ["custom-web-development", "technical-seo"],
-    relatedIndustries: ["professional-services", "technology"]
+    relatedIndustries: ["professional-services", "technology"],
+    relatedBlogSlugs: ["how-to-redesign-a-website-without-losing-seo", "custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost"]
   },
   "website-performance": {
     slug: "website-performance",
@@ -371,10 +378,9 @@ const subServiceEntries: Record<string, SubService> = {
       ["Can page speed optimization services accelerate WordPress or Shopify sites?", "Yes! We optimize database queries, remove heavy scripts, and implement advanced CDN caching."]
     ],
     relatedServices: ["wordpress-development", "technical-seo"],
-    relatedIndustries: ["fashion", "retail"]
+    relatedIndustries: ["fashion", "retail"],
+    relatedBlogSlugs: ["cost-of-poor-core-web-vitals-inp", "wordpress-vs-nextjs-for-business-websites", "what-is-technical-seo"]
   },
-
-  // --- SEO ---
   "technical-seo": {
     slug: "technical-seo",
     categorySlug: "seo",
@@ -402,7 +408,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How quickly do fixes from a technical SEO company show results?", "Indexing and crawl improvements typically reflect in Search Console within 1 to 3 weeks."]
     ],
     relatedServices: ["website-performance", "local-seo"],
-    relatedIndustries: ["technology", "real-estate"]
+    relatedIndustries: ["technology", "real-estate"],
+    relatedBlogSlugs: ["what-is-technical-seo", "why-is-my-website-not-ranking-on-google", "cost-of-poor-core-web-vitals-inp"]
   },
   "local-seo": {
     slug: "local-seo",
@@ -431,7 +438,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How fast can a local SEO agency improve Google Map rankings?", "Most clients see significant Google Map pack movement within 60 to 90 days."]
     ],
     relatedServices: ["technical-seo", "small-business-seo"],
-    relatedIndustries: ["health-wellness", "hospitality"]
+    relatedIndustries: ["health-wellness", "hospitality"],
+    relatedBlogSlugs: ["local-seo-for-franchises-multi-location", "why-is-my-website-not-ranking-on-google", "how-long-does-seo-take-for-new-website"]
   },
   "ecommerce-seo": {
     slug: "ecommerce-seo",
@@ -460,7 +468,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How does an ecommerce SEO agency handle out-of-stock products?", "We apply strategic canonicals or 301 redirects to preserve link authority and user experience."]
     ],
     relatedServices: ["ecommerce-development", "technical-seo"],
-    relatedIndustries: ["fashion", "retail"]
+    relatedIndustries: ["fashion", "retail"],
+    relatedBlogSlugs: ["enterprise-seo-vs-traditional-seo", "why-is-my-website-not-ranking-on-google", "nextjs-replacing-headless-shopify-enterprise-ecommerce"]
   },
   "small-business-seo": {
     slug: "small-business-seo",
@@ -489,7 +498,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Is affordable SEO for small business effective?", "Yes! We focus strictly on high-ROI commercial keywords that convert local searchers into paying clients."]
     ],
     relatedServices: ["local-seo", "website-redesign"],
-    relatedIndustries: ["professional-services", "health-wellness"]
+    relatedIndustries: ["professional-services", "health-wellness"],
+    relatedBlogSlugs: ["how-long-does-seo-take-for-new-website", "why-is-my-website-not-ranking-on-google", "best-b2b-seo-agencies-reddit-reviews"]
   },
 
   // --- DIGITAL MARKETING ---
@@ -520,7 +530,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Why hire a content marketing agency USA?", "A professional content marketing company ensures consistent, high-quality editorial writing that converts readers into active leads."]
     ],
     relatedServices: ["social-media-marketing", "paid-advertising"],
-    relatedIndustries: ["technology", "professional-services"]
+    relatedIndustries: ["technology", "professional-services"],
+    relatedBlogSlugs: ["b2b-saas-seo-strategy", "enterprise-seo-vs-traditional-seo", "how-long-does-seo-take-for-new-website"]
   },
   "social-media-marketing": {
     slug: "social-media-marketing",
@@ -549,7 +560,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["What is included in social media management services?", "We handle content creation, graphic design, copywriting, audience engagement, and performance analytics."]
     ],
     relatedServices: ["paid-advertising", "graphic-design"],
-    relatedIndustries: ["fashion", "retail"]
+    relatedIndustries: ["fashion", "retail"],
+    relatedBlogSlugs: ["b2b-saas-seo-strategy", "custom-web-development-vs-website-builders", "why-is-my-website-not-ranking-on-google"]
   },
   "paid-advertising": {
     slug: "paid-advertising",
@@ -578,7 +590,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How fast do paid search marketing services generate leads?", "PPC search campaigns generate immediate high-intent traffic and lead submissions upon launch."]
     ],
     relatedServices: ["landing-page-development", "conversion-optimisation"],
-    relatedIndustries: ["real-estate", "professional-services"]
+    relatedIndustries: ["real-estate", "professional-services"],
+    relatedBlogSlugs: ["cost-of-poor-core-web-vitals-inp", "how-much-does-custom-web-development-cost", "b2b-saas-seo-strategy"]
   },
   "conversion-optimisation": {
     slug: "conversion-optimisation",
@@ -607,7 +620,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Why select Go Execution for website conversion optimization?", "We combine deep technical web engineering with conversion psychology to deliver measurable ROI."]
     ],
     relatedServices: ["landing-page-development", "website-performance"],
-    relatedIndustries: ["fashion", "technology"]
+    relatedIndustries: ["fashion", "technology"],
+    relatedBlogSlugs: ["cost-of-poor-core-web-vitals-inp", "wordpress-vs-nextjs-for-business-websites", "why-is-my-website-not-ranking-on-google"]
   },
 
   // --- DESIGN & BRANDING ---
@@ -638,7 +652,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Do we receive full vector files?", "Yes! You own 100% full commercial rights and receive original master vector files."]
     ],
     relatedServices: ["logo-design", "brand-identity"],
-    relatedIndustries: ["fashion", "real-estate"]
+    relatedIndustries: ["fashion", "real-estate"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost", "how-to-redesign-a-website-without-losing-seo"]
   },
   "logo-design": {
     slug: "logo-design",
@@ -667,7 +682,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Are custom logo design services scalable for all media?", "Yes, all vector logos scale infinitely without any resolution loss."]
     ],
     relatedServices: ["brand-identity", "graphic-design"],
-    relatedIndustries: ["professional-services", "health-wellness"]
+    relatedIndustries: ["professional-services", "health-wellness"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "how-to-redesign-a-website-without-losing-seo", "how-much-does-custom-web-development-cost"]
   },
   "brand-identity": {
     slug: "brand-identity",
@@ -696,7 +712,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Why partner with a brand identity agency?", "Consistency builds consumer trust, market recognition, and premium brand equity."]
     ],
     relatedServices: ["logo-design", "graphic-design"],
-    relatedIndustries: ["technology", "hospitality"]
+    relatedIndustries: ["technology", "hospitality"],
+    relatedBlogSlugs: ["how-to-redesign-a-website-without-losing-seo", "custom-web-development-vs-website-builders", "enterprise-seo-vs-traditional-seo"]
   },
   "creative-design": {
     slug: "creative-design",
@@ -725,7 +742,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Why choose Go Execution as your creative agency USA?", "We combine high-end aesthetics with commercial conversion strategy for maximum impact."]
     ],
     relatedServices: ["graphic-design", "video-animation"],
-    relatedIndustries: ["fashion", "retail"]
+    relatedIndustries: ["fashion", "retail"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost", "how-to-redesign-a-website-without-losing-seo"]
   },
 
   // --- VIDEO ---
@@ -756,7 +774,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["How long does a video animation agency take to deliver a video?", "Standard animated video production takes 3 to 4 weeks from script approval to final render."]
     ],
     relatedServices: ["2d-animation", "explainer-videos"],
-    relatedIndustries: ["technology", "real-estate"]
+    relatedIndustries: ["technology", "real-estate"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "cost-of-poor-core-web-vitals-inp", "b2b-saas-seo-strategy"]
   },
   "2d-animation": {
     slug: "2d-animation",
@@ -785,7 +804,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Can 2D animation company assets be adapted for social media?", "Yes! 2D motion graphics perform exceptionally well on Instagram Reels, YouTube, and TikTok."]
     ],
     relatedServices: ["video-animation", "explainer-videos"],
-    relatedIndustries: ["health-wellness", "technology"]
+    relatedIndustries: ["health-wellness", "technology"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "b2b-saas-seo-strategy", "how-much-does-custom-web-development-cost"]
   },
   "3d-animation": {
     slug: "3d-animation",
@@ -814,7 +834,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["What is 3D product animation used for?", "It is ideal for hardware showcases, e-commerce product pages, crowdfunding, and ad campaigns."]
     ],
     relatedServices: ["video-animation", "graphic-design"],
-    relatedIndustries: ["real-estate", "technology"]
+    relatedIndustries: ["real-estate", "technology"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "cost-of-poor-core-web-vitals-inp", "nextjs-replacing-headless-shopify-enterprise-ecommerce"]
   },
   "explainer-videos": {
     slug: "explainer-videos",
@@ -843,7 +864,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Where should we feature business explainer videos?", "Above the fold on key landing pages, main service pages, and paid search campaign funnels."]
     ],
     relatedServices: ["video-animation", "2d-animation"],
-    relatedIndustries: ["technology", "professional-services"]
+    relatedIndustries: ["technology", "professional-services"],
+    relatedBlogSlugs: ["b2b-saas-seo-strategy", "custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost"]
   },
 
   // --- MOBILE APPS ---
@@ -874,7 +896,8 @@ const subServiceEntries: Record<string, SubService> = {
       ["Do custom mobile app development services cover both iOS and Android?", "Yes! With React Native or Flutter, we deliver native-performing apps for both platforms simultaneously."]
     ],
     relatedServices: ["custom-web-development", "nextjs-development"],
-    relatedIndustries: ["technology", "health-wellness"]
+    relatedIndustries: ["technology", "health-wellness"],
+    relatedBlogSlugs: ["wordpress-vs-nextjs-for-business-websites", "custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost"]
   }
 };
 

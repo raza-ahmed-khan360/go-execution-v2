@@ -101,7 +101,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             )}
 
             <div className="ge-hero__actions">
-              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
                 <span>Book Free Industry Strategy Session</span>
               </Link>
               <a className="ge-button ge-button--outline" href="#solutions">
@@ -220,7 +220,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                 </p>
               </div>
               <div className="ge-impact-card__actions">
-                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
                   <span>Schedule Industry Growth Audit</span>
                 </Link>
               </div>

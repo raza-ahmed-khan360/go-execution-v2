@@ -278,7 +278,17 @@ export default async function SubServicePage({ params }: Props) {
 
         {/* --- RELATED INSIGHTS & ARTICLES (INTERNAL LINKING) --- */}
         {(() => {
-          const relatedBlogs = blogPosts.filter((p) => p.categorySlug === catSlug).slice(0, 3);
+          const relatedCategorySlug = catSlug === "seo" ? "seo-services" : catSlug;
+          const curatedBlogs = sub.relatedBlogSlugs
+            ? sub.relatedBlogSlugs
+                .map((s) => blogPosts.find((p) => p.slug === s))
+                .filter((p): p is typeof blogPosts[0] => Boolean(p))
+            : [];
+          const fallbackBlogs = blogPosts.filter((p) => p.categorySlug === relatedCategorySlug);
+          const combinedBlogs = [...curatedBlogs, ...fallbackBlogs];
+          const relatedBlogs = combinedBlogs
+            .filter((post, idx, self) => self.findIndex((p) => p.slug === post.slug) === idx)
+            .slice(0, 3);
           if (relatedBlogs.length === 0) return null;
           return (
             <section className="ge-section ge-related-posts ge-bg-light">

@@ -9,12 +9,12 @@ import { usePathname } from "next/navigation";
 
 const dropdowns = {
   portfolio: [
-    ["View All Projects", "/portfolio?category=all-projects"],
-    ["Website Design & Development", "/portfolio?category=website-design-development"],
-    ["Graphic Designing", "/portfolio?category=graphic-designing"],
-    ["Digital Marketing", "/portfolio?category=digital-marketing"],
-    ["Video Animation", "/portfolio?category=video-animation"],
-    ["Mobile Apps", "/portfolio?category=mobile-apps"],
+    ["View All Projects", "/portfolio/?category=all-projects"],
+    ["Website Design & Development", "/portfolio/?category=website-design-development"],
+    ["Graphic Designing", "/portfolio/?category=graphic-designing"],
+    ["Digital Marketing", "/portfolio/?category=digital-marketing"],
+    ["Video Animation", "/portfolio/?category=video-animation"],
+    ["Mobile Apps", "/portfolio/?category=mobile-apps"],
   ],
   services: [
     ["Explore All Services", "/services/"],
@@ -188,12 +188,12 @@ export function Header() {
             {renderDropdown("portfolio", "Portfolio")}
             {renderDropdown("services", "Services")}
             {renderDropdown("industries", "Industries")}
-            <li><Link href="/pricing" onClick={closeNavigation}>Pricing</Link></li>
-            <li><Link href="/about" onClick={closeNavigation}>About</Link></li>
-            <li><Link href="/contact" onClick={closeNavigation}>Contact</Link></li>
-            <li><Link href="/blog" onClick={closeNavigation}>Insights</Link></li>
+            <li><Link href="/pricing/" onClick={closeNavigation}>Pricing</Link></li>
+            <li><Link href="/about/" onClick={closeNavigation}>About</Link></li>
+            <li><Link href="/contact/" onClick={closeNavigation}>Contact</Link></li>
+            <li><Link href="/blog/" onClick={closeNavigation}>Insights</Link></li>
           </ul>
-          <Link className="ge-header-cta ge-magnetic" href="/contact" onClick={closeNavigation}><span>Book a Free Consultation</span></Link>
+          <Link className="ge-header-cta ge-magnetic" href="/contact/" onClick={closeNavigation}><span>Book a Free Consultation</span></Link>
         </nav>
       </div>
     </header>
@@ -497,12 +497,12 @@ export function Footer() {
             </div>
             <div className="ge-footer__lead-content">
               <p className="ge-eyebrow ge-eyebrow--light">{ctaData.eyebrow}</p>
-              <Link className="ge-footer__headline" href="/contact">
+              <Link className="ge-footer__headline" href="/contact/">
                 {ctaData.headline}
               </Link>
               <p className="ge-footer__lead-copy">{ctaData.copy}</p>
               <div className="ge-footer__lead-action">
-                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+                <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
                   <span>Book a Free Consultation</span>
                 </Link>
               </div>
@@ -549,12 +549,12 @@ export function Footer() {
           <div>
             <h4 className="ge-footer__col-title">Portfolio &amp; Work</h4>
             <ul className="ge-footer__col-links">
-              <li><Link href="/portfolio?category=all-projects">View All Projects</Link></li>
-              <li><Link href="/portfolio?category=website-design-development">Web Engineering</Link></li>
-              <li><Link href="/portfolio?category=graphic-designing">Graphic &amp; UI Design</Link></li>
-              <li><Link href="/portfolio?category=digital-marketing">Digital Ad Campaigns</Link></li>
-              <li><Link href="/portfolio?category=video-animation">Video Motion Ads</Link></li>
-              <li><Link href="/portfolio?category=mobile-apps">Mobile Apps</Link></li>
+              <li><Link href="/portfolio/?category=all-projects">View All Projects</Link></li>
+              <li><Link href="/portfolio/?category=website-design-development">Web Engineering</Link></li>
+              <li><Link href="/portfolio/?category=graphic-designing">Graphic &amp; UI Design</Link></li>
+              <li><Link href="/portfolio/?category=digital-marketing">Digital Ad Campaigns</Link></li>
+              <li><Link href="/portfolio/?category=video-animation">Video Motion Ads</Link></li>
+              <li><Link href="/portfolio/?category=mobile-apps">Mobile Apps</Link></li>
             </ul>
           </div>
 
@@ -562,15 +562,15 @@ export function Footer() {
           <div>
             <h4 className="ge-footer__col-title">Company</h4>
             <ul className="ge-footer__col-links">
-              <li><Link href="/about">About Go Execution</Link></li>
-              <li><Link href="/pricing">Investment &amp; Pricing</Link></li>
-              <li><Link href="/blog">Industry Insights &amp; Blog</Link></li>
+              <li><Link href="/about/">About Go Execution</Link></li>
+              <li><Link href="/pricing/">Investment &amp; Pricing</Link></li>
+              <li><Link href="/blog/">Industry Insights &amp; Blog</Link></li>
               <li><Link href="/why-is-my-website-not-ranking-on-google/">Website Ranking Diagnostic</Link></li>
               <li><Link href="/how-long-does-seo-take-for-new-website/">New Website SEO Timeline</Link></li>
-              <li><Link href="/contact">Book Strategy Consultation</Link></li>
-              <li><Link href="/terms-of-service">Terms of Service</Link></li>
-                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-                <li><Link href="/cookie-policy">Cookie Policy</Link></li>
+              <li><Link href="/contact/">Book Strategy Consultation</Link></li>
+              <li><Link href="/terms-of-service/">Terms of Service</Link></li>
+                <li><Link href="/privacy-policy/">Privacy Policy</Link></li>
+                <li><Link href="/cookie-policy/">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
@@ -636,13 +636,13 @@ export function Footer() {
           {renderFooterDropdownNav("portfolio", "Portfolio")}
           {renderFooterDropdownNav("services", "Services")}
           {renderFooterDropdownNav("industries", "Industries")}
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/terms-of-service">Terms of Service</Link>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/cookie-policy">Cookie Policy</Link>
+          <Link href="/pricing/">Pricing</Link>
+          <Link href="/about/">About</Link>
+          <Link href="/contact/">Contact</Link>
+          <Link href="/blog/">Blog</Link>
+          <Link href="/terms-of-service/">Terms of Service</Link>
+            <Link href="/privacy-policy/">Privacy Policy</Link>
+            <Link href="/cookie-policy/">Cookie Policy</Link>
         </nav>
 
         <div className="ge-footer__details">
@@ -650,7 +650,7 @@ export function Footer() {
           <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`}>{site.phone}</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
         </div>
-        <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-of-service">Terms of Service</Link><span aria-hidden="true">|</span><Link href="/privacy-policy">Privacy Policy</Link><span aria-hidden="true">|</span><Link href="/cookie-policy">Cookie Policy</Link></div><p>Where Strategy Meets Execution</p></div>
+        <div className="ge-footer__bottom"><p>© {new Date().getFullYear()} Go Execution. All rights reserved.</p><div className="ge-footer__legal"><Link href="/terms-of-service/">Terms of Service</Link><span aria-hidden="true">|</span><Link href="/privacy-policy/">Privacy Policy</Link><span aria-hidden="true">|</span><Link href="/cookie-policy/">Cookie Policy</Link></div><p>Where Strategy Meets Execution</p></div>
       </div>
     </footer>
   );

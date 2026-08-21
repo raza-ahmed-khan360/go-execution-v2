@@ -71,7 +71,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="ge-hero__actions" style={{ marginTop: 32 }}>
-              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
                 <span>Book Strategy Consultation</span>
               </Link>
             </div>

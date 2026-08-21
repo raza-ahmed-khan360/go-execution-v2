@@ -13,6 +13,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "ai": "^7.0.15",
+    "googleapis": "^176.0.0",
     "lucide-react": "^1.29.0",
     "next": "^16.3.0",
     "nodemailer": "^9.0.5",

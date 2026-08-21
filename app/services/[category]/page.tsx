@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCategory, getSubServicesForCategory, serviceCategories } from "@/lib/services";
+import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
 import { JsonLd, buildService, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 type Props = { params: Promise<{ category: string }> };
@@ -101,7 +102,7 @@ export default async function CategoryHubPage({ params }: Props) {
             </div>
 
             <div className="ge-hero__actions">
-              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact">
+              <Link className="ge-button ge-button--gold ge-magnetic" href="/contact/">
                 <span>Book Free Strategy Consultation</span>
               </Link>
               <a className="ge-button ge-button--outline" href="#sub-services">
@@ -302,6 +303,47 @@ export default async function CategoryHubPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* --- RELATED INSIGHTS & GUIDES --- */}
+        {(() => {
+          const categoryBlogSlug = catSlug === "seo" ? "seo-services" : catSlug;
+          const relatedBlogs = blogPosts
+            .filter((p) => p.categorySlug === categoryBlogSlug || (catSlug !== "seo" && catSlug !== "web-development" && p.categorySlug === "web-development"))
+            .slice(0, 3);
+          if (relatedBlogs.length === 0) return null;
+          return (
+            <section className="ge-section ge-related-posts ge-bg-light">
+              <div className="ge-container ge-container--narrow">
+                <div className="ge-section-heading" style={{ marginBottom: 48 }}>
+                  <p className="ge-eyebrow">Industry Insights</p>
+                  <h2>Related {cat.title} Guides & Resources</h2>
+                </div>
+                <div className="ge-blog-grid">
+                  {relatedBlogs.map((rel) => (
+                    <article key={rel.slug} className="ge-blog-card">
+                      {rel.image ? (
+                        <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
+                          <Image src={rel.image} alt={rel.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
+                        </Link>
+                      ) : (
+                        <Link href={`/${rel.slug}/`} className="ge-blog-card__image">
+                          <span>{String(1).padStart(2, "0")}</span>
+                        </Link>
+                      )}
+                      <p className="ge-eyebrow">{rel.category}</p>
+                      <h3><Link href={`/${rel.slug}/`}>{rel.title}</Link></h3>
+                      <p>{rel.excerpt}</p>
+                      <div>
+                        <time dateTime={rel.date}>{formatBlogDate(rel.date)}</time>
+                        <Link href={`/${rel.slug}/`}>Read more</Link>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })()}
       </main>
     </>
   );
