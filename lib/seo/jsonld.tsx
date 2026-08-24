@@ -109,7 +109,14 @@ export function buildArticle(opts: {
   reviewerName?: string;
 }) {
   const author = opts.authorName
-    ? { "@type": "Person", name: opts.authorName, url: opts.authorUrl || `${site.url}/about/` }
+    ? {
+        "@type": "Person",
+        name: opts.authorName,
+        url: opts.authorUrl || `${site.url}/about/`,
+        jobTitle: "Founder & SEO Strategist",
+        worksFor: { "@id": `${site.url}/#organization` },
+        sameAs: ["https://www.linkedin.com/in/justin-goexecution/"]
+      }
     : { "@id": `${site.url}/#organization` };
 
   const article: any = {

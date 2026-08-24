@@ -142,6 +142,7 @@ export const blogPosts: readonly BlogPost[] = [
     imageAlt:
       "A 6-month SEO growth trajectory chart showing discovery, indexing, and ranking phases",
     contentHtml: `
+      <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> SEO for a new website typically takes 3 to 6 months to start generating meaningful organic traffic. Brand-new domains must build initial authority, pass Google's crawl and indexing phases, and establish trust. Significant ROI and highly competitive keyword rankings usually require 6 to 12 months of consistent content and link-building efforts.</p></aside>
       <p>The most common question we hear from founders launching a new site is: <strong>"How long does SEO take for a new website?"</strong></p>
       <p>While there is no guaranteed deadline, a brand-new domain (often sitting in what the industry calls the "Google Sandbox") typically requires <strong>3 to 6 months</strong> to start seeing meaningful organic traction, and <strong>6 to 12 months</strong> to achieve a positive ROI on competitive commercial keywords.</p>
       
@@ -611,6 +612,7 @@ export const blogPosts: readonly BlogPost[] = [
     category: "SEO",
     categorySlug: "seo-services",
     contentHtml: `
+      <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> Multi-location and franchise SEO requires a scalable architecture. The core strategy relies on creating unique, hyper-local landing pages for each location, strictly managing NAP (Name, Address, Phone) consistency across local data aggregators, scaling Google Business Profile (GBP) management via APIs, and using LocalBusiness schema markup to differentiate branches.</p></aside>
       <p>Managing SEO for a single storefront with dedicated <a href="/services/seo/local-seo/">Local SEO Services</a> is straightforward. But when you are a franchisor or a multi-location brand with 50, 500, or 5,000 locations, traditional local tactics collapse under their own weight. Scaling <strong>Multi-Location SEO</strong> requires an advanced <a href="/services/seo/technical-seo/">Technical SEO</a> architecture to ensure brand consistency while dominating local search results across the country.</p>
       <h2>The Multi-Location SEO Challenge</h2>
       <p>Franchises face a unique set of challenges that single-location businesses do not:</p>
@@ -734,6 +736,7 @@ export const blogPosts: readonly BlogPost[] = [
     category: "SEO",
     categorySlug: "seo-services",
     contentHtml: `
+      <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> A successful B2B SaaS SEO strategy focuses on the entire long-tail buyer journey. It targets bottom-of-funnel conversion keywords (like "competitor alternatives"), middle-of-funnel comparative guides, and top-of-funnel educational resources. High-quality technical SEO, deep product-led content, and authoritative backlinks are required to compete in the high-LTV SaaS market.</p></aside>
       <p>Marketing a B2B Software-as-a-Service (SaaS) product requires a vastly different approach than marketing a local service or a retail product. SaaS buyers undergo long, complex sales cycles, require immense technical validation, and have massive Lifetime Values (LTV). A successful <strong>B2B SaaS SEO Strategy</strong> must capture users at every stage of this sophisticated funnel.</p>
       <h2>The SaaS SEO Funnel</h2>
       <p>Most SaaS companies make the mistake of only writing high-level, top-of-funnel blog posts (e.g., "What is CRM?"). While this drives traffic, it rarely drives qualified enterprise leads. A SaaS SEO strategy must prioritize Bottom-of-Funnel (BoFu) and Product-Led content.</p>
