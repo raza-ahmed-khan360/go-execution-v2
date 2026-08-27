@@ -3,6 +3,10 @@ import { blogPosts } from "@/lib/blog-posts";
 import { industries } from "@/lib/industries";
 import { site } from "@/lib/seo/site";
 import { allServiceCategories, allSubServices } from "@/lib/services";
+import wpContent from "@/lib/wp-content.json";
+
+const slugify = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
 
 const staticPages = [
   "/",
@@ -29,6 +33,8 @@ const subServicePages = allSubServices.map(
 const industryPages = Object.keys(industries).map(
   (slug) => `/industries/${slug}/`
 );
+
+const portfolioPages = wpContent.portfolio.map((p) => `/portfolio/${slugify(p.title)}/`);
 
 const blogCategoryPages = Array.from(
   new Set(blogPosts.map((post) => post.categorySlug))

@@ -82,9 +82,6 @@ const nextConfig: NextConfig = {
       { source: "/services-2/", destination: "/services/", permanent: true },
       { source: "/services-2", destination: "/services/", permanent: true },
 
-      // Legacy portfolio individual pages (redirect to main portfolio gallery)
-      { source: "/portfolio/:slug/", destination: "/portfolio/", permanent: true },
-      { source: "/portfolio/:slug", destination: "/portfolio/", permanent: true },
 
       // Root blog slugs -> /:slug/
       { source: "/why-your-business-website-is-not-ranking/", destination: "/why-is-my-website-not-ranking-on-google/", permanent: true },
@@ -106,7 +103,9 @@ const nextConfig: NextConfig = {
 
       // Renamed legal pages
       { source: "/privacy/", destination: "/privacy-policy/", permanent: true },
-      { source: "/terms/", destination: "/terms-and-conditions/", permanent: true },
+      { source: "/terms/", destination: "/terms-of-service/", permanent: true },
+      { source: "/terms-and-conditions/", destination: "/terms-of-service/", permanent: true },
+      { source: "/terms-and-conditions", destination: "/terms-of-service/", permanent: true },
 
       // Old sitemap compatibility
       { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
