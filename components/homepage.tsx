@@ -5,6 +5,8 @@ import { ServicesCarousel } from "@/components/services-carousel";
 import { MobileHeroStory } from "@/components/mobile-hero-story";
 import { DesktopHeroBackground } from "@/components/desktop-hero-background";
 import { FaqAccordion, PortfolioGrid, PricingGrid } from "@/components/interactive-sections";
+
+import { createClient } from "@supabase/supabase-js";
 import { TestimonialShowcase, type Testimonial } from "@/components/testimonial-showcase";
 
 const servicesCarouselData = [
@@ -209,7 +211,27 @@ function HeroContent() {
   );
 }
 
-export function Homepage() {
+export async function Homepage() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+  const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+  
+  let dbTestimonials: Testimonial[] = [];
+  if (supabase) {
+    const { data } = await supabase.from("testimonials").select("*").eq("approved", true).order("created_at", { ascending: false });
+    if (data) {
+      dbTestimonials = data.map(t => ({
+        quote: t.quote,
+        name: t.name,
+        role: t.role,
+        metric: t.metric,
+        metricLabel: t.metric_label
+      }));
+    }
+  }
+  
+  const allTestimonials = [...dbTestimonials, ...testimonials];
+
   return (
     <main id="primary" className="site-main">
       {/* --- HERO SECTION --- */}
@@ -394,7 +416,7 @@ export function Homepage() {
         </div></div>
       </div></section>
 
-      <TestimonialShowcase items={testimonials} />
+      <TestimonialShowcase items={allTestimonials} />
 
       {/* --- PRICING SECTION --- */}
       <section className="ge-section ge-pricing"><div className="ge-container">
