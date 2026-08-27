@@ -14,8 +14,8 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const { slug } = params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   const project = wpContent.portfolio.find((p) => slugify(p.title) === slug);
   
   // Format slug to readable title if project not found
@@ -29,8 +29,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function PortfolioCaseStudyPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function PortfolioCaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   
   // Try to find the actual project from our 40 items
   const project = wpContent.portfolio.find((p) => slugify(p.title) === slug);
