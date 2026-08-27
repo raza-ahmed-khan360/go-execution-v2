@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -43,15 +44,11 @@ export function PortfolioCard({ item, index }: { item: PortfolioItem; index: num
   };
 
   return (
-    <a
+    <Link
       className={`ge-project ge-project--${index + 1} is-visible no-lightbox${isVideo ? " ge-project--video" : ""}`}
-      data-elementor-open-lightbox="no"
-      data-no-lightbox="true"
       data-category={slug(item.category)}
-      href={hasMedia ? item.image : "#"}
-      target={hasMedia ? "_blank" : undefined}
-      rel={hasMedia ? "noopener noreferrer" : undefined}
-      aria-label={hasMedia ? `${item.title} portfolio ${isVideo ? "video" : "image"}` : `${item.title} portfolio preview unavailable`}
+      href={`/portfolio/${slug(item.title)}/`}
+      aria-label={`View case study for ${item.title}`}
       onMouseEnter={playPreview}
       onMouseLeave={stopPreview}
       onFocus={playPreview}
@@ -79,7 +76,7 @@ export function PortfolioCard({ item, index }: { item: PortfolioItem; index: num
         <strong>{item.title}</strong>
         <b aria-hidden="true" />
       </div>
-    </a>
+    </Link>
   );
 }
 
