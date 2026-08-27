@@ -1,4 +1,4 @@
-import { NextResponse } from "next";
+import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
 // Make sure to set these in your .env.local file
