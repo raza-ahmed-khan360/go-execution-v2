@@ -9,6 +9,7 @@ import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { SiteChatbot } from "@/components/site-chatbot";
 import { SiteEffects } from "@/components/site-effects";
 import { Footer, Header } from "@/components/site-shell";
+import { JsonLd, buildOrganization, buildWebSite, buildPlace } from "@/lib/seo/jsonld";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -87,6 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <div className="ge-custom-cursor" aria-hidden="true" />
         <SiteEffects />
+        <JsonLd data={{ "@context": "https://schema.org", "@graph": [buildOrganization(), buildWebSite(), buildPlace()] }} />
       </body>
     </html>
   );

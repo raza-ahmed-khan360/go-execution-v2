@@ -79,20 +79,26 @@ export function buildBreadcrumbList(items: { name: string; url: string }[]) {
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      name: item.name,
-      item: `${site.url}${item.url}`,
+      item: {
+        "@id": `${site.url}${item.url}`,
+        name: item.name,
+      },
     })),
   };
 }
 
-export function buildService(opts: { path: string; name: string; description: string }) {
+export function buildService(opts: { path: string; name: string; description: string; serviceType?: string }) {
   return {
     "@type": "Service",
     "@id": `${site.url}${opts.path}#service`,
     name: opts.name,
     description: opts.description,
     provider: { "@id": `${site.url}/#organization` },
-    areaServed: "US",
+    serviceType: opts.serviceType || opts.name,
+    areaServed: {
+      "@type": "Country",
+      name: "US"
+    },
     inLanguage: "en-US",
   };
 }

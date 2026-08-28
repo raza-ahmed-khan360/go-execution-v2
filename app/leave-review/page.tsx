@@ -4,8 +4,14 @@ import { JsonLd, buildWebPage, buildBreadcrumbList } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
   title: "Leave a Review | Go Execution",
-  description: "Share your experience working with Go Execution.",
+  description: "Share your experience working with Go Execution. Leave a review to help us continue providing top-tier digital strategy and engineering solutions.",
   alternates: { canonical: "/leave-review/" },
+  openGraph: {
+    title: "Leave a Review | Go Execution",
+    description: "Share your experience working with Go Execution. Leave a review to help us continue providing top-tier digital strategy and engineering solutions.",
+    url: "/leave-review/",
+    type: "website",
+  },
 };
 
 export default function LeaveReviewPage() {

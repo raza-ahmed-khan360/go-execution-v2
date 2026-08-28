@@ -18,11 +18,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const project = wpContent.portfolio.find((p) => slugify(p.title) === slug);
   const fallbackTitle = slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
   const title = project ? `${project.title} Case Study` : `${fallbackTitle} Project`;
+  const url = `/portfolio/${slug}/`;
+  const desc = `Read the complete case study and project details for ${title} by Go Execution. Discover how our tailored digital strategy, engineering, and execution drove measurable business growth.`;
 
   return {
     title: `${title} | Go Execution Portfolio`,
-    description: `Read the case study and project details for ${title} by Go Execution.`,
-    alternates: { canonical: `/portfolio/${slug}/` },
+    description: desc,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | Go Execution Portfolio`,
+      description: desc,
+      url: url,
+      type: "article",
+    },
   };
 }
 
@@ -124,6 +132,15 @@ export default async function PortfolioCaseStudyPage({ params }: { params: Promi
   const image = project ? project.image : "/assets/images/generated/web-dev.jpg";
 
   const content = getCategoryContent(category, title);
+  
+  const relatedProjects = wpContent.portfolio
+    .filter(p => p.category === category && slugify(p.title) !== slug)
+    .slice(0, 3);
+  
+  if (relatedProjects.length < 3) {
+    const additional = wpContent.portfolio.filter(p => slugify(p.title) !== slug && !relatedProjects.includes(p));
+    relatedProjects.push(...additional.slice(0, 3 - relatedProjects.length));
+  }
 
   const schema = {
     "@context": "https://schema.org",
@@ -170,14 +187,25 @@ export default async function PortfolioCaseStudyPage({ params }: { params: Promi
           <div className="ge-container">
             <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
               
-              <div style={{ borderRadius: "24px", overflow: "hidden", marginBottom: "60px", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}>
-                <Image
-                  src={image}
-                  alt={`${title} project preview`}
-                  width={1000}
-                  height={560}
-                  style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", backgroundColor: "#f1f5f9" }}
-                />
+              <div style={{ borderRadius: "24px", overflow: "hidden", marginBottom: "60px", boxShadow: "0 20px 40px rgba(0,0,0,0.1)", background: "#f1f5f9" }}>
+                {image.endsWith(".mp4") || image.endsWith(".webm") ? (
+                  <video
+                    src={image}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
+                  />
+                ) : (
+                  <Image
+                    src={image}
+                    alt={`${title} project preview`}
+                    width={1000}
+                    height={560}
+                    style={{ width: "100%", height: "auto", display: "block", objectFit: "cover" }}
+                  />
+                )}
               </div>
 
               <div className="ge-grid ge-grid--2col" style={{ gap: "60px", alignItems: "start" }}>
@@ -204,6 +232,36 @@ export default async function PortfolioCaseStudyPage({ params }: { params: Promi
                 </div>
               </div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* RELATED PROJECTS */}
+        <section className="ge-section" style={{ padding: "80px 0", background: "#f8fafc", borderTop: "1px solid #e2e8f0" }}>
+          <div className="ge-container">
+            <h2 style={{ fontSize: "28px", color: "#0d1b2a", marginBottom: "40px", textAlign: "center" }}>Related Projects</h2>
+            <div className="ge-grid ge-grid--3col" style={{ gap: "30px" }}>
+              {relatedProjects.map((p, idx) => {
+                const pSlug = slugify(p.title);
+                const pImage = p.image;
+                const isPVideo = pImage.endsWith(".mp4") || pImage.endsWith(".webm");
+                
+                return (
+                  <Link key={idx} href={`/portfolio/${pSlug}/`} style={{ display: "block", background: "#fff", borderRadius: "16px", overflow: "hidden", textDecoration: "none", color: "inherit", boxShadow: "0 4px 15px rgba(0,0,0,0.05)" }}>
+                    <div style={{ aspectRatio: "16/9", background: "#f1f5f9", overflow: "hidden" }}>
+                      {isPVideo ? (
+                        <video src={pImage} autoPlay loop muted playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      ) : (
+                        <Image src={pImage} alt={p.title} width={400} height={225} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      )}
+                    </div>
+                    <div style={{ padding: "20px" }}>
+                      <div style={{ fontSize: "12px", color: "#b8860b", fontWeight: 600, marginBottom: "8px", textTransform: "uppercase" }}>{p.category}</div>
+                      <h3 style={{ fontSize: "18px", color: "#0d1b2a", margin: 0 }}>{p.title}</h3>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
