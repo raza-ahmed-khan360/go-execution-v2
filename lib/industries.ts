@@ -201,67 +201,69 @@ const industryEntries: Record<string, Industry> = {
   "professional-services": {
     slug: "professional-services",
     title: "Professional Services",
-    seoTitle: "Professional Services Marketing Agency | Go Execution",
-    eyebrow: "Authority-Driven Digital Growth for Law, Finance & Consulting",
-    description: "Digital marketing for professional service firms, combining credible websites, lead generation, content, SEO, paid media, and conversion strategy.",
-    intro: "High-ticket professional services win on authority. Our professional services marketing agency builds high-trust corporate websites and targeted SEO lead engines.",
+    seoTitle: "SEO for Accountants & Professional Website Design Services | Go Execution",
+    eyebrow: "CPA Firm Marketing & Professional Website Design Services",
+    description: "Looking for SEO for accounting firms or a top SEO agency for accountants? Go Execution provides professional website design services and finance SEO.",
+    intro: "In the professional services sector, trust is your most valuable currency. Whether you run a virtual accounting firm or a traditional law practice, your digital presence must reflect absolute authority. Go Execution delivers world-class professional website design services and specialized CPA firm marketing that turn visitors into high-value clients. As a leading SEO agency for accountants and finance SEO experts, we engineer marketing for accounting firms that dominates search results and accelerates firm growth.",
     image: "/assets/images/logo-light.png",
     stats: [
-      ["Authority-First", "High-Trust Corporate Identity"],
-      ["Page 1 Rankings", "Professional Services SEO"],
-      ["3.5x More", "Qualified Lead Inquiries"]
+      ["Lead Generation", "CPA Firm Marketing"],
+      ["Page 1 Dominance", "SEO for Accountants"],
+      ["High-Trust", "Professional Website Design"]
     ],
     challenges: [
-      "Differentiating your practice from established corporate competitors",
-      "Converting website visitors into scheduled consultation calls",
-      "Dominating Google Page 1 search results for high-value legal and financial terms"
+      "Failing to capture high-intent commercial leads due to outdated professional website design.",
+      "Struggling to rank against larger practices without specialized SEO for accounting firms and finance SEO.",
+      "Managing the complex digital transition to a virtual accounting firm model while maintaining client trust."
     ],
     solutions: [
-      "Professional services website development built for consultations",
-      "Professional services SEO campaigns targeting commercial queries",
-      "Professional services digital marketing driving qualified client leads"
+      "Custom professional website design services that build instant credibility and streamline client onboarding.",
+      "Comprehensive CPA firm marketing and marketing for accounting firms designed for measurable ROI.",
+      "Partnering with a specialized accounting firm search engine optimization company to secure Page 1 rankings."
     ],
     services: [
-      { categorySlug: "web-development", slug: "custom-web-development", title: "Professional Services Web Development", desc: "High-trust corporate web design built for consultation bookings." },
-      { categorySlug: "seo", slug: "technical-seo", title: "Professional Services SEO", desc: "Dominating high-value commercial search terms in your market." },
-      { categorySlug: "digital-marketing", slug: "paid-advertising", title: "Professional Services Marketing", desc: "Targeted B2B lead generation campaigns for law, finance & consulting." }
+      { categorySlug: "web-development", slug: "custom-web-development", title: "Website Design for Professional Services", desc: "High-trust professional website design services built for consultation bookings and firm credibility." },
+      { categorySlug: "seo", slug: "technical-seo", title: "SEO for Accountants", desc: "Advanced finance SEO and SEO for accounting firms to capture high-value financial clients." },
+      { categorySlug: "digital-marketing", slug: "paid-advertising", title: "CPA Firm Marketing", desc: "Data-driven marketing for accounting firms and professional services targeting enterprise decision-makers." }
     ],
     faq: [
-      ["How does professional services marketing generate corporate leads?", "We target high-intent decision makers through search ads, authority web platforms, and consultation booking flows."],
-      ["What results can we expect from professional services SEO?", "Our professional services SEO strategies secure Page 1 rankings for competitive legal, financial, and consulting search terms."]
+      ["Why should we hire a specialized SEO agency for accountants?", "A specialized accounting firm search engine optimization company understands the nuances of finance SEO, CPA firm marketing, and how to target high-net-worth clients."],
+      ["What is included in your professional website design services?", "Our professional website design includes conversion-optimized corporate branding, secure client portals (ideal for a virtual accounting firm), and seamless mobile experiences."],
+      ["How does marketing for accounting firms generate ROI?", "Our CPA firm marketing strategies combine targeted search advertising with high-converting professional website design to consistently drive qualified consultation requests."]
     ]
   },
   "health-wellness": {
     slug: "health-wellness",
     title: "Health & Wellness",
-    seoTitle: "Healthcare Digital Marketing Agency & Wellness Marketing",
-    eyebrow: "HIPAA-Compliant Digital Solutions for Healthcare & Wellness",
-    description: "Digital marketing for health and wellness brands, including accessible websites, local SEO, content, paid campaigns, and customer acquisition.",
-    intro: "Trust and credibility are essential in healthcare. Our health and wellness marketing agency builds secure web portals and healthcare digital marketing strategies.",
+    seoTitle: "Healthcare SEO Agency & Medical Website Design | Go Execution",
+    eyebrow: "Top Healthcare Marketing Agency & Medical Website Design",
+    description: "Looking for a specialized healthcare marketing agency? Go Execution provides premium medical website design and healthcare SEO to scale your patient volume.",
+    intro: "In the medical field, patient trust begins with your digital presence. As a premier healthcare marketing agency, Go Execution builds secure, high-converting platforms for clinics, hospitals, and wellness practices. Whether you need HIPAA-compliant medical website design, specialized dental website design, or a comprehensive local search strategy from a top healthcare seo agency, we deliver the patient acquisition engines that scale your practice. We don't just run ads; we are a full-funnel healthcare digital marketing agency focused on sustainable growth.",
     image: "/assets/images/logo-light.png",
     stats: [
-      ["Encrypted & Secure", "Patient Intake & Booking"],
-      ["Top Local Rank", "Google Map Pack Dominance"],
-      ["High-Trust", "Healthcare SEO Services Engine"]
+      ["Patient Booking", "Medical Website Design"],
+      ["Local Dominance", "Healthcare SEO"],
+      ["HIPAA Compliant", "Healthcare Marketing Agency"]
     ],
     challenges: [
-      "Building patient trust online while complying with privacy standards",
-      "Friction in online appointment scheduling and patient intake",
-      "High customer acquisition costs in competitive local markets"
+      "Losing potential patients to competitors due to outdated or non-compliant medical website design.",
+      "Struggling to rank in local Google searches without a specialized healthcare seo agency.",
+      "High patient acquisition costs from relying on broad, non-targeted healthcare digital marketing campaigns."
     ],
     solutions: [
-      "Healthcare website development with online booking integration",
-      "Healthcare digital marketing and local search campaigns",
-      "Healthcare SEO services driving clinic and practice visibility"
+      "Custom medical website design and dental website design that integrates secure booking and telehealth portals.",
+      "Targeted healthcare seo that dominates local search results (Google Maps) for high-intent medical queries.",
+      "Partnering with a specialized healthcare digital marketing agency to lower patient acquisition costs."
     ],
     services: [
-      { categorySlug: "web-development", slug: "custom-web-development", title: "Healthcare Website Development", desc: "Encrypted, accessible websites with seamless online booking." },
-      { categorySlug: "seo", slug: "local-seo", title: "Healthcare SEO Services", desc: "Dominating local clinic searches and Google Maps results." },
-      { categorySlug: "digital-marketing", slug: "social-media-marketing", title: "Healthcare Digital Marketing", desc: "Targeted patient awareness campaigns for clinics and wellness practices." }
+      { categorySlug: "web-development", slug: "custom-web-development", title: "Medical Website Design", desc: "Premium, HIPAA-compliant medical website design optimized for patient conversions and accessibility." },
+      { categorySlug: "seo", slug: "local-seo", title: "Healthcare SEO", desc: "Data-driven healthcare seo strategies to secure Page 1 rankings for your clinic or hospital." },
+      { categorySlug: "digital-marketing", slug: "social-media-marketing", title: "Healthcare Marketing", desc: "Comprehensive patient acquisition campaigns managed by a top-tier healthcare marketing agency." }
     ],
     faq: [
-      ["Why hire a specialized healthcare digital marketing agency?", "A healthcare digital marketing agency understands medical trust, local patient acquisition, and compliant booking flows."],
-      ["How do healthcare SEO services increase patient appointments?", "Healthcare SEO services optimize your practice for local searches like 'best clinic near me' and top medical treatment terms."]
+      ["Why do we need a specialized healthcare seo agency?", "General agencies don't understand strict medical compliance (HIPAA) or YMYL (Your Money or Your Life) search guidelines. A specialized healthcare seo agency ensures your content ranks safely and effectively."],
+      ["What features are included in your medical website design?", "Our medical website design includes secure patient intake forms, online booking integration, mobile-first layouts, and soothing UI aesthetics to build instant patient trust."],
+      ["How does a healthcare digital marketing agency lower acquisition costs?", "By focusing heavily on high-intent healthcare seo and local search dominance rather than expensive broad-match paid ads, driving sustainable organic patient volume."]
     ]
   }
 };
