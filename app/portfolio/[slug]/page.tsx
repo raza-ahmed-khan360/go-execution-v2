@@ -25,6 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${title} | Go Execution Portfolio`,
     description: desc,
     alternates: { canonical: url },
+    robots: {
+      index: false,
+      follow: true,
+    },
     openGraph: {
       title: `${title} | Go Execution Portfolio`,
       description: desc,
