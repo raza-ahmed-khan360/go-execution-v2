@@ -8,7 +8,7 @@ import { JsonLd, buildAboutPage, buildBreadcrumbList , buildOrganization, buildW
 export const metadata: Metadata = {
   title: { absolute: "About Our Digital Growth Agency | Go Execution" },
   description:
-    "Learn how Go Execution combines custom web development, technical SEO, performance marketing, and brand strategy to help US businesses scale revenue.",
+    "Learn how Go Execution combines custom web development, technical SEO, performance marketing, and brand strategy to help businesses scale revenue.",
   alternates: { canonical: "/about/" },
   openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/about/" },
 };
@@ -46,9 +46,9 @@ const principles = [
 
 const aboutFaqs = [
   { question: "What sets Go Execution apart from generic web agencies?", answer: "We do not use slow, bloated pre-made templates. We engineer custom high-performance web platforms (Next.js, React, custom WordPress) integrated with technical SEO graphs and high-ROAS marketing funnels under one roof." },
-  { question: "Do you only work with enterprise clients?", answer: "No. We partner with ambitious small and medium-sized US businesses ready to scale. Our strategies adapt to your budget while maintaining enterprise-level execution." },
-  { question: "Where is your team located?", answer: "We are headquartered in Dallas, Texas. Our entire team operates within the US, ensuring seamless communication, cultural alignment, and legal compliance for American businesses." },
-  { question: "Who will manage my project?", answer: "You will be assigned a dedicated Account Strategist based in the US. They will act as your single point of contact, coordinating our internal engineering, design, and marketing teams." }
+  { question: "Do you only work with enterprise clients?", answer: "No. We partner with ambitious small and medium-sized businesses ready to scale. Our strategies adapt to your budget while maintaining enterprise-level execution." },
+  { question: "Where is your team located?", answer: "We are headquartered in Dallas, Texas. Our entire team operates globally, ensuring seamless communication, cultural alignment, and legal compliance for our global clients." },
+  { question: "Who will manage my project?", answer: "You will be assigned a dedicated Account Strategist for your project. They will act as your single point of contact, coordinating our internal engineering, design, and marketing teams." }
 ];
 
 export default function About() {
@@ -57,7 +57,7 @@ export default function About() {
     "@graph": [
         buildOrganization(),
         buildWebSite(),
-      buildAboutPage({ path: "/about/", title: "About Go Execution | US Digital Growth Agency Team" }),
+      buildAboutPage({ path: "/about/", title: "About Go Execution | Digital Growth Agency Team" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },
         { name: "About", url: "/about/" },
@@ -73,12 +73,12 @@ export default function About() {
         <section className="ge-hero ge-hero--inner" style={{ background: "#ffffff", color: "#0d1b2a", paddingTop: 160, paddingBottom: 80 }}>
           <div className="ge-container">
             <div className="ge-hero__badge-wrap" style={{ background: "#f8fafc", border: "1px solid rgba(229, 193, 88, 0.4)" }}>
-              <span className="ge-eyebrow" style={{ color: "#0d1b2a", margin: 0 }}>● US DIGITAL GROWTH &amp; WEB ENGINEERING AGENCY</span>
+              <span className="ge-eyebrow" style={{ color: "#0d1b2a", margin: 0 }}>● DIGITAL GROWTH &amp; WEB ENGINEERING AGENCY</span>
             </div>
 
             <h1 className="ge-hero__title" style={{ color: "#0d1b2a", margin: "24px 0" }}>
               We Engineer Digital Growth <br />
-              <span className="ge-title-accent">For Ambitious US Brands</span>
+              <span className="ge-title-accent">For Ambitious Brands</span>
             </h1>
 
             <p className="ge-hero__copy" style={{ color: "#475569", maxWidth: 720 }}>
@@ -89,7 +89,7 @@ export default function About() {
             <div className="ge-hero-stats" style={{ marginTop: 36, marginBottom: 40 }}>
               <div className="ge-hero-stat-pill" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
                 <strong style={{ color: "#0d1b2a" }}>250+ Projects</strong>
-                <span style={{ color: "#64748b" }}>Delivered for US Brands</span>
+                <span style={{ color: "#64748b" }}>Delivered for Brands</span>
               </div>
               <div className="ge-hero-stat-pill" style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}>
                 <strong style={{ color: "#0d1b2a" }}>Sub-1s Speeds</strong>

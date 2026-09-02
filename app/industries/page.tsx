@@ -5,12 +5,12 @@ import { IndustryInteractiveHub } from "@/components/industry-interactive-hub";
 import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWebSite } from "@/lib/seo/jsonld";
 
 export const metadata: Metadata = {
-  title: "Industries We Scale in USA | Go Execution",
+  title: "Industries We Scale | Go Execution",
   description:
     "Explore tailored digital marketing, custom web development, and SEO growth solutions engineered for key industries across the United States.",
   alternates: { canonical: "/industries/" },
   openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }], 
-    title: "Industries We Scale in USA | Go Execution",
+    title: "Industries We Scale | Go Execution",
     description:
       "Explore tailored digital marketing, custom web development, and SEO growth solutions engineered for key industries across the United States.",
     url: "/industries/",
@@ -23,7 +23,7 @@ export default function IndustriesIndexPage() {
     "@graph": [
         buildOrganization(),
         buildWebSite(),
-      buildWebPage({ path: "/industries/", title: "Industries We Scale in USA | Go Execution" }),
+      buildWebPage({ path: "/industries/", title: "Industries We Scale | Go Execution" }),
       buildBreadcrumbList([
         { name: "Home", url: "/" },
         { name: "Industries", url: "/industries/" },
@@ -52,7 +52,7 @@ export default function IndustriesIndexPage() {
             </h1>
 
             <p className="ge-hero__copy">
-              Generic marketing produces generic results. We combine deep sector domain knowledge, custom web engineering, and targeted performance advertising to eliminate friction and scale revenue across major US industries.
+              Generic marketing produces generic results. We combine deep sector domain knowledge, custom web engineering, and targeted performance advertising to eliminate friction and scale revenue across major industries.
             </p>
 
             {/* Quick Metrics Bar */}

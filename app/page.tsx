@@ -4,18 +4,18 @@ import { JsonLd, buildOrganization, buildWebSite, buildWebPage, buildFAQPage } f
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Digital Marketing Agency USA | Go Execution",
+    absolute: "Global Digital Marketing Agency | Go Execution",
   },
   description:
-    "Go Execution is a US digital marketing agency for web development, SEO, paid advertising, branding, and measurable business growth.",
+    "Go Execution is a digital marketing agency for web development, SEO, paid advertising, branding, and measurable business growth.",
   alternates: {
     canonical: "/",
   },
   openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     url: "/",
-    title: "Digital Marketing Agency USA | Go Execution",
+    title: "Global Digital Marketing Agency | Go Execution",
     description:
-      "Go Execution is a US digital marketing agency for web development, SEO, paid advertising, branding, and measurable business growth.",
+      "Go Execution is a digital marketing agency for web development, SEO, paid advertising, branding, and measurable business growth.",
   },
   twitter: {
     card: "summary_large_image",
@@ -30,7 +30,7 @@ export default function Home() {
       buildWebSite(),
       buildWebPage({
         path: "/",
-        title: "Digital Marketing Agency in USA | Web, SEO & Growth | Go Execution",
+        title: "Global Digital Marketing Agency | Web, SEO & Growth | Go Execution",
       }),
       buildFAQPage({ path: "/" }, [...homepageFaqs]),
     ],

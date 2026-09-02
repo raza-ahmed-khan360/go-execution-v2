@@ -17,12 +17,12 @@ type ServiceData = {
 };
 
 const serviceList = [
-  { slug: "website-design-development", title: "Web Development in USA" },
+  { slug: "website-design-development", title: "Web Development" },
   { slug: "logo-design", title: "Graphic Designing & Branding" },
-  { slug: "video-animation", title: "Video Animation Services in USA" },
-  { slug: "seo-services", title: "SEO Services in USA" },
-  { slug: "digital-marketing", title: "Digital Marketing in USA" },
-  { slug: "mobile-apps", title: "Mobile App Development in USA" },
+  { slug: "video-animation", title: "Video Animation Services" },
+  { slug: "seo-services", title: "SEO Services" },
+  { slug: "digital-marketing", title: "Digital Marketing" },
+  { slug: "mobile-apps", title: "Mobile App Development" },
 ] as const;
 
 const techStacks: Record<string, string[]> = {

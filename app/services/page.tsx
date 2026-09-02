@@ -7,7 +7,7 @@ import { JsonLd, buildWebPage, buildBreadcrumbList , buildOrganization, buildWeb
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing & Web Design Services | Go Execution" },
   description:
-    "Explore Go Execution services for US businesses, including web design, SEO, digital marketing, branding, mobile app development, and video animation.",
+    "Explore Go Execution services for businesses, including web design, SEO, digital marketing, branding, mobile app development, and video animation.",
   alternates: { canonical: "/services/" },
   openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/services/" },
 };
@@ -47,7 +47,7 @@ export default function ServicesPage() {
             </h1>
 
             <p className="ge-hero__copy">
-              We unite custom web development, search engine optimization, performance advertising, and brand design into a single accountable growth engine for US businesses.
+              We unite custom web development, search engine optimization, performance advertising, and brand design into a single accountable growth engine for businesses.
             </p>
 
             {/* Quick Metrics Bar */}

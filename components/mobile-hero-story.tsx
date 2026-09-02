@@ -21,8 +21,8 @@ type MobileHeroStoryProps = {
 export function MobileHeroStory({
   eyebrow = "FULL-SERVICE DIGITAL MARKETING AGENCY",
   title = "Full-Service Digital",
-  titleAccent = "Marketing Agency in USA",
-  copy = "Go Execution helps US businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
+  titleAccent = "Global Marketing Agency",
+  copy = "Go Execution helps businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
   primaryLabel = "Get a Free Growth Audit",
   primaryHref = "/contact",
   secondaryLabel = "Explore Our Services",

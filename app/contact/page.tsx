@@ -9,7 +9,7 @@ import content from "@/lib/wp-content.json";
 export const metadata: Metadata = {
   title: { absolute: "Contact Go Execution | Start Your Digital Growth Project" },
   description:
-    "Contact Go Execution to discuss web design, SEO, digital marketing, branding, mobile apps, or video animation for your US business and growth goals.",
+    "Contact Go Execution to discuss web design, SEO, digital marketing, branding, mobile apps, or video animation for your business and growth goals.",
   alternates: { canonical: "/contact/" },
   openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],  url: "/contact/" },
 };

@@ -80,7 +80,7 @@ export default async function CategoryHubPage({ params }: Props) {
             </div>
 
             <h1 className="ge-hero__title">
-              {cat.title} <span className="ge-title-accent">For US Businesses</span>
+              {cat.title} <span className="ge-title-accent">For Businesses</span>
             </h1>
 
             <p className="ge-hero__copy">{cat.intro}</p>

@@ -289,7 +289,7 @@ function getPageSpecificCta(pathname: string) {
     return {
       eyebrow: "Targeted Organic Growth",
       headline: "Outrank Competitors in Your Market.",
-      copy: "High-intent commercial keyword targeting and content optimization for US businesses.",
+      copy: "High-intent commercial keyword targeting and content optimization for businesses.",
     };
   }
   if (pathname.includes("/services/seo")) {

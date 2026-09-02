@@ -99,7 +99,7 @@ export default async function SubServicePage({ params }: Props) {
             </div>
 
             <h1 className="ge-hero__title">
-              {sub.title} <span className="ge-title-accent">For US Growth Brands</span>
+              {sub.title} <span className="ge-title-accent">For Growth Brands</span>
             </h1>
 
             <p className="ge-hero__copy">{sub.intro}</p>

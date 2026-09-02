@@ -170,7 +170,7 @@ export const homepageFaqs = [
   { question: "What does a digital marketing agency do?", answer: "A digital marketing agency helps businesses attract, engage, and convert clients through strategy, custom web development, SEO, paid advertising, content marketing, and conversion optimization." },
   { question: "What digital marketing services does Go Execution provide?", answer: "We provide full-service digital solutions including web development, technical SEO, digital marketing, design & branding, video animation, and mobile app development." },
   { question: "How can a digital marketing agency help my business grow?", answer: "By unifying your digital channels, optimizing user journeys for conversion, and continuously refining traffic acquisition strategies based on performance data." },
-  { question: "Does Go Execution work with small businesses?", answer: "Yes. We engineer scalable digital platforms and targeted search strategies tailored to the budget, market, and growth goals of US small businesses." },
+  { question: "Does Go Execution work with small businesses?", answer: "Yes. We engineer scalable digital platforms and targeted search strategies tailored to the budget, market, and growth goals of small businesses." },
   { question: "Does Go Execution provide SEO services?", answer: "Yes. We deliver technical SEO, local Google Maps optimization, ecommerce SEO, and content strategies designed to increase organic search rankings." },
   { question: "Does Go Execution build custom websites?", answer: "Yes. We build high-performance custom websites using Next.js, React, WordPress, Shopify, and custom landing page architectures." },
   { question: "How long does a digital marketing project take?", answer: "Project timelines vary by scope: custom website development typically takes 4 to 8 weeks, while marketing campaigns and SEO launch within 1 to 2 weeks." },
@@ -181,7 +181,7 @@ const homeHeroContent = {
   eyebrow: "FULL-SERVICE DIGITAL MARKETING AGENCY",
   title: "Full-Service Digital",
   titleAccent: "Marketing Agency",
-  copy: "Go Execution helps US businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
+  copy: "Go Execution helps businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
   primaryLabel: "Get a Free Growth Audit",
   primaryHref: "/contact/",
   secondaryLabel: "Explore Our Services",
@@ -245,7 +245,7 @@ export async function Homepage() {
 
       {/* --- TRUST STATISTICS --- */}
       <section className="ge-stats" aria-label="Agency statistics"><div className="ge-container ge-stats__grid ge-stats--navy">
-        {[["500", "+", "US Websites Created"], ["300", "+", "Marketing Campaigns"], ["70", "+", "Mobile Apps Built"], ["1", "M+", "Client Revenue Generated"]].map(([value, suffix, label]) => (
+        {[["500", "+", "Websites Created"], ["300", "+", "Marketing Campaigns"], ["70", "+", "Mobile Apps Built"], ["1", "M+", "Client Revenue Generated"]].map(([value, suffix, label]) => (
           <div className="ge-stat ge-reveal" key={label}>
             <strong data-counter={value} data-suffix={suffix}>{value}{suffix}</strong>
             <span>{label}</span>
@@ -262,7 +262,7 @@ export async function Homepage() {
           </div>
           <div>
             <p style={{ marginBottom: 18 }}>
-              Go Execution brings strategy, web engineering, creative design, and performance marketing together under one roof. We build connected digital experiences that help US businesses attract qualified traffic, convert visitors, and scale measurable revenue.
+              Go Execution brings strategy, web engineering, creative design, and performance marketing together under one roof. We build connected digital experiences that help businesses attract qualified traffic, convert visitors, and scale measurable revenue.
             </p>
             <Link className="ge-button ge-button--outline" href="/services/">
               <span>Explore All Services</span>
@@ -292,7 +292,7 @@ export async function Homepage() {
           <div className="ge-section-heading ge-section-heading--wide ge-reveal" style={{ marginBottom: 36 }}>
             <div>
               <p className="ge-eyebrow">Sector-Specific Strategy</p>
-              <h2 style={{ color: "#0d1b2a" }}>Digital Marketing for US Businesses Across Industries</h2>
+              <h2 style={{ color: "#0d1b2a" }}>Digital Marketing for Businesses Across Industries</h2>
             </div>
             <div>
               <p style={{ color: "#475569", marginBottom: 18 }}>

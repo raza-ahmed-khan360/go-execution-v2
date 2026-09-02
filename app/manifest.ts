@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Go Execution",
     short_name: "Go Execution",
     description:
-      "Go Execution helps US businesses grow with web design, SEO, digital marketing, branding, mobile apps, and video animation focused on measurable results.",
+      "Go Execution helps businesses grow with web design, SEO, digital marketing, branding, mobile apps, and video animation focused on measurable results.",
     start_url: "/",
     display: "standalone",
     background_color: "#0b1c2c",
