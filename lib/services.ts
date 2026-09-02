@@ -784,27 +784,27 @@ const subServiceEntries: Record<string, SubService> = {
     slug: "2d-animation",
     categorySlug: "video",
     title: "2D Animation Services",
-    seoTitle: "2D Animation Services USA | Go Execution",
+    seoTitle: "2D Animation Services & Professional 2D Animation Company",
     eyebrow: "Fluid 2D Character & Vector Motion",
-    description: "2D animation for explainers, campaigns, product stories, and branded content, from scripting and storyboards through final delivery.",
-    intro: "Engage prospects with fluid 2D animation services. Perfect for storytelling, explaining service workflows, and launching social media video ads.",
-    overview: "Our 2D animation company USA crafts custom character rigs, vibrant vector scenes, and smooth transition motion for 2D animated videos.",
+    description: "Our 2D animation company provides professional 2D animation services, creating vector motion graphics and explainer videos for B2B brands.",
+    intro: "Engage prospects with fluid, professional 2D animation services. We specialize in B2B storytelling, explaining complex service workflows, and launching high-converting video campaigns.",
+    overview: "As a specialized 2D animation company, we craft custom character rigs, vibrant vector scenes, and smooth transitions that capture attention. Our 2D video animation services go beyond basic templates—we design custom 2D animation styles tailored to your enterprise brand. Whether you need an engaging explainer video or short-form content for LinkedIn, our 2D animation studio delivers broadcast-quality motion graphics.",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "2D Animation Services",
-      "2D Animation Company USA Rigs",
-      "2D Animation Agency USA Motion",
-      "2D Animated Videos & Vector Characters"
+      "Professional 2D Animation Services",
+      "2D Animation Company Rigs",
+      "2D Video Animation Services",
+      "2D Animation Studio Motion Graphics"
     ],
     process: [
-      ["Script & Character Design", "Designing unique brand characters and narrative scenes."],
-      ["Storyboard Approval", "Reviewing frame-by-frame visual progression before animating."],
-      ["2D Motion Production", "Keyframing smooth character movements and text motion."],
-      ["Sound Mix & Delivery", "Adding background score, sound effects, and voiceover."]
+      ["Script & Character Design", "Designing unique brand characters and narrative scenes optimized for B2B audiences."],
+      ["Storyboard Approval", "Reviewing frame-by-frame visual progression in your chosen 2D animation style."],
+      ["2D Motion Production", "Keyframing smooth character movements and text motion in our 2D animation studio."],
+      ["Sound Mix & Delivery", "Adding background score, sound effects, and voiceover for final delivery."]
     ],
     faq: [
-      ["Why choose a 2D animation agency for marketing videos?", "2D animated videos deliver high engagement, fast production turnarounds, and easy updating."],
-      ["Can 2D animation company assets be adapted for social media?", "Yes! 2D motion graphics perform exceptionally well on Instagram Reels, YouTube, and TikTok."]
+      ["Why choose a professional 2D animation company?", "Professional 2D animation services ensure your brand looks credible. We create custom assets rather than using stock vectors, delivering higher engagement."],
+      ["What is included in your 2D video animation services?", "Our 2D animation studio handles end-to-end production, including scriptwriting, storyboarding, custom illustration, animation, and professional voiceover."]
     ],
     relatedServices: ["video-animation", "explainer-videos"],
     relatedIndustries: ["health-wellness", "technology"],
