@@ -813,28 +813,28 @@ const subServiceEntries: Record<string, SubService> = {
   "3d-animation": {
     slug: "3d-animation",
     categorySlug: "video",
-    title: "3D Animation Services",
-    seoTitle: "3D Animation Services USA | Go Execution",
+    title: "3D Product Animation",
+    seoTitle: "3D Product Animation Company | Industrial 3D Animation Services",
     eyebrow: "Photorealistic 3D Modeling & Rendering",
-    description: "3D animation for product visualization, demonstrations, advertising, and cinematic brand content, from modeling through final render.",
-    intro: "Showcase products with photorealistic 3D detail. Our 3D animation services model, texture, and animate complex physical products and environments.",
-    overview: "Our 3D animation company USA builds photorealistic renders, exploded CAD views, and 3D product animation for tech, real estate, and retail brands.",
+    description: "Go Execution is a premier 3D product animation company offering technical and industrial 3D animation services for B2B manufacturing and tech brands.",
+    intro: "Showcase complex products with photorealistic 3D detail. As a specialized 3D product animation company, we model, texture, and animate physical products and industrial equipment.",
+    overview: "Our 3D video agency builds photorealistic renders, exploded CAD views, and technical animations for enterprise brands. Whether you need industrial 3D animation services for heavy machinery or sleek 3D product animation services for consumer electronics, our 3D product animation studio translates your CAD files into cinematic 4K motion that drives sales.",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "3D Animation Services USA",
-      "3D Animation Company USA Renders",
-      "3D Animation Agency CAD Rigs",
-      "3D Product Animation & Cinematic 4K Motion"
+      "3D Product Animation Company",
+      "Industrial 3D Animation Services",
+      "3D Product Animation Studio Renders",
+      "3D Video Agency Cinematic Motion"
     ],
     process: [
-      ["CAD / 3D Asset Import", "Importing physical CAD files or modeling product geometry from scratch."],
-      ["Lighting & Shader Setup", "Applying realistic materials, textures, and studio lighting."],
-      ["Camera Rigging & Motion", "Animating dynamic camera moves and product assembly flows."],
-      ["High-Res 4K Render", "Rendering final frames with post-processing color grading."]
+      ["CAD / 3D Asset Import", "Importing physical CAD files or modeling industrial product geometry from scratch."],
+      ["Lighting & Shader Setup", "Applying realistic materials, textures, and studio lighting in our 3D product animation studio."],
+      ["Camera Rigging & Motion", "Animating dynamic camera moves, cross-sections, and product assembly flows."],
+      ["High-Res 4K Render", "Rendering final frames with cinematic post-processing color grading."]
     ],
     faq: [
-      ["Why partner with a 3D animation agency?", "A specialized 3D animation company produces photorealistic product visuals impossible to capture with standard cameras."],
-      ["What is 3D product animation used for?", "It is ideal for hardware showcases, e-commerce product pages, crowdfunding, and ad campaigns."]
+      ["Why partner with a 3D product animation agency?", "A specialized 3D product animation company produces photorealistic industrial visuals that are impossible or too expensive to capture with standard live-action cameras."],
+      ["What is industrial 3D animation used for?", "Industrial 3D animation services are ideal for showcasing heavy machinery, technical hardware components, trade show displays, and digital twin training."]
     ],
     relatedServices: ["video-animation", "graphic-design"],
     relatedIndustries: ["real-estate", "technology"],
