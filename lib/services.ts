@@ -874,33 +874,33 @@ const subServiceEntries: Record<string, SubService> = {
   // --- MOBILE APPS ---
   "custom-mobile-app-development": {
     slug: "custom-mobile-app-development",
-    categorySlug: "mobile-app-development",
-    title: "Custom Mobile App Development",
-    seoTitle: "Custom Mobile App Development USA | Go Execution",
-    eyebrow: "Native & Cross-Platform Mobile Engineering",
-    description: "Custom mobile app development for iOS and Android, from product discovery and UX design to engineering, testing, launch, and iteration.",
-    intro: "Bring your commercial platform into users' hands. As a leading mobile app development company USA, we build custom mobile apps for iOS and Android.",
-    overview: "Our mobile app development agency engineers React Native and Flutter cross-platform applications with secure cloud backends and push notifications.",
+    categorySlug: "mobile-apps",
+    title: "Enterprise Mobile App Development",
+    seoTitle: "Enterprise Mobile App Development Company & Custom App Services",
+    eyebrow: "Secure, Scalable iOS & Android Apps",
+    description: "Go Execution is a leading enterprise mobile app development company providing custom mobile app development services, iOS, Android, and cross-platform solutions.",
+    intro: "Modernize your workforce and engage your customers with high-performance mobile applications. As an enterprise mobile app development company, we build secure, scalable solutions tailored to complex business requirements.",
+    overview: "Off-the-shelf software rarely fits enterprise workflows. Our custom mobile app development services bridge the gap, delivering cross-platform mobile development, native iOS, and Android solutions. From secure internal logistics tools to consumer-facing fintech applications, our enterprise application development services ensure your app integrates seamlessly with your legacy systems, databases, and cloud infrastructure while maintaining strict compliance (SOC 2, HIPAA).",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "Mobile App Development Company USA",
-      "Mobile App Development Services USA",
-      "Mobile App Development Agency Engineering",
-      "Custom Mobile App Development & iOS and Android App Development"
+      "Enterprise Mobile App Development Company",
+      "Custom Mobile App Development Services",
+      "Cross-Platform Mobile Development",
+      "Native iOS & Android App Development Company"
     ],
     process: [
-      ["Mobile Scope & UX Wireframes", "Mapping user screens, navigation flows, and database architecture."],
-      ["UI Design & Interactive Prototype", "Crafting intuitive mobile UI components adhering to iOS/Android guidelines."],
-      ["Mobile Code Engineering", "Developing clean, performant mobile app code with real-time sync."],
-      ["Store Testing & Submission", "Rigorous device testing and managing Apple/Google store approvals."]
+      ["Architecture & Strategy", "Mapping out enterprise application development services, API integrations, and security frameworks."],
+      ["UX/UI Prototyping", "Designing intuitive mobile interfaces optimized for complex enterprise workflows and user adoption."],
+      ["Custom App Development", "Writing clean, scalable code for iOS, Android, or cross-platform (React Native/Flutter)."],
+      ["QA, MDM & Deployment", "Running rigorous security testing and deploying via App Stores or internal MDM (Mobile Device Management)."]
     ],
     faq: [
-      ["Why choose a mobile application development company in the USA?", "A top mobile app development agency ensures enterprise security, fluid UX design, and reliable App Store approvals."],
-      ["Do custom mobile app development services cover both iOS and Android?", "Yes! With React Native or Flutter, we deliver native-performing apps for both platforms simultaneously."]
+      ["Why choose an enterprise mobile app development company?", "Enterprise apps require deep system integrations, high-grade security, and scalable architectures that standard consumer app agencies cannot support."],
+      ["Do you offer cross-platform mobile development?", "Yes. We offer both native development (Swift/Kotlin) and cross-platform mobile development to optimize costs without sacrificing performance."]
     ],
-    relatedServices: ["custom-web-development", "nextjs-development"],
-    relatedIndustries: ["technology", "health-wellness"],
-    relatedBlogSlugs: ["wordpress-vs-nextjs-for-business-websites", "custom-web-development-vs-website-builders", "how-much-does-custom-web-development-cost"]
+    relatedServices: ["custom-software-development", "digital-transformation"],
+    relatedIndustries: ["technology", "health-wellness", "logistics"],
+    relatedBlogSlugs: ["custom-web-development-vs-website-builders", "b2b-saas-seo-strategy", "how-much-does-custom-web-development-cost"]
   }
 };
 
