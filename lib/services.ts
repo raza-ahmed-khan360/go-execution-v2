@@ -753,28 +753,28 @@ const subServiceEntries: Record<string, SubService> = {
   "video-animation": {
     slug: "video-animation",
     categorySlug: "video",
-    title: "Video Animation",
-    seoTitle: "Video Animation Services & Video Animation Agency USA",
-    eyebrow: "High-Converting Motion Graphics & Video",
-    description: "Video animation for 2D, 3D, explainer, product, and marketing videos, shaped around a clear message and consistent visual direction.",
-    intro: "Hook audience attention in seconds. Our video animation services produce dynamic motion graphics, 2D/3D visual assets, and animated explainer videos.",
-    overview: "As a video animation agency USA, we combine scriptwriting, custom sound design, and 4K motion graphics to communicate complex product value.",
+    title: "B2B Video Marketing",
+    seoTitle: "B2B Video Marketing Agency | Expert Video Production Company",
+    eyebrow: "Cinematic B2B Motion & Storytelling",
+    description: "Go Execution is a premier B2B video marketing agency offering enterprise video production, 2D/3D animation, and SaaS video services.",
+    intro: "Hook enterprise decision-makers in seconds. As a leading B2B video marketing agency, we produce cinematic motion graphics, live-action brand films, and animated product explainers.",
+    overview: "Complex B2B products require specialized storytelling. A standard video advertising agency focuses on consumer trends, but we are a dedicated B2B video production agency. From crafting high-impact SaaS videos and corporate brand anthems to executing comprehensive B2B video production campaigns, our team translates dense technical features into compelling visual narratives that accelerate the B2B sales cycle.",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "Video Animation Services USA",
-      "Video Animation Agency Motion Graphics",
-      "Animation Company USA Production",
-      "Animated Video Production & Video Production and Animation"
+      "B2B Video Marketing Agency Strategy",
+      "Enterprise SaaS Videos & Explainers",
+      "B2B Video Production Company Services",
+      "Video Advertising Agency Motion Graphics"
     ],
     process: [
-      ["Scriptwriting & Storyboarding", "Drafting compelling narrative arcs and visual frame concepts."],
-      ["Custom Voiceover & Audio", "Recording professional voiceover tracks and sound effects."],
-      ["Animation & Rendering", "Bringing illustrations to life with fluid 60FPS motion."],
-      ["Final 4K Delivery", "Exporting optimized video files for web, YouTube, and ad platforms."]
+      ["B2B Scriptwriting", "Translating complex software and enterprise services into clear, persuasive narrative scripts."],
+      ["Storyboarding & Style", "Designing visual frame concepts that strictly align with your corporate brand guidelines."],
+      ["Animation & Production", "Producing fluid 2D/3D animation, motion graphics, or cinematic live-action footage."],
+      ["Pipeline Alignment", "Exporting optimized videos for landing pages, ABM campaigns, and LinkedIn video ads."]
     ],
     faq: [
-      ["Why hire an animated video production agency?", "Professional animation clarifies complex services, increases landing page retention, and boosts conversion rates."],
-      ["How long does a video animation agency take to deliver a video?", "Standard animated video production takes 3 to 4 weeks from script approval to final render."]
+      ["What makes a B2B video production agency different?", "A true B2B video agency understands long sales cycles, complex buying committees, and how to simplify technical concepts into engaging visual stories."],
+      ["Do you produce SaaS videos and product explainers?", "Yes. Our core expertise includes abstract software UI animation and SaaS product marketing videos."]
     ],
     relatedServices: ["2d-animation", "explainer-videos"],
     relatedIndustries: ["technology", "real-estate"],
