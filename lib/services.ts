@@ -566,31 +566,31 @@ const subServiceEntries: Record<string, SubService> = {
   "paid-advertising": {
     slug: "paid-advertising",
     categorySlug: "digital-marketing",
-    title: "Paid Advertising (PPC)",
-    seoTitle: "PPC Management Services USA | PPC Agency & Google Ads",
-    eyebrow: "Immediate High-Intent Customer Acquisition",
-    description: "PPC management for Google Ads and paid social, covering research, campaign structure, creative testing, landing pages, and conversion tracking.",
-    intro: "Capture buyers at the exact moment they search online. Our PPC management services USA build targeted Google Search and paid advertising campaigns.",
-    overview: "As a top PPC agency USA, we eliminate wasted ad spend through negative keyword sculpting, Google Ads management, and high-converting landing pages.",
+    title: "B2B PPC & Paid Media",
+    seoTitle: "B2B PPC Agency | Enterprise Paid Media & Adwords Management",
+    eyebrow: "Pipeline-Driven B2B Advertising",
+    description: "Go Execution is a premier B2B PPC agency specializing in pipeline generation, B2B advertising, and enterprise paid media management.",
+    intro: "Eliminate wasted ad spend with a high-performing B2B paid media approach. As a dedicated B2B PPC agency, we turn paid advertising into a predictable revenue channel for enterprise brands.",
+    overview: "Managing B2B PPC campaigns requires entirely different mechanics than consumer ads. As a specialized B2B advertising agency, we focus on pipeline creation, LTV:CAC ratios, and targeting highly specific buying committees. Whether it is enterprise Adwords management, account-based LinkedIn strategies, or scaling as your core media buying agency, our B2B paid media agency model ensures every dollar spent is directly attributed to qualified sales opportunities.",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "PPC Management Services USA",
-      "PPC Agency USA & Campaign Strategy",
-      "Paid Advertising Agency & Ad Copywriting",
-      "Google Ads Management & Paid Search Marketing Services"
+      "B2B PPC Agency Strategy & Execution",
+      "Enterprise Adwords Agency Management",
+      "B2B Paid Media Agency & Pipeline Attribution",
+      "LinkedIn ABM & B2B Advertising Agency Campaigns"
     ],
     process: [
-      ["Account Restructuring", "Organizing campaigns into tightly targeted ad groups and match types."],
-      ["Ad Copywriting", "Testing multi-headline responsive search ads to maximize CTR."],
-      ["Landing Page Alignment", "Ensuring ad message matches landing page content for top Quality Scores."],
-      ["Daily Bid Optimization", "Continuously optimizing bids for target Cost Per Acquisition (CPA)."]
+      ["Firmographic Targeting", "Using advanced data layers to target exact job titles, company sizes, and industries."],
+      ["Campaign Restructuring", "Organizing Google Ads and paid media into tight, intent-based ad groups."],
+      ["Creative & Copy", "Developing technical, value-driven ad copy tailored to B2B buying stages."],
+      ["Pipeline Optimization", "Bidding directly to CRM pipeline metrics, not just cheap top-of-funnel clicks."]
     ],
     faq: [
-      ["Why hire a paid advertising agency for Google Ads management?", "A certified PPC agency eliminates ad budget waste, optimizes keyword quality scores, and increases lead volume."],
-      ["How fast do paid search marketing services generate leads?", "PPC search campaigns generate immediate high-intent traffic and lead submissions upon launch."]
+      ["What is the difference between a B2B PPC agency and a regular paid ads agency?", "A B2B PPC agency optimizes for CRM pipeline and long sales cycles using firmographic targeting, rather than just optimizing for cheap clicks or immediate e-commerce checkouts."],
+      ["Do you act as a full-service media buying agency?", "Yes. We manage multi-channel B2B advertising campaigns across Google Search, LinkedIn, and targeted programmatic platforms to capture enterprise intent."]
     ],
     relatedServices: ["landing-page-development", "conversion-optimisation"],
-    relatedIndustries: ["real-estate", "professional-services"],
+    relatedIndustries: ["technology", "professional-services"],
     relatedBlogSlugs: ["cost-of-poor-core-web-vitals-inp", "how-much-does-custom-web-development-cost", "b2b-saas-seo-strategy"]
   },
   "conversion-optimisation": {
