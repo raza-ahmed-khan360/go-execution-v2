@@ -596,32 +596,32 @@ const subServiceEntries: Record<string, SubService> = {
   "conversion-optimisation": {
     slug: "conversion-optimisation",
     categorySlug: "digital-marketing",
-    title: "Conversion Rate Optimization (CRO)",
-    seoTitle: "Conversion Rate Optimization Services USA | CRO Agency",
-    eyebrow: "Maximizing Revenue From Existing Traffic",
-    description: "Conversion rate optimization using analytics, user research, testing, and UX improvements to turn more website traffic into qualified leads.",
-    intro: "Scale revenue without buying more ad traffic. Our conversion rate optimization services evaluate heatmaps and user journeys to turn clicks into sales.",
-    overview: "As a specialized CRO agency USA, we combine behavioral analytics, A/B split testing, and website conversion optimization to increase customer conversions.",
+    title: "B2B Conversion Rate Optimization",
+    seoTitle: "B2B CRO Agency | Conversion Rate Optimization Services",
+    eyebrow: "Maximize Pipeline Conversions",
+    description: "Go Execution is a premier B2B CRO agency offering data-driven conversion rate optimization services to increase enterprise lead volume.",
+    intro: "Stop losing enterprise buyers to a confusing website journey. As a dedicated B2B CRO agency, we optimize complex SaaS and B2B websites to turn traffic into qualified pipeline.",
+    overview: "Consumer CRO focuses on simple cart checkouts. B2B conversion rate optimization is entirely different—it requires navigating multi-stakeholder purchasing paths and complex technical messaging. Our CRO agency provides rigorous funnel research, heatmapping, and A/B testing designed exclusively for B2B. From optimizing demo request funnels to simplifying value propositions for procurement teams, our conversion rate optimization services lift your average conversion rates to generate measurable B2B revenue.",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "Conversion Rate Optimization Services",
-      "CRO Agency USA & Behavioral Analytics",
-      "Conversion Optimization Services & A/B Testing",
-      "Website Conversion Optimization & Funnel Design"
+      "B2B CRO Agency Services",
+      "Enterprise Funnel & UX Audits",
+      "B2B Conversion Rate Optimization",
+      "A/B Testing & Pipeline Revenue Optimization"
     ],
     process: [
-      ["Funnel Data Audit", "Analyzing drop-off points in Google Analytics 4 and Hotjar heatmaps."],
-      ["Hypothesis Formation", "Developing data-driven hypotheses for higher converting page layouts."],
-      ["A/B Test Execution", "Running split tests to compare variant pages against control pages."],
-      ["Winning Implementation", "Permanently deploying winning layout variations."]
+      ["Buyer Behavior Analysis", "Using session recordings, heatmaps, and enterprise analytics to identify B2B drop-off points."],
+      ["Messaging & Friction Audit", "Refining complex B2B value propositions so decision-makers understand them instantly."],
+      ["Lead Funnel Optimization", "Revamping demo request pages, pricing calculators, and enterprise contact forms."],
+      ["Scientific A/B Testing", "Validating all CRO agency changes statistically before deploying permanent site updates."]
     ],
     faq: [
-      ["How do conversion optimization services increase revenue?", "By removing checkout friction and optimizing CTA positioning, a CRO agency doubles sales from your current traffic."],
-      ["Why select Go Execution for website conversion optimization?", "We combine deep technical web engineering with conversion psychology to deliver measurable ROI."]
+      ["Why do I need a specialized B2B CRO agency?", "A standard cro agency focuses on D2C cart friction. A B2B CRO agency understands how to optimize long, complex enterprise sales cycles and high-value lead forms."],
+      ["What results can we expect from B2B conversion rate optimization services?", "Our conversion rate optimization services typically deliver a significant lift in qualified demo requests, MQLs, and ultimately, closed revenue pipeline."]
     ],
-    relatedServices: ["landing-page-development", "website-performance"],
-    relatedIndustries: ["fashion", "technology"],
-    relatedBlogSlugs: ["cost-of-poor-core-web-vitals-inp", "wordpress-vs-nextjs-for-business-websites", "why-is-my-website-not-ranking-on-google"]
+    relatedServices: ["landing-page-development", "paid-advertising"],
+    relatedIndustries: ["technology", "professional-services"],
+    relatedBlogSlugs: ["cost-of-poor-core-web-vitals-inp", "how-much-does-custom-web-development-cost", "b2b-saas-seo-strategy"]
   },
 
   // --- DESIGN & BRANDING ---
