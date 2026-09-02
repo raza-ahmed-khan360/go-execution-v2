@@ -536,31 +536,31 @@ const subServiceEntries: Record<string, SubService> = {
   "social-media-marketing": {
     slug: "social-media-marketing",
     categorySlug: "digital-marketing",
-    title: "Social Media Marketing",
-    seoTitle: "Social Media Marketing Services USA | Social Media Agency",
-    eyebrow: "Brand Engagement & Paid Social Ads",
-    description: "Social media marketing for US businesses, including strategy, content, community management, paid campaigns, and performance reporting.",
-    intro: "Build active brand communities and launch high-converting ad campaigns with our social media marketing services USA across Meta, LinkedIn, and TikTok.",
-    overview: "As a premier social media marketing company, we combine eye-catching graphics, UGC video creatives, and social media advertising services.",
+    title: "B2B Social Media Marketing",
+    seoTitle: "B2B Social Media Marketing Agency | Expert Management Services",
+    eyebrow: "Enterprise Social Engagement & Lead Gen",
+    description: "Go Execution is a premier B2B social media agency specializing in B2B social media marketing strategy, lead generation, and corporate account management.",
+    intro: "Turn professional networks into measurable pipeline influence. As a dedicated B2B social media marketing agency, we build executive credibility and generate enterprise leads on LinkedIn and beyond.",
+    overview: "Consumer social strategies fail in the corporate world. We are a specialized B2B social media agency focused entirely on long sales cycles, buying committees, and complex industries. Our B2B social media marketing services encompass executive thought leadership, employee advocacy, and precision ABM campaigns. We execute a comprehensive B2B social media strategy designed to establish market authority and drive measurable social media B2B lead generation.",
     image: "/assets/images/logo-light.png",
     capabilities: [
-      "Social Media Marketing Services USA",
-      "Social Media Marketing Agency USA Campaigns",
-      "Social Media Management Services & Scheduling",
-      "Social Media Advertising Services & UGC Ads"
+      "B2B Social Media Marketing Agency Strategy",
+      "Executive Thought Leadership & Ghostwriting",
+      "Social Media B2B Lead Generation",
+      "Corporate Social Media Content Creation Services"
     ],
     process: [
-      ["Audience Segmentation", "Identifying target buyer personas, interests, and online behaviors."],
-      ["Creative Production", "Designing visual graphic assets, video Reels, and ad copy variants."],
-      ["Campaign Management", "Launching paid social ads with real-time ROAS monitoring."],
-      ["Optimization & Scaling", "Scaling winning ad creatives and reallocating budget for maximum ROI."]
+      ["Executive Discovery", "We analyze your leadership voices and define a clear B2B social media strategy tailored to your industry."],
+      ["Asset Production", "Delivering high-end social media content creation services, transforming whitepapers into engaging carousels and posts."],
+      ["Targeted Distribution", "Deploying native content and executing precise LinkedIn ABM campaigns to reach key decision-makers."],
+      ["Pipeline Analytics", "Tracking direct pipeline influence and ROI from our B2B social media marketing services."]
     ],
     faq: [
-      ["Why hire a social media marketing agency in the USA?", "A dedicated agency creates high-impact ad creatives, manages daily post scheduling, and optimizes campaign ROAS."],
-      ["What is included in social media management services?", "We handle content creation, graphic design, copywriting, audience engagement, and performance analytics."]
+      ["What makes a B2B social media agency different?", "A true B2B social media marketing agency understands how to market complex services to buying committees rather than relying on viral consumer trends."],
+      ["Can social media actually drive enterprise sales?", "Absolutely. Our social media B2B lead generation tactics specifically target decision-makers through thought leadership and precise account-based marketing (ABM)."]
     ],
-    relatedServices: ["paid-advertising", "graphic-design"],
-    relatedIndustries: ["fashion", "retail"],
+    relatedServices: ["paid-advertising", "content-marketing"],
+    relatedIndustries: ["technology", "professional-services"],
     relatedBlogSlugs: ["b2b-saas-seo-strategy", "custom-web-development-vs-website-builders", "why-is-my-website-not-ranking-on-google"]
   },
   "paid-advertising": {
