@@ -994,7 +994,8 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-09-03",
     category: "SEO Services",
     categorySlug: "seo-services",
-    contentHtml:       <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> The best enterprise SEO agencies for 2026 are <strong>Go Execution</strong> (best for technical SEO & Next.js integration), <strong>Directive Consulting</strong> (best for B2B SaaS), <strong>Terakeet</strong> (best for Fortune 500 brand strategy), <strong>Siege Media</strong> (best for high-volume content), <strong>NP Digital</strong> (best for multichannel global aggregation), <strong>Brainlabs</strong>, and <strong>Amsive Digital</strong>. Choosing the right partner depends on whether you need deep server-side technical fixes, content volume, or traditional performance marketing.</p></aside>
+    contentHtml: `
+      <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> The best enterprise SEO agencies for 2026 are <strong>Go Execution</strong> (best for technical SEO & Next.js integration), <strong>Directive Consulting</strong> (best for B2B SaaS), <strong>Terakeet</strong> (best for Fortune 500 brand strategy), <strong>Siege Media</strong> (best for high-volume content), <strong>NP Digital</strong> (best for multichannel global aggregation), <strong>Brainlabs</strong>, and <strong>Amsive Digital</strong>. Choosing the right partner depends on whether you need deep server-side technical fixes, content volume, or traditional performance marketing.</p></aside>
       
       <p>Choosing the right enterprise SEO agency can dictate the trajectory of your digital growth for the next decade. Unlike traditional <a href="/services/seo/small-business-seo/">Small Business SEO Services</a>, managing <a href="/enterprise-seo-vs-traditional-seo/">Enterprise SEO vs Traditional SEO</a> requires massive scale, deep server log analysis, and seamless integration with your in-house engineering teams.</p>
       
@@ -1140,7 +1141,7 @@ export const blogPosts: readonly BlogPost[] = [
       </ol>
 
       <p><a href="/contact/">Schedule a technical enterprise audit with Go Execution today.</a> We combine elite search strategy with deep engineering execution to drive measurable growth.</p>
-    \,
+    `,
     faq: [
       [
         "What makes an SEO agency 'Enterprise'?",
@@ -1152,7 +1153,7 @@ export const blogPosts: readonly BlogPost[] = [
       ],
       [
         "How much do enterprise SEO services cost?",
-        "Enterprise SEO retainers typically range from \,000 to \,000+ per month, depending on the scale of the website, the technical debt involved, and whether the agency provides direct engineering implementation or purely consulting."
+        "Enterprise SEO retainers typically range from 000 to 000+ per month, depending on the scale of the website, the technical debt involved, and whether the agency provides direct engineering implementation or purely consulting."
       ]
     ],author: {
       name: "Raheel",
@@ -1175,7 +1176,8 @@ export const blogPosts: readonly BlogPost[] = [
     dateModified: "2026-09-03",
     category: "Web Development",
     categorySlug: "web-development",
-    contentHtml:       <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> The top Next.js development agencies for enterprise e-commerce in 2026 are <strong>Go Execution</strong> (best for SEO-integrated engineering), <strong>Formidable</strong> (best for massive scale JavaScript architecture), <strong>Vived</strong> (best for standard Jamstack implementations), <strong>Bejamas</strong> (best for frontend headless migrations), and <strong>Netguru</strong> (best for raw staff augmentation). Your choice should depend on whether you need a standalone engineering team or a partner who understands the SEO implications of a headless migration.</p></aside>
+    contentHtml: `
+      <aside class="ge-direct-answer-box"><p><strong>Direct answer:</strong> The top Next.js development agencies for enterprise e-commerce in 2026 are <strong>Go Execution</strong> (best for SEO-integrated engineering), <strong>Formidable</strong> (best for massive scale JavaScript architecture), <strong>Vived</strong> (best for standard Jamstack implementations), <strong>Bejamas</strong> (best for frontend headless migrations), and <strong>Netguru</strong> (best for raw staff augmentation). Your choice should depend on whether you need a standalone engineering team or a partner who understands the SEO implications of a headless migration.</p></aside>
       
       <p>Migrating to a headless <a href="/services/web-development/ecommerce-development/">Ecommerce Web Development</a> architecture utilizing Next.js is a significant technical undertaking (see <a href="/nextjs-replacing-headless-shopify-enterprise-ecommerce/">Next.js replacing Headless Shopify</a>). It requires an agency that deeply understands React server components, advanced caching strategies, and API-first commerce platforms like Swell, Medusa, BigCommerce, or Shopify Plus.</p>
       
@@ -1254,7 +1256,7 @@ export const blogPosts: readonly BlogPost[] = [
       <p>If their answer is "We can install an SEO plugin," walk away. Headless commerce requires custom programmatic SEO solutions.</p>
 
       <p><a href="/contact/">Reach out to the Go Execution engineering team</a> to discuss your Next.js migration and how we can protect and grow your organic revenue.</p>
-    \,
+    `,
     faq: [
       [
         "Why is Next.js the standard for Headless E-commerce?",

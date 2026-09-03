@@ -874,7 +874,7 @@ const subServiceEntries: Record<string, SubService> = {
   // --- MOBILE APPS ---
   "custom-mobile-app-development": {
     slug: "custom-mobile-app-development",
-    categorySlug: "mobile-apps",
+    categorySlug: "mobile-app-development",
     title: "Enterprise Mobile App Development",
     seoTitle: "Enterprise Mobile App Development Company & Custom App Services",
     eyebrow: "Secure, Scalable iOS & Android Apps",

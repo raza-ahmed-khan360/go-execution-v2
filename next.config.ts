@@ -69,6 +69,8 @@ const nextConfig: NextConfig = {
       { source: "/services/explainer-videos/", destination: "/services/video/explainer-videos/", permanent: true },
 
       { source: "/services/custom-mobile-app-development/", destination: "/services/mobile-app-development/custom-mobile-app-development/", permanent: true },
+      { source: "/services/mobile-apps/custom-mobile-app-development/", destination: "/services/mobile-app-development/custom-mobile-app-development/", permanent: true },
+      { source: "/services/mobile-apps/custom-mobile-app-development", destination: "/services/mobile-app-development/custom-mobile-app-development/", permanent: true },
 
       // Legacy WP singular /service/:slug/ -> /services/:slug/
       { source: "/service/:slug/", destination: "/services/", permanent: true },
