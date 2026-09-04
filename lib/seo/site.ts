@@ -8,6 +8,7 @@ export const site = {
     "Go Execution is a Dallas-based digital agency providing web design, SEO, digital marketing, branding, mobile app development, and video animation for US businesses.",
   phone: "+1 469 499 8558",
   email: "justin@goexecution.com",
+  displayEmail: "info@goexecution.com",
   address: {
     streetAddress: "13345 N Central Expy Ste 203",
     addressLocality: "Dallas",
