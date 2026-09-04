@@ -284,6 +284,11 @@ export async function Homepage() {
           </p>
         </div>
         <PortfolioGrid items={content.portfolio.filter((project) => project.category === "Website Design & Development")} initialLimit={6} includeAll={false} deferCatalogue />
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem' }} className="ge-reveal">
+          <Link className="ge-button ge-button--outline" href="/portfolio/">
+            <span>View All Projects</span>
+          </Link>
+        </div>
       </div></section>
 
       {/* --- INDUSTRIES SECTION (REDESIGNED LUXURY BENTO GRID) --- */}
