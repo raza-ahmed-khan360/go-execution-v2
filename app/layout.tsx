@@ -6,7 +6,6 @@ import { DeferredAnalytics } from "@/components/deferred-analytics";
 import { ExecutingLoader } from "@/components/executing-loader";
 import { FloatingConsultation } from "@/components/floating-consultation";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
-import { SiteChatbot } from "@/components/site-chatbot";
 import { SiteEffects } from "@/components/site-effects";
 import { Footer, Header } from "@/components/site-shell";
 import { JsonLd, buildOrganization, buildWebSite, buildPlace } from "@/lib/seo/jsonld";
@@ -83,7 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FloatingWhatsApp />
         <FloatingConsultation />
-        <SiteChatbot />
         <SpeedInsights />
         <Analytics />
         <div className="ge-custom-cursor" aria-hidden="true" />
