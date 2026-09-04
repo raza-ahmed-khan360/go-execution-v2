@@ -109,6 +109,7 @@ const homepageIndustries = [
     desc: "Custom MLS/IDX property search platforms, seller valuation funnels, and high-converting brokerage websites.",
     image: "/assets/images/generated/real-estate.jpg",
     feature: "MLS/IDX Integration & Listing Leads",
+      cta: "Explore Property Growth",
   },
   {
     slug: "fashion",
@@ -118,6 +119,7 @@ const homepageIndustries = [
     desc: "Sub-second Shopify & Next.js luxury storefronts, paid social video campaigns, and brand identity systems.",
     image: "/assets/images/generated/fashion-apparel.jpg",
     feature: "Headless E-Commerce & UGC Ads",
+      cta: "Scale Your Brand",
   },
   {
     slug: "health-wellness",
@@ -127,6 +129,7 @@ const homepageIndustries = [
     desc: "HIPAA-compliant patient booking portals, local search optimization, and reputation management funnels.",
     image: "/assets/images/generated/health-wellness-growth.png",
     feature: "HIPAA Portals & Local Map Pack SEO",
+      cta: "View Patient Funnels",
   },
   {
     slug: "technology",
@@ -136,6 +139,7 @@ const homepageIndustries = [
     desc: "High-converting product landing pages, technical SEO, demo booking funnels, and brand positioning.",
     image: "/assets/images/generated/tech-saas.jpg",
     feature: "Demo Booking & Technical SEO",
+      cta: "Scale SaaS Revenue",
   },
   {
     slug: "professional-services",
@@ -145,6 +149,7 @@ const homepageIndustries = [
     desc: "Authority-building digital platforms, practice area SEO, and high-value consultation lead generation.",
     image: "/assets/images/generated/prof-services.jpg",
     feature: "Consultation Funnels & Organic Growth",
+      cta: "Grow Firm Authority",
   },
   {
     slug: "hospitality",
@@ -154,6 +159,7 @@ const homepageIndustries = [
     desc: "Immersive venue showcases, direct booking engines, promo video animation, and local search campaigns.",
     image: "/assets/images/generated/hospitality.jpg",
     feature: "Direct Booking & Video Marketing",
+      cta: "Boost Direct Bookings",
   },
 ];
 
@@ -340,7 +346,7 @@ export async function Homepage() {
                     </div>
                   </div>
                   <Link className="ge-bento-card-btn" href={`/industries/${ind.slug}/`}>
-                    <span>Explore Strategy</span>
+                    <span>{ind.cta}</span>
                   </Link>
                 </div>
               </article>
