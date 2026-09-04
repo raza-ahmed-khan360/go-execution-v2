@@ -251,7 +251,7 @@ export async function Homepage() {
 
       {/* --- TRUST STATISTICS --- */}
       <section className="ge-stats" aria-label="Agency statistics"><div className="ge-container ge-stats__grid ge-stats--navy">
-        {[["500", "+", "Websites Created"], ["300", "+", "Marketing Campaigns"], ["70", "+", "Mobile Apps Built"], ["1", "M+", "Client Revenue Generated"]].map(([value, suffix, label]) => (
+        {[["120", "+", "Websites Created"], ["80", "+", "Marketing Campaigns"], ["25", "+", "Mobile Apps Built"], ["15", "M+", "Client Revenue Generated"]].map(([value, suffix, label]) => (
           <div className="ge-stat ge-reveal" key={label}>
             <strong data-counter={value} data-suffix={suffix}>{value}{suffix}</strong>
             <span>{label}</span>
