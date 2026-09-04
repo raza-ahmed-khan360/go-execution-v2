@@ -404,7 +404,14 @@ export async function Homepage() {
         <div className="ge-problems-heading ge-reveal">
           <p className="ge-eyebrow">5-Step Delivery Framework</p>
           <h2>Our Digital Growth Process</h2>
-          <p className="ge-growth-redesign__intro">A structured, data-informed workflow designed to turn commercial objectives into measurable results across web engineering and marketing campaigns.</p>
+          <div>
+            <p className="ge-growth-redesign__intro" style={{ marginTop: 0 }}>A structured, data-informed workflow designed to turn commercial objectives into measurable results across web engineering and marketing campaigns.</p>
+            <div style={{ marginTop: "1.5rem" }}>
+              <Link className="ge-button ge-button--outline" href="/contact/">
+                <span>Start Your Project</span>
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="ge-scroll-section"><div className="ge-scroll-text">
           {growthSteps.map((step, index) => (
