@@ -248,7 +248,7 @@ export default function About() {
                     <strong style={{ color: "#0d1b2a" }}>📞 Phone:</strong> <a href={`tel:${site.phone.replace(/[^\d+]/g, '')}`} style={{ color: "#b8860b", fontWeight: 600 }}>{site.phone}</a> / <a href="https://wa.me/17738653770" target="_blank" rel="noreferrer" style={{ color: "#b8860b", fontWeight: 600 }}>+1 (773) 865-3770 (WhatsApp)</a>
                   </p>
                   <p>
-                    <strong style={{ color: "#0d1b2a" }}>✉️ Email:</strong> <a href={`mailto:${site.email}`} style={{ color: "#b8860b", fontWeight: 600 }}>{site.email}</a>
+                    <strong style={{ color: "#0d1b2a" }}>📧 Email:</strong> <a href={`mailto:${site.email}`} style={{ color: "#b8860b", fontWeight: 600 }}>{site.displayEmail || 'info@goexecution.com'}</a>
                   </p>
                 </div>
               </div>
