@@ -7547,8 +7547,8 @@ input, textarea, select {
 	top: calc(105px + var(--card-index, 0) * 28px) !important;
 	z-index: calc(1 + var(--card-index, 0)) !important;
 	display: grid !important;
-	grid-template-columns: minmax(360px, 440px) minmax(330px, 1fr);
-	width: min(100%, 1080px);
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
 	min-height: 0 !important;
 	margin-inline: auto !important;
 	padding: 0 !important;
@@ -7568,7 +7568,7 @@ input, textarea, select {
 }
 
 .ge-growth-redesign--story .ge-growth-story:nth-child(even) {
-	grid-template-columns: minmax(330px, 1fr) minmax(360px, 440px);
+	grid-template-columns: 1fr 1fr;
 }
 
 .ge-growth-redesign--story .ge-growth-story .ge-scroll-step__mobile-img-wrap {
