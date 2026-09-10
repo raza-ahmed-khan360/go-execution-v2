@@ -131,7 +131,7 @@ export default async function CategoryHubPage({ params }: Props) {
                   <h3>Why Our {cat.title} Wins</h3>
                 </div>
                 <p style={{ color: "rgba(255, 255, 255, 0.85)", lineHeight: 1.7, fontSize: "1.02rem" }}>
-                  We replace slow, generic templates with high-performance engineered platforms. Every component is built for rapid search engine indexing, sub-second loading, and maximum visitor lead conversion.
+                  We replace slow, generic templates with high-performance engineered platforms. Every component is built for rapid search engine indexing, high-performance loading, and maximum visitor lead conversion.
                 </p>
               </div>
 

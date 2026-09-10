@@ -62,10 +62,7 @@ export function TestimonialShowcase({ items }: { items: readonly Testimonial[] }
                 <strong>{item.name}</strong>
                 <small>{item.role}</small>
               </span>
-              <span className="ge-testimonial-showcase__verified">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 12 2 2 4-5" /><circle cx="12" cy="12" r="9" /></svg>
-                Verified client
-              </span>
+
             </footer>
           </blockquote>
 

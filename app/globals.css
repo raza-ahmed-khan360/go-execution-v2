@@ -14190,3 +14190,9 @@ table {
 	color: var(--ge-navy);
 	background: #ffffff;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 90px;
+  }
+}

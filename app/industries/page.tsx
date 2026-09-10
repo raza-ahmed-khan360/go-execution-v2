@@ -165,7 +165,7 @@ export default function IndustriesIndexPage() {
               </div>
               <div className="ge-pillar-card">
                 <span className="ge-pillar-num">02</span>
-                <h3>Sub-Second Speed</h3>
+                <h3>High-Performance Speed</h3>
                 <p>Lightning-fast Next.js engineering that ranks higher on Google and lowers customer acquisition costs.</p>
               </div>
               <div className="ge-pillar-card">

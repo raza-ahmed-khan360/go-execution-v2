@@ -210,7 +210,7 @@ function getPageSpecificCta(pathname: string) {
     return {
       eyebrow: "Custom Full-Stack Engineering",
       headline: "Build Your Custom Next.js Platform.",
-      copy: "Zero template bloat. Enterprise Next.js and React architectures built for sub-second speeds.",
+      copy: "Zero template bloat. Enterprise Next.js and React architectures built for high-performance speeds.",
     };
   }
   if (pathname.includes("/services/web-development/wordpress-development")) {
@@ -224,7 +224,7 @@ function getPageSpecificCta(pathname: string) {
     return {
       eyebrow: "Next.js 16 & React 19 Engineering",
       headline: "Accelerate Your Web Application.",
-      copy: "Server-side rendering, static site generation, and sub-second Core Web Vitals performance.",
+      copy: "Server-side rendering, static site generation, and high-performance Core Web Vitals performance.",
     };
   }
   if (pathname.includes("/services/web-development/ecommerce-development")) {
@@ -251,7 +251,7 @@ function getPageSpecificCta(pathname: string) {
   if (pathname.includes("/services/web-development/website-speed")) {
     return {
       eyebrow: "Core Web Vitals Remediation",
-      headline: "Achieve Sub-Second Load Speeds.",
+      headline: "Achieve High-Performance Load Speeds.",
       copy: "Eliminate code bloat, optimize JavaScript bundles, and pass Google PageSpeed audits.",
     };
   }
@@ -440,11 +440,11 @@ function getPageSpecificCta(pathname: string) {
 
 export function Footer() {
   const pathname = usePathname();
-  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "invalid" | "ready">("idle");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "invalid" | "ready" | "success" | "error">("idle");
   const [footerDropdown, setFooterDropdown] = useState<DropdownName | null>(null);
   const ctaData = getPageSpecificCta(pathname || "/");
 
-  const handleNewsletterSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     if (!form.checkValidity()) {
@@ -452,8 +452,28 @@ export function Footer() {
       form.reportValidity();
       return;
     }
-    setNewsletterStatus("ready");
-    form.reset();
+    
+    const formData = new FormData(form);
+    const email = formData.get("email") as string;
+    
+    setNewsletterStatus("ready"); // Can use 'ready' to show a loading state if we want, but let's just make it simple
+    
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      
+      if (response.ok) {
+        setNewsletterStatus("success");
+        form.reset();
+      } else {
+        setNewsletterStatus("error");
+      }
+    } catch {
+      setNewsletterStatus("error");
+    }
   };
 
   const renderFooterDropdownNav = (name: DropdownName, label: string) => (
@@ -617,6 +637,8 @@ export function Footer() {
               </a>
             </div>
           </div>
+          
+
           <div className="ge-footer__newsletter">
             <p className="ge-footer__newsletter-title">Join Our Newsletter</p>
             <p className="ge-footer__newsletter-copy">Sign up for our newsletter to enjoy free marketing tips, inspirations, and more.</p>
@@ -626,7 +648,10 @@ export function Footer() {
               <button type="submit">Sign Up</button>
             </form>
             <p id="footer-newsletter-status" className={`ge-footer__newsletter-status${newsletterStatus === "idle" ? "" : " is-visible"}`} aria-live="polite">
-              {newsletterStatus === "invalid" ? "Please enter a valid email address." : "Newsletter signup is ready to connect to your email platform."}
+              {newsletterStatus === "invalid" && "Please enter a valid email address."}
+              {newsletterStatus === "ready" && "Sending..."}
+              {newsletterStatus === "success" && "Thank you for subscribing!"}
+              {newsletterStatus === "error" && "Something went wrong. Please try again."}
             </p>
           </div>
         </div>

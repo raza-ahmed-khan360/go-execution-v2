@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import content from "@/lib/wp-content.json";
-import { ServicesCarousel } from "@/components/services-carousel";
 import { MobileHeroStory } from "@/components/mobile-hero-story";
 import { DesktopHeroBackground } from "@/components/desktop-hero-background";
 import { FaqAccordion, PortfolioGrid, PricingGrid } from "@/components/interactive-sections";
@@ -9,53 +8,7 @@ import { FaqAccordion, PortfolioGrid, PricingGrid } from "@/components/interacti
 import { createClient } from "@supabase/supabase-js";
 import { TestimonialShowcase, type Testimonial } from "@/components/testimonial-showcase";
 
-const servicesCarouselData = [
-  {
-    slug: "web-development",
-    title: "Web Development Services",
-    copy: "Build fast, responsive and conversion-focused websites with custom development, WordPress, Next.js, ecommerce and landing page solutions.",
-    image: "/assets/images/generated/web-dev.jpg",
-    anchorText: "Explore Web Development",
-  },
-  {
-    slug: "seo",
-    title: "SEO Services",
-    copy: "Improve organic visibility and attract high-intent customers through technical SEO, local SEO, ecommerce SEO and search strategies built around your business.",
-    image: "/assets/images/generated/seo-analytics.jpg",
-    anchorText: "Explore SEO Services",
-  },
-  {
-    slug: "digital-marketing",
-    title: "Digital Marketing",
-    copy: "Create measurable growth with content marketing, social media marketing, paid advertising and conversion optimisation designed around your customer journey.",
-    image: "/assets/images/generated/digital-mktg.jpg",
-    anchorText: "Explore Digital Marketing",
-  },
-  {
-    slug: "design-branding",
-    title: "Design & Branding",
-    copy: "Build a consistent and recognisable brand through logo design, graphic design, brand identity and creative marketing assets.",
-    image: "/assets/images/generated/branding-design.jpg",
-    anchorText: "Explore Design & Branding",
-  },
-  {
-    slug: "video",
-    title: "Video & Animation",
-    copy: "Explain products, services and ideas through engaging 2D, 3D and explainer animation created for digital marketing and customer engagement.",
-    image: "/assets/images/generated/video-motion.jpg",
-    anchorText: "Explore Video & Animation",
-  },
-  {
-    slug: "mobile-app-development",
-    title: "Mobile App Development",
-    copy: "Develop custom mobile applications for businesses and digital products across iOS and Android.",
-    image: "/assets/images/generated/mobile-apps.jpg",
-    anchorText: "Explore Mobile App Development",
-  },
-].map((service, index) => ({
-  ...service,
-  number: String(index + 1).padStart(2, "0"),
-}));
+
 
 const growthSteps = [
   {
@@ -164,9 +117,7 @@ const homepageIndustries = [
 ];
 
 const testimonials: readonly Testimonial[] = [
-  { quote: "Go Execution completely transformed our digital trajectory. The new custom web platform increased qualified consultation requests by 127% in Q1 alone.", name: "Maya Chen", role: "CEO, Meridian Labs", metric: "127%", metricLabel: "more qualified leads" },
   { quote: "We reached $2.4M in revenue during our first year on the ecommerce platform built by Go Execution. Their strategic guidance was instrumental to our growth.", name: "Raj Patel", role: "Founder, Coastal Roasters", metric: "$2.4M", metricLabel: "first-year revenue" },
-  { quote: "Their multi-channel marketing campaigns generated a 312% return on ad spend. We closed $4.2M in sales within 6 months. By far our most accountable agency partner.", name: "Lucia Torres", role: "Marketing Director, Velocity Motors", metric: "312%", metricLabel: "campaign return on investment" },
   { quote: "The website overhaul and technical SEO strategy pushed us to top Google rankings for all our core practice areas. Consultation inquiries doubled.", name: "Kwame Asante", role: "Managing Partner, Zenith Legal", metric: "94%", metricLabel: "more consultation requests" },
   { quote: "The brand identity and packaging system they crafted elevated our positioning instantly. We gained 12,000 engaged followers and secured national press coverage.", name: "Anika Bergström", role: "Brand Manager, Lumina Cosmetics", metric: "12K", metricLabel: "new followers in 90 days" },
   { quote: "The custom property management portal reduced operational overhead by 73%. We now scale our property portfolio without adding administrative friction.", name: "James Mitchell", role: "Owner, Horizon Real Estate", metric: "73%", metricLabel: "less administration time" },
@@ -251,7 +202,7 @@ export async function Homepage() {
 
       {/* --- TRUST STATISTICS --- */}
       <section className="ge-stats" aria-label="Agency statistics"><div className="ge-container ge-stats__grid ge-stats--navy">
-        {[["120", "+", "Websites Created"], ["80", "+", "Marketing Campaigns"], ["25", "+", "Mobile Apps Built"], ["15", "M+", "Client Revenue Generated"]].map(([value, suffix, label]) => (
+        {[["120", "+", "Websites Created"], ["80", "+", "Marketing Campaigns"], ["25", "+", "Mobile Apps Built"], ["250", "+", "Projects Delivered"]].map(([value, suffix, label]) => (
           <div className="ge-stat ge-reveal" key={label}>
             <strong data-counter={value} data-suffix={suffix}>{value}{suffix}</strong>
             <span>{label}</span>
@@ -260,23 +211,7 @@ export async function Homepage() {
       </div></section>
 
       {/* --- SERVICES SECTION --- */}
-      <section id="services" className="ge-section ge-services"><div className="ge-container">
-        <div className="ge-section-heading ge-section-heading--wide ge-reveal" style={{ marginBottom: 20 }}>
-          <div>
-            <p className="ge-eyebrow">360° Growth Spectrum</p>
-            <h2>Digital Marketing Services That Drive Business Growth</h2>
-          </div>
-          <div>
-            <p style={{ marginBottom: 18 }}>
-              Go Execution brings strategy, web engineering, creative design, and performance marketing together under one roof. We build connected digital experiences that help businesses attract qualified traffic, convert visitors, and scale measurable revenue.
-            </p>
-            <Link className="ge-button ge-button--outline" href="/services/">
-              <span>Explore All Services</span>
-            </Link>
-          </div>
-        </div>
-        <ServicesCarousel services={servicesCarouselData} />
-      </div></section>
+      
 
       {/* --- PORTFOLIO SECTION --- */}
       <section id="work" className="ge-section ge-work"><div className="ge-container">

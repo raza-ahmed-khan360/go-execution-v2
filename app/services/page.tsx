@@ -178,7 +178,7 @@ export default function ServicesPage() {
               <div className="ge-pillar-card">
                 <span className="ge-pillar-num">01</span>
                 <h3>Custom Code Engineering</h3>
-                <p>Zero template bloat. Next.js and React architectures built for sub-second speeds.</p>
+                <p>Zero template bloat. Next.js and React architectures built for high-performance speeds.</p>
               </div>
               <div className="ge-pillar-card">
                 <span className="ge-pillar-num">02</span>

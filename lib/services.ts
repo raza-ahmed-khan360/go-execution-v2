@@ -44,7 +44,7 @@ export const serviceCategories: Record<string, ServiceCategory> = {
     seoTitle: "Web Development Company USA & Web Agency | Go Execution",
     eyebrow: "Enterprise Web Engineering & Architectures",
     description: "Custom web development for US businesses, including Next.js, WordPress, ecommerce, landing pages, redesigns, and performance optimization.",
-    intro: "We build sub-second web platforms engineered for maximum search visibility, enterprise security, and seamless user experiences across all devices.",
+    intro: "We build high-performance web platforms engineered for maximum search visibility, enterprise security, and seamless user experiences across all devices.",
     image: serviceVisuals["web-development"],
     capabilities: [
       "Custom Web Development USA",
@@ -194,7 +194,7 @@ const subServiceEntries: Record<string, SubService> = {
       ["QA, Security & Launch", "Rigorous testing, vulnerability scanning, and seamless deployment."]
     ],
     faq: [
-      ["Why should we hire a custom web development agency over using a template?", "A custom web development company builds scalable architectures that don't suffer from template bloat, ensuring sub-second load times and exact feature matches."],
+      ["Why should we hire a custom web development agency over using a template?", "A custom web development company builds scalable architectures that don't suffer from template bloat, ensuring high-performance load times and exact feature matches."],
       ["Do you provide custom web application development services?", "Yes, as a specialized custom website developer, we build complex web apps, client portals, and secure enterprise dashboards."]
     ],
     relatedServices: ["nextjs-development", "wordpress-development"],
@@ -236,7 +236,7 @@ const subServiceEntries: Record<string, SubService> = {
     categorySlug: "web-development",
     title: "Next.js Development",
     seoTitle: "Next.js Development Company & Agency | Go Execution",
-    eyebrow: "Sub-Second Load Times & Edge Rendering",
+    eyebrow: "High-Performance Load Times & Edge Rendering",
     description: "Looking for a specialized Next.js development company? We are a Next.js website development agency building fast, scalable React applications.",
     intro: "Modern users abandon slow websites. As a top-tier Next.js development company, we engineer React-based web applications that load in milliseconds and dominate Google's Core Web Vitals. Whether you need to migrate a legacy monolithic system or build a complex SaaS platform from scratch, our Next.js website development agency implements Server-Side Rendering (SSR) and Static Site Generation (SSG) for unmatched speed and SEO. Partner with a specialized Next.js website agency to future-proof your digital architecture.",
     overview: "We are a full-cycle Next.js development agency specializing in headless CMS integrations, custom React components, and enterprise-grade frontend scaling.",
@@ -299,7 +299,7 @@ const subServiceEntries: Record<string, SubService> = {
     eyebrow: "Precision Paid Traffic Acquisition Pages",
     description: "Landing page design and development for campaigns that need clear messaging, fast performance, strong UX, and measurable conversion paths.",
     intro: "Don't waste ad spend on slow, generic pages. Our landing page design agency builds high converting landing pages engineered to convert ad clicks into revenue.",
-    overview: "Our landing page development USA services pair psychological copy, sub-second load speeds, and clear conversion focused landing page design.",
+    overview: "Our landing page development USA services pair psychological copy, high-performance load speeds, and clear conversion focused landing page design.",
     image: "/assets/images/logo-light.png",
     capabilities: [
       "Landing Page Design and Development",
@@ -340,7 +340,7 @@ const subServiceEntries: Record<string, SubService> = {
     process: [
       ["SEO Audit & URL Mapping", "Cataloging all existing URLs and ranking assets before design starts."],
       ["Brand Modernization", "Designing state-of-the-art UI components and interactive layouts."],
-      ["Next.js / WordPress Rebuild", "Engineering sub-second performance code with modern frameworks."],
+      ["Next.js / WordPress Rebuild", "Engineering high-performance performance code with modern frameworks."],
       ["Seamless 301 Migration Launch", "Executing 301 redirect maps to guarantee 0 ranking loss."]
     ],
     faq: [

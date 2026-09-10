@@ -46,7 +46,7 @@ const getCategoryContent = (category: string, title: string) => {
       challenge1: `In the modern digital landscape, ${title} needed a high-performance web architecture. The primary challenge was overcoming legacy infrastructure that caused slow page load times, poor mobile responsiveness, and high bounce rates.`,
       challenge2: `They required a scalable, technically sound platform that not only met Google's Core Web Vitals but also provided a seamless, intuitive user experience (UX) to maximize conversion rates.`,
       solutionItems: [
-        "Architected a custom Next.js frontend for sub-second page loads",
+        "Architected a custom Next.js frontend for high-performance page loads",
         "Implemented conversion rate optimization (CRO) methodologies",
         "Restructured technical SEO and schema markup for search visibility",
         "Designed a mobile-first, highly accessible UI system"

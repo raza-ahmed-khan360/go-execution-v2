@@ -170,7 +170,7 @@ export default function About() {
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 16 }}>
                   {[
                     ["100% Custom Engineering", "Zero pre-made template bloat or slow plugins."],
-                    ["Sub-Second Speed Guarantee", "Core Web Vitals optimized for top Google rankings."],
+                    ["High-Performance Speed Guarantee", "Core Web Vitals optimized for top Google rankings."],
                     ["Revenue & ROAS Accountability", "Campaigns and web funnels connected to real leads and sales."],
                     ["Direct Senior Lead Accessibility", "Direct communication with senior engineers and strategists."],
                   ].map(([title, desc]) => (

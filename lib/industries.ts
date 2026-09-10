@@ -77,7 +77,7 @@ const industryEntries: Record<string, Industry> = {
       "Inconsistent ROAS and wasted ad spend on broad audiences without a solid organic SEO foundation."
     ],
     solutions: [
-      "Custom fashion ecommerce web design prioritizing sub-second load times and visual storytelling.",
+      "Custom fashion ecommerce web design prioritizing high-performance load times and visual storytelling.",
       "Targeted SEO for fashion ecommerce, optimizing category pages and individual SKUs for high-intent buyers.",
       "Integrated digital marketing strategies that combine organic fashion SEO with hyper-targeted paid media."
     ],
@@ -114,7 +114,7 @@ const industryEntries: Record<string, Industry> = {
     ],
     solutions: [
       "Targeted retail SEO services that optimize category pages and individual product SKUs for high-intent searchers.",
-      "Custom retail website development and Shopify storefronts engineered for sub-second speeds and 1-click checkouts.",
+      "Custom retail website development and Shopify storefronts engineered for high-performance speeds and 1-click checkouts.",
       "Comprehensive digital marketing campaigns bridging online retail SEO with hyper-local foot traffic strategies."
     ],
     services: [

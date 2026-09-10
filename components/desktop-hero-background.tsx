@@ -123,7 +123,7 @@ export function DesktopHeroBackground({ interactive = true }: { interactive?: bo
           className="ge-hero__image-card"
           style={card.style as React.CSSProperties}
         >
-          <Image src={card.source} alt="" fill sizes="(max-width: 1400px) 380px, 450px" />
+          <Image src={card.source} alt="" fill priority sizes="(max-width: 1400px) 380px, 450px" />
         </div>
       ))}
     </div>

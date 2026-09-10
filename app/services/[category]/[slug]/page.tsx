@@ -150,7 +150,7 @@ export default async function SubServicePage({ params }: Props) {
                   <h3>Why Choose Go Execution for {sub.title}</h3>
                 </div>
                 <p style={{ color: "rgba(255, 255, 255, 0.85)", lineHeight: 1.7, fontSize: "1.02rem", marginBottom: 20 }}>
-                  Generic templates limit brand scalability and cause slow load times that hurt conversions. Our {sub.title} services combine sub-second engineering, conversion rate psychology, and robust security to turn visitors into buyers.
+                  Generic templates limit brand scalability and cause slow load times that hurt conversions. Our {sub.title} services combine high-performance engineering, conversion rate psychology, and robust security to turn visitors into buyers.
                 </p>
                 <div style={{ marginTop: "auto" }}>
                   <Link className="ge-button ge-button--gold ge-magnetic" href={questionnaire.href}>

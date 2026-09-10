@@ -15,7 +15,7 @@ export function JsonLd({ data }: JsonLdProps) {
 
 export function buildOrganization() {
   return {
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness"],
     "@id": `${site.url}/#organization`,
     name: site.name,
     alternateName: site.alternateName,
@@ -28,6 +28,13 @@ export function buildOrganization() {
     },
     email: site.email,
     telephone: site.phone,
+    contactPoint: {
+      "@type": "ContactPoint",
+      "telephone": site.phone,
+      "contactType": "customer service",
+      "areaServed": "US"
+    },
+    areaServed: "US",
     sameAs: site.sameAs,
     location: { "@id": `${site.url}/#place` },
   };
