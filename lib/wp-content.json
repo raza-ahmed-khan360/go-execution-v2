@@ -339,70 +339,6 @@
           "5 Stock Photos",
           "3 Unique Banner Design"
         ]
-      },
-      {
-        "name": "ELITE WEBSITE PACKAGE",
-        "price": "$1599.00",
-        "striked": "$3,198",
-        "benefits": [
-          "10 Unique Pages Website Design",
-          "Custom, Interactive, Dynamic & High End Design",
-          "Customize WordPress (or) PHP Development",
-          "Interactive Sliding Banners",
-          "10 Stock Images",
-          "10 Banner Designs",
-          "Special Hoover Effects",
-          "Unlimited Revisions",
-          "Content Management System (WordPress or Custom)",
-          "Mobile Responsive",
-          "10 Professional Email ID's",
-          "Google Friendly Sitemap",
-          "Search Engine Submission",
-          "Industry specified Team of Expert Designers and Developers",
-          "Complete Deployment"
-        ]
-      },
-      {
-        "name": "CORPORATE WEBSITE PACKAGE",
-        "price": "$2599.00",
-        "striked": "$5,198",
-        "benefits": [
-          "Unlimited Pages Website Design",
-          "Custom Made, Interactive, Dynamic & High End Design",
-          "Customized WordPress & PHP Development",
-          "Interactive Sliding Banners",
-          "Up to 15 Custom Made Banner Designs",
-          "15 Stock Images",
-          "Unlimited Revisions",
-          "Special Hoover Effects",
-          "Content Management System",
-          "Custom Dynamic Forms (Optional)",
-          "Signup Area (For Newsletters, Offers etc.)",
-          "Search Bar",
-          "Live Feeds of Social Networks integration (Optional)",
-          "Mobile Responsive",
-          "Up to 15 Professional Email ID's"
-        ]
-      },
-      {
-        "name": "ENTERPRISE PLUS WEBSITE PACKAGE",
-        "price": "$4,599",
-        "striked": "$9,198",
-        "benefits": [
-          "Custom designed Homepage (6x concepts)",
-          "20 Custom designed Inner pages",
-          "Custom Made, Interactive, Dynamic & User Friendly Design",
-          "Custom Wordpress/PHP Development",
-          "Customized CMS Integration",
-          "Cross platform (Desktop, iPhone, Android, etc) responsive compatibility",
-          "Striking Hover Effects",
-          "15 Premium Stock Photos",
-          "10 Custom Banner Designs",
-          "2 Landing Page Designs",
-          "Custom Dynamic Forms",
-          "Online Reservation/ Appointment/ Scheduling Tool",
-          "Online Payment Integration"
-        ]
       }
     ],
     "E-Commerce": [
@@ -450,7 +386,7 @@
           "Shipping calculator Integration",
           "Wishlist",
           "Social Media Pages Integration",
-          "Facebook “Like” Plugin integration",
+          "Facebook \u201cLike\u201d Plugin integration",
           "Sitemap",
           "Dedicated Team of Designers and Developers",
           "Complete Deployment",
@@ -477,85 +413,6 @@
           "Sales & Inventory Management",
           "Free Google Friendly Sitemap",
           "Custom Email Addresses"
-        ]
-      },
-      {
-        "name": "CORPORATE E-COMMERCE PACKAGE",
-        "price": "$1799.99",
-        "striked": "$3599.00",
-        "benefits": [
-          "Unlimited Unique Pages Website",
-          "Conceptual and Dynamic Website",
-          "Content Management System (CMS)",
-          "Mobile Responsive",
-          "Easy Product Search",
-          "Product Reviews",
-          "Unlimited Products",
-          "Unlimited Categories",
-          "Full Shopping Cart Integration",
-          "Payment Module Integration",
-          "Sales & Inventory Management",
-          "Free Google Friendly Sitemap",
-          "Custom Email Addresses",
-          "Facebook Page Design",
-          "YouTube Page Design",
-          "Instagram Page Design",
-          "Complete Deployment",
-          "Dedicated Accounts Manager",
-          "100% Ownership Rights"
-        ]
-      },
-      {
-        "name": "ELITE E-COMMERCE PACKAGE",
-        "price": "$3694.99",
-        "striked": "$7,389.98",
-        "benefits": [
-          "UNLIMITED Logo Design Concepts",
-          "By 6 Expert Designers",
-          "Icon Design",
-          "UNLIMITED Revisions",
-          "Print Media",
-          "Stationary Design (BusinessCard, Letterhead & Envelope)",
-          "Invoice Design, Email Signature",
-          "Bi-Fold Brochure (OR) 2 Sided Flyer Design",
-          "Product Catalog Design",
-          "Sign age Design (OR) Label Design",
-          "T-Shirt Design (OR) Car Wrap Design",
-          "Website",
-          "E-Commerce Store Design",
-          "Product Detail Page Design",
-          "Unique Banner Slider",
-          "Featured Products Showcase",
-          "Full Shopping Cart Integration",
-          "Unlimited Products",
-          "Unlimited Categories",
-          "Product Rating & Reviews",
-          "Easy Product Search"
-        ]
-      },
-      {
-        "name": "CUSTOM E-COMMERCE MARKETPLACE PACKAGE",
-        "price": "$6999.00",
-        "striked": "$13999.00",
-        "benefits": [
-          "Unlimited Page Website",
-          "Custom Content Management System (CMS)",
-          "Unique Pages and UI Design",
-          "Complete Custom Development",
-          "Process Automation Tools",
-          "Newsfeed Integration",
-          "Social Media Plugins Integration",
-          "Upto 40 Stock images",
-          "10 Unique Banner Designs",
-          "Free Google Friendly Sitemap",
-          "FREE 5 Years Hosting",
-          "Custom Email Addresses",
-          "Social Media Page Designs (Facebook, Twitter, Instagram)",
-          "Complete Deployment",
-          "Commitment to Quality",
-          "Original Custom Designs",
-          "Transparent Reporting & Milestones",
-          "Automated Inventory/Shipping/Supplier Module"
         ]
       }
     ],
@@ -593,53 +450,6 @@
           "UNLIMITED Revisions",
           "Stationary Design (Business Card, Letterhead, Envelope)",
           "FREE MS Word Letterhead"
-        ]
-      },
-      {
-        "name": "ELITE LOGO PACKAGE",
-        "price": "$348.00",
-        "striked": "$696.00",
-        "benefits": [
-          "UNLIMITED Logo Design Concepts",
-          "By 5 Expert Designers",
-          "Stationary Design (Business Card, Letterhead, Envelope)",
-          "Icon Design",
-          "UNLIMITED Revisions",
-          "FREE MS Word Letterhead",
-          "Free Email Signature"
-        ]
-      },
-      {
-        "name": "BUSINESS LOGO PACKAGE",
-        "price": "$448.00",
-        "striked": "$896.00",
-        "benefits": [
-          "UNLIMITED Logo Design Concepts",
-          "By 8 Expert Designers",
-          "UNLIMITED Revisions",
-          "2 Stationary Design Sets (Business Card, Letterhead, Envelope)",
-          "Icon Design",
-          "Double Sided Flyer Design / Bi-Fold Brochure",
-          "FREE MS Word Letterhead",
-          "Free Email Signature"
-        ]
-      },
-      {
-        "name": "GOLD LOGO PACKAGE",
-        "price": "$848.00",
-        "striked": "$1696.00",
-        "benefits": [
-          "UNLIMITED Logo Design Concepts",
-          "By 8 Expert Designers",
-          "Icon Design",
-          "UNLIMITED Revisions",
-          "2 Stationary Design Sets (Business Card, Letterhead, Envelope)",
-          "FREE MS Word Letterhead",
-          "Free Email Signature",
-          "3 Page Custom Website",
-          "2 Stock Photos",
-          "2 Banner Designs",
-          "All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)"
         ]
       }
     ],
@@ -701,32 +511,6 @@
         "striked": "$399.98",
         "benefits": [
           "20 Keywords",
-          "Advanced Search Optimization",
-          "Off-site Optimization",
-          "On-site Optimization",
-          "Link Building",
-          "Social Bookmarking",
-          "In-depth Site Analysis",
-          "Content Duplicacy Check",
-          "Initial Backlinks analysis",
-          "Google Penalty Check",
-          "Mobile Usability Check",
-          "Competition Analysis",
-          "Keyword Research",
-          "Page Speed Analysis & Optimization",
-          "Title & Meta Tags Optimization",
-          "Content Optimization",
-          "HTML Code Cleanup & Optimization",
-          "Internal Link Structuring & Optimization",
-          "Pages H tags Optimization"
-        ]
-      },
-      {
-        "name": "PROFESSIONAL SEO PACKAGE",
-        "price": "$2145.00",
-        "striked": "$399.98",
-        "benefits": [
-          "30 Keywords",
           "Advanced Search Optimization",
           "Off-site Optimization",
           "On-site Optimization",
@@ -829,19 +613,6 @@
           "Voice - Over & Sound Effects",
           "6 Weeks Delivery"
         ]
-      },
-      {
-        "name": "2D BASIC VIDEO PACKAGE",
-        "price": "$599.00",
-        "striked": "$1198.00",
-        "benefits": [
-          "120 Second Video",
-          "Professional Script",
-          "Sample Theme",
-          "Storyboard",
-          "Animation",
-          "Voice - Over & Sound Effects"
-        ]
       }
     ],
     "Shopify": [
@@ -889,7 +660,7 @@
           "Shipping calculator Integration",
           "Wishlist",
           "Social Media Pages Integration",
-          "Facebook “Like” Plugin integration",
+          "Facebook \u201cLike\u201d Plugin integration",
           "Sitemap",
           "Dedicated Team of Designers and Developers",
           "Complete Deployment",
@@ -916,85 +687,6 @@
           "Sales & Inventory Management",
           "Free Google Friendly Sitemap",
           "Custom Email Addresses"
-        ]
-      },
-      {
-        "name": "CORPORATE E-COMMERCE PACKAGE (Shopify)",
-        "price": "$1799.99",
-        "striked": "$3599.00",
-        "benefits": [
-          "Unlimited Unique Pages Website",
-          "Conceptual and Dynamic Website",
-          "Content Management System (CMS)",
-          "Mobile Responsive",
-          "Easy Product Search",
-          "Product Reviews",
-          "Unlimited Products",
-          "Unlimited Categories",
-          "Full Shopping Cart Integration",
-          "Payment Module Integration",
-          "Sales & Inventory Management",
-          "Free Google Friendly Sitemap",
-          "Custom Email Addresses",
-          "Facebook Page Design",
-          "YouTube Page Design",
-          "Instagram Page Design",
-          "Complete Deployment",
-          "Dedicated Accounts Manager",
-          "100% Ownership Rights"
-        ]
-      },
-      {
-        "name": "ELITE E-COMMERCE PACKAGE (Shopify)",
-        "price": "$3694.99",
-        "striked": "$7,388.00",
-        "benefits": [
-          "UNLIMITED Logo Design Concepts",
-          "By 6 Expert Designers",
-          "Icon Design",
-          "UNLIMITED Revisions",
-          "Print Media",
-          "Stationary Design (BusinessCard, Letterhead & Envelope)",
-          "Invoice Design, Email Signature",
-          "Bi-Fold Brochure (OR) 2 Sided Flyer Design",
-          "Product Catalog Design",
-          "Sign age Design (OR) Label Design",
-          "T-Shirt Design (OR) Car Wrap Design",
-          "Website",
-          "E-Commerce Store Design",
-          "Product Detail Page Design",
-          "Unique Banner Slider",
-          "Featured Products Showcase",
-          "Full Shopping Cart Integration",
-          "Unlimited Products",
-          "Unlimited Categories",
-          "Product Rating & Reviews",
-          "Easy Product Search"
-        ]
-      },
-      {
-        "name": "CUSTOM E-COMMERCE MARKETPLACE PACKAGE (Shopify)",
-        "price": "$6999.00",
-        "striked": "$13999.00",
-        "benefits": [
-          "Unlimited Page Website",
-          "Custom Content Management System (CMS)",
-          "Unique Pages and UI Design",
-          "Complete Custom Development",
-          "Process Automation Tools",
-          "Newsfeed Integration",
-          "Social Media Plugins Integration",
-          "Upto 40 Stock images",
-          "10 Unique Banner Designs",
-          "Free Google Friendly Sitemap",
-          "FREE 5 Years Hosting",
-          "Custom Email Addresses",
-          "Social Media Page Designs (Facebook, Twitter, Instagram)",
-          "Complete Deployment",
-          "Commitment to Quality",
-          "Original Custom Designs",
-          "Transparent Reporting & Milestones",
-          "Automated Inventory/Shipping/Supplier Module"
         ]
       }
     ],
@@ -1237,51 +929,6 @@
           "15 Stock images",
           "8 Unique Banner Designs"
         ]
-      },
-      {
-        "name": "CORPORATE COMBO PACKAGE",
-        "price": "$1999.99",
-        "striked": "",
-        "benefits": [
-          "Unlimited Logo Concepts",
-          "8 Dedicated Designers",
-          "Icon Design",
-          "2 Free Custom Stationary Designs",
-          "MS Word Letterhead",
-          "Invoice Design",
-          "Product Catalog Design",
-          "Unlimited Pages Website",
-          "Conceptual and Dynamic Website",
-          "Content Management System (CMS)",
-          "Easy Product Search",
-          "Product Reviews",
-          "Unlimited Products",
-          "Unlimited Categories",
-          "Promotional Product Showcase",
-          "New Product Showcase",
-          "Full Shopping Cart Integration",
-          "Payment Module Integration"
-        ]
-      },
-      {
-        "name": "ELITE COMBO PACKAGE",
-        "price": "$2,999.99",
-        "striked": "",
-        "benefits": [
-          "Complete Custom Design & Development",
-          "Client/User Dashboard Area",
-          "Custom Coding",
-          "Custom PHP Development",
-          "Content Management System (CMS)",
-          "Online Appointment/Scheduling/Online Ordering Integration (Optional)",
-          "Online Payment Integration (Optional)",
-          "Multi Lingual (Optional)",
-          "Custom Dynamic Forms (Optional)",
-          "Signup Area (For Newsletters, Offers etc.)",
-          "Search Bar",
-          "Live Feeds of Social Networks integration (Optional)",
-          "Mobile Responsive Web"
-        ]
       }
     ]
   },
@@ -1377,7 +1024,7 @@
       "image": "/uploads/2026/06/3.webp"
     },
     {
-      "title": "Ka’Chava",
+      "title": "Ka\u2019Chava",
       "category": "Website Design & Development",
       "image": "/uploads/2026/06/image_2026-07-09_002325172.jpg"
     },
@@ -1437,7 +1084,7 @@
       "image": "/uploads/2026/06/12.webp"
     },
     {
-      "title": "Vee-Vee’s African Restaurant",
+      "title": "Vee-Vee\u2019s African Restaurant",
       "category": "Website Design & Development",
       "image": "/uploads/2026/06/image_2026-06-30_203348554-scaled.png"
     },
@@ -1626,7 +1273,7 @@
         {
           "title": "Quality Assurance",
           "paragraphs": [
-            "We aim to deliver work according to the client’s project brief and agreed requirements. Our team follows a professional process to ensure that the final output is aligned with the approved direction.",
+            "We aim to deliver work according to the client\u2019s project brief and agreed requirements. Our team follows a professional process to ensure that the final output is aligned with the approved direction.",
             "However, subjective preferences may vary. Revisions are provided to improve and refine the work within the agreed scope."
           ]
         },
@@ -1656,7 +1303,7 @@
         {
           "title": "Communication Policy",
           "paragraphs": [
-            "All official communication should be made through Go Execution’s official email, phone number, project dashboard, or approved communication channels.",
+            "All official communication should be made through Go Execution\u2019s official email, phone number, project dashboard, or approved communication channels.",
             "Go Execution will not be responsible for any communication, payment request, or instruction received from unauthorized email addresses, numbers, or third parties pretending to represent the company."
           ]
         },
