@@ -78,7 +78,7 @@ export default function IndustriesIndexPage() {
         </section>
 
         {/* --- INTERACTIVE BENTO FILTERABLE GRID --- */}
-        <section className="ge-section ge-industries-hub-section">
+        <section className="ge-section ge-dark-section ge-industries-hub-section">
           <div className="ge-container">
             <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 40 }}>
               <div>

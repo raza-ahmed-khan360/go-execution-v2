@@ -226,7 +226,7 @@ export default async function SubServicePage({ params }: Props) {
 
         {/* --- RELATED SOLUTIONS --- */}
         {related.length > 0 && (
-          <section className="ge-section ge-related-solutions-section">
+          <section className="ge-section ge-dark-section ge-related-solutions-section">
             <div className="ge-container">
               <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 48 }}>
                 <div>
