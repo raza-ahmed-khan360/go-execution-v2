@@ -433,7 +433,7 @@ body:not(.home) .ge-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: #ffffff !important;
+	background: rgba(255, 255, 255, 0.92) !important;
 	backdrop-filter: blur(20px) !important;
 	-webkit-backdrop-filter: blur(20px) !important;
 	border: 1px solid rgba(255, 255, 255, 0.8) !important;
@@ -13286,7 +13286,7 @@ body.ge-menu-open {
 .ge-hero--inner .ge-hero__content {
 	position: relative;
 	z-index: 3;
-	background: #ffffff !important;
+	background: rgba(255, 255, 255, 0.92) !important;
 	border: 1px solid rgba(201, 168, 106, 0.4) !important;
 	border-radius: 28px !important;
 	padding: clamp(32px, 4vw, 52px) clamp(28px, 4vw, 48px) !important;
