@@ -14,13 +14,13 @@ export type Industry = {
 };
 
 const industryVisuals: Record<string, string> = {
-  "real-estate": "/assets/images/generated/real-estate.jpg",
-  fashion: "/assets/images/generated/fashion-apparel.jpg",
-  retail: "/assets/images/generated/retail-ecommerce.jpg",
-  hospitality: "/assets/images/generated/hospitality.jpg",
-  technology: "/assets/images/generated/tech-saas.jpg",
-  "professional-services": "/assets/images/generated/prof-services.jpg",
-  "health-wellness": "/assets/images/generated/health-wellness-growth.png",
+  "real-estate": "/assets/images/real/real-estate.jpeg",
+  fashion: "/assets/images/real/fashion-retail.jpeg",
+  retail: "/assets/images/real/fashion-retail.jpeg",
+  hospitality: "/assets/images/real/hospitality.jpeg",
+  technology: "/assets/images/real/technology-saas.jpeg",
+  "professional-services": "/assets/images/real/professional-services.jpeg",
+  "health-wellness": "/assets/images/real/health-wellness.jpeg",
 };
 
 const industryEntries: Record<string, Industry> = {

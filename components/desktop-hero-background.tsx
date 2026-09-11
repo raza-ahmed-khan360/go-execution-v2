@@ -6,47 +6,47 @@ import { useEffect, useRef } from "react";
 const cards = [
   {
     id: "branding-design",
-    source: "/assets/images/generated/branding-design.jpg",
+    source: "/assets/images/real/professional-services.jpeg",
     style: { top: "4%", left: "2%", width: "390px", height: "365px" },
   },
   {
     id: "web-dev",
-    source: "/assets/images/generated/web-dev.jpg",
+    source: "/assets/images/real/technology-saas.jpeg",
     style: { top: "3%", left: "36%", width: "355px", height: "415px" },
   },
   {
     id: "video-motion",
-    source: "/assets/images/generated/video-motion.jpg",
+    source: "/assets/images/real/fashion-retail.jpeg",
     style: { top: "5%", left: "69%", width: "375px", height: "350px" },
   },
   {
     id: "seo-analytics",
-    source: "/assets/images/generated/seo-analytics.jpg",
+    source: "/assets/images/real/real-estate.jpeg",
     style: { top: "36%", left: "18%", width: "365px", height: "395px" },
   },
   {
     id: "tech-saas",
-    source: "/assets/images/generated/tech-saas.jpg",
+    source: "/assets/images/real/health-wellness.jpeg",
     style: { top: "34%", left: "51%", width: "410px", height: "360px" },
   },
   {
     id: "mobile-apps",
-    source: "/assets/images/generated/mobile-apps.jpg",
+    source: "/assets/images/real/hospitality.jpeg",
     style: { top: "37%", right: "2%", width: "360px", height: "390px" },
   },
   {
     id: "real-estate",
-    source: "/assets/images/generated/real-estate.jpg",
+    source: "/assets/images/real/real-estate.jpeg",
     style: { top: "68%", left: "3%", width: "385px", height: "370px" },
   },
   {
     id: "digital-mktg",
-    source: "/assets/images/generated/digital-mktg.jpg",
+    source: "/assets/images/real/technology-saas.jpeg",
     style: { top: "66%", left: "37%", width: "350px", height: "420px" },
   },
   {
     id: "retail-ecommerce",
-    source: "/assets/images/generated/retail-ecommerce.jpg",
+    source: "/assets/images/real/fashion-retail.jpeg",
     style: { top: "69%", left: "70%", width: "400px", height: "355px" },
   },
 ] as const;

@@ -133,7 +133,7 @@ export default async function PortfolioCaseStudyPage({ params }: { params: Promi
   
   const title = project ? project.title : fallbackTitle;
   const category = project ? project.category : "Digital Project";
-  const image = project ? project.image : "/assets/images/generated/web-dev.jpg";
+  const image = project ? project.image : "/assets/images/real/technology-saas.jpeg";
 
   const content = getCategoryContent(category, title);
   

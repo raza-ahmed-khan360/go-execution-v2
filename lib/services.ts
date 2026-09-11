@@ -29,12 +29,12 @@ export type SubService = {
 };
 
 const serviceVisuals: Record<string, string> = {
-  "web-development": "/assets/images/generated/service_web_dev_hero.jpg",
-  seo: "/assets/images/generated/service_seo_hero.jpg",
-  "digital-marketing": "/assets/images/generated/service_digital_marketing_hero.jpg",
-  "design-branding": "/assets/images/generated/service_branding_hero.jpg",
-  video: "/assets/images/generated/video-motion.jpg",
-  "mobile-app-development": "/assets/images/generated/mobile-apps.jpg",
+  "web-development": "/assets/images/real/technology-saas.jpeg",
+  seo: "/assets/images/real/real-estate.jpeg",
+  "digital-marketing": "/assets/images/real/technology-saas.jpeg",
+  "design-branding": "/assets/images/real/professional-services.jpeg",
+  video: "/assets/images/real/fashion-retail.jpeg",
+  "mobile-app-development": "/assets/images/real/hospitality.jpeg",
 };
 
 export const serviceCategories: Record<string, ServiceCategory> = {
