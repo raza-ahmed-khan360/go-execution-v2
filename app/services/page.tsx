@@ -79,7 +79,7 @@ export default function ServicesPage() {
         </section>
 
         {/* --- CATEGORY CARDS GRID --- */}
-        <section className="ge-section ge-services-category-grid-section">
+        <section className="ge-section ge-dark-section ge-services-category-grid-section">
           <div className="ge-container">
             <div className="ge-section-heading ge-section-heading--wide" style={{ marginBottom: 48 }}>
               <div>
