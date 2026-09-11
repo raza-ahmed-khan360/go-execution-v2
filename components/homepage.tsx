@@ -386,7 +386,7 @@ export async function Homepage() {
       <section className="ge-section ge-pricing"><div className="ge-container">
         <div className="ge-section-heading ge-reveal">
           <div>
-            <p className="ge-eyebrow">Transparent Investment</p>
+            <p className="ge-eyebrow">Our Pricings</p>
             <h2>Website &amp; Digital Growth Packages</h2>
             <p style={{ marginTop: 12, color: "#cbd5e1" }}>Choose a starting package for your website or speak with our team about a solution tailored to your business, goals and technical requirements.</p>
           </div>
