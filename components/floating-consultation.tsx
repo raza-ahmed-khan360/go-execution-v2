@@ -5,7 +5,7 @@ export function FloatingConsultation() {
   return (
     <Link href="/contact/" className="ge-consultation-float" aria-label="Book a free consultation with Go Execution">
       <span className="ge-consultation-float__icon" aria-hidden="true"><FaCalendarCheck /></span>
-      <span>
+      <span className="ge-consultation-float__text">
         <small>Ready to grow?</small>
         <strong>Book a FREE Consultation</strong>
       </span>
