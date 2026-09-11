@@ -244,9 +244,14 @@ export async function Homepage() {
               <p style={{ color: "#475569", marginBottom: 18 }}>
                 Our digital strategies are adapted to the audience, buying journey, and competitive environment of each business sector. Explore custom web &amp; marketing solutions designed around measurable growth.
               </p>
-              <Link className="ge-button ge-button--outline" href="/industries/">
-                <span>Explore All Industries</span>
-              </Link>
+              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "1.5rem" }}>
+                <Link className="ge-button ge-button--outline" href="/industries/">
+                  <span>Explore All Industries</span>
+                </Link>
+                <Link className="ge-button ge-button--gold" href="/contact/">
+                  <span>Request an Industry Case Study</span>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -314,7 +319,10 @@ export async function Homepage() {
           <p className="ge-eyebrow ge-eyebrow--light">Integrated Growth Team</p>
           <h2>Why Businesses Choose Go Execution</h2>
           <p>Strategy, technology, creative and performance marketing work together under one team, giving businesses a clearer path from digital presence to measurable growth.</p>
-          <Link className="ge-why__cta-btn" href="/about/"><span>Discover Our Approach</span></Link>
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "2rem" }}>
+            <Link className="ge-why__cta-btn" href="/about/"><span>Discover Our Approach</span></Link>
+            <Link className="ge-button ge-button--gold" href="/contact/"><span>Speak with an Expert</span></Link>
+          </div>
         </div>
         <div className="ge-why-cards">
           {[
@@ -341,9 +349,12 @@ export async function Homepage() {
           <h2>Our Digital Growth Process</h2>
           <div>
             <p className="ge-growth-redesign__intro" style={{ marginTop: 0 }}>A structured, data-informed workflow designed to turn commercial objectives into measurable results across web engineering and marketing campaigns.</p>
-            <div style={{ marginTop: "1.5rem" }}>
-              <Link className="ge-button ge-button--outline" href="/contact/">
-                <span>Start Your Project</span>
+            <div style={{ marginTop: "1.5rem", display: "flex", gap: "16px", flexWrap: "wrap" }}>
+              <Link className="ge-button ge-button--outline" href="/portfolio/">
+                <span>View Past Campaigns</span>
+              </Link>
+              <Link className="ge-button ge-button--gold" href="/contact/">
+                <span>Map Out Your Strategy</span>
               </Link>
             </div>
           </div>
