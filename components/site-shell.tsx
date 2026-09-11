@@ -646,6 +646,7 @@ export function Footer() {
               <label className="screen-reader-text" htmlFor="footer-email">Email address</label>
               <input id="footer-email" name="email" type="email" autoComplete="email" placeholder="Email Address" required aria-describedby={newsletterStatus === "idle" ? undefined : "footer-newsletter-status"} />
               <button type="submit">Sign Up</button>
+              <p style={{ fontSize: "0.65rem", color: "var(--color-navy-light)", marginTop: "0.5rem", lineHeight: "1.2" }}>By submitting, you agree to receive SMS reminders/updates from GO EXECUTION LLC. Message &amp; data rates may apply. Reply STOP to unsubscribe.</p>
             </form>
             <p id="footer-newsletter-status" className={`ge-footer__newsletter-status${newsletterStatus === "idle" ? "" : " is-visible"}`} aria-live="polite">
               {newsletterStatus === "invalid" && "Please enter a valid email address."}

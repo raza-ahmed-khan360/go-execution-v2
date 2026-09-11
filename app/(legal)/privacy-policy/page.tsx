@@ -78,6 +78,10 @@ export default function PrivacyPolicy() {
               </ul>
               <p>If you make a request, we have one month to respond to you. To exercise any of these rights, please contact us at our provided email address.</p>
 
+              
+              <h2>SMS Communications &amp; Consent</h2>
+              <p>By submitting your phone number through any of our contact forms, questionnaires, or newsletter signups, you agree to receive SMS reminders/updates from GO EXECUTION LLC. Message &amp; data rates may apply. Reply STOP to unsubscribe.</p>
+
               <h2>6. Data Security</h2>
               <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors, and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality.</p>
 

@@ -69,6 +69,10 @@ export default function TermsOfService() {
               <h2>7. Contact Us</h2>
               <p>If you have any questions about these Terms, please contact us at:</p>
               <p><strong>Email:</strong> <a href="mailto:justin@goexecution.com">info@goexecution.com</a></p>
+            
+              <h2>SMS Communications &amp; Consent</h2>
+              <p>By submitting your phone number through any of our contact forms, questionnaires, or newsletter signups, you agree to receive SMS reminders/updates from GO EXECUTION LLC. Message &amp; data rates may apply. Reply STOP to unsubscribe.</p>
+
             </div>
           </div>
         </section>

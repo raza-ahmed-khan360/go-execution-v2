@@ -59,6 +59,8 @@ export function ContactForm({ services }: { services: string[] }) {
         <label>Service Interested In<select name="service" required defaultValue=""><option value="">Select a service</option>{services.map((service) => <option value={service} key={service}>{service}</option>)}</select></label>
       </div>
       <label>Message<textarea name="message" rows={5} required /></label>
+      
+      <p className="ge-form__consent" style={{ fontSize: "0.75rem", color: "var(--color-navy-light)", marginTop: "0.5rem", marginBottom: "1rem", lineHeight: "1.4" }}>By submitting, you agree to receive SMS reminders/updates from GO EXECUTION LLC. Message &amp; data rates may apply. Reply STOP to unsubscribe.</p>
       <button className="ge-button ge-button--navy" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Request Consultation"}</button>
       {status !== "idle" && (
         <p className={`ge-form__status${status === "error" ? " is-error" : ""}${status === "success" ? " is-success" : ""}`} role="status" aria-live="polite">
