@@ -60,11 +60,17 @@ export function Header() {
   const [dropdown, setDropdown] = useState<DropdownName | null>(null);
   const [isFixed, setIsFixed] = useState(false);
   const [isOverDark, setIsOverDark] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  
   const headerRef = useRef<HTMLElement>(null);
   const fixedRef = useRef(false);
   const darkRef = useRef(false);
+  const hiddenRef = useRef(false);
+  const lastScrollY = useRef(0);
+  const openRef = useRef(false);
 
   useEffect(() => {
+    openRef.current = open;
     document.body.classList.toggle("ge-menu-open", open);
     return () => document.body.classList.remove("ge-menu-open");
   }, [open]);
@@ -75,11 +81,34 @@ export function Header() {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         frame = 0;
-        const fixed = window.scrollY > 80;
+        const currentScrollY = window.scrollY;
+        const fixed = currentScrollY > 80;
+        
         if (fixedRef.current !== fixed) {
           fixedRef.current = fixed;
           setIsFixed(fixed);
         }
+
+        if (fixed && !openRef.current) {
+          if (currentScrollY > lastScrollY.current && currentScrollY > 200) {
+            if (!hiddenRef.current) {
+              hiddenRef.current = true;
+              setIsHidden(true);
+            }
+          } else if (currentScrollY < lastScrollY.current) {
+            if (hiddenRef.current) {
+              hiddenRef.current = false;
+              setIsHidden(false);
+            }
+          }
+        } else {
+          if (hiddenRef.current) {
+            hiddenRef.current = false;
+            setIsHidden(false);
+          }
+        }
+        lastScrollY.current = currentScrollY;
+
         if (!fixed || !headerRef.current) {
           if (darkRef.current) {
             darkRef.current = false;
@@ -87,6 +116,7 @@ export function Header() {
           }
           return;
         }
+        
         const headerRect = headerRef.current.getBoundingClientRect();
         const overDark = Array.from(document.querySelectorAll(".ge-industries, .ge-cta, .ge-footer, .ge-inner-cta, .ge-contact-note")).some((section) => {
           const rect = section.getBoundingClientRect();
@@ -158,7 +188,7 @@ export function Header() {
   );
 
   return (
-    <header ref={headerRef} className={`ge-header${isFixed ? " is-fixed" : ""}${isOverDark ? " is-over-dark" : ""}`}>
+    <header ref={headerRef} className={`ge-header${isFixed ? " is-fixed" : ""}${isOverDark ? " is-over-dark" : ""}${isHidden ? " is-hidden" : ""}`}>
       <div className="ge-container ge-header__inner">
         <Link className="ge-brand" href="/" aria-label="Go Execution home">
           <Image
