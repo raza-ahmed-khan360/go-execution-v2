@@ -79,8 +79,30 @@ const nextConfig: NextConfig = {
       { source: "/services/mobile-apps/custom-mobile-app-development", destination: "/services/mobile-app-development/custom-mobile-app-development/", permanent: true },
 
       // Legacy WP singular /service/:slug/ -> /services/:slug/
-      { source: "/service/:slug/", destination: "/services/", permanent: true },
-      { source: "/service/:slug", destination: "/services/", permanent: true },
+      { source: "/service/digital-marketing/", destination: "/services/digital-marketing/", permanent: true },
+      { source: "/service/digital-marketing", destination: "/services/digital-marketing/", permanent: true },
+      { source: "/service/video-animation/", destination: "/services/video/video-animation/", permanent: true },
+      { source: "/service/video-animation", destination: "/services/video/video-animation/", permanent: true },
+      { source: "/service/mobile-apps/", destination: "/services/mobile-app-development/", permanent: true },
+      { source: "/service/mobile-apps", destination: "/services/mobile-app-development/", permanent: true },
+      { source: "/service/logo-design/", destination: "/services/design-branding/logo-design/", permanent: true },
+      { source: "/service/logo-design", destination: "/services/design-branding/logo-design/", permanent: true },
+      { source: "/service/seo/", destination: "/services/seo/", permanent: true },
+      { source: "/service/seo", destination: "/services/seo/", permanent: true },
+      { source: "/service/website-design-development/", destination: "/services/website-design-development/", permanent: true },
+      { source: "/service/website-design-development", destination: "/services/website-design-development/", permanent: true },
+      { source: "/service/:slug/", destination: "/services/:slug/", permanent: true },
+      { source: "/service/:slug", destination: "/services/:slug/", permanent: true },
+
+      // Legacy WP dummy portfolio slugs -> /portfolio/
+      { source: "/portfolio/website-design-development-project-2/", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/website-design-development-project-2", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/website-design-development-project-5/", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/website-design-development-project-5", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/digital-marketing-project-4-2/", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/digital-marketing-project-4-2", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/website-design-development-project-6/", destination: "/portfolio/", permanent: true },
+      { source: "/portfolio/website-design-development-project-6", destination: "/portfolio/", permanent: true },
 
       // Legacy WP page variations
       { source: "/about-us/", destination: "/about/", permanent: true },
@@ -136,6 +158,15 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/_next/static/media/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/immutable/media/:path*",
         headers: [
           {
             key: "X-Robots-Tag",
