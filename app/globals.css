@@ -3965,6 +3965,11 @@ body:not(.home) .ge-header,
 	transform: translateX(48px);
 }
 
+.ge-reveal[data-reveal="left"].is-visible,
+.ge-reveal[data-reveal="right"].is-visible {
+	transform: none;
+}
+
 body.ge-loaded .ge-hero__visual {
 	transition-delay: 0.36s;
 }
@@ -8210,26 +8215,6 @@ body:not(.home) .ge-header,
 /* Why Go Execution — split editorial value list. */
 .ge-why--split {
 	position: relative;
-	padding: clamp(100px, 10vw, 150px) 0;
-	overflow: hidden;
-	color: #fff;
-	background: radial-gradient(circle at 12% 14%, rgba(201,168,106,.15), transparent 28%), #0b1927;
-}
-.ge-why--split::before { position: absolute; inset: 0; content: ""; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 68px 68px; mask-image: linear-gradient(90deg, #000, transparent 80%); }
-.ge-why--split .ge-why__watermark { right: -5%; left: auto; opacity: .04; transform: rotate(-12deg); }
-.ge-why--split > .ge-container { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(340px,.75fr) minmax(480px,1fr); align-items: start; gap: clamp(60px, 8vw, 130px); }
-.ge-why--split .ge-section-heading { position: sticky; top: 145px; display: block; margin: 0; text-align: left; }
-.ge-why--split .ge-section-heading .ge-eyebrow { margin-bottom: 26px; color: var(--ge-gold-light); }
-.ge-why--split .ge-section-heading h2 { max-width: 590px; margin: 0; color: #fff; font-size: clamp(30px, 3.4vw, 48px); letter-spacing: -.035em; line-height: 1.1; }
-.ge-why--split .ge-section-heading > p:not(.ge-eyebrow) { max-width: 510px; margin: 30px 0 0; color: rgba(255,255,255,.62); font-size: 16px; line-height: 1.75; }
-.ge-why--split__link { display: inline-flex; align-items: center; gap: 16px; margin-top: 38px; padding-bottom: 8px; border-bottom: 1px solid rgba(201,168,106,.7); color: #fff; font-size: 14px; font-weight: 600; }
-.ge-why--split__link span { color: var(--ge-gold-light); font-size: 19px; transition: transform .3s var(--ge-ease); }
-/* ==========================================================================
-   Redesigned "Why Go Execution" Section with On-Scroll Reveal & Glass Cards
-   ========================================================================== */
-
-.ge-why--split {
-	position: relative;
 	padding: clamp(90px, 9vw, 140px) 0;
 	overflow: hidden;
 	color: #fff;
@@ -8237,14 +8222,21 @@ body:not(.home) .ge-header,
 	            radial-gradient(circle at 85% 85%, rgba(18, 43, 70, 0.45), transparent 40%),
 	            #081726;
 }
+.ge-why--split::before { position: absolute; inset: 0; content: ""; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 68px 68px; mask-image: linear-gradient(90deg, #000, transparent 80%); }
+.ge-why--split .ge-why__watermark { right: -5%; left: auto; opacity: .04; transform: rotate(-12deg); }
 
 .ge-why--split .ge-why__grid {
 	position: relative;
 	z-index: 2;
 	display: grid;
-	grid-template-columns: minmax(300px, 0.85fr) minmax(420px, 1.15fr);
+	grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
 	align-items: start;
-	gap: clamp(48px, 6vw, 90px);
+	gap: clamp(36px, 5vw, 80px);
+}
+
+.ge-why__lead,
+.ge-why--split .ge-why-cards {
+	min-width: 0;
 }
 
 .ge-why__lead {
@@ -8324,6 +8316,7 @@ body:not(.home) .ge-header,
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	min-width: 0;
 	min-height: 250px;
 	padding: 30px 24px;
 	border: 1px solid rgba(255, 255, 255, 0.1);
