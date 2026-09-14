@@ -120,6 +120,14 @@ const nextConfig: NextConfig = {
       { source: "/post-sitemap.xml", destination: "/sitemap.xml", permanent: true },
       { source: "/page-sitemap.xml", destination: "/sitemap.xml", permanent: true },
 
+      // Legacy WordPress paths
+      { source: "/wp-content/uploads/:path*", destination: "/uploads/:path*", permanent: true },
+      { source: "/wp-content/:path*", destination: "/", permanent: true },
+      { source: "/wp-admin/:path*", destination: "/", permanent: true },
+      { source: "/wp-admin", destination: "/", permanent: true },
+      { source: "/wp-login.php", destination: "/", permanent: true },
+      { source: "/xmlrpc.php", destination: "/", permanent: true },
+
       // www -> non-www
       { source: "/:path*", has: [{ type: "host", value: "www.goexecution.com" }], destination: "https://goexecution.com/:path*", permanent: true },
     ];
