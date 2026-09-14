@@ -6,7 +6,14 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/preview/", "/drafts/", "/web-questionnaire/", "/logo-questionnaire/"],
+        disallow: [
+          "/api/",
+          "/preview/",
+          "/drafts/",
+          "/web-questionnaire/",
+          "/logo-questionnaire/",
+          "/_next/static/media/",
+        ],
       },
       {
         userAgent: [
@@ -23,7 +30,14 @@ export default function robots(): MetadataRoute.Robots {
           "CCBot",
         ],
         allow: "/",
-        disallow: ["/api/", "/preview/", "/drafts/", "/web-questionnaire/", "/logo-questionnaire/"],
+        disallow: [
+          "/api/",
+          "/preview/",
+          "/drafts/",
+          "/web-questionnaire/",
+          "/logo-questionnaire/",
+          "/_next/static/media/",
+        ],
       },
     ],
     sitemap: "https://goexecution.com/sitemap.xml",

@@ -33,9 +33,15 @@ const nextConfig: NextConfig = {
       { source: "/seo-services", destination: "/services/seo/", permanent: true },
       { source: "/services/seo-services/", destination: "/services/seo/", permanent: true },
       { source: "/services/seo-services", destination: "/services/seo/", permanent: true },
+      { source: "/seo/", destination: "/services/seo/", permanent: true },
+      { source: "/seo", destination: "/services/seo/", permanent: true },
 
       { source: "/mobile-apps/", destination: "/services/mobile-app-development/", permanent: true },
       { source: "/mobile-apps", destination: "/services/mobile-app-development/", permanent: true },
+      { source: "/services/mobile-apps/", destination: "/services/mobile-app-development/", permanent: true },
+      { source: "/services/mobile-apps", destination: "/services/mobile-app-development/", permanent: true },
+      { source: "/services/mobile-apps/:slug/", destination: "/services/mobile-app-development/:slug/", permanent: true },
+      { source: "/services/mobile-apps/:slug", destination: "/services/mobile-app-development/:slug/", permanent: true },
       { source: "/digital-marketing/", destination: "/services/digital-marketing/", permanent: true },
       { source: "/digital-marketing", destination: "/services/digital-marketing/", permanent: true },
 
@@ -116,6 +122,19 @@ const nextConfig: NextConfig = {
 
       // www -> non-www
       { source: "/:path*", has: [{ type: "host", value: "www.goexecution.com" }], destination: "https://goexecution.com/:path*", permanent: true },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        source: "/_next/static/media/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
     ];
   },
 };
