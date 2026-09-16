@@ -21,7 +21,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://goexecution.com"),
   title: {
-    default: "Global Digital Marketing Agency | Go Execution",
+    default: "Go Execution | Global Digital Marketing Agency",
     template: "%s | Go Execution",
   },
   description:
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Go Execution",
-    title: "Global Digital Marketing Agency | Go Execution",
+    title: "Go Execution | Global Digital Marketing Agency",
     description:
       "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious businesses.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Global Digital Marketing Agency | Go Execution",
+    title: "Go Execution | Global Digital Marketing Agency",
     description:
       "Go Execution delivers web development, SEO, paid advertising, branding, content, and growth strategy for ambitious businesses.",
   },

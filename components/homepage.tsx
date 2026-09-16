@@ -136,7 +136,7 @@ export const homepageFaqs = [
 
 const homeHeroContent = {
   eyebrow: "FULL-SERVICE DIGITAL MARKETING AGENCY",
-  title: "Full-Service Digital",
+  title: "Go Execution Digital",
   titleAccent: "Marketing Agency",
   copy: "Go Execution helps businesses turn digital traffic into measurable growth through conversion-focused web development, SEO, paid advertising, content, branding and digital strategy.",
   primaryLabel: "Get a Free Growth Audit",

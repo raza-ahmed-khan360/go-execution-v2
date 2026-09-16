@@ -1,7 +1,7 @@
 export const site = {
   url: "https://goexecution.com",
   name: "Go Execution LLC",
-  alternateName: "GoExecution",
+  alternateName: "Go Execution",
   locale: "en_US",
   language: "en",
   description:

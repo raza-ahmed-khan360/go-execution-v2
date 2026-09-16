@@ -4,7 +4,7 @@ import { JsonLd, buildOrganization, buildWebSite, buildWebPage, buildFAQPage } f
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Global Digital Marketing Agency | Go Execution",
+    absolute: "Go Execution | Global Digital Marketing Agency",
   },
   description:
     "Go Execution is a digital marketing agency for web development, SEO, paid advertising, branding, and measurable business growth.",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: { type: "website", siteName: "Go Execution", images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     url: "/",
-    title: "Global Digital Marketing Agency | Go Execution",
+    title: "Go Execution | Global Digital Marketing Agency",
     description:
       "Go Execution is a digital marketing agency for web development, SEO, paid advertising, branding, and measurable business growth.",
   },
@@ -30,7 +30,7 @@ export default function Home() {
       buildWebSite(),
       buildWebPage({
         path: "/",
-        title: "Global Digital Marketing Agency | Web, SEO & Growth | Go Execution",
+        title: "Go Execution | Global Digital Marketing Agency",
       }),
       buildFAQPage({ path: "/" }, [...homepageFaqs]),
     ],
