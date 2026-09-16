@@ -20,6 +20,7 @@ export function buildOrganization() {
     name: site.name,
     alternateName: site.alternateName,
     url: `${site.url}/`,
+    image: `${site.url}/assets/images/logo-dark.png`,
     logo: {
       "@type": "ImageObject",
       url: `${site.url}/assets/images/logo-dark.png`,
@@ -28,6 +29,14 @@ export function buildOrganization() {
     },
     email: site.email,
     telephone: site.phone,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.address.streetAddress,
+      addressLocality: site.address.addressLocality,
+      addressRegion: site.address.addressRegion,
+      postalCode: site.address.postalCode,
+      addressCountry: site.address.addressCountry,
+    },
     contactPoint: {
       "@type": "ContactPoint",
       "telephone": site.phone,
@@ -37,6 +46,7 @@ export function buildOrganization() {
     areaServed: "US",
     sameAs: site.sameAs,
     location: { "@id": `${site.url}/#place` },
+    priceRange: "$$",
   };
 }
 
@@ -87,6 +97,7 @@ export function buildBreadcrumbList(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: index + 1,
       item: {
+        "@type": "WebPage",
         "@id": `${site.url}${item.url}`,
         name: item.name,
       },
@@ -106,7 +117,6 @@ export function buildService(opts: { path: string; name: string; description: st
       "@type": "Country",
       name: "US"
     },
-    inLanguage: "en-US",
   };
 }
 
@@ -130,7 +140,7 @@ export function buildArticle(opts: {
         worksFor: { "@id": `${site.url}/#organization` },
         sameAs: ["https://www.linkedin.com/in/justin-goexecution/"]
       }
-    : { "@id": `${site.url}/#organization` };
+    : { "@type": "Organization", "@id": `${site.url}/#organization` };
 
   const article: any = {
     "@type": "Article",
