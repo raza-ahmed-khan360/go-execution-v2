@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     description: "Share your experience working with Go Execution. Leave a review to help us continue providing top-tier digital strategy and engineering solutions.",
     url: "/leave-review/",
     type: "website",
+    siteName: "Go Execution",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
   },
 };
 

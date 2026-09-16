@@ -34,6 +34,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: desc,
       url: url,
       type: "article",
+      siteName: "Go Execution",
+      images: [{ url: project?.image || "/opengraph-image.png", width: 1200, height: 630 }],
     },
   };
 }
