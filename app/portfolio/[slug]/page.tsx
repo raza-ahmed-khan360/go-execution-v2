@@ -19,10 +19,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const fallbackTitle = slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
   const title = project ? `${project.title} Case Study` : `${fallbackTitle} Project`;
   const url = `/portfolio/${slug}/`;
-  const desc = `Read the complete case study and project details for ${title} by Go Execution. Discover how our tailored digital strategy, engineering, and execution drove measurable business growth.`;
+  const desc = `Explore the ${title}. Discover how Go Execution digital strategy and engineering drove measurable business growth.`;
 
   return {
-    title: `${title} | Go Execution Portfolio`,
+    title: { absolute: `${title} | Go Execution` },
     description: desc,
     alternates: { canonical: url },
     robots: {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       follow: true,
     },
     openGraph: {
-      title: `${title} | Go Execution Portfolio`,
+      title: `${title} | Go Execution`,
       description: desc,
       url: url,
       type: "article",
