@@ -132,9 +132,9 @@ const industryEntries: Record<string, Industry> = {
   "hospitality": {
     slug: "hospitality",
     title: "Hospitality & Leisure",
-    seoTitle: "Hotel Web Design Agency & Hospitality Website Development | Go Execution",
+    seoTitle: "Hotel Web Design & Hospitality Website Development",
     eyebrow: "The Premium Hotel Website Design Company & Branding Firm",
-    description: "Looking for a top hotel web design agency? Go Execution specializes in custom hospitality website development, web design, and branding to drive direct bookings.",
+    description: "Looking for a hotel web design agency? We specialize in custom hospitality website development, web design, and branding to drive direct bookings.",
     intro: "Hospitality brands thrive on sensory storytelling and frictionless direct bookings. As a leading hotel web design agency and digital branding firm, Go Execution engineers visually stunning booking portals. From custom hotel website development to high-converting user experiences, our hotel website design company ensures your property stands out, minimizes OTA dependency, and maximizes direct revenue.",
     image: "/assets/images/logo-light.png",
     stats: [
@@ -201,7 +201,7 @@ const industryEntries: Record<string, Industry> = {
   "professional-services": {
     slug: "professional-services",
     title: "Professional Services",
-    seoTitle: "SEO for Accountants & Professional Website Design Services | Go Execution",
+    seoTitle: "SEO for Accountants & Professional Website Design Services",
     eyebrow: "CPA Firm Marketing & Professional Website Design Services",
     description: "Looking for SEO for accounting firms or a top SEO agency for accountants? Go Execution provides professional website design services and finance SEO.",
     intro: "In the professional services sector, trust is your most valuable currency. Whether you run a virtual accounting firm or a traditional law practice, your digital presence must reflect absolute authority. Go Execution delivers world-class professional website design services and specialized CPA firm marketing that turn visitors into high-value clients. As a leading SEO agency for accountants and finance SEO experts, we engineer marketing for accounting firms that dominates search results and accelerates firm growth.",
