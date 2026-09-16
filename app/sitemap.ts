@@ -20,6 +20,7 @@ const staticPages = [
   "/terms-of-service/",
   "/cookie-policy/",
   "/portfolio/",
+  "/leave-review/",
 ];
 
 const categoryPages = allServiceCategories.map(
