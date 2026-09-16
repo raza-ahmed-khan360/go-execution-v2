@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
               <h2>4. Third-Party Advertising and Analytics (Google)</h2>
               <p>We use third-party vendors, including Google, to serve ads based on your prior visits to our website or other websites. These vendors use cookies and web beacons to collect data in the ad serving process.</p>
               <p>Specifically, Google’s use of advertising cookies (such as the DoubleClick cookie) enables it and its partners to serve ads to our users based on their visit to our site and/or other sites on the Internet.</p>
-              <p>You may opt out of personalized advertising by visiting <a href="https://myadcenter.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>.</p>
+              <p>You may opt out of personalized advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://youradchoices.com/" target="_blank" rel="noopener noreferrer">aboutads.info</a>.</p>
 
               <h2>5. Your Privacy Rights (GDPR & CCPA)</h2>
               <p>Depending on your location, you may have specific rights regarding your personal data under the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), or other applicable privacy laws. These rights include:</p>

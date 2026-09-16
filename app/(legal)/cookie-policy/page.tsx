@@ -63,8 +63,8 @@ export default function CookiePolicy() {
               <p>To specifically withdraw consent or opt out of Google’s use of cookies for analytics and targeted advertising, you can:</p>
               <ul>
                 <li>Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
-                <li>Visit <a href="https://myadcenter.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> to opt out of personalized ads.</li>
-                <li>Use the Digital Advertising Alliance's opt-out tool at <a href="https://aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>.</li>
+                <li>Visit <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> to opt out of personalized ads.</li>
+                <li>Use the Digital Advertising Alliance's opt-out tool at <a href="https://youradchoices.com/" target="_blank" rel="noopener noreferrer">aboutads.info</a>.</li>
               </ul>
 
               <h2>4. Changes to This Cookie Policy</h2>
