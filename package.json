@@ -11,8 +11,6 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.112.4",
     "@types/nodemailer": "^8.0.1",
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
     "ai": "^7.0.15",
     "googleapis": "^176.0.0",
     "lucide-react": "^1.29.0",

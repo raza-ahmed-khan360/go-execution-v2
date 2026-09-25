@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next"
 import { Poppins } from "next/font/google";
 import { DeferredAnalytics } from "@/components/deferred-analytics";
 import { ExecutingLoader } from "@/components/executing-loader";
@@ -82,9 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <FloatingWhatsApp />
         <FloatingConsultation />
-        <SpeedInsights />
-        <Analytics />
-        <div className="ge-custom-cursor" aria-hidden="true" />
+                        <div className="ge-custom-cursor" aria-hidden="true" />
         <SiteEffects />
         <JsonLd data={{ "@context": "https://schema.org", "@graph": [buildOrganization(), buildWebSite(), buildPlace()] }} />
       </body>
